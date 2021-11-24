@@ -1,6 +1,7 @@
 "use strict";
 
 /**
+ * O(log n)
  * @param {number[]} numsArr
  * @param {number} target
  * @return {number}
