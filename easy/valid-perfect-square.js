@@ -1,6 +1,7 @@
 "use strict";
 
 /**
+ * O(1)
  * @param {number} num
  * @return {boolean}
  */
