@@ -16,10 +16,10 @@ function countPoints(points, queries) {
         for (let [xi, yi] of points) {
             const xVal = xi - xj;
             const yVal = yi - yj;
+
             if (xVal ** 2 + yVal ** 2 <= radj ** 2) {
                 pointCount++;
             }
-            
         }
         pointCountArr.push(pointCount);
     }
