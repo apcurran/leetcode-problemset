@@ -21,6 +21,7 @@ function countPoints(points, queries) {
                 pointCount++;
             }
         }
+        
         pointCountArr.push(pointCount);
     }
 
