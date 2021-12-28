@@ -57,26 +57,53 @@
 //     return dupsArr;
 // }
 
+// /**
+//  * Solution 3
+//  * 
+//  * This solution eliminates the second for loop, and uses slightly less memory
+//  * 
+//  * Time: O(n)
+//  * Space: O(n)
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
+// function findDuplicates(nums) {
+//     let numsMap = new Map();
+//     let resArr = [];
+
+//     for (let num of nums) {
+//         if (!numsMap.has(num)) {
+//             numsMap.set(num, false);
+//         } else {
+//             resArr.push(num);
+//         }
+//     }
+
+//     return resArr;
+// }
+
 /**
- * Solution 3
- * 
- * This solution eliminates the second for loop, and uses slightly less memory
+ * Solution 4
  * 
  * Time: O(n)
- * Space: O(n)
+ * Space: O(1)
  * @param {number[]} nums
  * @return {number[]}
  */
 function findDuplicates(nums) {
-    let numsMap = new Map();
     let resArr = [];
 
-    for (let num of nums) {
-        if (!numsMap.has(num)) {
-            numsMap.set(num, false);
-        } else {
-            resArr.push(num);
+    for (let i = 0; i < nums.length; i++) {
+        const index = Math.abs(nums[i]) - 1;
+
+        if (nums[index] < 0) {
+            // If the num is negative, it is a duplicate
+            const dupNum = index + 1;
+            resArr.push(dupNum);
         }
+
+        // Set num to negative once seen the first time
+        nums[index] = -nums[index];
     }
 
     return resArr;
