@@ -15,7 +15,6 @@
  */
 function minSetSize(arr) {
     let arrCopy = [...arr];
-    // Create a cache to store num of occurrences of each value.
     let numCache = new Map();
     let numSetRemovalCount = 0;
 
@@ -38,11 +37,11 @@ function minSetSize(arr) {
         if (arrCopy.includes(key)) {
             // Remove num key from arr
             arrCopy = arrCopy.filter((num) => num !== key);
+            // After removing the num occurences from arr, incr a counter by 1.
             numSetRemovalCount++;
         }
     }
-    // After removing the num occurences from arr, incr a counter by 1.
-    // Repeat as necessary until the condition is met -- at least half of the ints of the arr are removed. (while loop or recursion)
+
     return numSetRemovalCount;
 }
 
