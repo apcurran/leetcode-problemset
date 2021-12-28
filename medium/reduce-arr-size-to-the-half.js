@@ -34,12 +34,10 @@ function minSetSize(arr) {
     for (let key of sortedNumCache.keys()) {
         if (arrCopy.length <= arr.length / 2) break;
 
-        if (arrCopy.includes(key)) {
-            // Remove num key from arr
-            arrCopy = arrCopy.filter((num) => num !== key);
-            // After removing the num occurences from arr, incr a counter by 1.
-            numSetRemovalCount++;
-        }
+        // Remove num key from arr
+        arrCopy = arrCopy.filter((num) => num !== key);
+        // After removing the num occurences from arr, incr a counter by 1.
+        numSetRemovalCount++;
     }
 
     return numSetRemovalCount;
