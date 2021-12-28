@@ -32,7 +32,7 @@
 /**
  * Solution 2
  * 
- * Time: O(n)
+ * Time: O(n log n) - due to JS sorting algo
  * Space: O(1)
  * @param {number[]} nums
  * @return {number[]}
