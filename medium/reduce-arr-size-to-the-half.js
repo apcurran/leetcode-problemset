@@ -3,7 +3,7 @@
 /**
  * Solution 1
  * 
- * Time: O(n^2)
+ * Time: O(n log n) - due to sorting
  * Space: O(n)
  * 
  * You are given an integer array arr.
@@ -14,7 +14,6 @@
  * @return {number}
  */
 function minSetSize(arr) {
-    let arrCopy = [...arr];
     let numCache = new Map();
     let numSetRemovalCount = 0;
 
@@ -29,13 +28,14 @@ function minSetSize(arr) {
 
     // Sorted numCache by value (number of occurrences)
     let sortedNumCache = new Map([...numCache.entries()].sort((a, b) => b[1] - a[1]));
-
+    let n = arr.length;
+    let currArrLen = arr.length;
     // Check cache to see the highest num of occurrences and start by removing that key num from arr.
     for (let key of sortedNumCache.keys()) {
-        if (arrCopy.length <= arr.length / 2) break;
+        if (currArrLen <= n / 2) break;
 
-        // Remove num key from arr
-        arrCopy = arrCopy.filter((num) => num !== key);
+        const numOccurences = sortedNumCache.get(key);
+        currArrLen -= numOccurences;
         // After removing the num occurences from arr, incr a counter by 1.
         numSetRemovalCount++;
     }
