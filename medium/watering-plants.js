@@ -1,6 +1,11 @@
 "use strict";
 
 /**
+ * Solution 1
+ * 
+ * Time: O(n)
+ * Space: O(1)
+ * 
  * @param {number[]} plants
  * @param {number} capacity
  * @return {number}
@@ -11,7 +16,6 @@ function wateringPlants(plants, capacity) {
     // Init a water capacity copy
     let canCapacityCopy = capacity;
 
-    // Iterate through the plants array and water each plant (subtracting from water cap copy each time)
     for (let i = 0; i < plants.length; i++) {
         const currPlantWateringAmt = plants[i];
 
@@ -20,7 +24,9 @@ function wateringPlants(plants, capacity) {
             const stepsToWalkBackForRefill = i;
             // Reset cap back to original amt after refilling
             canCapacityCopy = capacity;
+            // Walk back to last plant that you left off at
             const stepsToWalkBackToPlant = i + 1;
+            
             // Incr steps counter by total steps back and forward
             stepsCounter += stepsToWalkBackForRefill + stepsToWalkBackToPlant;
             // Subtract water amt from can
