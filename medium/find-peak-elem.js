@@ -19,10 +19,9 @@ function findPeakElement(nums) {
 
     for (let i = 0; i < n; i++) {
         const currNum = nums[i];
-        const prevNum = nums[i - 1];
         const nextNum = nums[i + 1];
 
-        if (currNum > prevNum && currNum > nextNum) {
+        if (currNum > nextNum) {
             return i;
         }
     }
