@@ -9,6 +9,9 @@
  */
 
 /**
+ * Time: O(1)
+ * Space: O(1)
+ * 
  * @param {ListNode} node
  * @return {void} Do not return anything, modify node in-place instead.
  */
