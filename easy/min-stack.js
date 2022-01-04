@@ -27,15 +27,13 @@ MinStack.prototype.pop = function() {
 };
 
 /**
- * Time: O(n)
- * Space: O(n)
+ * Time: O(1)
+ * Space: O(1)
  * 
  * @return {number}
  */
 MinStack.prototype.top = function() {
-    const stackCopy = [...this.stack];
-
-    return stackCopy.pop();
+    return this.stack[this.stack.length - 1];
 };
 
 /**
