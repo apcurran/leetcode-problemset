@@ -16,21 +16,43 @@
 //     }
 // }
 
-/** Solution 2
+// /**
+//  * Solution 2
+//  * Time: O(n)
+//  * Space: O(n)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function singleNumber(nums) {
+//     const numsCache = new Map();
+
+//     for (let num of nums) {
+//         const numValToSave = (numsCache.get(num) || 0) + 1;
+//         numsCache.set(num, numValToSave);
+//     }
+
+//     for (let [key, val] of numsCache) {
+//         if (val === 1) return key;
+//     }
+// }
+
+/**
+ * Solution 3 -- bit manipulation with XOR
+ * Time: O(n)
+ * Space: O(1)
+ * 
  * @param {number[]} nums
  * @return {number}
  */
 function singleNumber(nums) {
-    const numsCache = new Map();
+    let result = 0;
 
     for (let num of nums) {
-        const numValToSave = (numsCache.get(num) || 0) + 1;
-        numsCache.set(num, numValToSave);
+        result = result ^ num;
     }
 
-    for (let [key, val] of numsCache) {
-        if (val === 1) return key;
-    }
+    return result;
 }
 
 console.log(singleNumber([2,2,1])); // 1
