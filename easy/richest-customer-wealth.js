@@ -3,20 +3,21 @@
 /**
  * Solution 1
  * Time: O(n^2)
- * Space: O(n)
+ * Space: O(1)
  * 
  * @param {number[][]} accounts
  * @return {number}
  */
 function maximumWealth(accounts) {
-    const customerWealthArr = new Set();
+    let maxCustomerWealth = 0;
 
     for (let account of accounts) {
         const customerWealth = account.reduce((total, curr) => total + curr, 0);
-        customerWealthArr.add(customerWealth);
+
+        if (customerWealth > maxCustomerWealth) maxCustomerWealth = customerWealth;
     }
 
-    return Math.max(...customerWealthArr);
+    return maxCustomerWealth;
 }
 
 console.log( maximumWealth([[1,2,3],[3,2,1]]) ); // 6
