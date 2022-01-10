@@ -2,7 +2,10 @@
 
 /**
  * Solution 1
- * Time: O(n^2)
+ * m = num of customers
+ * n = num of banks
+ * 
+ * Time: O(m * n)
  * Space: O(1)
  * 
  * @param {number[][]} accounts
