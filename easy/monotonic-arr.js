@@ -12,7 +12,7 @@ function isMonotonic(nums) {
     let isIncreasing = true;
     let isDecreasing = true;
 
-    // Stop one elem before end -- to prevent check against next num being undefined
+    // Stop one elem before end -- to prevent check against nextNum being undefined
     for (let i = 0; i < nums.length - 1; i++) {
         const currNum = nums[i];
         const nextNum = nums[i + 1];
