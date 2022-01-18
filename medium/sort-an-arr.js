@@ -41,32 +41,74 @@
 //     return nums.sort((a, b) => a - b);
 // }
 
+// /**
+//  * Solution 2 -- recursive
+//  * Time: O(n^2)
+//  * Space: O(n^2)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
+// function sortArray(nums) {
+//     if (nums.length <= 1) return nums;
+
+//     let pivot = nums[0];
+//     let left = [];
+//     let right = [];
+
+//     for (let i = 1; i < nums.length; i++) {
+//         const currNum = nums[i];
+
+//         if (currNum < pivot) {
+//             left.push(currNum);
+//         } else {
+//             right.push(currNum);
+//         }
+//     }
+
+//     return sortArray(left).concat(pivot, sortArray(right));
+// }
+
 /**
- * Solution 2 -- recursive
- * Time: O(n^2)
- * Space: O(n^2)
+ * Solution 2 -- Merge Sort
+ * Time: O(n log n)
+ * Space: O(n)
  * 
- * @param {number[]} nums
+ * @param {number[]} numsArr
  * @return {number[]}
  */
-function sortArray(nums) {
-    if (nums.length <= 1) return nums;
+function sortArray(numsArr) {
+    if (numsArr.length <= 1) return numsArr;
 
-    let pivot = nums[0];
-    let left = [];
-    let right = [];
+    const middleIndex = Math.floor(numsArr.length / 2);
+    const leftArr = numsArr.slice(0, middleIndex);
+    const rightArr = numsArr.slice(middleIndex);
 
-    for (let i = 1; i < nums.length; i++) {
-        const currNum = nums[i];
+    return merge(
+        sortArray(leftArr),
+        sortArray(rightArr)
+    );
+}
 
-        if (currNum < pivot) {
-            left.push(currNum);
+function merge(leftArr, rightArr) {
+    let resultArr = [];
+    let leftIndex = 0;
+    let rightIndex = 0;
+
+    while (leftIndex < leftArr.length && rightIndex < rightArr.length) {
+        const leftElem = leftArr[leftIndex];
+        const rightElem = rightArr[rightIndex];
+
+        if (leftElem < rightElem) {
+            resultArr.push(leftElem);
+            leftIndex++;
         } else {
-            right.push(currNum);
+            resultArr.push(rightElem);
+            rightIndex++;
         }
     }
 
-    return sortArray(left).concat(pivot, sortArray(right));
+    return [...resultArr, ...leftArr.slice(leftIndex), ...rightArr.slice(rightIndex)];
 }
 
-console.log( sortArray([5, 2, 3, 1]) ); // [1, 2, 3, 5]
+console.log(sortArray([5, 2, 3, 1])); // [1, 2, 3, 5]
