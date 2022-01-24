@@ -40,13 +40,13 @@ function maxNumberOfBalloons(text) {
         const textMapCharCount = textMap.get(balloonChar);
         const dividedResult = Math.floor(textMapCharCount / balloonCharCount);
 
-        // If divided res is NaN, OR divided res is a fraction, return early from func
+        // If divided res is NaN, return early from func
         if (isNaN(dividedResult)) return 0;
 
         valuesMap.set(balloonChar, dividedResult);
     }
 
-    // Take min val of valuesMap
+    // Take min val of valuesMap, since that is the limiting factor on how many "balloon" instances that can be made from the text string
     return Math.min(...valuesMap.values());
 }
 
