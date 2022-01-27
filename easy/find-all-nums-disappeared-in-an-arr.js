@@ -10,10 +10,10 @@
  */
 function findDisappearedNumbers(nums) {
     let resArr = [];
-    const sortedArr = new Set(nums);
+    const numsSet = new Set(nums);
 
     for (let i = 1; i <= nums.length; i++) {
-        if (!sortedArr.has(i)) {
+        if (!numsSet.has(i)) {
             resArr.push(i);
         }
     }
