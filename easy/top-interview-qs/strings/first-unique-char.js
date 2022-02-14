@@ -1,38 +1,30 @@
 "use strict";
 
 /**
+ * Solution 1
+ * time: O(n^2)
+ * space: O(1)
+ * 
  * @param {string} str
  * @return {number}
  */
 function firstUniqChar(str) {
-    let charsMap = new Map();
-
     for (let i = 0; i < str.length; i++) {
         const char = str[i];
-        // Check if char already exists.
-        const potentialPreexistingChar = charsMap.get(char);
-        
-        // If it exists, increment it.
-        if (potentialPreexistingChar !== undefined) {
-            const incrementedCharCount = potentialPreexistingChar + 1;
-            charsMap.set(char, incrementedCharCount);
-            
-            continue;
+        let isRepeated = false;
+
+        for (let j = 0; j < str.length; j++) {
+            const nextChar = str[j];
+
+            if (nextChar === char && i !== j) {
+                isRepeated = true;
+            }
         }
-        
-        // Otherwise, create new char val in map.
-        charsMap.set(char, 1);
+
+        if (!isRepeated) return i;
     }
 
-    // Loop through map and return first char with a 1 val
-    const charsArr = [...charsMap];
-
-    for (let i = 0; i < charsArr.length; i++) {
-        if (charsArr[i][1] === 1) {
-            return i;
-        }
-    }
-
+    // No char is non-repeating
     return -1;
 }
 
