@@ -1,30 +1,63 @@
 "use strict";
 
+// /**
+//  * Solution 1
+//  * time: O(n^2)
+//  * space: O(1)
+//  * 
+//  * @param {string} str
+//  * @return {number}
+//  */
+// function firstUniqChar(str) {
+//     for (let i = 0; i < str.length; i++) {
+//         const char = str[i];
+//         let isRepeated = false;
+
+//         for (let j = 0; j < str.length; j++) {
+//             const nextChar = str[j];
+
+//             if (nextChar === char && i !== j) {
+//                 isRepeated = true;
+//             }
+//         }
+
+//         if (!isRepeated) return i;
+//     }
+
+//     // No char is non-repeating
+//     return -1;
+// }
+
 /**
- * Solution 1
+ * Solution 2
  * time: O(n^2)
- * space: O(1)
+ * space: O(n)
  * 
  * @param {string} str
  * @return {number}
  */
 function firstUniqChar(str) {
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i];
-        let isRepeated = false;
-
-        for (let j = 0; j < str.length; j++) {
-            const nextChar = str[j];
-
-            if (nextChar === char && i !== j) {
-                isRepeated = true;
-            }
+    let charMap = new Map();
+    // Iterate through string
+    for (let char of str) {
+        if (!charMap.has(char)) {
+            // Store curr char in a map obj
+            charMap.set(char, 1);
+        } else {
+            // Incr the count of the char occurrences
+            const prevCharVal = charMap.get(char);
+            charMap.set(char, prevCharVal + 1);
         }
-
-        if (!isRepeated) return i;
     }
 
-    // No char is non-repeating
+    // Check for a char in the map with an occurrence val of 1
+    for (let [char, charVal] of charMap) {
+        if (charVal === 1) {
+            // return index of char
+            return str.indexOf(char);
+        }
+    }
+    // If none exist with an occurrence of 1, then return -1
     return -1;
 }
 
