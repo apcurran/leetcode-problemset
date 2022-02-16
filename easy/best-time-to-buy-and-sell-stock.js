@@ -30,7 +30,7 @@
 // }
 
 /**
- * Solution 2
+ * Solution 2 -- dynamic programming
  * time: O(n)
  * space: O(1)
  * 
