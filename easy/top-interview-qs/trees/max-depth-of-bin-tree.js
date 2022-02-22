@@ -9,7 +9,7 @@ function TreeNode(val, left, right) {
 }
 
 /**
- * Solution 1 -- recursion
+ * Solution 1 -- recursion DFS
  * time: O(n)
  * space: O(n)
  * 
@@ -24,4 +24,32 @@ function maxDepth(root) {
     const currMaxDepth = Math.max(leftDepth, rightDepth);
 
     return 1 + currMaxDepth;
+}
+
+/**
+ * Solution 2 -- iterative DFS
+ * time: O(n)
+ * space: O(1)
+ * 
+ * @param {TreeNode} root
+ * @return {number}
+ */
+function maxDepth(root) {
+    if (root === null) return 0;
+
+    let stack = [[root, 1]];
+    let level = 1;
+
+    while (stack.length > 0) {
+        const [node, depth] = stack.pop();
+
+        if (node !== null) {
+            level = Math.max(level, depth);
+
+            stack.push([node.left, depth + 1]);
+            stack.push([node.right, depth + 1]);
+        }
+    }
+
+    return level;
 }
