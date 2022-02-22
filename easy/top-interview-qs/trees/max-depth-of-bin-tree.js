@@ -29,7 +29,7 @@ function maxDepth(root) {
 /**
  * Solution 2 -- iterative DFS
  * time: O(n)
- * space: O(1)
+ * space: O(n)
  * 
  * @param {TreeNode} root
  * @return {number}
