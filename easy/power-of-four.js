@@ -1,7 +1,7 @@
 "use strict";
 
 // /**
-//  * solution 1
+//  * solution 1 -- recursion
 //  * time: O(log n)
 //  * space: O(log n)
 //  * 
@@ -19,7 +19,7 @@
 // }
 
 /**
- * solution 1
+ * solution 2 -- math logarithms
  * time: O(1)
  * space: O(1)
  * 
