@@ -14,9 +14,9 @@ function minimumSum(num) {
                         .split("")
                         .map((digitStr) => +digitStr)
                         .sort((a, b) => a - b);
-
-    const num1 = Number(String(digitsArr[0]) + String(digitsArr[3]));
-    const num2 = Number(String(digitsArr[1]) + String(digitsArr[2]));
+                        
+    const num1 = (digitsArr[0] * 10) + digitsArr[3];
+    const num2 = (digitsArr[1] * 10) + digitsArr[2];
     
     return num1 + num2;
 }
