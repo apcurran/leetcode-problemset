@@ -9,30 +9,25 @@
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
-// function productExceptSelf(nums) {
-//     let resArr = [];
+function productExceptSelf(nums) {
+    let resArr = [];
 
-//     for (let i = 0; i < nums.length; i++) {
-//         let innerNumProd = 1;
+    for (let i = 0; i < nums.length; i++) {
+        let innerNumProd = 1;
 
-//         for (let j = 0; j < nums.length; j++) {
-//             // skip calc of curr i index
-//             if (j === i) continue;
+        for (let j = 0; j < nums.length; j++) {
+            // skip calc of curr i index
+            if (j === i) continue;
 
-//             const innerNum = nums[j];
-//             innerNumProd *= innerNum;
-//         }
+            const innerNum = nums[j];
+            innerNumProd *= innerNum;
+        }
 
-//         // account for neg 0 case
-//         if (Object.is(-0, innerNumProd)) {
-//             resArr.push(0);
-//         } else {
-//             resArr.push(innerNumProd);
-//         }
-//     }
+        resArr.push(innerNumProd);
+    }
 
-//     return resArr;
-// }
+    return resArr;
+}
 
 /**
  * solution 2
