@@ -1,7 +1,43 @@
 "use strict";
 
+// /**
+//  * solution 1 - nested loops
+//  *
+//  * time: O(n^2)
+//  * space: O(1) - if not counting output arr as extra space
+//  * 
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
+// function productExceptSelf(nums) {
+//     let resArr = [];
+
+//     for (let i = 0; i < nums.length; i++) {
+//         let innerNumProd = 1;
+
+//         for (let j = 0; j < nums.length; j++) {
+//             // skip calc of curr i index
+//             if (j === i) continue;
+
+//             const innerNum = nums[j];
+//             innerNumProd *= innerNum;
+//         }
+
+//         // account for neg 0 case
+//         if (Object.is(-0, innerNumProd)) {
+//             resArr.push(0);
+//         } else {
+//             resArr.push(innerNumProd);
+//         }
+//     }
+
+//     return resArr;
+// }
+
 /**
- * time: O(n^2)
+ * solution 2
+ * 
+ * time: O(n)
  * space: O(1) - if not counting output arr as extra space
  * 
  * @param {number[]} nums
@@ -10,23 +46,24 @@
 function productExceptSelf(nums) {
     let resArr = [];
 
+    // prefix prod op by traversing left to right
+    let prefix = 1;
+
     for (let i = 0; i < nums.length; i++) {
-        let innerNumProd = 1;
+        const currNum = nums[i];
 
-        for (let j = 0; j < nums.length; j++) {
-            // skip calc of curr i index
-            if (j === i) continue;
+        resArr[i] = prefix;
+        prefix *= currNum;
+    }
 
-            const innerNum = nums[j];
-            innerNumProd *= innerNum;
-        }
+    // postfix prod op by traversing right to left
+    let postfix = 1;
 
-        // account for neg 0 case
-        if (Object.is(-0, innerNumProd)) {
-            resArr.push(0);
-        } else {
-            resArr.push(innerNumProd);
-        }
+    for (let i = nums.length - 1; i >= 0; i--) {
+        const currNum = nums[i];
+
+        resArr[i] *= postfix;
+        postfix *= currNum;
     }
 
     return resArr;
