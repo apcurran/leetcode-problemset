@@ -6,20 +6,49 @@ function ListNode(val, next) {
     this.next = (next === undefined ? null : next);
 }
 
+// /**
+//  * solution 1 -- iterative
+//  * time: O(n)
+//  * space: O(1)
+//  * 
+//  * @param {ListNode} head
+//  * @return {ListNode}
+//  */
+// function reverseList(head) {
+//     let prev = null;
+//     let current = head;
+
+//     while (current !== null) {
+//         const next = current.next;
+//         current.next = prev;
+//         prev = current;
+//         current = next;
+//     }
+
+//     return prev;
+// }
+
 /**
+ * solution 2 -- recursive
+ * time: O(n)
+ * space: O(n)
+ * 
  * @param {ListNode} head
  * @return {ListNode}
  */
 function reverseList(head) {
-    let prev = null;
-    let current = head;
+    // base case
+    if (head === null) return null;
 
-    while (current !== null) {
-        const next = current.next;
-        current.next = prev;
-        prev = current;
-        current = next;
+    let newHead = head;
+
+    if (head.next) {
+        newHead = reverseList(head.next);
+        // reverse link
+        head.next.next = head;
     }
 
-    return prev;
+    head.next = null;
+
+    return newHead;
 }
