@@ -13,6 +13,7 @@ function longestConsecutive(nums) {
     let globalLongestConsec = 0;
 
     for (let num of nums) {
+        // check if it is the start of a seq
         if (!numsSet.has(num - 1)) {
             let localLen = 1;
 
