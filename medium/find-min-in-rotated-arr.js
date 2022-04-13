@@ -1,15 +1,33 @@
 "use strict";
 
+// /**
+//  * Solution 1 -- Math.min()
+//  * Time: O(n)
+//  * Space: O(n)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function findMin(nums) {
+//     return Math.min(...nums);
+// }
+
 /**
- * Solution 1
+ * Solution 2 -- iterative
  * Time: O(n)
- * Space: O(n)
+ * Space: O(1)
  * 
  * @param {number[]} nums
  * @return {number}
  */
 function findMin(nums) {
-    return Math.min(...nums);
+    let minNum = nums[0];
+
+    for (let num of nums) {
+        if (num < minNum) minNum = num;
+    }
+
+    return minNum;
 }
 
 console.log( findMin([3,4,5,1,2]) ); // 1
