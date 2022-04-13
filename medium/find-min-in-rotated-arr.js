@@ -12,8 +12,26 @@
 //     return Math.min(...nums);
 // }
 
+// /**
+//  * Solution 2 -- iterative
+//  * Time: O(n)
+//  * Space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function findMin(nums) {
+//     let minNum = nums[0];
+
+//     for (let num of nums) {
+//         if (num < minNum) minNum = num;
+//     }
+
+//     return minNum;
+// }
+
 /**
- * Solution 2 -- iterative
+ * Solution 2 -- iterative w/ Math.min()
  * Time: O(n)
  * Space: O(1)
  * 
@@ -24,7 +42,7 @@ function findMin(nums) {
     let minNum = nums[0];
 
     for (let num of nums) {
-        if (num < minNum) minNum = num;
+        minNum = Math.min(minNum, num);
     }
 
     return minNum;
