@@ -2,8 +2,8 @@
 
 /**
  * solution 1
- * time: O(n^2)
- * space: O(n)
+ * time: O(n * m)
+ * space: O(n) || O(m) -- smaller of two arrs
  * 
  * @param {number[]} nums1
  * @param {number[]} nums2
