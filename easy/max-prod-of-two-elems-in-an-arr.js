@@ -16,8 +16,29 @@
 //     return (largestNum - 1) * (nextLargestNum - 1);
 // }
 
+// /**
+//  * solution 2
+//  * time: O(n)
+//  * space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function maxProduct(nums) {
+//     let largestNum = 0;
+//     let nextLargestNum = 0;
+
+//     for (let num of nums) {
+//         // requires that nextLargestNum be calculated first
+//         nextLargestNum = Math.max(nextLargestNum, Math.min(largestNum, num));
+//         largestNum = Math.max(largestNum, num);
+//     }
+
+//     return (largestNum - 1) * (nextLargestNum - 1);
+// }
+
 /**
- * solution 2
+ * solution 3 -- two-pointer technique
  * time: O(n)
  * space: O(1)
  * 
@@ -25,16 +46,22 @@
  * @return {number}
  */
 function maxProduct(nums) {
-    let largestNum = 0;
-    let nextLargestNum = 0;
+    let leftPointer = 0;
+    let rightPointer = nums.length - 1;
+    let maxProd = 0;
 
-    for (let num of nums) {
-        // requires that nextLargestNum be calculated first
-        nextLargestNum = Math.max(nextLargestNum, Math.min(largestNum, num));
-        largestNum = Math.max(largestNum, num);
+    while (leftPointer < rightPointer) {
+        const currMax = (nums[leftPointer] - 1) * (nums[rightPointer] - 1);
+        maxProd = Math.max(maxProd, currMax);
+
+        if (nums[leftPointer] < nums[rightPointer]) {
+            leftPointer++;
+        } else {
+            rightPointer--;
+        }
     }
 
-    return (largestNum - 1) * (nextLargestNum - 1);
+    return maxProd;
 }
 
 console.log( maxProduct([3, 4, 5, 2]) ); // 12
