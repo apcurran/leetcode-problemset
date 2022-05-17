@@ -33,7 +33,7 @@
 // }
 
 /**
- * solution 1 -- two-pointer technique
+ * solution 2 -- two-pointer technique
  * time: O(n)
  * space: O(1)
  * 
