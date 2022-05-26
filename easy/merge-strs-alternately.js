@@ -14,8 +14,9 @@ function mergeAlternately(word1, word2) {
     let resWord = "";
 
     for (let i = 0; i < maxLen; i++) {
-        const charsChunk = (word1[i] || "") + (word2[i] || "");
-        resWord += charsChunk;
+        const word1Char = word1[i] || "";
+        const word2Char = word2[i] || "";
+        resWord += word1Char + word2Char;
     }
 
     return resWord;
