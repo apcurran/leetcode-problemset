@@ -37,7 +37,7 @@
 // }
 
 /**
- * solution 1 -- iterative
+ * solution 1 -- iterative (optimized)
  * time: O(n)
  * space: O(1)
  * 
