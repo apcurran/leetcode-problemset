@@ -22,3 +22,6 @@ function escapeGhosts(ghosts, target) {
 
     return true;
 }
+
+console.log( escapeGhosts([[1,0],[0,3]], [0,1]) ); // true
+console.log( escapeGhosts([[1,0]], [2,0]) ); // false
