@@ -35,17 +35,36 @@
 //     return findFinalValue(nums, original * 2);
 // }
 
+// /**
+//  * solution 2 -- iterative
+//  * time: O(n^2)
+//  * space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @param {number} original
+//  * @return {number}
+//  */
+// function findFinalValue(nums, original) {
+//     while (nums.includes(original)) {
+//         original *= 2;
+//     }
+
+//     return original;
+// }
+
 /**
  * solution 2 -- iterative
- * time: O(n^2)
- * space: O(1)
+ * time: O(n * log n) -- Set.has() check is faster then array.includes() O(n) check
+ * space: O(n)
  * 
  * @param {number[]} nums
  * @param {number} original
  * @return {number}
  */
 function findFinalValue(nums, original) {
-    while (nums.includes(original)) {
+    const numsSet = new Set(nums);
+
+    while (numsSet.has(original)) {
         original *= 2;
     }
 
