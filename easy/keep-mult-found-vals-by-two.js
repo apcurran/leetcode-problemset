@@ -20,19 +20,36 @@
 //     return original;
 // }
 
+// /**
+//  * solution 1 -- recursive (cleaned up)
+//  * time: O(n^2)
+//  * space: O(n) -- due to call stack
+//  * 
+//  * @param {number[]} nums
+//  * @param {number} original
+//  * @return {number}
+//  */
+// function findFinalValue(nums, original) {
+//     if (!nums.includes(original)) return original;
+
+//     return findFinalValue(nums, original * 2);
+// }
+
 /**
- * solution -- recursive (cleaned up)
+ * solution 2 -- iterative
  * time: O(n^2)
- * space: O(n) -- due to call stack
+ * space: O(1)
  * 
  * @param {number[]} nums
  * @param {number} original
  * @return {number}
  */
 function findFinalValue(nums, original) {
-    if (!nums.includes(original)) return original;
+    while (nums.includes(original)) {
+        original *= 2;
+    }
 
-    return findFinalValue(nums, original * 2);
+    return original;
 }
 
 console.log( findFinalValue([2, 7, 9], 4) ); // 4
