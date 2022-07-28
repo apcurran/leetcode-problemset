@@ -9,29 +9,50 @@
  * }
  */
 
+// /**
+//  * solution 1 -- recursion
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @param {number} targetSum
+//  * @param {number} currentSum
+//  * @return {boolean}
+//  */
+// function hasPathSum(root, targetSum, currentSum = 0) {
+//     if (root === null) return false;
+
+//     // add total sum
+//     currentSum += root.val;
+
+//     // leaf node
+//     if (root.left === null && root.right === null) {
+//         return currentSum === targetSum;
+//     }
+
+//     const leftSide = hasPathSum(root.left, targetSum, currentSum);
+//     const rightSide = hasPathSum(root.right, targetSum, currentSum);
+
+//     return leftSide || rightSide;
+// }
+
 /**
- * solution 1 -- recursion
+ * solution 2 -- recursion (slightly cleaner)
  * time: O(n)
  * space: O(n)
  * 
  * @param {TreeNode} root
- * @param {number} targetSum
- * @param {number} currentSum
+ * @param {number} sum
  * @return {boolean}
  */
-function hasPathSum(root, targetSum, currentSum = 0) {
+function hasPathSum(root, sum) {
     if (root === null) return false;
 
-    // add total sum
-    currentSum += root.val;
-
-    // leaf node
     if (root.left === null && root.right === null) {
-        return currentSum === targetSum;
+        return sum === root.val; 
     }
 
-    const leftSide = hasPathSum(root.left, targetSum, currentSum);
-    const rightSide = hasPathSum(root.right, targetSum, currentSum);
+    const currSum = sum - root.val;
 
-    return leftSide || rightSide;
+    return hasPathSum(root.left, currSum) || hasPathSum(root.right, currSum);
 }
