@@ -9,8 +9,39 @@
  * }
  */
 
+// /**
+//  * solution 1 -- recursive
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @return {number[]}
+//  */
+// function postorderTraversal(root) {
+//     let resArr = [];
+
+//     recursiveHelper(root, resArr);
+
+//     return resArr;
+// }
+
+// /**
+//  * @param {TreeNode} node 
+//  * @param {number[]} arr 
+//  * @returns {void}
+//  */
+// function recursiveHelper(node, arr) {
+//     if (node === null) return;
+
+//     if (node.left) recursiveHelper(node.left, arr);
+
+//     if (node.right) recursiveHelper(node.right, arr);
+
+//     arr.push(node.val);
+// }
+
 /**
- * solution 1 -- recursive
+ * solution 1 -- iterative
  * time: O(n)
  * space: O(n)
  * 
@@ -18,24 +49,20 @@
  * @return {number[]}
  */
 function postorderTraversal(root) {
+    if (root === null) return [];
+
+    let stack = [root];
     let resArr = [];
 
-    recursiveHelper(root, resArr);
+    while (stack.length > 0) {
+        const node = stack.pop();
 
-    return resArr;
-}
+        resArr.push(node.val);
 
-/**
- * @param {TreeNode} node 
- * @param {number[]} arr 
- * @returns {void}
- */
-function recursiveHelper(node, arr) {
-    if (node === null) return;
+        if (node.left) stack.push(node.left);
 
-    if (node.left) recursiveHelper(node.left, arr);
+        if (node.right) stack.push(node.right);
+    }
 
-    if (node.right) recursiveHelper(node.right, arr);
-
-    arr.push(node.val);
+    return resArr.reverse();
 }
