@@ -1,19 +1,33 @@
 "use strict";
 
+// /**
+//  * solution 1
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {number} num
+//  * @return {boolean}
+//  */
+// function isSameAfterReversals(num) {
+//     const reversedNumStr = String(num).split("").reverse().join("");
+//     const numStrNoLeadingZeroes = reversedNumStr.replace(/^0+/, "");
+//     const doubleReversedNumNoZeroes = Number( numStrNoLeadingZeroes.split("").reverse().join("") );
+
+//     return doubleReversedNumNoZeroes === num;
+// }
+
 /**
- * solution 1
- * time: O(n)
- * space: O(n)
+ * solution 2
+ * time: O(1)
+ * space: O(1)
  * 
  * @param {number} num
  * @return {boolean}
  */
 function isSameAfterReversals(num) {
-    const reversedNumStr = String(num).split("").reverse().join("");
-    const numStrNoLeadingZeroes = reversedNumStr.replace(/^0+/, "");
-    const doubleReversedNumNoZeroes = Number( numStrNoLeadingZeroes.split("").reverse().join("") );
+    if (num === 0) return true;
 
-    return doubleReversedNumNoZeroes === num;
+    return num % 10 !== 0;
 }
 
 console.log( isSameAfterReversals(526) ); // true
