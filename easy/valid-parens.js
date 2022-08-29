@@ -24,10 +24,11 @@ function isValid(str) {
             case "{":
                 stack.push("}");
                 break;
-            default:
+            default: {
                 const elem = stack.pop();
 
                 if (bracket !== elem) return false;
+            }
         }
     }
 
