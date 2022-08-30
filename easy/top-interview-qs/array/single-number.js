@@ -49,6 +49,8 @@ function singleNumber(nums) {
     let numSet = new Set();
 
     for (let num of nums) {
+        // duplicates are removed from set,
+        // leaving only the single non-duplicate num
         if (numSet.has(num)) {
             numSet.delete(num);
             continue;
@@ -57,6 +59,7 @@ function singleNumber(nums) {
         numSet.add(num);
     }
     
+    // get first elem of Set obj
     return numSet
             .values()
             .next()
