@@ -38,22 +38,50 @@
 // }
 
 /**
- * Solution 3 -- bit manipulation with XOR
+ * Solution 3
  * Time: O(n)
- * Space: O(1)
+ * Space: O(n)
  * 
  * @param {number[]} nums
  * @return {number}
  */
 function singleNumber(nums) {
-    let result = 0;
+    let numSet = new Set();
 
     for (let num of nums) {
-        result = result ^ num;
-    }
+        if (numSet.has(num)) {
+            numSet.delete(num);
+            continue;
+        }
 
-    return result;
+        numSet.add(num);
+    }
+    
+    return numSet
+            .values()
+            .next()
+            .value;
 }
+
+
+
+// /**
+//  * Solution 4 -- bit manipulation with XOR
+//  * Time: O(n)
+//  * Space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function singleNumber(nums) {
+//     let result = 0;
+
+//     for (let num of nums) {
+//         result = result ^ num;
+//     }
+
+//     return result;
+// }
 
 console.log(singleNumber([2,2,1])); // 1
 console.log(singleNumber([4,1,2,1,2])); // 4
