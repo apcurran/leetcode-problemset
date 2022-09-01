@@ -9,22 +9,18 @@
 //  * @return {number[]}
 //  */
 // function twoSum(numbers, target) {
-//     // iterate nums
 //     for (let outerIndex = 0; outerIndex < numbers.length; outerIndex++) {
 //         const outerNum = numbers[outerIndex];
-//         // for each num !== num attempt to add to sum up to target val
+
 //         innerloop:
-//         for (let innerIndex = 0; innerIndex < numbers.length; innerIndex++) {
+//         for (let innerIndex = outerIndex + 1; innerIndex < numbers.length; innerIndex++) {
 //             const innerNum = numbers[innerIndex];
 //             const sum = outerNum + innerNum;
-
-//             // check for same elem (can't use same elem twice)
-//             if (outerIndex === innerIndex) continue;
 
 //             // check for sum greater than target (skip the rest since input arr is sorted asc)
 //             if (sum > target) break innerloop;
 
-//             // if target is reached, return index arr as index1 + 1 and index2 + 1
+//             // if target is reached return index arr as index1 + 1 and index2 + 1 -- the indices are 1-based instead of 0-based
 //             if (sum === target) {
 //                 return [outerIndex + 1, innerIndex + 1];
 //             }
