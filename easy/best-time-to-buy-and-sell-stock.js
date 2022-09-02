@@ -1,7 +1,7 @@
 "use strict";
 
 // /**
-//  * Solution 1
+//  * Solution 1 -- TLE
 //  * time: O(n^2)
 //  * space: O(1)
 //  * 
@@ -17,16 +17,11 @@
 //         for (let j = i + 1; j < prices.length; j++) {
 //             const innerCurrNum = prices[j];
 //             const testMaxProfit = innerCurrNum - outerCurrNum;
-
-//             if (testMaxProfit > globalMaxProfit) {
-//                 globalMaxProfit = testMaxProfit;
-//             }
+//             globalMaxProfit = Math.max(globalMaxProfit, testMaxProfit);
 //         }
 //     }
 
-//     if (globalMaxProfit > 0) return globalMaxProfit;
-
-//     return 0;
+//     return globalMaxProfit;
 // }
 
 /**
