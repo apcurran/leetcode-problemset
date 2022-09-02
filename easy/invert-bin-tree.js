@@ -59,28 +59,51 @@
 // }
 
 /**
- * solution 3 -- BFS queue
- * time: O(n^2) -- due to O(n) array.shift() inside of loop
+ * solution 3 -- Recursive DFS stack
+ * time: O(n)
  * space: O(n)
  * 
  * @param {TreeNode} root
  * @return {TreeNode}
  */
 function invertTree(root) {
+    // base case
     if (root === null) return null;
 
-    let queue = [root];
-
-    while (queue.length > 0) {
-        const currNode = queue.shift();
-
-        // destructure swap
-        [currNode.left, currNode.right] = [currNode.right, currNode.left];
-
-        if (currNode.left) queue.push(currNode.left);
-
-        if (currNode.right) queue.push(currNode.right);
-    }
-
+    // swap
+    const temp = root.left;
+    root.left = root.right;
+    root.right = temp;
+    // recursive cases
+    invertTree(root.left);
+    invertTree(root.right);
+    
     return root;
 }
+
+// /**
+//  * solution 4 -- BFS queue
+//  * time: O(n^2) -- due to O(n) array.shift() inside of loop
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @return {TreeNode}
+//  */
+// function invertTree(root) {
+//     if (root === null) return null;
+
+//     let queue = [root];
+
+//     while (queue.length > 0) {
+//         const currNode = queue.shift();
+
+//         // destructure swap
+//         [currNode.left, currNode.right] = [currNode.right, currNode.left];
+
+//         if (currNode.left) queue.push(currNode.left);
+
+//         if (currNode.right) queue.push(currNode.right);
+//     }
+
+//     return root;
+// }
