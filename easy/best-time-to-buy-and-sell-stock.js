@@ -25,7 +25,7 @@
 // }
 
 /**
- * Solution 2 -- dynamic programming
+ * Solution 2 -- sliding window technique
  * time: O(n)
  * space: O(1)
  * 
