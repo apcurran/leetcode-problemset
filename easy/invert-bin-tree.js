@@ -60,14 +60,13 @@
 
 /**
  * solution 3 -- BFS queue
- * time: O(n)
+ * time: O(n^2) -- due to O(n) array.shift() inside of loop
  * space: O(n)
  * 
  * @param {TreeNode} root
  * @return {TreeNode}
  */
 function invertTree(root) {
-    // base case
     if (root === null) return null;
 
     let queue = [root];
