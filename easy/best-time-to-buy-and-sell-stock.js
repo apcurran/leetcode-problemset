@@ -40,12 +40,16 @@ function maxProfit(prices) {
     let globalMaxProfit = 0;
 
     while (rightPointer < prices.length) {
-        if (prices[leftPointer] < prices[rightPointer]) {
+        const buyPrice = prices[leftPointer];
+        const sellPrice = prices[rightPointer];
+
+        if (buyPrice < sellPrice) {
             // positive selling price -- PROFIT
-            const currProfit = prices[rightPointer] - prices[leftPointer];
+            const currProfit = sellPrice - buyPrice;
             globalMaxProfit = Math.max(globalMaxProfit, currProfit);
         } else {
-            // would be a negative loss, so move leftPointer to curr rightPointer position
+            // would be a negative loss,
+            // so move leftPointer to curr rightPointer position to avoid buying at a high price
             leftPointer = rightPointer;
         }
 
