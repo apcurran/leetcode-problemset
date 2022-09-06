@@ -10,8 +10,9 @@
  */
 
 /**
+ * n = num of nodes in tree
  * time: O(n)
- * space: O(n)
+ * space: O(n) -- worst case of a completely unbalanced tree
  * 
  * @param {TreeNode} p
  * @param {TreeNode} q
