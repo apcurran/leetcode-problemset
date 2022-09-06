@@ -10,8 +10,8 @@
  */
 
 /**
- * time: O(n)
- * space: O(n)
+ * time: O(p + q)
+ * space: O(p + q)
  * 
  * @param {TreeNode} p
  * @param {TreeNode} q
