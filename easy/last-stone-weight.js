@@ -2,6 +2,8 @@
 
 /**
  * solution 1 -- iterative
+ * time: O(n^2 * log n)
+ * space: O(1)
  * 
  * @param {number[]} stones
  * @return {number}
@@ -20,7 +22,7 @@ function lastStoneWeight(stones) {
             continue;
         }
 
-        // destroy x and y = y - x
+        // y = y - x
         const revisedYStone = largestStoneY - smallerStoneX;
         stones.push(revisedYStone);
     }
