@@ -1,6 +1,8 @@
 "use strict";
 
 /**
+ * solution 1 -- recursion with cache (memo)
+ * 
  * @param {number} n
  * @return {number}
  */
