@@ -20,6 +20,8 @@
 
 // /**
 //  * solution 2 -- recursion with cache (memo) top-down approach
+//  * time: O(n)
+//  * space: O(n)
 //  * 
 //  * @param {number} n
 //  * @return {number}
