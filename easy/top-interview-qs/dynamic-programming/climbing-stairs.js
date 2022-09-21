@@ -1,16 +1,16 @@
 "use strict";
 
 // /**
-//  * solution 1 -- recursion with cache (memo)
+//  * solution 1 -- recursion with cache (memo) top-down approach
 //  * 
 //  * @param {number} n
 //  * @return {number}
 //  */
 // function climbStairs(n, cache = new Map()) {
 //     if (n === 1) {
-//         return 1;
+//         return 1; // only one single-step option
 //     } else if (n === 2) {
-//         return 2;
+//         return 2; // two options: take two single-steps, or take one double-step
 //     }
 
 //     let result = 0;
@@ -46,3 +46,4 @@ function climbStairs(n) {
 
 console.log(climbStairs(2)); // 2
 console.log(climbStairs(3)); // 3
+console.log(climbStairs(5)); // 8
