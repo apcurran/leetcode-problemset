@@ -17,6 +17,7 @@ function ListNode(val, next) {
  * @return {ListNode}
  */
 function mergeTwoLists(list1, list2) {
+    // covers edge case of inserting into an empty list
     let dummyNode = new ListNode();
     let tail = dummyNode;
 
