@@ -32,6 +32,7 @@ function mergeTwoLists(list1, list2) {
             list2 = list2.next;
         }
 
+        // traverse to next node in created list
         tail = tail.next;
     }
 
