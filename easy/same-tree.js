@@ -19,6 +19,7 @@
  * @return {boolean}
  */
 function isSameTree(p, q) {
+    // empty trees are technically the same
     if (p === null && q === null) return true;
 
     if (p === null || q === null) return false;
