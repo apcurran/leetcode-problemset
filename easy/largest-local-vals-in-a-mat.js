@@ -1,6 +1,10 @@
 "use strict";
 
 /**
+ * solution 1 -- iterative
+ * time: O(n^2)
+ * space: O(n^2)
+ * 
  * @param {number[][]} grid
  * @return {number[][]}
  */
