@@ -10,7 +10,7 @@
  * @return {boolean}
  */
 function canPlaceFlowers(flowerbed, n) {
-    let flowerbedCopy = [0, ...flowerbed, 0];
+    const flowerbedCopy = [0, ...flowerbed, 0];
     let canPlantCount = 0;
 
     for (let i = 1; i < flowerbedCopy.length - 1; i++) {
