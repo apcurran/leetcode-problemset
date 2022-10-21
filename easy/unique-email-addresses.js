@@ -2,7 +2,7 @@
 
 /**
  * solution 1 -- Set obj
- * time: O(n^2) -- replace and split cause loops
+ * time: O(n * m) -- replace and split cause loops
  * space: O(n)
  * 
  * @param {string[]} emails
