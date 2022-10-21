@@ -14,6 +14,7 @@ function numUniqueEmails(emails) {
     for (let email of emails) {
         const [localName, domain] = email.split("@");
         // remove "." char from localName portion
+        // then, only take portion of localName before "+" char
         const updatedLocalName = localName
                                     .replace(/\./g, "")
                                     .split("+")[0];
