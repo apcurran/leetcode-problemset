@@ -14,15 +14,14 @@ function dailyTemperatures(temperatures) {
 
     for (let i = 0; i < temperatures.length; i++) {
         const temp = temperatures[i];
-
         // is the stack empty AND is the temp greater than the temp at the top of the stack
-        while (stack.length > 0 && temp > stack[stack.length - 1][0]) {
-            const stackIndex = stack.pop()[1];
+        while (stack.length > 0 && temp > temperatures[stack[stack.length - 1]]) {
+            const stackIndex = stack.pop();
             // subtract days
             resArr[stackIndex] = i - stackIndex;
         }
 
-        stack.push([temp, i]);
+        stack.push(i);
     }
 
     return resArr;
