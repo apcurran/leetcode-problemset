@@ -21,11 +21,7 @@ function findAnagrams(s, p) {
     sLoop:
     for (let i = 0; i < s.length - p.length + 1; i++) {
         // for each char in s string
-        // console.log("index:", i);
-        // console.log("p str len:", i + p.length);
-        
         const sSlice = s.slice(i, i + p.length);
-        // console.log(sSlice);
         // check if sSlice is an anagram of p str
         let sSliceMap = new Map();
 
