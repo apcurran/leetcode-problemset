@@ -37,4 +37,25 @@ function reverseArr(nums, start, end) {
     }
 }
 
+// /**
+//  * solution 2 -- correct, but TLE
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {number[]} nums 
+//  * @param {number} k 
+//  * @returns {number[]}
+//  */
+// function rotate(nums, k) {
+//     k = k % nums.length;
+
+//     for (let i = 0; i < k; i++) {
+//         const removedNum = nums.pop();
+//         // move to the front of arr
+//         nums.unshift(removedNum);
+//     }
+
+//     return nums;
+// }
+
 console.log( rotate([1,2,3,4,5,6,7], 3) ); // [5, 6, 7, 1, 2, 3, 4]
