@@ -36,30 +36,14 @@ function twoSum(nums, target) {
 
     for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
-
-        if (!numCache.has(num)) {
-            // add to cache
-            numCache.set(num, i);
-        }
-    }
-
-    for (let i = 0; i < nums.length; i++) {
-        const num = nums[i];
         const neededNum = target - num;
 
         if (numCache.has(neededNum)) {
-            // get index
-            const numIndex = numCache.get(neededNum);
-
-            if (numIndex === i) {
-                continue;
-            }
-            // return indices if sum equals target
-            return [i, numIndex];
-        } else {
-            // set index/num in cache
-            numCache.set(num, i);
+            const neededNumIndex = numCache.get(neededNum);
+            return [i, neededNumIndex];
         }
+
+        numCache.set(num, i);
     }
 }
 
