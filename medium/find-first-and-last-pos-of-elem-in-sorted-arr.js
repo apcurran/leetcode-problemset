@@ -29,21 +29,4 @@ function searchRange(nums, target) {
     return resArr;
 }
 
-// /**
-//  * solution 2 -- binary search
-//  * time: O(log n)
-//  * space: O(1)
-//  * 
-//  * @param {number[]} nums arr sorted in non-decreasing order
-//  * @param {number} target
-//  * @return {number[]}
-//  */
-// function searchRange(nums, target) {
-//     let resArr = [-1, -1];
-
-
-
-//     return resArr;
-// }
-
 console.log( searchRange([5,7,7,8,8,10], 8) ); // [3, 4]
