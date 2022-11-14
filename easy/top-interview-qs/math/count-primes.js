@@ -31,6 +31,6 @@ function isPrime(num) {
     return true;
 }
 
-console.log( countPrimes(1) ) // 0
-console.log( countPrimes(0) ) // 0
-console.log( countPrimes(10) ) // 4
+console.log( countPrimes(1) ); // 0
+console.log( countPrimes(0) ); // 0
+console.log( countPrimes(10) ); // 4
