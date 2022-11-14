@@ -4,7 +4,7 @@
  * solution 1 -- iterative
  * n = wordArr len
  * m = word len
- * time: O(n^2)
+ * time: O(n * m)
  * space: O(min(m))
  * 
  * @param {string[]} strsArr 
