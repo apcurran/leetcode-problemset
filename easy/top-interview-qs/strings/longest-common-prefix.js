@@ -1,6 +1,11 @@
 "use strict";
 
 /**
+ * solution 1 -- iterative
+ * n = wordArr len
+ * m = word len
+ * time: O(n^2)
+ * space: O(min(m))
  * 
  * @param {string[]} strsArr 
  * @returns {string}
@@ -8,21 +13,26 @@
 function longestCommonPrefix(strsArr) {
     let prefix = "";
 
-    for (let i = 0; i < strsArr.length; i++) {
+    // iterate all chars of first word
+    for (let i = 0; i < strsArr[0].length; i++) {
         if (strsArr[0] === "") return prefix;
+        
+        const firstWordChar = strsArr[0][i];
+        // iterate all words in strsArr
+        for (let word of strsArr) {
+            const wordChar = word[i];
 
-        const char = strsArr[0][i]; // Chars of first str
-
-        for (let j = 0; j < strsArr.length; j++) {
-            if (strsArr[j][i] !== char) return prefix;
+            if (i === word.length || wordChar !== firstWordChar) {
+                return prefix;
+            }
         }
 
-        prefix += char;
+        prefix += firstWordChar;
     }
 
     return prefix;
 }
 
-// console.log( longestCommonPrefix(["flower","flow","flight"]) ); // "fl"
-// console.log( longestCommonPrefix(["dog","racecar","car"]) ); // ""
+console.log( longestCommonPrefix(["flower","flow","flight"]) ); // "fl"
+console.log( longestCommonPrefix(["dog","racecar","car"]) ); // ""
 console.log( longestCommonPrefix([""]) ); // ""
