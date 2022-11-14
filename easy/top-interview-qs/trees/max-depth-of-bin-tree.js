@@ -26,30 +26,30 @@ function maxDepth(root) {
     return 1 + currMaxDepth;
 }
 
-/**
- * Solution 2 -- iterative DFS
- * time: O(n)
- * space: O(n)
- * 
- * @param {TreeNode} root
- * @return {number}
- */
-function maxDepth(root) {
-    if (root === null) return 0;
+// /**
+//  * Solution 2 -- iterative DFS
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @return {number}
+//  */
+// function maxDepth(root) {
+//     if (root === null) return 0;
 
-    let stack = [[root, 1]];
-    let level = 1;
+//     let stack = [[root, 1]];
+//     let level = 1;
 
-    while (stack.length > 0) {
-        const [node, depth] = stack.pop();
+//     while (stack.length > 0) {
+//         const [node, depth] = stack.pop();
 
-        if (node !== null) {
-            level = Math.max(level, depth);
+//         if (node !== null) {
+//             level = Math.max(level, depth);
 
-            stack.push([node.left, depth + 1]);
-            stack.push([node.right, depth + 1]);
-        }
-    }
+//             stack.push([node.left, depth + 1]);
+//             stack.push([node.right, depth + 1]);
+//         }
+//     }
 
-    return level;
-}
+//     return level;
+// }
