@@ -25,6 +25,7 @@ function reverseList(head) {
         current = next;
     }
 
+    // prev will be the new head after reversing the list
     return prev;
 }
 
