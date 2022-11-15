@@ -6,7 +6,7 @@
  * space: O(1)
  * 
  * @param {string[]} str
- * @return {void} Do not return anything, modify s in-place instead.
+ * @return {void}
  */
 function reverseString(str) {
     let leftPtr = 0;
