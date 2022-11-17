@@ -27,7 +27,7 @@
 function rotate(nums, k) {
     k %= nums.length;
     // Reverse initial arr
-    nums.reverse();
+    reverse(nums, 0, nums.length - 1);
     // Reverse first k elems
     reverse(nums, 0, k - 1);
     // Reverse leftover elems after first k elems
