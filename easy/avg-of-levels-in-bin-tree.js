@@ -12,7 +12,7 @@ function TreeNode(val, left, right) {
  * n = height of tree
  * m = nodes per level in tree
  * l = total levels
- * O(n * (m^2))
+ * time: O(n * (m^2))
  * space: O(l + m)
  * 
  * @param {TreeNode} root
