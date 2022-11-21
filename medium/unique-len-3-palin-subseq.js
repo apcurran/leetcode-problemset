@@ -23,7 +23,7 @@ function countPalindromicSubsequence(s) {
                 const thirdChar = s[k];
                 const possiblePalinStr = firstChar + secondChar + thirdChar;
 
-                if (isPalindrome(possiblePalinStr)) {
+                if (isThreeLenStrPalindrome(possiblePalinStr)) {
                     palinSet.add(possiblePalinStr);
                 }
             }
@@ -34,17 +34,14 @@ function countPalindromicSubsequence(s) {
 }
 
 /**
+ * time: O(1)
+ * space: O(1)
+ * 
  * @param {string} str 
  * @returns {boolean}
  */
-function isPalindrome(str) {
-    let revvedStr = "";
-
-    for (let i = str.length - 1; i >= 0; i--) {
-        revvedStr += str[i];
-    }
-
-    return revvedStr === str;
+function isThreeLenStrPalindrome(str) {
+    return str[0] === str[2];
 }
 
 console.log( countPalindromicSubsequence("aabca") ); // 3
