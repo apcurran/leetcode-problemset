@@ -2,6 +2,7 @@
 
 /**
  * solution 1 -- correct, but TLE
+ * m = subStr len
  * time: O(n^3)
  * space: O(n + m)
  * 
