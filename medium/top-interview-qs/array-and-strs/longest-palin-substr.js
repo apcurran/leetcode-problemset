@@ -32,17 +32,23 @@ function longestPalindrome(s) {
 }
 
 /**
+ * solution 1 -- two-pointer approach
+ * 
  * @param {string} str 
  * @returns {boolean}
  */
 function isPalindrome(str) {
-    let revvedStr = "";
+    let left = 0;
+    let right = str.length - 1;
 
-    for (let i = str.length - 1; i >= 0; i--) {
-        revvedStr += str[i];
+    while (left < right) {
+        if (str[left] !== str[right]) return false;
+
+        left++;
+        right--;
     }
 
-    return revvedStr === str;
+    return true;
 }
 
 console.log( longestPalindrome("babad") ); // "bab"
