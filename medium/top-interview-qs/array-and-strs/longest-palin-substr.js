@@ -61,7 +61,6 @@
  */
 function longestPalindrome(s) {
     let longest = "";
-    let longestLen = 0;
 
     for (let i = 0; i < s.length; i++) {
         const oddLeft = i;
@@ -86,9 +85,8 @@ function longestPalindrome(s) {
         while (left >= 0 && right < s.length && s[left] === s[right]) {
             const currentLen = right - left + 1;
 
-            if (currentLen > longestLen) {
+            if (currentLen > longest.length) {
                 longest = s.slice(left, right + 1); // inclusive copy
-                longestLen = currentLen;
             }
             // move pointers
             left--;
