@@ -8,6 +8,10 @@ function TreeNode(val, left, right) {
 }
 
 /**
+ * solution 1 (DFS -- recursion)
+ * time: O(n)
+ * space: O(n)
+ * 
  * @param {TreeNode} root
  * @return {number}
  */
