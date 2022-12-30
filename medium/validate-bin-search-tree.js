@@ -20,19 +20,21 @@ function isValidBST(root) {
 }
 
 /**
- * @param {TreeNode} node 
+ * @param {TreeNode} root 
  * @param {number} left 
  * @param {number} right 
  * @returns {boolean}
  */
-function validate(node, left, right) {
+function validate(root, left, right) {
     // an empty node is still valid
-    if (node === null) return true;
+    if (root === null) return true;
 
-    if (!(left < node.val && node.val < right)) return false;
+    const isValidSubtree = left < root.val && root.val < right;
 
-    const validateLeft = validate(node.left, left, node.val);
-    const validateRight = validate(node.right, node.val, right);
+    if (!isValidSubtree) return false;
 
-    return validateLeft && validateRight;
+    const isValidLeft = validate(root.left, left, root.val);
+    const isValidRight = validate(root.right, root.val, right);
+
+    return isValidLeft && isValidRight;
 }
