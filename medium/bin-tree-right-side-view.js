@@ -7,8 +7,44 @@ function TreeNode(val, left, right) {
     this.right = (right===undefined ? null : right);
 }
 
+// /**
+//  * solution 1 -- BFS
+//  * time: O(n^2)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @return {number[]}
+//  */
+// function rightSideView(root) {
+//     if (root === null) return [];
+
+//     let queue = [root];
+//     let results = [];
+
+//     while (queue.length > 0) {
+//         let rightSideNode = null;
+//         let queueLength = queue.length;
+        
+//         for (let i = 0; i < queueLength; i++) {
+//             const currentNode = queue.shift();
+
+//             if (currentNode !== null) {
+//                 rightSideNode = currentNode;
+//                 queue.push(currentNode.left);
+//                 queue.push(currentNode.right);
+//             }
+//         }
+
+//         if (rightSideNode !== null) {
+//             results.push(rightSideNode.val);
+//         }
+//     }
+
+//     return results;
+// }
+
 /**
- * solution 1 -- BFS
+ * solution 2 -- BFS slight alterations
  * time: O(n^2)
  * space: O(n)
  * 
@@ -22,21 +58,24 @@ function rightSideView(root) {
     let results = [];
 
     while (queue.length > 0) {
-        let rightSideNode = null;
-        let queueLength = queue.length;
-        
+        const queueLength = queue.length;
+
         for (let i = 0; i < queueLength; i++) {
+            // front of queue
             const currentNode = queue.shift();
 
-            if (currentNode !== null) {
-                rightSideNode = currentNode;
-                queue.push(currentNode.left);
+            if (i === 0) {
+                results.push(currentNode.val);
+            }
+
+            // push right side first
+            if (currentNode.right) {
                 queue.push(currentNode.right);
             }
-        }
 
-        if (rightSideNode !== null) {
-            results.push(rightSideNode.val);
+            if (currentNode.left) {
+                queue.push(currentNode.left);
+            }
         }
     }
 
