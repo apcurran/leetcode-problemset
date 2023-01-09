@@ -91,15 +91,12 @@ function TreeNode(val, left, right) {
  * @return {number[]}
  */
 function rightSideView(root) {
-    if (root === null) return [];
-
     let results = [];
 
     dfs(root, 0, results);
 
     return results;
 }
-
 
 /**
  * 
@@ -111,14 +108,14 @@ function rightSideView(root) {
 function dfs(root, level, results) {
     if (root === null) return;
 
-    if (results.length <= level) {
-        results.push(null);
+    if (level >= results.length) {
+        results.push(root.val);
+    } else {
+        results[level] = root.val;
     }
 
     dfs(root.left, level + 1, results);
     dfs(root.right, level + 1, results);
-
-    results[level] = root.val;
 }
 
 const a = new TreeNode(1);
