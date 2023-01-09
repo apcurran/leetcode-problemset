@@ -62,4 +62,4 @@ a.next = b;
 b.next = c;
 c.next = d;
 
-console.log( reorderList(a) ); // list of 1 -> 4 -> 2 -> 3
+console.log( reorderList(a) ); // list should now be 1 -> 4 -> 2 -> 3
