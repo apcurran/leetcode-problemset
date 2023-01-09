@@ -1,0 +1,57 @@
+"use strict";
+
+// Definition for a binary tree node.
+function TreeNode(val, left, right) {
+    this.val = (val===undefined ? 0 : val);
+    this.left = (left===undefined ? null : left);
+    this.right = (right===undefined ? null : right);
+}
+
+/**
+ * solution 1 -- BFS
+ * time: O(n^2)
+ * space: O(n)
+ * 
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+function rightSideView(root) {
+    if (root === null) return [];
+
+    let queue = [root];
+    let results = [];
+
+    while (queue.length > 0) {
+        let rightSideNode = null;
+        let queueLength = queue.length;
+        
+        for (let i = 0; i < queueLength; i++) {
+            const currentNode = queue.shift();
+
+            if (currentNode !== null) {
+                rightSideNode = currentNode;
+                queue.push(currentNode.left);
+                queue.push(currentNode.right);
+            }
+        }
+
+        if (rightSideNode !== null) {
+            results.push(rightSideNode.val);
+        }
+    }
+
+    return results;
+}
+
+const a = new TreeNode(1);
+const b = new TreeNode(2);
+const c = new TreeNode(3);
+const d = new TreeNode(5);
+const e = new TreeNode(4);
+
+a.left = b;
+a.right = c;
+b.right = d;
+c.right = e;
+
+console.log( rightSideView(a) ); // [1, 3, 4]
