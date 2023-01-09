@@ -43,9 +43,48 @@ function TreeNode(val, left, right) {
 //     return results;
 // }
 
+// /**
+//  * solution 2 -- BFS slight alterations
+//  * time: O(n^2)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @return {number[]}
+//  */
+// function rightSideView(root) {
+//     if (root === null) return [];
+
+//     let queue = [root];
+//     let results = [];
+
+//     while (queue.length > 0) {
+//         const queueLength = queue.length;
+
+//         for (let i = 0; i < queueLength; i++) {
+//             // front of queue
+//             const currentNode = queue.shift();
+
+//             if (i === 0) {
+//                 results.push(currentNode.val);
+//             }
+
+//             // push right side first
+//             if (currentNode.right) {
+//                 queue.push(currentNode.right);
+//             }
+
+//             if (currentNode.left) {
+//                 queue.push(currentNode.left);
+//             }
+//         }
+//     }
+
+//     return results;
+// }
+
 /**
- * solution 2 -- BFS slight alterations
- * time: O(n^2)
+ * solution 3 -- DFS recursion
+ * time: O(n)
  * space: O(n)
  * 
  * @param {TreeNode} root
@@ -54,32 +93,32 @@ function TreeNode(val, left, right) {
 function rightSideView(root) {
     if (root === null) return [];
 
-    let queue = [root];
     let results = [];
 
-    while (queue.length > 0) {
-        const queueLength = queue.length;
-
-        for (let i = 0; i < queueLength; i++) {
-            // front of queue
-            const currentNode = queue.shift();
-
-            if (i === 0) {
-                results.push(currentNode.val);
-            }
-
-            // push right side first
-            if (currentNode.right) {
-                queue.push(currentNode.right);
-            }
-
-            if (currentNode.left) {
-                queue.push(currentNode.left);
-            }
-        }
-    }
+    dfs(root, 0, results);
 
     return results;
+}
+
+
+/**
+ * 
+ * @param {TreeNode} root 
+ * @param {number} level 
+ * @param {number[]} results 
+ * @returns {void}
+ */
+function dfs(root, level, results) {
+    if (root === null) return;
+
+    if (results.length <= level) {
+        results.push(null);
+    }
+
+    dfs(root.left, level + 1, results);
+    dfs(root.right, level + 1, results);
+
+    results[level] = root.val;
 }
 
 const a = new TreeNode(1);
