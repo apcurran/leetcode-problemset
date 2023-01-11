@@ -28,16 +28,16 @@ function getTargetCopy(original, cloned, target) {
             return currentNode;
         }
 
-        // check for left
-        if (currentNode.left) {
-            // if exists, add
-            stack.push(currentNode.left);
-        }
-
         // check for right
         if (currentNode.right) {
             // if exists, add
             stack.push(currentNode.right);
+        }
+
+        // check for left
+        if (currentNode.left) {
+            // if exists, add
+            stack.push(currentNode.left);
         }
     }
 }
