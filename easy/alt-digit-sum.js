@@ -13,21 +13,16 @@ function alternateDigitSum(n) {
     const digitsStr = String(n);
     // first digit is positive
     let digitsSum = 0;
-    // following digits alternate neg/pos
-    let isDigitPositive = true;
 
     for (let i = 0; i < digitsStr.length; i++) {
         const digit = Number(digitsStr[i]);
         
         // add digits to total
-        if (isDigitPositive) {
+        if (i % 2 === 0) {
             digitsSum += digit;
         } else {
             digitsSum += (-digit);
         }
-
-        // flip each iteration
-        isDigitPositive = !isDigitPositive;
     }
 
     return digitsSum;
