@@ -15,9 +15,9 @@ function isSumEqual(firstWord, secondWord, targetWord) {
     const secondWordNumericalValue = getStringNumericalValue(secondWord);
     const targetWordNumericalValue = getStringNumericalValue(targetWord);
     // add firstWord numerical value and secondWord numerical value for sum
-    const sumOfFirstAndSecondWords = firstWordNumericalValue + secondWordNumericalValue;
+    const sumOfFirstAndSecondWordValues = firstWordNumericalValue + secondWordNumericalValue;
     
-    return sumOfFirstAndSecondWords === targetWordNumericalValue;
+    return sumOfFirstAndSecondWordValues === targetWordNumericalValue;
 }
 
 /**
