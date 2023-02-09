@@ -7,7 +7,7 @@ class StockSpanner {
 
     /** 
      * solution 1 -- stack
-     * time: O(n)
+     * time: O(n) -- amortized over all runs of .next()
      * space: O(n)
      * 
      * @param {number} price
@@ -19,10 +19,9 @@ class StockSpanner {
         // while the stack has items, and
         // the top stack item's price is less than or equal to the current given price
         while (this.stack.length > 0 && this.stack[this.stack.length - 1][0] <= price) {
-            const topStackItemSpan = this.stack[this.stack.length - 1][1];
+            const topStackItem = this.stack.pop();
+            const topStackItemSpan = topStackItem[1];
             currentSpan += topStackItemSpan;
-            // remove top stack item afterwards
-            this.stack.pop();
         }
 
         this.stack.push([price, currentSpan]);
