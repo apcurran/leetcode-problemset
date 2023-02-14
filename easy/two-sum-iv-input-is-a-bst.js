@@ -7,8 +7,43 @@ function TreeNode(val, left, right) {
     this.right = (right===undefined ? null : right);
 }
 
+// /**
+//  * solution 1 -- iterative
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @param {number} k
+//  * @return {boolean}
+//  */
+// function findTarget(root, k) {
+//     let seenValues = new Set();
+//     let stack = [root];
+
+//     while (stack.length > 0) {
+//         const currentNode = stack.pop();
+//         const currentNodeVal = currentNode.val;
+//         const neededValue = k - currentNodeVal;
+
+//         if (seenValues.has(neededValue)) return true;
+//         // otherwise, add value to set
+//         seenValues.add(currentNodeVal);
+//         // then keep exploring through the tree
+//         if (currentNode.left) {
+//             stack.push(currentNode.left);
+//         }
+
+//         if (currentNode.right) {
+//             stack.push(currentNode.right);
+//         }
+//     }
+
+//     // none found
+//     return false;
+// }
+
 /**
- * solution 1 -- iterative
+ * solution 2 -- recursive
  * time: O(n)
  * space: O(n)
  * 
@@ -16,30 +51,17 @@ function TreeNode(val, left, right) {
  * @param {number} k
  * @return {boolean}
  */
-function findTarget(root, k) {
-    let seenValues = new Set();
-    let stack = [root];
+function findTarget(root, k, seenValues = new Set()) {
+    if (root === null) return false;
 
-    while (stack.length > 0) {
-        const currentNode = stack.pop();
-        const currentNodeVal = currentNode.val;
-        const neededValue = k - currentNodeVal;
+    const neededValue = k - root.val;
 
-        if (seenValues.has(neededValue)) return true;
-        // otherwise, add value to set
-        seenValues.add(currentNodeVal);
-        // then keep exploring through the tree
-        if (currentNode.left) {
-            stack.push(currentNode.left);
-        }
+    if (seenValues.has(neededValue)) return true;
 
-        if (currentNode.right) {
-            stack.push(currentNode.right);
-        }
-    }
+    // otherwise, add the value and continue through the tree 
+    seenValues.add(root.val);
 
-    // none found
-    return false;
+    return findTarget(root.left, k, seenValues) || findTarget(root.right, k, seenValues);
 }
 
 const a = new TreeNode(5);
