@@ -8,7 +8,7 @@ function TreeNode(val, left, right) {
 }
 
 /**
- * solution 1
+ * solution 1 -- iterative
  * time: O(n)
  * space: O(n)
  * 
