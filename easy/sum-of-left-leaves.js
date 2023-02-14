@@ -7,35 +7,54 @@ function TreeNode(val, left, right) {
     this.right = (right===undefined ? null : right);
 }
 
+// /**
+//  * solution 1 -- DFS iterative
+//  * time: O(n)
+//  * space: O(1)
+//  * 
+//  * @param {TreeNode} root
+//  * @return {number}
+//  */
+// function sumOfLeftLeaves(root) {
+//     let stack = [root];
+//     let leftLeavesSum = 0;
+
+//     while (stack.length > 0) {
+//         const currentNode = stack.pop();
+
+//         if (currentNode?.right) {
+//             stack.push(currentNode.right);
+//         }
+
+//         if (currentNode?.left) {
+//             stack.push(currentNode.left);
+
+//             if (currentNode.left.left === null && currentNode.left.right === null) {
+//                 leftLeavesSum += currentNode.left.val;
+//             }
+//         }
+//     }
+
+//     return leftLeavesSum;
+// }
+
 /**
- * solution 1 -- DFS iterative
+ * solution 2 -- DFS recursion
  * time: O(n)
- * space: O(1)
+ * space: O(n)
  * 
  * @param {TreeNode} root
  * @return {number}
  */
-function sumOfLeftLeaves(root) {
-    let stack = [root];
-    let leftLeavesSum = 0;
+function sumOfLeftLeaves(root, isLeft = false) {
+    if (root === null) return 0;
 
-    while (stack.length > 0) {
-        const currentNode = stack.pop();
-
-        if (currentNode?.right) {
-            stack.push(currentNode.right);
-        }
-
-        if (currentNode?.left) {
-            stack.push(currentNode.left);
-
-            if (currentNode.left.left === null && currentNode.left.right === null) {
-                leftLeavesSum += currentNode.left.val;
-            }
-        }
+    if (root.left === null && root.right === null && isLeft === true) {
+        // left leaf identified
+        return root.val;
     }
 
-    return leftLeavesSum;
+    return sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false);
 }
 
 const a = new TreeNode(1);
