@@ -1,32 +1,67 @@
 "use strict";
 
+// /**
+//  * solution 1
+//  * time: O(n * m)
+//  * space: O(n + m)
+//  * 
+//  * @param {string} str
+//  * @param {string} char
+//  * @return {number[]}
+//  */
+// function shortestToChar(str, char) {
+//     let charPositionsInStr = [];
+//     let shortestDistancesToChar = [];
+
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === char) charPositionsInStr.push(i);
+//     }
+
+//     for (let i = 0; i < str.length; i++) {
+//         let minDistanceToChar = Infinity;
+
+//         for (let j = 0; j < charPositionsInStr.length; j++) {
+//             const currentCharPosition = charPositionsInStr[j];
+//             const positionsDifference = Math.abs(i - currentCharPosition);
+//             minDistanceToChar = Math.min(minDistanceToChar, positionsDifference);
+//         }
+        
+//         shortestDistancesToChar.push(minDistanceToChar);        
+//     }
+
+//     return shortestDistancesToChar;
+// }
+
 /**
- * solution 1
- * time: O(n * m)
- * space: O(n + m)
+ * solution 2 -- two-pass technique
+ * time: O(n)
+ * space: O(n)
  * 
  * @param {string} str
- * @param {string} char
+ * @param {string} targetChar
  * @return {number[]}
  */
-function shortestToChar(str, char) {
-    let charPositionsInStr = [];
+function shortestToChar(str, targetChar) {
     let shortestDistancesToChar = [];
+    let previousPosition = Infinity;
 
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === char) charPositionsInStr.push(i);
+        const currentLetter = str[i];
+        
+        if (currentLetter === targetChar) previousPosition = i;
+
+        const positionsDifference = Math.abs(i - previousPosition);
+        shortestDistancesToChar[i] = positionsDifference;
     }
 
-    for (let i = 0; i < str.length; i++) {
-        let minDistanceToChar = Infinity;
+    for (let i = str.length - 1; i >= 0; i--) {
+        const currentLetter = str[i];
+        const positionsDifference = Math.abs(i - previousPosition);
 
-        for (let j = 0; j < charPositionsInStr.length; j++) {
-            const currentCharPosition = charPositionsInStr[j];
-            const positionsDifference = Math.abs(i - currentCharPosition);
-            minDistanceToChar = Math.min(minDistanceToChar, positionsDifference);
-        }
-        
-        shortestDistancesToChar.push(minDistanceToChar);        
+        if (currentLetter === targetChar) previousPosition = i;
+
+        const smallestPositionDistance = Math.min(shortestDistancesToChar[i], positionsDifference);
+        shortestDistancesToChar[i] = smallestPositionDistance;
     }
 
     return shortestDistancesToChar;
