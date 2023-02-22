@@ -1,6 +1,10 @@
 "use strict";
 
 /**
+ * solution 1
+ * time: O(n * m)
+ * space: O(n + m)
+ * 
  * @param {string} str
  * @param {string} char
  * @return {number[]}
