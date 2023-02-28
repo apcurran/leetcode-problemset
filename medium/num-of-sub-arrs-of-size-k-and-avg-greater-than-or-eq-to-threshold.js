@@ -12,8 +12,8 @@
  */
 function numOfSubarrays(arr, k, threshold) {
     let subArraysCount = 0;
-    
-    for (let i = 0; i < arr.length - k + 1; i++) {
+
+    for (let i = 0; i <= arr.length - k; i++) {
         const currentNum = arr[i];
         let sum = currentNum;
 
