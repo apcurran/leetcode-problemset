@@ -24,26 +24,49 @@
 //     return removeStars(updatedText);
 // }
 
+// /**
+//  * solution 2
+//  * time: O(n^2)
+//  * space: O(n)
+//  * 
+//  * @param {string} str
+//  * @return {string}
+//  */
+// function removeStars(str) {
+//     let updatedText = str;
+
+//     while (true) {
+//         const starIndex = updatedText.indexOf("*");
+
+//         if (starIndex === -1) break;
+
+//         updatedText = updatedText.slice(0, starIndex - 1) + updatedText.slice(starIndex + 1);
+//     }
+
+//     return updatedText;
+// }
+
 /**
- * solution 2
- * time: O(n^2)
+ * solution 3
+ * time: O(n)
  * space: O(n)
  * 
  * @param {string} str
  * @return {string}
  */
 function removeStars(str) {
-    let updatedText = str;
+    const splitText = str.split("");
+    let stack = [];
 
-    while (true) {
-        const starIndex = updatedText.indexOf("*");
-
-        if (starIndex === -1) break;
-
-        updatedText = updatedText.slice(0, starIndex - 1) + updatedText.slice(starIndex + 1);
+    for (let char of splitText) {
+        if (char === "*") {
+            stack.pop();
+        } else {
+            stack.push(char);
+        }
     }
 
-    return updatedText;
+    return stack.join("");
 }
 
 console.log( removeStars("leet**cod*e") ); // "lecoe"
