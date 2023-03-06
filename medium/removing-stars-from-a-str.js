@@ -25,7 +25,7 @@
 // }
 
 // /**
-//  * solution 2
+//  * solution 2 -- iterative
 //  * time: O(n^2)
 //  * space: O(n)
 //  * 
@@ -47,7 +47,7 @@
 // }
 
 /**
- * solution 3
+ * solution 3 -- stack
  * time: O(n)
  * space: O(n)
  * 
