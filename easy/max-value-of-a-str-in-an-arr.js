@@ -45,9 +45,9 @@ function maximumValue(strs) {
 
     for (let str of strs) {
         const strConvertedToNumber = Number(str);
-        const isConvertedNumberNotValid = Number.isNaN(strConvertedToNumber);
+        const isConvertedNumberInvalid = Number.isNaN(strConvertedToNumber);
 
-        if (isConvertedNumberNotValid) {
+        if (isConvertedNumberInvalid) {
             maxVal = Math.max(maxVal, str.length);
         } else {
             maxVal = Math.max(maxVal, strConvertedToNumber);
