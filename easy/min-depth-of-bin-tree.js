@@ -28,6 +28,7 @@ function minDepth(root) {
             const node = queue.shift();
 
             if (node.left === null && node.right === null) {
+                // leaf node -> end the func
                 return currentLevel;
             }
             
