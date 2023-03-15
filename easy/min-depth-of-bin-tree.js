@@ -7,6 +7,23 @@ function TreeNode(val, left, right) {
     this.right = (right===undefined ? null : right);
 }
 
+const a = new TreeNode(3);
+const b = new TreeNode(9);
+const c = new TreeNode(20);
+const d = new TreeNode(15);
+const e = new TreeNode(7);
+
+a.left = b;
+a.right = c;
+c.left = d;
+c.right = e;
+
+//           3
+//          / \
+//         9   20
+//            /  \
+//           15   7
+
 /**
  * solution 1 -- BFS
  * time: O(n^2)
@@ -22,6 +39,7 @@ function minDepth(root) {
     let currentLevel = 1; // start with the count of the first root node
 
     while (queue.length > 0) {
+        // search this tree level
         let queueLen = queue.length;
 
         for (let i = 0; i < queueLen; i++) {
@@ -48,3 +66,5 @@ function minDepth(root) {
 
     return 0; // this should not ever be reached
 }
+
+console.log( minDepth(a) ); // 2
