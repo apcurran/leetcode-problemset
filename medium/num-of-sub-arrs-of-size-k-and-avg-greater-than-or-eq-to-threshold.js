@@ -1,8 +1,38 @@
 "use strict";
 
+// /**
+//  * solution 1
+//  * time: O(n^2)
+//  * space: O(1)
+//  * 
+//  * @param {number[]} arr
+//  * @param {number} k
+//  * @param {number} threshold
+//  * @return {number}
+//  */
+// function numOfSubarrays(arr, k, threshold) {
+//     let subArraysCount = 0;
+
+//     for (let i = 0; i <= arr.length - k; i++) {
+//         const currentNum = arr[i];
+//         let sum = currentNum;
+
+//         for (let j = i + 1; j < i + k; j++) {
+//             const innerNum = arr[j];
+//             sum += innerNum;
+//         }
+
+//         const avg = sum / k;
+
+//         if (avg >= threshold) subArraysCount++;
+//     }
+
+//     return subArraysCount;
+// }
+
 /**
- * solution 1
- * time: O(n^2)
+ * solution 2 -- sliding window technique
+ * time: O(n)
  * space: O(1)
  * 
  * @param {number[]} arr
@@ -12,19 +42,25 @@
  */
 function numOfSubarrays(arr, k, threshold) {
     let subArraysCount = 0;
+    let currentSum = 0;
 
-    for (let i = 0; i <= arr.length - k; i++) {
-        const currentNum = arr[i];
-        let sum = currentNum;
+    // initialize currentSum with first sum grouping
+    for (let i = 0; i < k - 1; i++) {
+        currentSum += arr[i];
+    }
 
-        for (let j = i + 1; j < i + k; j++) {
-            const innerNum = arr[j];
-            sum += innerNum;
+    for (let left = 0; left <= arr.length - k; left++) {
+        const leftPointerValue = arr[left];
+        const rightPointerValue = arr[left + k - 1];
+        currentSum += rightPointerValue;
+
+        const avg = currentSum / k;
+
+        if (avg >= threshold) {
+            subArraysCount++;
         }
 
-        const avg = sum / k;
-
-        if (avg >= threshold) subArraysCount++;
+        currentSum -= leftPointerValue;
     }
 
     return subArraysCount;
