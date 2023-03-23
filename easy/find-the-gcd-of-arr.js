@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1
+ * solution 1 -- Euclidean Algorithm
  * time: O(n + log(b))
  * space: O(1)
  * 
