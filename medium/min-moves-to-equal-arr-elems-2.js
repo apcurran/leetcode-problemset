@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1
+ * solution 1 -- find the median
  * time: O(n * log n) -- due to sorting
  * space: O(1)
  * 
