@@ -11,7 +11,7 @@
 function mySqrt(x) {
     let squareRootRoundedDown = 0;
 
-    for (let i = 0; i <= x; i++) {
+    for (let i = 0; i <= x / 2 + 1; i++) {
         const squaredValue = i * i;
 
         if (squaredValue > squareRootRoundedDown * squareRootRoundedDown && squaredValue <= x) {
@@ -25,5 +25,17 @@ function mySqrt(x) {
 
     return squareRootRoundedDown;
 }
+
+// /**
+//  * solution 2
+//  * time: O(sqrt(n))
+//  * space: O(1)
+//  * 
+//  * @param {number} x
+//  * @return {number}
+//  */
+// function mySqrt(x) {
+    
+// }
 
 console.log( mySqrt(4) ); // 2
