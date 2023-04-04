@@ -8,6 +8,9 @@
  */
 function partitionString(str) {
     let subStrs = new Set();
+    // will always have at least one char
+    // need 1 as a default to account for the char
+    // being added, but not incrementing minSubStrsCount (if only one char in str)
     let minSubStrsCount = 1;
 
     for (let char of str) {
@@ -15,7 +18,7 @@ function partitionString(str) {
             // increment counter
             minSubStrsCount++;
             // reset cache
-            subStrs = new Set();
+            subStrs.clear();
         }
 
         subStrs.add(char);
