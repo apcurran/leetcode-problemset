@@ -11,8 +11,8 @@
 function isValid(str) {
     let stack = [];
 
-    for (let bracket of str) {
-        switch (bracket) {
+    for (let currentBracket of str) {
+        switch (currentBracket) {
             case "(":
                 stack.push(")");
                 break;
@@ -23,9 +23,9 @@ function isValid(str) {
                 stack.push("}");
                 break;
             default: {
-                const elem = stack.pop();
+                const expectedClosingBracket = stack.pop();
 
-                if (bracket !== elem) return false;
+                if (currentBracket !== expectedClosingBracket) return false;
             }
         }
     }
