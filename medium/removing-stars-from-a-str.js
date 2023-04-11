@@ -55,10 +55,10 @@
  * @return {string}
  */
 function removeStars(str) {
-    const splitText = str.split("");
+    const characters = str.split("");
     let stack = [];
 
-    for (let char of splitText) {
+    for (let char of characters) {
         if (char === "*") {
             stack.pop();
         } else {
