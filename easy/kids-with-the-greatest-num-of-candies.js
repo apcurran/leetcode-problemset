@@ -16,7 +16,7 @@
 // }
 
 /**
- * Solution 2 -- slight optimization
+ * Solution 2 -- slight optimization -- not copying (spreading) arr with startingMaxCandies
  * Time: O(n)
  * Space: O(n)
  * 
