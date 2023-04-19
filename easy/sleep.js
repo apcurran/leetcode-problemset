@@ -6,10 +6,10 @@
  * space: O(1)
  * 
  * @param {number} ms
- * @returns {void}
+ * @returns {Promise}
  */
 async function sleep(ms) {
-    await new Promise((resolve) => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 /** 
