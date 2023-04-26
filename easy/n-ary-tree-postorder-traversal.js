@@ -40,14 +40,12 @@ function TreeNode(val, children) {
 function postorder(root) {
     let results = [];
 
-    recurse(root, results);
-
-    return results;
+    return recurse(root, results);
 }
 
 /**
  * @param {TreeNode|null} root 
- * @returns {void}
+ * @returns {number[]}
 */
 function recurse(root, results) {
     if (root === null) return results;
