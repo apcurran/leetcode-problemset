@@ -4,8 +4,33 @@ function TreeNode(val,children) {
    this.children = children;
 }
 
+// /**
+//  * solution 1 -- iterative
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode|null} root
+//  * @return {number[]}
+//  */
+// function postorder(root) {
+//     // DFS
+//     let stack = [root];
+//     let results = [];
+
+//     while (stack.length > 0) {
+//         const currentNode = stack.pop();
+
+//         if (currentNode === null) continue;
+
+//         results.push(currentNode.val);
+//         stack.push(...currentNode.children);
+//     }
+
+//     return results.reverse();
+// }
+
 /**
- * solution 1 -- iterative
+ * solution 2 -- recursive DFS
  * time: O(n)
  * space: O(n)
  * 
@@ -13,18 +38,23 @@ function TreeNode(val,children) {
  * @return {number[]}
  */
 function postorder(root) {
-    // DFS
-    let results = [];
-    let stack = [root];
-
-    while (stack.length > 0) {
-        const currentNode = stack.pop();
-
-        if (currentNode === null) continue;
-
-        results.push(currentNode.val);
-        stack.push(...currentNode.children);
+    /**
+     * @param {TreeNode|null} root 
+     * @returns {void}
+    */
+   function recurse(root) {
+       if (root === null) return;
+       
+       for (let child of root.children) {
+           recurse(child);
+        }
+        
+        results.push(root.val);
     }
+    
+    let results = [];
+    
+    recurse(root);
 
-    return results.reverse();
+    return results;
 }
