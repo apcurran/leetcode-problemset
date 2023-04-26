@@ -47,16 +47,16 @@ function preorder(root) {
 /**
  * 
  * @param {TreeNode|null} root 
- * @param {number[]} arr 
+ * @param {number[]} results 
  */
-function recurse(root, arr) {
-    if (root === null) return arr;
+function recurse(root, results) {
+    if (root === null) return results;
 
-    arr.push(root.val);
+    results.push(root.val);
 
     for (let child of root.children) {
-        recurse(child, arr);
+        recurse(child, results);
     }
 
-    return arr;
+    return results;
 }
