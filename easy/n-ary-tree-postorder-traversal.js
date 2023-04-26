@@ -1,7 +1,7 @@
 // Definition for a Node.
-function TreeNode(val,children) {
-   this.val = val;
-   this.children = children;
+function TreeNode(val, children) {
+    this.val = val;
+    this.children = children;
 }
 
 // /**
@@ -38,23 +38,25 @@ function TreeNode(val,children) {
  * @return {number[]}
  */
 function postorder(root) {
-    /**
-     * @param {TreeNode|null} root 
-     * @returns {void}
-    */
-   function recurse(root) {
-       if (root === null) return;
-       
-       for (let child of root.children) {
-           recurse(child);
-        }
-        
-        results.push(root.val);
-    }
-    
     let results = [];
-    
-    recurse(root);
+
+    recurse(root, results);
+
+    return results;
+}
+
+/**
+ * @param {TreeNode|null} root 
+ * @returns {void}
+*/
+function recurse(root, results) {
+    if (root === null) return results;
+
+    for (let child of root.children) {
+        recurse(child, results);
+    }
+
+    results.push(root.val);
 
     return results;
 }
