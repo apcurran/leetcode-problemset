@@ -1,3 +1,5 @@
+"use strict";
+
 // Definition for a Node.
 function TreeNode(val, children) {
     this.val = val;
@@ -5,7 +7,7 @@ function TreeNode(val, children) {
 }
 
 // /**
-//  * solution 1 -- iterative
+//  * solution 1 -- iterative DFS
 //  * time: O(n)
 //  * space: O(n)
 //  * 
@@ -13,7 +15,6 @@ function TreeNode(val, children) {
 //  * @return {number[]}
 //  */
 // function postorder(root) {
-//     // DFS
 //     let stack = [root];
 //     let results = [];
 
