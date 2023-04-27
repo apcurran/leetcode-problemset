@@ -45,6 +45,7 @@ function getLeaves(root) {
         const currentNode = stack.pop();
 
         if (currentNode.left === null && currentNode.right === null) {
+            // leaf node here
             leafNodeValues.push(currentNode.val);
         }
 
