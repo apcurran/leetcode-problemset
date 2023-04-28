@@ -23,7 +23,9 @@ function increasingBST(root) {
     let currentNode = dummyNode;
 
     for (let value of values) {
+        // create new TreeNode obj with value
         currentNode.right = new TreeNode(value);
+        // move pointer
         currentNode = currentNode.right;
     }
 
@@ -33,13 +35,13 @@ function increasingBST(root) {
 }
 
 /**
- * @param {TreeNode} node 
+ * @param {TreeNode} root 
  * @param {number[]} values 
  */
-function inorderTraversal(node, values) {
-    if (node === null) return;
+function inorderTraversal(root, values) {
+    if (root === null) return;
 
-    inorderTraversal(node.left, values);
-    values.push(node.val);
-    inorderTraversal(node.right, values);
+    inorderTraversal(root.left, values);
+    values.push(root.val);
+    inorderTraversal(root.right, values);
 }
