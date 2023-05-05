@@ -59,11 +59,11 @@ function maxVowels(str, k) {
         const windowLength = rightPointer - leftPointer + 1;
 
         if (windowLength > k) {
-            // move leftPointer forward
             if (allVowels.has(currentLeftChar)) {
                 currentVowelsCount--;
             }
-
+            
+            // move leftPointer forward
             leftPointer++;
         }
 
