@@ -14,7 +14,9 @@ function summaryRanges(nums) {
     for (let i = 0; i < nums.length; i++) {
         const start = nums[i];
 
-        // keep iterating until the next element is one more than the current element
+        // keep iterating
+        // ensure that we haven't passed the end of the nums array (i + 1 < nums.length check)
+        // ensure that our expected next num (nums[i] + 1) is equal to the actual next num (nums[i + 1])
         while (i + 1 < nums.length && nums[i] + 1 === nums[i + 1]) {
             i++;
         }
