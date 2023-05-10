@@ -11,8 +11,6 @@
  * @return {number}
  */
 function reduce(nums, fn, init) {
-    if (nums.length === 0) return init;
-
     let accumulator = init;
 
     for (let elem of nums) {
