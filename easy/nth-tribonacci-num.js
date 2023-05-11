@@ -39,7 +39,7 @@ function tribonacci(n) {
 
     if (n === 1 || n === 2) return 1;
 
-    let results = new Int32Array(n + 1);
+    let results = new Uint32Array(n + 1);
     // by problem definition
     results[1] = 1;
     results[2] = 1;
