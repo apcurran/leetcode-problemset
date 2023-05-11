@@ -26,10 +26,36 @@
 //     return value;
 // }
 
+// /**
+//  * solution 2 -- dynamic programming (bottom up)
+//  * time: O(n)
+//  * space: O(n) -- due to array buffer
+//  * 
+//  * @param {number} n
+//  * @return {number}
+//  */
+// function tribonacci(n) {
+//     if (n === 0) return 0;
+
+//     if (n === 1 || n === 2) return 1;
+
+//     let results = new Uint32Array(n + 1);
+//     // by problem definition
+//     results[1] = 1;
+//     results[2] = 1;
+    
+//     for (let i = 3; i <= n; i++) {
+//         const answer = results[i - 1] + results[i - 2] + results[i - 3];
+//         results[i] = answer;
+//     }
+
+//     return results[n];
+// }
+
 /**
- * solution 2 -- dynamic programming (bottom up)
+ * solution 3 -- dynamic programming (bottom up -- optimized)
  * time: O(n)
- * space: O(n) -- due to array buffer
+ * space: O(1)
  * 
  * @param {number} n
  * @return {number}
@@ -39,17 +65,18 @@ function tribonacci(n) {
 
     if (n === 1 || n === 2) return 1;
 
-    let results = new Uint32Array(n + 1);
-    // by problem definition
-    results[1] = 1;
-    results[2] = 1;
-    
-    for (let i = 3; i <= n; i++) {
-        const answer = results[i - 1] + results[i - 2] + results[i - 3];
-        results[i] = answer;
+    let a = 0;
+    let b = 1;
+    let c = 1;
+
+    for (let i = 0; i < n - 2; i++) {
+        const tempResult = a + b + c;
+        a = b;
+        b = c;
+        c = tempResult;
     }
 
-    return results[n];
+    return c;
 }
 
 console.log( tribonacci(4) ); // 4
