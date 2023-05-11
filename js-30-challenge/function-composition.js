@@ -13,11 +13,10 @@ const compose = function(functions) {
 	return function(x) {
         if (functions.length === 0) return x;
 
-        functions.reverse();
-
         let result = x;
 
-        for (let func of functions) {
+        for (let i = functions.length - 1; i >= 0; i--) {
+            const func = functions[i];
             const updatedValue = func(result);
             result = updatedValue;
         }
