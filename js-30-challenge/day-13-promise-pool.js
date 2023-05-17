@@ -1,6 +1,10 @@
 "use strict";
 
 /**
+ * solution 1
+ * time: O(n * m)
+ * space: O(n)
+ * 
  * @param {Function[]} functions
  * @param {number} n
  * @return {Function}
