@@ -39,7 +39,7 @@
  * @return {number}
  */
 function maximizeSum(nums, k) {
-    const largestElemIndex = getLargestElem(nums);
+    const largestElemIndex = getLargestElemIndex(nums);
     let largestElem = nums[largestElemIndex];
     let maxScore = 0;
 
@@ -59,7 +59,7 @@ function maximizeSum(nums, k) {
  * @param {number[]} arr 
  * @returns {number} index of largest elem
  */
-function getLargestElem(arr) {
+function getLargestElemIndex(arr) {
     let largestValue = arr[0];
     let largestElemIndex = 0;
 
