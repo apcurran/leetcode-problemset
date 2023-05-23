@@ -7,10 +7,40 @@ function TreeNode(val, left, right) {
     this.right = (right===undefined ? null : right);
 }
 
+// /**
+//  * solution 1 -- recursion
+//  * time: O(n^2)
+//  * space: O(n^2)
+//  * 
+//  * @param {TreeNode} root
+//  * @param {number} k
+//  * @return {number}
+//  */
+// function kthSmallest(root, k) {
+//     const elems = buildArrayFromBST(root, []);
+//     const zeroIndexedK = k - 1;
+
+//     return elems[zeroIndexedK];
+// }
+
+// /**
+//  * @param {TreeNode} root
+//  * @param {number[]} arr 
+//  * @returns {number[]}
+//  */
+// function buildArrayFromBST(root, arr) {
+//     if (root === null) return arr;
+
+//     const leftSide = buildArrayFromBST(root.left, arr);
+//     const rightSide = buildArrayFromBST(root.right, arr);
+
+//     return [...leftSide, root.val, ...rightSide];
+// }
+
 /**
- * solution 1 -- recursion
- * time: O(n^2)
- * space: O(n^2)
+ * solution 2 -- recursion (no copying of array)
+ * time: O(n)
+ * space: O(n)
  * 
  * @param {TreeNode} root
  * @param {number} k
@@ -31,8 +61,9 @@ function kthSmallest(root, k) {
 function buildArrayFromBST(root, arr) {
     if (root === null) return arr;
 
-    const leftSide = buildArrayFromBST(root.left, arr);
-    const rightSide = buildArrayFromBST(root.right, arr);
+    buildArrayFromBST(root.left, arr);
+    arr.push(root.val);
+    buildArrayFromBST(root.right, arr);
 
-    return [...leftSide, root.val, ...rightSide];
+    return arr;
 }
