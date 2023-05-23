@@ -31,9 +31,7 @@ function kthSmallest(root, k) {
 function buildArrayFromBST(root, arr) {
     if (root === null) return arr;
 
-    // check left side
     const leftSide = buildArrayFromBST(root.left, arr);
-    // check right side
     const rightSide = buildArrayFromBST(root.right, arr);
 
     return [...leftSide, root.val, ...rightSide];
