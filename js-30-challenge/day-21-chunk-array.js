@@ -12,14 +12,6 @@
  * @return {Array[]}
  */
 function chunk(arr, size) {
-    if (arr.length === 0) {
-        return [];
-    }
-
-    if (size >= arr.length) {
-        return [arr];
-    }
-
     let chunks = [];
 
     for (let i = 0; i < arr.length; i += size) {
