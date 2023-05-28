@@ -15,7 +15,7 @@ Array.prototype.groupBy = function(fn) {
     for (let elem of currentArr) {
         const key = fn(elem);
 
-        if (key in result) {
+        if (Object.hasOwn(result, key)) {
             result[key].push(elem);
         } else {
             result[key] = [elem];
