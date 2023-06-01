@@ -25,7 +25,7 @@ class ArrayWrapper {
      * @returns {string}
      */
     toString() {
-        return `[${this.nums.join(",")}]`;
+        return `[${this.nums}]`;
     }
 }
 
