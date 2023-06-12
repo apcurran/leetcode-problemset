@@ -18,8 +18,10 @@ function singleNonDuplicate(nums) {
         const leftNeighbor = nums[middle - 1];
         const rightNeighbor = nums[middle + 1];
 
+        // if no left neighbor (first elem) OR current elem is diff from left neighbor
         if (middle - 1 < 0 ||
-            leftNeighbor !== currentElement) {
+            currentElement !== leftNeighbor) {
+            // if no right neighbor (end of the list) OR current elem is diff from right neighbor
             if (middle + 1 === nums.length ||
                 currentElement !== rightNeighbor) {
                 return nums[middle];
