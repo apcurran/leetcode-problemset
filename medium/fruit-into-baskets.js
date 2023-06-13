@@ -3,7 +3,7 @@
 /**
  * solution 1 -- two-pointers with hashmap
  * time: O(n)
- * space: O(n)
+ * space: O(1) -- only two fruit types maintained at any one time
  * 
  * @param {number[]} fruits
  * @return {number}
