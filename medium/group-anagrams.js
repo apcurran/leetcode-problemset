@@ -16,19 +16,18 @@
 //         // Sort each str within iteration
 //         const alphaSortedStr = str
 //                                 .split("")
-//                                 .sort((a, b) => a > b ? 1 : -1)
+//                                 .sort()
 //                                 .join("");
         
 //         if (strsMap.has(alphaSortedStr)) {
 //             // Check if key exists in map, if so, then store original str in map as a val in an arr
-//             const strArrValue = strsMap.get(alphaSortedStr);
-//             const updatedStrArrValue = [...strArrValue, str];
-//             strsMap.set(alphaSortedStr, updatedStrArrValue);
+//             const strArrValues = strsMap.get(alphaSortedStr);
+//             strArrValues.push(str);
 //         } else {
 //             // Not in map obj
 //             // Store sorted str as a key in a map obj
-//             const strArrValue = [str];
-//             strsMap.set(alphaSortedStr, strArrValue);
+//             const strArrValues = [str];
+//             strsMap.set(alphaSortedStr, strArrValues);
 //         }
 //     }
 
