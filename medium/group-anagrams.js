@@ -1,39 +1,69 @@
 "use strict";
 
+// /**
+//  * Solution 1
+//  * time: O(n * m * log m)
+//  * space: O(n + m)
+//  * 
+//  * @param {string[]} strsArr
+//  * @return {string[][]}
+//  */
+// function groupAnagrams(strsArr) {
+//     // Create a map obj to store key/val pairs
+//     let strsMap = new Map();
+//     // Iterate through arr
+//     for (let str of strsArr) {
+//         // Sort each str within iteration
+//         const alphaSortedStr = str
+//                                 .split("")
+//                                 .sort((a, b) => a > b ? 1 : -1)
+//                                 .join("");
+        
+//         if (strsMap.has(alphaSortedStr)) {
+//             // Check if key exists in map, if so, then store original str in map as a val in an arr
+//             const strArrValue = strsMap.get(alphaSortedStr);
+//             const updatedStrArrValue = [...strArrValue, str];
+//             strsMap.set(alphaSortedStr, updatedStrArrValue);
+//         } else {
+//             // Not in map obj
+//             // Store sorted str as a key in a map obj
+//             const strArrValue = [str];
+//             strsMap.set(alphaSortedStr, strArrValue);
+//         }
+//     }
+
+//     // Iterate through map obj creating an arr with map values
+//     return [...strsMap.values()];
+// }
+
 /**
  * Solution 1
- * Time: O(n^2 log n)
- * Space: O(n)
+ * time: O(n * m * log m)
+ * space: O(n + m)
  * 
  * @param {string[]} strsArr
  * @return {string[][]}
  */
-function groupAnagrams(strsArr) {
-    // Create a map obj to store key/val pairs
-    let strsMap = new Map();
-    // Iterate through arr
-    for (let str of strsArr) {
-        // Sort each str within iteration
-        const alphaSortedStr = str
-                                .split("")
-                                .sort((a, b) => a > b ? 1 : -1)
-                                .join("");
-        
-        if (strsMap.has(alphaSortedStr)) {
-            // Check if key exists in map, if so, then store original str in map as a val in an arr
-            const strArrValue = strsMap.get(alphaSortedStr);
-            const updatedStrArrValue = [...strArrValue, str];
-            strsMap.set(alphaSortedStr, updatedStrArrValue);
-        } else {
-            // Not in map obj
-            // Store sorted str as a key in a map obj
-            const strArrValue = [str];
-            strsMap.set(alphaSortedStr, strArrValue);
-        }
+function groupAnagrams(strs) {
+    let anagramsCache = new Map();
+    let results = [];
+
+    for (let str of strs) {
+        const sortedStr = [...str].sort().join("");
+        // default to empty array
+        const strAnagrams = anagramsCache.get(sortedStr) || [];
+        strAnagrams.push(str);
+        // need to call Map.set()
+        anagramsCache.set(sortedStr, strAnagrams);
     }
 
-    // Iterate through map obj creating an arr with map values
-    return [...strsMap.values()];
+    // iterate Map cache
+    // add to results
+    for (let [, anagramsGroupList] of anagramsCache) {
+        results.push(anagramsGroupList);
+    }
+    
+    return results;
 }
 
 console.log( groupAnagrams(["eat","tea","tan","ate","nat","bat"]) ); // [["bat"],["nat","tan"],["ate","eat","tea"]]
