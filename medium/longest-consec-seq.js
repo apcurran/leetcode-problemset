@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1 -- cache
+ * solution 1 -- Set cache
  * time: O(n)
  * space: O(n)
  * 
@@ -9,23 +9,29 @@
  * @return {number}
  */
 function longestConsecutive(nums) {
-    let numsSet = new Set(nums);
-    let globalLongestConsec = 0;
+    let numsCache = new Set(nums);
+    let longestSequence = 0;
 
     for (let num of nums) {
-        // check if it is the start of a seq
-        if (!numsSet.has(num - 1)) {
-            let localLen = 1;
+        const leftNeighbor = num - 1;
 
-            while (numsSet.has(num + localLen)) {
-                localLen++;
+        // if there is not a left neighbor,
+        // then we know that this is the start of a new sequence
+        if (!numsCache.has(leftNeighbor)) {
+            let currentSequenceLength = 0;
+
+            // keep getting each consecutive number
+            // if the cache has the next consecutive number,
+            // then keep increasing the length of the sequence
+            while (numsCache.has(num + currentSequenceLength)) {
+                currentSequenceLength++;
             }
 
-            globalLongestConsec = Math.max(globalLongestConsec, localLen);
+            longestSequence = Math.max(longestSequence, currentSequenceLength);
         }
     }
 
-    return globalLongestConsec;
+    return longestSequence;
 }
 
 console.log( longestConsecutive([100, 4, 200, 1, 3, 2]) ); // 4
