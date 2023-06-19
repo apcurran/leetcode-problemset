@@ -29,12 +29,13 @@
 // }
 
 /**
- * solution 2
+ * solution 2 -- two pointers
  * time: O(n)
  * space: O(1)
+ * 
  * @param {number[]} numbers
  * @param {number} target
- * @return {number[]}
+ * @return {[number, number]|undefined}
  */
 function twoSum(numbers, target) {
     let leftPointer = 0;
