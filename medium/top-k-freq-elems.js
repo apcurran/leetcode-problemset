@@ -1,6 +1,40 @@
 "use strict";
 
+// /**
+//  * solution 1 -- hashmap
+//  * time: O(n * log n + k) -- sort hashmap
+//  * space: O(n)
+//  * 
+//  * @param {number[]} nums
+//  * @param {number} k
+//  * @return {number[]}
+//  */
+// function topKFrequent(nums, k) {
+//     let frequencyCache = new Map();
+    
+//     for (let num of nums) {
+//         const numFrequency = frequencyCache.get(num) || 0;
+//         frequencyCache.set(num, numFrequency + 1);
+//     }
+    
+//     // sort cache
+//     const sortedFrequency2DArr = [...frequencyCache.entries()]
+//                                                    .sort((a, b) => b[1] - a[1]);
+//     let results = [];
+
+//     for (let i = 0; i < k; i++) {
+//         const topFrequentNum = sortedFrequency2DArr[i][0];
+//         results.push(topFrequentNum);
+//     }
+
+//     return results;
+// }
+
 /**
+ * solution 2
+ * time: O(n)
+ * space: O(n)
+ * 
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}
