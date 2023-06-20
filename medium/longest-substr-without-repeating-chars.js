@@ -35,38 +35,67 @@
 //     return globalLargestCharCount;
 // }
 
+// /**
+//  * solution 2
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {string} str
+//  * @return {number}
+//  */
+// function lengthOfLongestSubstring(str) {
+//     if (str.length === 0) return 0;
+
+//     let globalLargestCharCount = 0;
+//     let leftPointer = 0;
+//     let rightPointer = 0;
+//     let charSet = new Set();
+
+//     while (rightPointer < str.length) {
+//         const currRightChar = str[rightPointer];
+//         const currLeftChar = str[leftPointer];
+
+//         if (!charSet.has(currRightChar)) {
+//             charSet.add(currRightChar);
+//             rightPointer++;
+//         } else {
+//             charSet.delete(currLeftChar);
+//             leftPointer++;
+//         }
+
+//         globalLargestCharCount = Math.max(globalLargestCharCount, rightPointer - leftPointer);
+//     }
+
+//     return globalLargestCharCount;
+// }
+
 /**
- * solution 2
- * time: O(n)
+ * solution 3 -- sliding window variation
+ * time: O(n) 
  * space: O(n)
  * 
  * @param {string} str
  * @return {number}
  */
 function lengthOfLongestSubstring(str) {
-    if (str.length === 0) return 0;
+    let seenChars = new Set();
+    let maxSubstrLength = 0;
 
-    let globalLargestCharCount = 0;
     let leftPointer = 0;
-    let rightPointer = 0;
-    let charSet = new Set();
-
-    while (rightPointer < str.length) {
-        const currRightChar = str[rightPointer];
-        const currLeftChar = str[leftPointer];
-
-        if (!charSet.has(currRightChar)) {
-            charSet.add(currRightChar);
-            rightPointer++;
-        } else {
-            charSet.delete(currLeftChar);
+    
+    for (let rightPointer = 0; rightPointer < str.length; rightPointer++) {
+        // duplicate char
+        while (seenChars.has(str[rightPointer])) {
+            // remove duplicates
+            seenChars.delete(str[leftPointer]);
             leftPointer++;
         }
 
-        globalLargestCharCount = Math.max(globalLargestCharCount, rightPointer - leftPointer);
+        seenChars.add(str[rightPointer]);
+        maxSubstrLength = Math.max(maxSubstrLength, seenChars.size);
     }
 
-    return globalLargestCharCount;
+    return maxSubstrLength;
 }
 
 console.log( lengthOfLongestSubstring("abcabcbb") ); // 3
