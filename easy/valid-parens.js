@@ -33,6 +33,42 @@ function isValid(str) {
     return stack.length === 0;
 }
 
+
+// /**
+//  * solution 2 -- alt stack version
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {string} str
+//  * @return {boolean}
+//  */
+// function isValid(str) {
+//     const parenthesesMatches = new Map([
+//         [")", "("],
+//         ["]", "["],
+//         ["}", "{"]
+//     ]);
+//     let stack = [];
+
+//     for (let char of str) {
+//         if (!parenthesesMatches.has(char)) {
+//             stack.push(char);
+
+//             continue;
+//         }
+
+//         const stackPeek = stack[stack.length - 1];
+
+//         if (stack.length > 0 && parenthesesMatches.get(char) === stackPeek) {
+//             stack.pop();
+//         } else {
+//             return false;
+//         }
+//     }
+
+//     return stack.length === 0;
+// }
+
 console.log(isValid("()")); // true
 console.log(isValid("()[]{}")); // true
 console.log(isValid("(]")); // false
