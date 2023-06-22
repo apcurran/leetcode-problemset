@@ -43,27 +43,44 @@ d.next = e;
 //     return previous;
 // }
 
+// /**
+//  * solution 2 -- recursive
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {ListNode} head
+//  * @return {ListNode|null}
+//  */
+// function reverseList(head) {
+//     if (head === null) return null;
+
+//     let newHead = head;
+
+//     if (head.next) {
+//         newHead = reverseList(head.next);
+//         head.next.next = head;
+//     }
+
+//     head.next = null;
+
+//     return newHead;
+// }
+
 /**
- * solution 2 -- recursive
+ * solution 3 -- recursive alternative
  * time: O(n)
  * space: O(n)
  * 
  * @param {ListNode} head
  * @return {ListNode|null}
  */
-function reverseList(head) {
-    if (head === null) return null;
+function reverseList(head, previous = null) {
+    if (head === null) return previous;
 
-    let newHead = head;
-
-    if (head.next) {
-        newHead = reverseList(head.next);
-        head.next.next = head;
-    }
-
-    head.next = null;
-
-    return newHead;
+    const nextTemp = head.next;
+    head.next = previous;
+    
+    return reverseList(nextTemp, head);
 }
 
 console.log( reverseList(a) ); // 5 -> 4 -> 3 -> 2 -> 1
