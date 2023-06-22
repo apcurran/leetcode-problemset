@@ -17,30 +17,53 @@ b.next = c;
 c.next = d;
 d.next = e;
 
+// /**
+//  * solution 1 -- iterative
+//  * time: O(n)
+//  * space: O(1)
+//  * 
+//  * @param {ListNode} head
+//  * @return {ListNode}
+//  */
+// function reverseList(head) {
+//     let current = head;
+//     let previous = null;
+
+//     while (current !== null) {
+//         // save temp next pointer
+//         const tempNextPointer = current.next;
+//         // make next pointer point to previous
+//         current.next = previous;
+//         // move previous pointer current node
+//         previous = current;
+//         // move current pointer to next node in list
+//         current = tempNextPointer;
+//     }
+
+//     return previous;
+// }
+
 /**
- * solution 1 -- iterative
+ * solution 2 -- recursive
  * time: O(n)
- * space: O(1)
+ * space: O(n)
  * 
  * @param {ListNode} head
- * @return {ListNode}
+ * @return {ListNode|null}
  */
 function reverseList(head) {
-    let current = head;
-    let previous = null;
+    if (head === null) return null;
 
-    while (current !== null) {
-        // save temp next pointer
-        const tempNextPointer = current.next;
-        // make next pointer point to previous
-        current.next = previous;
-        // move previous pointer current node
-        previous = current;
-        // move current pointer to next node in list
-        current = tempNextPointer;
+    let newHead = head;
+
+    if (head.next) {
+        newHead = reverseList(head.next);
+        head.next.next = head;
     }
 
-    return previous;
+    head.next = null;
+
+    return newHead;
 }
 
 console.log( reverseList(a) ); // 5 -> 4 -> 3 -> 2 -> 1
