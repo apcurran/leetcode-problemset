@@ -46,9 +46,10 @@ function findMin(nums) {
         }
 
         const middle = left + Math.floor((right - left) / 2);
-        res = Math.min(res, nums[middle]);
+        const value = nums[middle];
+        res = Math.min(res, value);
 
-        if (nums[middle] >= nums[left]) {
+        if (value >= nums[left]) {
             // search right
             left = middle + 1;
         } else {
