@@ -21,6 +21,10 @@
             "error",
             "always"
         ],
-        "arrow-parens": "error"
+        "arrow-parens": "error",
+        "eol-last": [
+            "error",
+            "always"
+        ]
     }
 }
