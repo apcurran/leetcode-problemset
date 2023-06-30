@@ -1,33 +1,35 @@
 "use strict";
 
 /**
- * solution 1 -- sort strings
- * time: O(n * m * log m)
+ * solution 1 -- sort strings (barely passes)
+ * time: O(s1 * log(s1) + s2 * log(s2))
+ * space: O(s1 + s2)
  * 
  * @param {string} s1
  * @param {string} s2
  * @return {boolean}
  */
 function checkInclusion(s1, s2) {
-    // check for equal strings after sorting -- similar to an anagram check
-    const s1Length = s1.length;
-    const sortedS1 = s1
-                        .split("")
-                        .sort()
-                        .join("");
-
+    const sortedS1 = getSortedStr(s1);
     
-    for (let i = 0; i < s2.length - s1Length + 1; i++) {
-        const sortedS2Chunk = s2
-                                .slice(i, i + s1Length)
-                                .split("")
-                                .sort()
-                                .join("");
+    for (let i = 0; i < s2.length - s1.length + 1; i++) {
+        const sortedS2Chunk = getSortedStr(s2.slice(i, i + s1.length));
 
         if (sortedS2Chunk === sortedS1) return true;
     }
 
     return false;
+}
+
+/**
+ * @param {string} str 
+ * @returns {string}
+ */
+function getSortedStr(str) {
+    return str
+            .split("")
+            .sort()
+            .join("");
 }
 
 console.log( checkInclusion("ba", "eidbaooo") ); // true
