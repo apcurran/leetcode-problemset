@@ -2,6 +2,8 @@
 
 /**
  * solution 1 -- recursion
+ * time: O(2^n)
+ * space: O(n)
  * 
  * @param {number} n
  * @return {string[]}
