@@ -13,8 +13,8 @@ function longestSubarray(nums) {
     let windowZerosCount = 0;
     let longestOnesWindowCount = 0;
 
-    for (let i = 0; i < nums.length; i++) {
-        const currentNum = nums[i];
+    for (let rightPointer = 0; rightPointer < nums.length; rightPointer++) {
+        const currentNum = nums[rightPointer];
 
         if (currentNum === 0) {
             windowZerosCount += 1;
@@ -31,7 +31,7 @@ function longestSubarray(nums) {
             leftPointer += 1;
         }
 
-        const currentWindowOnesCount = i - leftPointer;
+        const currentWindowOnesCount = rightPointer - leftPointer;
         longestOnesWindowCount = Math.max(longestOnesWindowCount, currentWindowOnesCount);
     }
 
