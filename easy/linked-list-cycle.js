@@ -1,12 +1,10 @@
 "use strict";
 
-
 // Definition for singly-linked list.
 function ListNode(val) {
     this.val = val;
     this.next = null;
 }
-
 
 /**
  * solution 1 -- tortoise and hare pointers (slow -> incr by one, fast -> incr by two)
@@ -52,6 +50,30 @@ function hasCycle(head) {
 
 //         // traverse to next node
 //         curr = curr.next;
+//     }
+
+//     return false;
+// }
+
+// /**
+//  * solution 3 -- flag visited nodes
+//  * time: O(n)
+//  * space: O(1)
+//  * 
+//  * @param {ListNode} head
+//  * @return {boolean}
+//  */
+// function hasCycle(head) {
+//     let current = head;
+
+//     while (current !== null) {
+//         if (current.hasSeen === true) {
+//             return true;
+//         }
+
+//         // mark node with hasSeen flag
+//         current.hasSeen = true;
+//         current = current.next;
 //     }
 
 //     return false;
