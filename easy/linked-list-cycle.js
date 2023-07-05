@@ -40,14 +40,13 @@ function hasCycle(head) {
 //  */
 // function hasCycle(head) {
 //     let curr = head;
-//     let valsSet = new Set();
+//     let visitedNodes = new Set();
 
 //     while (curr !== null) {
 //         // check for re-occurrence of node (indicating a cycle)
-//         if (valsSet.has(curr)) return true;
+//         if (visitedNodes.has(curr)) return true;
 //         // add node to Set
-//         valsSet.add(curr);
-
+//         visitedNodes.add(curr);
 //         // traverse to next node
 //         curr = curr.next;
 //     }
