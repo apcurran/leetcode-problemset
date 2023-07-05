@@ -7,34 +7,70 @@ function ListNode(val, next) {
 }
 
 /**
- * solution 1 -- two pointers with dummy node technique
+ * solution 1 -- one pointer, two passes
  * time: O(n)
  * space: O(1)
  * 
  * @param {ListNode} head
- * @param {number} n
+ * @param {number} nthFromEnd
  * @return {ListNode}
  */
-function removeNthFromEnd(head, n) {
-    const dummyNode = new ListNode(0, head);
-    let leftPointer = dummyNode;
-    let rightPointer = head;
+function removeNthFromEnd(head, nthFromEnd) {
+    let current = head;
+    let listLength = 0;
 
-    // initialize right pointer to be (head + n)
-    while (n > 0 && rightPointer !== null) {
-        rightPointer = rightPointer.next;
-        n--;
+    while (current !== null) {
+        current = current.next;
+        listLength++;
     }
 
-    // keep iterating until we reach the end of the list
-    while (rightPointer !== null) {
-        leftPointer = leftPointer.next;
-        rightPointer = rightPointer.next;
+    // EDGE CASE:
+    // if we need to remove the head (first) node,
+    // simply return the head's next pointer (second node)
+    if (listLength === nthFromEnd) return head.next;
+
+    // reuse pointer by reseting position back to the beginning
+    current = head;
+
+    for (let i = 1; i < listLength - nthFromEnd; i++) {
+        current = current.next;
     }
 
-    // right pointer is now at the end
-    // delete node
-    leftPointer.next = leftPointer.next.next;
+    // remove node
+    current.next = current.next.next;
 
-    return dummyNode.next;
+    return head;
 }
+
+// /**
+//  * solution 2 -- two pointers with dummy node technique
+//  * time: O(n)
+//  * space: O(1)
+//  * 
+//  * @param {ListNode} head
+//  * @param {number} n
+//  * @return {ListNode}
+//  */
+// function removeNthFromEnd(head, n) {
+//     const dummyNode = new ListNode(0, head);
+//     let leftPointer = dummyNode;
+//     let rightPointer = head;
+
+//     // initialize right pointer to be (head + n)
+//     while (n > 0 && rightPointer !== null) {
+//         rightPointer = rightPointer.next;
+//         n--;
+//     }
+
+//     // keep iterating until we reach the end of the list
+//     while (rightPointer !== null) {
+//         leftPointer = leftPointer.next;
+//         rightPointer = rightPointer.next;
+//     }
+
+//     // right pointer is now at the end
+//     // delete node
+//     leftPointer.next = leftPointer.next.next;
+
+//     return dummyNode.next;
+// }
