@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1 -- sliding window
+ * solution 1 -- sliding window technique
  * time: O(n)
  * space: O(1)
  * 
