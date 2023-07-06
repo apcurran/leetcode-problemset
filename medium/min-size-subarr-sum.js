@@ -1,7 +1,39 @@
 "use strict";
 
+// /**
+//  * solution 1 -- brute force (TLE)
+//  * time: O(n^2)
+//  * space: O(1)
+//  * 
+//  * @param {number} target
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function minSubArrayLen(target, nums) {
+//     let smallestSubarrLength = Infinity;
+
+//     outerLoop: for (let i = 0; i < nums.length; i++) {
+//         let currentSum = 0;
+
+//         for (let j = i; j < nums.length; j++) {
+//             const currentNum = nums[j];
+//             currentSum += currentNum;
+
+//             if (currentSum >= target) {
+//                 // record subarr length
+//                 const currentSubarrLength = j - i + 1;
+//                 smallestSubarrLength = Math.min(smallestSubarrLength, currentSubarrLength);
+//                 // skip rest of inner loop (it will only grow the current subarray length)
+//                 continue outerLoop;
+//             }
+//         }
+//     }
+
+//     return smallestSubarrLength === Infinity ? 0 : smallestSubarrLength;
+// }
+
 /**
- * solution 1 -- sliding window
+ * solution 2 -- sliding window
  * time: O(n)
  * space: O(1)
  * 
@@ -34,3 +66,5 @@ function minSubArrayLen(target, nums) {
 }
 
 console.log( minSubArrayLen(7, [2,3,1,2,4,3]) ); // 2 (4, 3)
+console.log( minSubArrayLen(4, [1,4,4]) ); // 1
+console.log( minSubArrayLen(11, [1,1,1,1,1,1,1,1]) ); // 0
