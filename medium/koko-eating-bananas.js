@@ -2,7 +2,7 @@
 
 // /**
 //  * solution 1 -- brute force
-//  * time: O(k * n)
+//  * time: O(max(n) * n)
 //  * space: O(1)
 //  * 
 //  * @param {number[]} piles
