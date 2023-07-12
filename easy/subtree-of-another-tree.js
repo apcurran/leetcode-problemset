@@ -9,6 +9,8 @@ function TreeNode(val, left, right) {
 
 /**
  * solution 1 -- recursive
+ * time: O(m * n)
+ * space: O(m + n)
  * 
  * @param {TreeNode} root
  * @param {TreeNode} subRoot
