@@ -41,5 +41,8 @@ function areSameTrees(tree1, tree2) {
     // vals have to match
     if (tree1.val !== tree2.val) return false;
 
-    return areSameTrees(tree1.left, tree2.left) && areSameTrees(tree1.right, tree2.right);
+    const areLeftSubtreesSame = areSameTrees(tree1.left, tree2.left);
+    const areRightSubtreesSame = areSameTrees(tree1.right, tree2.right);
+
+    return areLeftSubtreesSame && areRightSubtreesSame;
 }
