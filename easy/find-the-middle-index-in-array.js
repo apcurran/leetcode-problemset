@@ -10,8 +10,8 @@
  */
 function findMiddleIndex(nums) {
     for (let i = 0; i < nums.length; i++) {
-        const leftNums = nums.slice(0, i) || [0];
-        const rightNums = nums.slice(i + 1) || [0];
+        const leftNums = nums.slice(0, i);
+        const rightNums = nums.slice(i + 1);
         const leftNumsSum = leftNums.reduce((sum, currentNum) => sum + currentNum, 0);
         const rightNumsSum = rightNums.reduce((sum, currentNum) => sum + currentNum, 0);
 
