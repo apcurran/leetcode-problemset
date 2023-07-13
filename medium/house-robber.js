@@ -63,7 +63,7 @@
 // /**
 //  * solution 3 -- DP
 //  * time: O(n)
-//  * space: O(1)
+//  * space: O(n)
 //  * 
 //  * @param {number[]} nums
 //  * @return {number}
@@ -85,7 +85,7 @@
 // }
 
 /**
- * solution 3 -- DP
+ * solution 4 -- DP
  * time: O(n)
  * space: O(1)
  * 
