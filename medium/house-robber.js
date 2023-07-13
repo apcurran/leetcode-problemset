@@ -1,8 +1,34 @@
 "use strict";
 
+// /**
+//  * solution 1 -- recursion top-down (TLE)
+//  * time: O(2^n)
+//  * space: O(n)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function rob(nums) {
+//     return getRobberyTotal(nums, nums.length - 1);    
+// }
+
+// /**
+//  * @param {number[]} nums 
+//  * @param {number} i
+//  * @returns {number}
+//  */
+// function getRobberyTotal(nums, i) {
+//     if (i < 0) return 0;
+
+//     const totalOfCurrentPlusHouseBeforeLastLoot = nums[i] + getRobberyTotal(nums, i - 2);
+//     const totalOfPreviousHouseLoot = getRobberyTotal(nums, i - 1);
+
+//     return Math.max(totalOfCurrentPlusHouseBeforeLastLoot, totalOfPreviousHouseLoot); 
+// }
+
 /**
- * solution 1 -- recursion top-down (TLE)
- * time: O(2^n)
+ * solution 2 -- recursion top-down with caching
+ * time: O(n)
  * space: O(n)
  * 
  * @param {number[]} nums
@@ -17,13 +43,21 @@ function rob(nums) {
  * @param {number} i
  * @returns {number}
  */
-function getRobberyTotal(nums, i) {
+function getRobberyTotal(nums, i, cache = new Map()) {
     if (i < 0) return 0;
 
-    const totalOfCurrentPlusHouseBeforeLastLoot = nums[i] + getRobberyTotal(nums, i - 2);
-    const totalOfPreviousHouseLoot = getRobberyTotal(nums, i - 1);
+    // check cache for pre-computed value
+    if (cache.has(i)) {
+        return cache.get(i);
+    }
 
-    return Math.max(totalOfCurrentPlusHouseBeforeLastLoot, totalOfPreviousHouseLoot); 
+    const totalOfCurrentPlusHouseBeforeLastLoot = nums[i] + getRobberyTotal(nums, i - 2, cache);
+    const totalOfPreviousHouseLoot = getRobberyTotal(nums, i - 1, cache);
+    const maxOfBothRobberyOptions = Math.max(totalOfCurrentPlusHouseBeforeLastLoot, totalOfPreviousHouseLoot);
+    // update cache
+    cache.set(i, maxOfBothRobberyOptions);
+
+    return maxOfBothRobberyOptions;
 }
 
 // /**
