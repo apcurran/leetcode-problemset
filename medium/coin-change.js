@@ -97,6 +97,7 @@ function coinChange(coins, amount) {
 
     for (let i = 1; i < memo.length; i++) {
         for (let coin of coins) {
+            // if non-negative, keep going
             if (i - coin >= 0) {
                 memo[i] = Math.min(memo[i], memo[i - coin] + 1);
             }
@@ -104,7 +105,7 @@ function coinChange(coins, amount) {
     }
 
     const result = memo[amount];
-    
+
     if (result === Infinity) {
         return -1;
     } else {
