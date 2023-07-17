@@ -66,6 +66,7 @@ function coinChange(coins, amount, cache = new Map()) {
         const coinCount = coinChange(coins, updatedAmount, cache);
         
         if (coinCount >= 0) {
+            // coinCount + 1 to include this current coin for total coins
             if (minTotalCoins < 0) {
                 minTotalCoins = coinCount + 1;
             } else {
