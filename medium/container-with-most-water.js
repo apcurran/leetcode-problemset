@@ -32,14 +32,16 @@
  * @return {number}
  */
 function maxArea(heightsArr) {
-    let maxArea = 0;
     let leftPointer = 0;
     let rightPointer = heightsArr.length - 1;
+    let maxArea = 0;
 
     while (leftPointer < rightPointer) {
         const leftHeight = heightsArr[leftPointer];
         const rightHeight = heightsArr[rightPointer];
-        const currentArea = (rightPointer - leftPointer) * Math.min(leftHeight, rightHeight);
+        const height = Math.min(leftHeight, rightHeight);
+        const width = rightPointer - leftPointer;
+        const currentArea = width * height;
         maxArea = Math.max(maxArea, currentArea);
 
         // move pointer on smaller value
