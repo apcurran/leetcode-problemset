@@ -48,8 +48,43 @@ b.right = d;
 //     return values[k - 1];
 // }
 
+// /**
+//  * solution 2 -- DFS
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @param {number} k
+//  * @return {number}
+//  */
+// function kthSmallest(root, k) {
+//     let stack = [];
+//     let n = root;
+//     let count = 0;
+
+//     while (stack.length > 0 || n !== null) {
+//         if (n !== null) {
+//             stack.push(n);
+//             n = n.left;
+//         } else {
+//             const node = stack.pop();
+//             // update count
+//             count++;
+
+//             if (count === k) {
+//                 return node.val;
+//             }
+
+//             n = node?.right;
+//         }
+//     }
+
+//     // should not be reached
+//     return -1;
+// }
+
 /**
- * solution 2 -- DFS
+ * solution 2 -- DFS recursion
  * time: O(n)
  * space: O(n)
  * 
@@ -58,29 +93,23 @@ b.right = d;
  * @return {number}
  */
 function kthSmallest(root, k) {
-    let stack = [];
-    let n = root;
-    let count = 0;
+    const nodeValues = recurse(root, []);
 
-    while (stack.length > 0 || n !== null) {
-        if (n !== null) {
-            stack.push(n);
-            n = n.left;
-        } else {
-            const node = stack.pop();
-            // update count
-            count++;
+    return nodeValues[k - 1];
+}
 
-            if (count === k) {
-                return node.val;
-            }
+/**
+ * @param {TreeNode} root 
+ * @param {number[]} values 
+ */
+function recurse(root, values) {
+    if (root === null) return values;
 
-            n = node?.right;
-        }
-    }
+    recurse(root.left, values);
+    values.push(root.val);
+    recurse(root.right, values);
 
-    // should not be reached
-    return -1;
+    return values;
 }
 
 console.log(kthSmallest(a, 1)); // 1
