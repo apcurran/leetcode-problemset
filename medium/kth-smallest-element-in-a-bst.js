@@ -16,9 +16,41 @@ a.left = b;
 a.right = c;
 b.right = d;
 
+// /**
+//  * solution 1 -- DFS (unoptimized)
+//  * time: O(n * log n) -- sort
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @param {number} k
+//  * @return {number}
+//  */
+// function kthSmallest(root, k) {
+//     let values = [];
+//     let stack = [root];
+
+//     while (stack.length > 0) {
+//         const currentNode = stack.pop();
+//         values.push(currentNode.val);
+
+//         if (currentNode?.right !== null) {
+//             stack.push(currentNode?.right);
+//         }
+
+//         if (currentNode?.left !== null) {
+//             stack.push(currentNode?.left);
+//         }
+//     }
+
+//     // ASC order
+//     values.sort((a, b) => a - b);
+
+//     return values[k - 1];
+// }
+
 /**
- * solution 1 -- DFS (unoptimized)
- * time: O(n * log n) -- sort
+ * solution 2 -- DFS
+ * time: O(n)
  * space: O(n)
  * 
  * @param {TreeNode} root
@@ -26,26 +58,29 @@ b.right = d;
  * @return {number}
  */
 function kthSmallest(root, k) {
-    let values = [];
-    let stack = [root];
+    let stack = [];
+    let n = root;
+    let count = 0;
 
-    while (stack.length > 0) {
-        const currentNode = stack.pop();
-        values.push(currentNode.val);
+    while (stack.length > 0 || n !== null) {
+        if (n !== null) {
+            stack.push(n);
+            n = n.left;
+        } else {
+            const node = stack.pop();
+            // update count
+            count++;
 
-        if (currentNode?.right !== null) {
-            stack.push(currentNode?.right);
-        }
+            if (count === k) {
+                return node.val;
+            }
 
-        if (currentNode?.left !== null) {
-            stack.push(currentNode?.left);
+            n = node?.right;
         }
     }
 
-    // ASC order
-    values.sort((a, b) => a - b);
-
-    return values[k - 1];
+    // should not be reached
+    return -1;
 }
 
 console.log(kthSmallest(a, 1)); // 1
