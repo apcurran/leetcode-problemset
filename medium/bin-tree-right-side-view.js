@@ -7,44 +7,47 @@ function TreeNode(val, left, right) {
     this.right = (right===undefined ? null : right);
 }
 
+/**
+ * solution 1 -- BFS
+ * time: O(n^2)
+ * space: O(n)
+ * 
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+function rightSideView(root) {
+    if (root === null) return [];
+
+    // go to furthest right side nodes
+    let queue = [root];
+    let results = [];
+
+    while (queue.length > 0) {
+        const levelLength = queue.length;
+
+        for (let i = 0; i < levelLength; i++) {
+            const currentNode = queue.shift();
+
+            // last node in level
+            if (i === levelLength - 1) {
+                results.push(currentNode.val);
+            }
+
+            if (currentNode.left !== null) {
+                queue.push(currentNode.left);
+            }
+
+            if (currentNode.right !== null) {
+                queue.push(currentNode.right);
+            }
+        }
+    }
+
+    return results;
+}
+
 // /**
-//  * solution 1 -- BFS
-//  * time: O(n^2)
-//  * space: O(n)
-//  * 
-//  * @param {TreeNode} root
-//  * @return {number[]}
-//  */
-// function rightSideView(root) {
-//     if (root === null) return [];
-
-//     let queue = [root];
-//     let results = [];
-
-//     while (queue.length > 0) {
-//         let rightSideNode = null;
-//         let queueLength = queue.length;
-        
-//         for (let i = 0; i < queueLength; i++) {
-//             const currentNode = queue.shift();
-
-//             if (currentNode !== null) {
-//                 rightSideNode = currentNode;
-//                 queue.push(currentNode.left);
-//                 queue.push(currentNode.right);
-//             }
-//         }
-
-//         if (rightSideNode !== null) {
-//             results.push(rightSideNode.val);
-//         }
-//     }
-
-//     return results;
-// }
-
-// /**
-//  * solution 2 -- BFS slight alterations
+//  * solution 2 -- reverse BFS (right to left)
 //  * time: O(n^2)
 //  * space: O(n)
 //  * 
@@ -82,41 +85,41 @@ function TreeNode(val, left, right) {
 //     return results;
 // }
 
-/**
- * solution 3 -- DFS recursion
- * time: O(n)
- * space: O(n)
- * 
- * @param {TreeNode} root
- * @return {number[]}
- */
-function rightSideView(root) {
-    let results = [];
+// /**
+//  * solution 3 -- DFS recursion
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @return {number[]}
+//  */
+// function rightSideView(root) {
+//     let results = [];
 
-    dfs(root, 0, results);
+//     dfs(root, 0, results);
 
-    return results;
-}
+//     return results;
+// }
 
-/**
- * 
- * @param {TreeNode} root 
- * @param {number} level 
- * @param {number[]} results 
- * @returns {void}
- */
-function dfs(root, level, results) {
-    if (root === null) return;
+// /**
+//  * 
+//  * @param {TreeNode} root 
+//  * @param {number} level 
+//  * @param {number[]} results 
+//  * @returns {void}
+//  */
+// function dfs(root, level, results) {
+//     if (root === null) return;
 
-    if (level >= results.length) {
-        results.push(root.val);
-    } else {
-        results[level] = root.val;
-    }
+//     if (level >= results.length) {
+//         results.push(root.val);
+//     } else {
+//         results[level] = root.val;
+//     }
 
-    dfs(root.left, level + 1, results);
-    dfs(root.right, level + 1, results);
-}
+//     dfs(root.left, level + 1, results);
+//     dfs(root.right, level + 1, results);
+// }
 
 const a = new TreeNode(1);
 const b = new TreeNode(2);
