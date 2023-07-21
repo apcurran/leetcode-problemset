@@ -19,7 +19,6 @@ function goodNodes(root) {
     let goodNodesCount = 0;
 
     /**
-     * 
      * @param {TreeNode} root 
      * @param {number} maxValue 
      * @returns {void}
@@ -35,6 +34,7 @@ function goodNodes(root) {
         dfs(root.left, maxValue);
         dfs(root.right, maxValue);
     }
+    
     dfs(root, root.val);
 
     return goodNodesCount;
