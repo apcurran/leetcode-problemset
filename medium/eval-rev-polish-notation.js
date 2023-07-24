@@ -9,29 +9,30 @@
  * @return {number}
  */
 function evalRPN(tokens) {
+    const arithmeticSymbols = "+-*/";
     let stack = [];
 
     for (let token of tokens) {
-        if (token === "+") {
-            const sum = stack.pop() + stack.pop();
-            stack.push(sum);
-        } else if (token === "-") {
-            const a = stack.pop();
-            const b = stack.pop();
-            const diff = b - a;
-            stack.push(diff);
-        } else if (token === "*") {
-            const prod = stack.pop() * stack.pop();
-            stack.push(prod);
-        } else if (token === "/") {
-            const a = stack.pop();
-            const b = stack.pop();
-            const quotient = Math.trunc(b / a);
-            stack.push(quotient);
+        if (!arithmeticSymbols.includes(token)) {
+            stack.push(token);
         } else {
-            // number -- not an op
-            const num = Number(token);
-            stack.push(num);
+            // if token is arithmetic symbol, pop two previous stack items, perform op, then add back to stack
+            const item2 = Number(stack.pop());
+            const item1 = Number(stack.pop());
+
+            if (token === "+") {
+                const sum = item1 + item2;
+                stack.push(sum);
+            } else if (token === "-") {
+                const diff = item1 - item2;
+                stack.push(diff);
+            } else if (token === "*") {
+                const product = item1 * item2;
+                stack.push(product);
+            } else {
+                const quotient = Math.trunc(item1 / item2);
+                stack.push(quotient);
+            }
         }
     }
 
