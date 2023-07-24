@@ -33,21 +33,21 @@
  */
 function findMin(nums) {
     // binary search
-    let res = nums[0];
+    let minNum = nums[0];
     let left = 0;
     let right = nums.length - 1;
 
     while (left <= right) {
-        // we are within a sorted portion
+        // already sorted array, no rotation
         if (nums[left] < nums[right]) {
-            res = Math.min(res, nums[left]);
+            minNum = Math.min(minNum, nums[left]);
 
             break;
         }
 
         const middle = left + Math.floor((right - left) / 2);
         const value = nums[middle];
-        res = Math.min(res, value);
+        minNum = Math.min(minNum, value);
 
         if (value >= nums[left]) {
             // search right
@@ -58,7 +58,7 @@ function findMin(nums) {
         }
     }
 
-    return res;
+    return minNum;
 }
 
 console.log( findMin([3, 4, 5, 1, 2]) ); // 1
