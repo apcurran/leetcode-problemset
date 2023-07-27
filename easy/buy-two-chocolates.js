@@ -1,30 +1,52 @@
 "use strict";
 
+// /**
+//  * solution 1
+//  * time: O(n^2)
+//  * space: O(1)
+//  * 
+//  * @param {number[]} prices
+//  * @param {number} money
+//  * @return {number}
+//  */
+// function buyChoco(prices, money) {
+//     let lowestChocoTotal = prices[0] + prices[1];
+
+//     for (let i = 0; i < prices.length; i++) {
+//         const chocoOne = prices[i];
+
+//         for (let j = i + 1; j < prices.length; j++) {
+//             const chocoTwo = prices[j];
+//             const chocoTotal = chocoOne + chocoTwo;
+
+//             if (chocoTotal <= money) {
+//                 lowestChocoTotal = Math.min(lowestChocoTotal, chocoTotal);
+//             }
+//         }
+//     }
+
+//     const leftOverMoney = money - lowestChocoTotal;
+
+//     if (leftOverMoney >= 0) {
+//         return leftOverMoney;
+//     } else {
+//         return money;
+//     }
+// }
+
 /**
- * solution 1
- * time: O(n^2)
- * space: O(1)
+ * solution 2 -- sort
+ * time: O(n * log n)
+ * space: O(n) -- Array.prototype.sort()
  * 
  * @param {number[]} prices
  * @param {number} money
  * @return {number}
  */
 function buyChoco(prices, money) {
-    let lowestChocoTotal = prices[0] + prices[1];
+    prices.sort((a, b) => a - b);
 
-    for (let i = 0; i < prices.length; i++) {
-        const chocoOne = prices[i];
-
-        for (let j = i + 1; j < prices.length; j++) {
-            const chocoTwo = prices[j];
-            const chocoTotal = chocoOne + chocoTwo;
-
-            if (chocoTotal <= money) {
-                lowestChocoTotal = Math.min(lowestChocoTotal, chocoTotal);
-            }
-        }
-    }
-
+    const lowestChocoTotal = prices[0] + prices[1];
     const leftOverMoney = money - lowestChocoTotal;
 
     if (leftOverMoney >= 0) {
