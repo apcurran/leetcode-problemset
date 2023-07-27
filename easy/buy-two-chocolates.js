@@ -34,20 +34,53 @@
 //     }
 // }
 
+// /**
+//  * solution 2 -- sort
+//  * time: O(n * log n)
+//  * space: O(n) -- Array.prototype.sort()
+//  * 
+//  * @param {number[]} prices
+//  * @param {number} money
+//  * @return {number}
+//  */
+// function buyChoco(prices, money) {
+//     prices.sort((a, b) => a - b);
+
+//     const lowestChocoTotal = prices[0] + prices[1];
+//     const leftOverMoney = money - lowestChocoTotal;
+
+//     if (leftOverMoney >= 0) {
+//         return leftOverMoney;
+//     } else {
+//         return money;
+//     }
+// }
+
 /**
- * solution 2 -- sort
- * time: O(n * log n)
- * space: O(n) -- Array.prototype.sort()
+ * solution 3 -- two min nums
+ * time: O(n)
+ * space: O(1)
  * 
  * @param {number[]} prices
  * @param {number} money
  * @return {number}
  */
 function buyChoco(prices, money) {
-    prices.sort((a, b) => a - b);
+    let minChoco1 = Infinity;
+    let minChoco2 = Infinity;
 
-    const lowestChocoTotal = prices[0] + prices[1];
-    const leftOverMoney = money - lowestChocoTotal;
+    for (let i = 0; i < prices.length; i++) {
+        const choco = prices[i];
+
+        if (choco < minChoco1) {
+            minChoco2 = minChoco1;
+            minChoco1 = choco;
+        } else if (choco < minChoco2) {
+            minChoco2 = choco;
+        }
+    }
+
+    const leftOverMoney = money - (minChoco1 + minChoco2);
 
     if (leftOverMoney >= 0) {
         return leftOverMoney;
