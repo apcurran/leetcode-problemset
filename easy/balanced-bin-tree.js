@@ -7,8 +7,42 @@ function TreeNode(val, left, right) {
     this.right = (right === undefined ? null : right);
 }
 
+// /**
+//  * solution 1
+//  * time: O(n^2)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @return {boolean}
+//  */
+// function isBalanced(root) {
+//     if (root === null) return true;
+
+//     const leftSubtree = getDepth(root.left);
+//     const rightSubtree = getDepth(root.right);
+//     const subtreesDiff = Math.abs(leftSubtree - rightSubtree);
+
+//     const isLeftSubtreeBalanced = isBalanced(root.left);
+//     const isRightSubtreeBalanced = isBalanced(root.right);
+
+//     return subtreesDiff <= 1 && isLeftSubtreeBalanced && isRightSubtreeBalanced;
+// }
+
+// /**
+//  * @param {TreeNode} root 
+//  * @returns {number}
+//  */
+// function getDepth(root) {
+//     if (root === null) return 0;
+
+//     const leftSubtreeDepth = getDepth(root.left);
+//     const rightSubtreeDepth = getDepth(root.right);
+
+//     return 1 + Math.max(leftSubtreeDepth, rightSubtreeDepth);
+// }
+
 /**
- * solution 1 -- recursive
+ * solution 2 -- recursive
  * time: O(n)
  * space: O(n)
  * 
