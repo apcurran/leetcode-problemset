@@ -53,7 +53,7 @@
  */
 function minEatingSpeed(piles, h) {
     let left = 1;
-    let right = getMaxElementInList(piles);
+    let right = getMax(piles);
     let result = right; // init to known possible answer
 
     while (left <= right) {
@@ -86,7 +86,7 @@ function minEatingSpeed(piles, h) {
  * @param {number[]} arr 
  * @returns {number}
  */
-function getMaxElementInList(arr) {
+function getMax(arr) {
     let max = arr[0];
 
     for (let i = 1; i < arr.length; i++) {
