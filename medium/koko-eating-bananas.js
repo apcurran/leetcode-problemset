@@ -44,7 +44,7 @@
 
 /**
  * solution 2 -- binary search
- * time: O(n * log n)
+ * time: O(log(max(n)) * n)
  * space: O(1)
  * 
  * @param {number[]} piles
