@@ -54,31 +54,32 @@
 function minEatingSpeed(piles, h) {
     let left = 1;
     let right = getMaxElementInList(piles);
-    let res = right; // init to known possible answer
+    let result = right; // init to known possible answer
 
     while (left <= right) {
         // mid point
-        const k = Math.floor((left + right) / 2);
+        const bananasPerHourRate = Math.floor((left + right) / 2);
         let hours = 0;
 
         for (let pile of piles) {
             // hours required to eat this curr pile of bananas
-            const numOfHours = Math.ceil(pile / k);
+            const numOfHours = Math.ceil(pile / bananasPerHourRate);
             hours += numOfHours;
         }
 
         if (hours <= h) {
             // set res
-            res = Math.min(res, k);
+            result = Math.min(result, bananasPerHourRate);
             // look for an even smaller k (if possible) -> search left portion
-            right = k - 1;
+            right = bananasPerHourRate - 1;
         } else {
             // search right portion
-            left = k + 1;
+            // need larger rate to allow us to eat all bananas within h hours
+            left = bananasPerHourRate + 1;
         }
     }
 
-    return res;
+    return result;
 }
 
 /**
