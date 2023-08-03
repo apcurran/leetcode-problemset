@@ -79,9 +79,8 @@
  */
 function lengthOfLongestSubstring(str) {
     let seenChars = new Set();
-    let maxSubstrLength = 0;
-
     let leftPointer = 0;
+    let maxSubstrLength = 0;
     
     for (let rightPointer = 0; rightPointer < str.length; rightPointer++) {
         // duplicate char
