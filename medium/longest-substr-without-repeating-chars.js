@@ -1,7 +1,7 @@
 "use strict";
 
 // /**
-//  * solution 1
+//  * solution 1 -- slow, but correct Set solution
 //  * time: O(n^2)
 //  * space: O(n)
 //  * 
@@ -9,30 +9,29 @@
 //  * @return {number}
 //  */
 // function lengthOfLongestSubstring(str) {
-//     let globalLargestCharCount = 0;
+//     let seenChars = new Set();
+//     let longestNonRepeatingSubstringLength = 0;
 
-//     for (let i = 0; i < str.length; i++) {
-//         // for each substr create an empty set
-//         // store new chars in substr set
-//         let subStrSet = new Set();
+//     outerLoop: for (let i = 0; i < str.length; i++) {
 
 //         for (let j = i; j < str.length; j++) {
-//             const innerChar = str[j];
+//             const char = str[j];
 
-//             if (!subStrSet.has(innerChar)) {
-//                 subStrSet.add(innerChar);
-//                 continue;
+//             if (seenChars.has(char)) {
+//                 // record current longest length
+//                 longestNonRepeatingSubstringLength = Math.max(longestNonRepeatingSubstringLength, seenChars.size);
+//                 seenChars.clear();
+
+//                 continue outerLoop;
+//             } else {
+//                 seenChars.add(char);
 //             }
-
-//             // otherwise, char is repeated in substr
-//             break;
 //         }
-
-//         const subStrCount = subStrSet.size;
-//         globalLargestCharCount = Math.max(globalLargestCharCount, subStrCount);
 //     }
 
-//     return globalLargestCharCount;
+//     longestNonRepeatingSubstringLength = Math.max(longestNonRepeatingSubstringLength, seenChars.size);
+
+//     return longestNonRepeatingSubstringLength;
 // }
 
 // /**
