@@ -36,7 +36,9 @@ function letterCombinations(digits) {
             return;
         }
 
-        for (let char of digitToChars.get(digits[i])) {
+        const currentChars = digitToChars.get(digits[i]);
+
+        for (let char of currentChars) {
             backtrack(i + 1, currentStr + char);
         }
     }
