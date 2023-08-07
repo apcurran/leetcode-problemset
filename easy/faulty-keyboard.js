@@ -1,0 +1,39 @@
+"use strict";
+
+
+/**
+ * @param {string} str
+ * @return {string}
+ */
+function finalString(str) {
+    let result = "";
+
+    for (let char of str) {
+        if (char === "i") {
+            // reverse current string
+            const reversedStr = reverseString(result);
+            result = reversedStr;
+        } else {
+            result += char;
+        }
+    }
+
+    return result;
+}
+
+/**
+ * @param {string} str 
+ * @returns {string}
+ */
+function reverseString(str) {
+    let reversed = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+
+    return reversed;
+}
+
+console.log(finalString("string")); // "rtsng"
+console.log(finalString("poiinter")); // "ponter"
