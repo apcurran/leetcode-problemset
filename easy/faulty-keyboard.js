@@ -2,6 +2,10 @@
 
 
 /**
+ * solution 1
+ * time: O(n)
+ * space: O(n)
+ * 
  * @param {string} str
  * @return {string}
  */
