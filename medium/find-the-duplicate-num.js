@@ -31,6 +31,25 @@
 //     }
 // }
 
+// /**
+//  * solution 2 -- arr as hashmap (modifys input -- not allowed in desc)
+//  * Time: O(n)
+//  * Space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function findDuplicate(nums) {
+//     while (nums[0] !== nums[nums[0]]) {
+//         const next = nums[nums[0]];
+//         // swap
+//         nums[nums[0]] = nums[0];
+//         nums[0] = next;
+//     }
+
+//     return nums[0];
+// }
+
 /**
  * solution 2 -- arr as hashmap
  * Time: O(n)
