@@ -17,7 +17,7 @@ function threeSum(nums) {
         const currNum = nums[i];
         const prevNum = nums[i - 1];
 
-        // prevent re-use of duplicate nums for triplets
+        // if not first element and current value is a duplicate of previous value
         if (i > 0 && currNum === prevNum) continue;
 
         // two-sum (two pointers)
@@ -25,19 +25,18 @@ function threeSum(nums) {
         let right = nums.length - 1;
 
         while (left < right) {
-            const localSum = currNum + nums[left] + nums[right];
+            const currentSum = currNum + nums[left] + nums[right];
 
-            if (localSum > 0) {
-                // decrease sum by moving right pointer to the left
+            if (currentSum > 0) {
+                // decrease sum
                 right--;
-            } else if (localSum < 0) {
-                // increase sum by moving left pointer to the right
+            } else if (currentSum < 0) {
+                // increase sum
                 left++;
             } else {
                 // localSum is equal to 0
-                // add to res arr
                 result.push([currNum, nums[left], nums[right]]);
-                // update pointers
+                // check for more matches with same current first value
                 left++;
                 // while local curr num is equal to local prev num
                 while (nums[left] === nums[left - 1] && left < right) {
@@ -50,4 +49,4 @@ function threeSum(nums) {
     return result;
 }
 
-console.log( threeSum([-1,0,1,2,-1,-4]) ); // [[-1,-1,2], [-1,0,1]]
+console.log(threeSum([-1, 0, 1, 2, -1, -4])); // [[-1,-1,2], [-1,0,1]]
