@@ -37,7 +37,7 @@
  */
 function dailyTemperatures(temperatures) {
     let results = new Array(temperatures.length).fill(0);
-    let stack = []; // [temp, index]
+    let stack = []; // pair tuple [temp, tempIndex]
 
     for (let i = 0; i < temperatures.length; i++) {
         const temp = temperatures[i];
