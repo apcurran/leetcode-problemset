@@ -28,7 +28,8 @@ function maxTurbulenceSize(arr) {
             right++;
             previousSign = "<";
         } else {
-            // either consecutive signs the same or equals sign
+            // condition => either consecutive signs the same or equals sign
+            // logic => skip equals signs
             const updatedRightPointer = arr[right] === arr[right - 1] ? right + 1 : right;
             right = updatedRightPointer;
             left = right - 1;
