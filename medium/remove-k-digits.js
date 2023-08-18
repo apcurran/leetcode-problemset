@@ -2,7 +2,7 @@
 
 /**
  * solution 1
- * time: O(n^2)
+ * time: O(n)
  * space: O(n)
  * 
  * @param {string} num
@@ -29,13 +29,30 @@ function removeKdigits(num, k) {
     }
 
     // remove leading zeros
-    while (stack.length > 0 && stack[0] === "0") {
-        stack.shift();
-    }
-
-    const result = stack.join("");
+    const stackWithoutLeadingZeros = removeLeadingZeros(stack);
+    const result = stackWithoutLeadingZeros.join("");
 
     return result || "0";
+}
+
+/**
+ * @param {string[]} arr
+ * @returns {string[]}
+ */
+function removeLeadingZeros(arr) {
+    let hasFirstNonZeroNumBeenSeen = false;
+    let results = [];
+
+    for (let numStr of arr) {
+        if (numStr === "0" && hasFirstNonZeroNumBeenSeen === false) {
+            continue;
+        }
+
+        hasFirstNonZeroNumBeenSeen = true;
+        results.push(numStr);
+    }
+
+    return results;
 }
 
 console.log(removeKdigits("1432219", 3)); // "1219"
