@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1 -- greedy
+ * solution 1 -- sliding window
  * time: O(n)
  * space: O(1)
  * 
