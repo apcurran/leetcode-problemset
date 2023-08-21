@@ -1,7 +1,10 @@
 "use strict";
 
 /**
- * O(n)
+ * solution 1
+ * time: O(n)
+ * space: O(n)
+ * 
  * @param {string} str
  * @return {boolean}
  */
