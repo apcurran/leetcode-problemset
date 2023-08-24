@@ -19,8 +19,6 @@ function maxPathSum(root) {
     let result = [root.val];
 
     /**
-     * max path sum without split
-     * 
      * @param {TreeNode} root 
      * @returns {number}
      */
@@ -36,6 +34,7 @@ function maxPathSum(root) {
         // compute max path sum (inlude split)
         result[0] = Math.max(result[0], currentSum);
 
+        // max path sum without split
         return root.val + Math.max(leftMax, rightMax);
     }
 
