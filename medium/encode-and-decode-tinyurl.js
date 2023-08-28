@@ -12,6 +12,8 @@ let hashMap = new Map();
  * @return {string}
  */
 function encode(longUrl) {
+    // I would use window.crypto.randomUUID() method here
+    // but it will not work for LeetCode submission.
     const code = Math.random().toString(32).slice(5);
     const tinyURL = `https://tinyurl.com/${code}`;
     hashMap.set(tinyURL, longUrl);
