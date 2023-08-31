@@ -12,18 +12,18 @@ function removeOuterParentheses(str) {
     let stack = [];
     let result = "";
 
-    for (let char of str) {
-        if (char === "(") {
+    for (let paren of str) {
+        if (paren === "(") {
             if (stack.length > 0) {
-                result += char;
+                result += paren;
             }
 
-            stack.push(char);
+            stack.push(paren);
         } else {
             stack.pop();
 
             if (stack.length > 0) {
-                result += char;
+                result += paren;
             }
         }
     }
