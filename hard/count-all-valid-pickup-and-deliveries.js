@@ -10,13 +10,13 @@
  */
 function countOrders(n) {
     const modulusAmount = 1e9 + 7;
-    let validSequencesCount = 1;
+    let validCombos = 1;
 
     for (let i = 2; i <= n; i++) {
-        validSequencesCount = (validSequencesCount * (2 * i - 1) * i) % modulusAmount;
+        validCombos = (validCombos * (2 * i - 1) * i) % modulusAmount;
     }
 
-    return validSequencesCount;
+    return validCombos;
 }
 
 console.log(countOrders(2)); // 6
