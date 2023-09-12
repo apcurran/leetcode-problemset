@@ -22,7 +22,7 @@ function addTwoNumbers(list1, list2) {
     let carry = 0;
 
     // keep going while there are still nodes in list 1 or list 2 OR there is a carry number leftover
-    while (list1 !== null || list2 !== null || carry !== 0) {
+    while (list1 !== null || list2 !== null || carry > 0) {
         // set to vals if not null, otherwise 0 (since there l1 or l2 may be null but still needs to be added with the other number)
         const list1Value = list1 !== null ? list1.val : 0;
         const list2Value = list2 !== null ? list2.val : 0;
