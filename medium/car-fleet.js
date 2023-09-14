@@ -16,13 +16,11 @@ function carFleet(target, positions, speeds) {
     for (let i = 0; i < positions.length; i++) {
         const position = positions[i];
         const speed = speeds[i];
-        const tuple = [position, speed];
-        positionSpeedTuples.push(tuple);
+        positionSpeedTuples.push([position, speed]);
     }
 
     // reverse sort
     positionSpeedTuples.sort((tupleA, tupleB) => tupleB[0] - tupleA[0]);
-    console.log(positionSpeedTuples);
     
     let stack = [];
 
