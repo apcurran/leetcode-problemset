@@ -10,31 +10,25 @@
  * @param {number[]} speeds
  * @return {number}
  */
-function carFleet(target, positions, speeds) {
-    let positionSpeedTuples = [];
+function carFleet(target, position, speed) {
+    let carTuples = [];
 
-    for (let i = 0; i < positions.length; i++) {
-        const position = positions[i];
-        const speed = speeds[i];
-        positionSpeedTuples.push([position, speed]);
+    for (let i = 0; i < position.length; i++) {
+        const currentCarPosition = position[i];
+        const currentCarSpeed = speed[i];
+        carTuples.push([currentCarPosition, currentCarSpeed]);
     }
 
-    // reverse sort
-    positionSpeedTuples.sort((tupleA, tupleB) => tupleB[0] - tupleA[0]);
-    
+    // sort tuples by position DESC order
+    carTuples.sort((tupleA, tupleB) => tupleB[0] - tupleA[0]);
     let stack = [];
+    
+    for (let [carPosition, carSpeed] of carTuples) {
+        const timeToDestination = (target - carPosition) / carSpeed;
+        stack.push(timeToDestination);
 
-    for (let [position, speed] of positionSpeedTuples) {
-        const carTime = (target - position) / speed;
-        stack.push(carTime);
-
-        if (stack.length <= 1) continue;
-
-        const topStackCarTime = stack[stack.length - 1];
-        const secondToTopOfStackCarTime = stack[stack.length - 2];
-
-        if (topStackCarTime <= secondToTopOfStackCarTime) {
-            // collision of cars here -> they now combine
+        // first we need two cars to compare AND does the top of stack overlap with the previous item on the stack? -- collision
+        if (stack.length >= 2 && stack[stack.length - 1] <= stack[stack.length - 2]) {
             stack.pop();
         }
     }
