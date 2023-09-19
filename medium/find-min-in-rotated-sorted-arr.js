@@ -32,33 +32,34 @@
  * @return {number}
  */
 function findMin(nums) {
-    // binary search
-    let minNum = nums[0];
     let left = 0;
     let right = nums.length - 1;
+    let min = nums[0];
 
     while (left <= right) {
-        // already sorted array, no rotation
+        // already sorted (ASC) list
         if (nums[left] < nums[right]) {
-            minNum = Math.min(minNum, nums[left]);
+            // update min
+            min = Math.min(min, nums[left]);
 
             break;
         }
 
+        // if not, do binary search on rotated list
         const middle = left + Math.floor((right - left) / 2);
-        const value = nums[middle];
-        minNum = Math.min(minNum, value);
+        const middleValue = nums[middle];
+        // update min
+        min = Math.min(min, middleValue);
 
-        if (value >= nums[left]) {
-            // search right
+        if (middleValue >= nums[left]) {
+            // disregard middle and all values to the left -- they are in the larger rotated portion of the list
             left = middle + 1;
         } else {
-            // search left
             right = middle - 1;
         }
     }
 
-    return minNum;
+    return min;
 }
 
 console.log( findMin([3, 4, 5, 1, 2]) ); // 1
