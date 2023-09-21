@@ -36,7 +36,8 @@ function removeNthFromEnd(head, nthFromEnd) {
         current = current.next;
     }
 
-    // remove node
+    // we are at the node before the one to be removed
+    // remove next node by updating pointer
     current.next = current.next.next;
 
     return head;
