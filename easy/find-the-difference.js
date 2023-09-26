@@ -1,7 +1,7 @@
 "use strict";
 
 // /**
-//  * Solution 1
+//  * Solution 1 -- sort
 //  * n = t length
 //  * Time: O(n log n) -- due to sorting of strings
 //  * Space: O(n)
@@ -31,7 +31,7 @@
 // }
 
 /**
- * Solution 2
+ * Solution 2 -- hashmap
  * n = t length
  * Time: O(n) -- t is the same s length + 1
  * Space: O(1) -- technically O(26) since there are only 26 alpha chars
