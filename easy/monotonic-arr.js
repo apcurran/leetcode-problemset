@@ -22,6 +22,10 @@ function isMonotonic(nums) {
         } else if (currNum < nextNum) {
             isDecreasing = false;
         }
+
+        if (!isIncreasing && !isDecreasing) {
+            return false;
+        }
     }
 
     return isIncreasing ? isIncreasing : isDecreasing;
