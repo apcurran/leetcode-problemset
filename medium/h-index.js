@@ -2,7 +2,7 @@
 
 /**
  * solution 1
- * time: O(n)
+ * time: O(n * log n) -- sort
  * space: O(n) -- built-in JS sort uses O(n)
  * 
  * @param {number[]} citations
