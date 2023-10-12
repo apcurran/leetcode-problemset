@@ -60,7 +60,7 @@ function characterReplacement(str, k) {
         const charCount = charCounts.get(currentChar) || 0;
         charCounts.set(currentChar, charCount + 1);
 
-        while (getWindowLength(left, right) - getMax(charCounts.values()) > k) {
+        if (getWindowLength(left, right) - getMax(charCounts.values()) > k) {
             const leftChar = str[left];
             const leftCharCount = charCounts.get(leftChar);
             charCounts.set(leftChar, leftCharCount - 1);
