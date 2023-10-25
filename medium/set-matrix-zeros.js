@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1
+ * solution 1 -- hashset
  * time: O(m * n)
  * space: O(m + n)
  * 
