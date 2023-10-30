@@ -2,8 +2,10 @@
 
 /**
  * solution 1 -- sort strings (barely passes)
- * time: O(s1 * log(s1) + s2 * log(s2))
- * space: O(s1 + s2)
+ * n = s1
+ * m = s2
+ * time: O( m * (n * log(n)) )
+ * space: O( n )
  * 
  * @param {string} s1
  * @param {string} s2
