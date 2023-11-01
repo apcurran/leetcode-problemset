@@ -21,21 +21,21 @@ function search(nums, target) {
 
         // left sorted portion
         if (nums[left] <= nums[mid]) {
-            if (target > nums[mid] || target < nums[left]) {
-                // search right
-                left = mid + 1;
-            } else {
-                // otherwise, search left
+            if (nums[left] <= target && target <= nums[mid]) {
+                // search left half
                 right = mid - 1;
+            } else {
+                // search right half
+                left = mid + 1;
             }
         } else {
             // right sorted portion
-            if (target < nums[mid] || target > nums[right]) {
-                // search left
-                right = mid - 1;
-            } else {
+            if (nums[mid] <= target && target <= nums[right]) {
                 // search right
                 left = mid + 1;
+            } else {
+                // search left
+                right = mid - 1;
             }
         }
     }
