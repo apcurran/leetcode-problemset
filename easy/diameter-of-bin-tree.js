@@ -19,7 +19,6 @@ function diameterOfBinaryTree(root) {
     let maxDiameter = 0;
 
     /**
-     * 
      * @param {TreeNode} root 
      * @returns {number}
      */
