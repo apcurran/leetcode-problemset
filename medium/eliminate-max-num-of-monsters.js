@@ -3,7 +3,7 @@
 /**
  * solution 1
  * time: O(n * log n) -- array.sort()
- * space: O(1)
+ * space: O(n)
  * 
  * @param {number[]} dist
  * @param {number[]} speed
