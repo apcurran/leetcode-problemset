@@ -2,7 +2,7 @@
 
 /**
  * solution 1
- * time: O(n * log n) -- due to array.sort()
+ * time: O(n * log n) -- array.sort()
  * space: O(1)
  * 
  * @param {number[]} dist
@@ -25,7 +25,7 @@ function eliminateMaximum(dist, speed) {
 
     for (let minute = 0; minute < minuteReached.length; minute++) {
         if (minute >= minuteReached[minute]) {
-            return resultCount;
+            break;
         }
 
         resultCount++;
