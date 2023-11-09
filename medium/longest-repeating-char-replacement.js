@@ -90,8 +90,7 @@ function getWindowLength(left, right) {
  * @returns {number}
  */
 function getMax(iterable) {
-    const firstValue = iterable.next().value;
-    let max = firstValue;
+    let max = -Infinity;
 
     for (let num of iterable) {
         max = Math.max(max, num);
