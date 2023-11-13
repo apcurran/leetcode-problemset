@@ -65,9 +65,10 @@ function dfs(root) {
     const right = dfs(root.right);
     const [isLeftBalanced, leftHeight] = left;
     const [isRightBalanced, rightHeight] = right;
-    const isTreeBalanced = (isLeftBalanced && isRightBalanced && Math.abs(leftHeight - rightHeight) <= 1);
+    const heightsDifference = Math.abs(leftHeight - rightHeight);
+    const isTreeBalanced = (isLeftBalanced && isRightBalanced && heightsDifference <= 1);
     const currRootHeight = 1;
-    const largestHeight = Math.max(leftHeight, rightHeight);
+    const largestSubtreeHeight = Math.max(leftHeight, rightHeight);
 
-    return [isTreeBalanced, currRootHeight + largestHeight];
+    return [isTreeBalanced, currRootHeight + largestSubtreeHeight];
 }
