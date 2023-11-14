@@ -16,24 +16,26 @@ function TreeNode(val, left, right) {
  * @return {number}
  */
 function diameterOfBinaryTree(root) {
-    let maxDiameter = 0;
+    if (root === null) return 0;
+
+    let globalMaxDiameter = 0;
+    dfs(root);
+
+    return globalMaxDiameter;
 
     /**
-     * @param {TreeNode} root 
+     * @param {TreeNode} node 
      * @returns {number}
      */
-    function maxDepth(root) {
-        if (root === null) return 0;
+    function dfs(node) {
+        if (node === null) return 0;
 
-        const left = maxDepth(root.left);
-        const right = maxDepth(root.right);
+        const left = dfs(node.left);
+        const right = dfs(node.right);
+        // get current diameter and compare with global max
         const currentDiameter = left + right;
-        maxDiameter = Math.max(maxDiameter, currentDiameter);
-        // return maximum + 1 (to count the root itself)
-        return Math.max(left, right) + 1;
+        globalMaxDiameter = Math.max(globalMaxDiameter, currentDiameter);
+
+        return 1 + Math.max(left, right);
     }
-
-    maxDepth(root);
-
-    return maxDiameter;
 }
