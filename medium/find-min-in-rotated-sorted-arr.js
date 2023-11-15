@@ -37,9 +37,9 @@ function findMin(nums) {
     let min = nums[0];
 
     while (left <= right) {
-        // already sorted (ASC) list
+        // this segment of the array is sorted
         if (nums[left] < nums[right]) {
-            // update min
+            // possible update to min
             min = Math.min(min, nums[left]);
 
             break;
@@ -48,11 +48,12 @@ function findMin(nums) {
         // if not, do binary search on rotated list
         const middle = left + Math.floor((right - left) / 2);
         const middleValue = nums[middle];
-        // update min
+        // possible update to min
         min = Math.min(min, middleValue);
 
         if (middleValue >= nums[left]) {
             // disregard middle and all values to the left -- they are in the larger rotated portion of the list
+            // search smaller values portion
             left = middle + 1;
         } else {
             right = middle - 1;
