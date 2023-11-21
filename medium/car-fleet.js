@@ -55,10 +55,10 @@ function carFleet(target, positions, speeds) {
         carTuples.push([currentCarPosition, currentCarSpeed]);
     }
 
-    // sort tuples by position DESC order
     let fleetsCount = 0;
     let currTime = 0; // no fleet will be at the target at starting time 0
-
+    
+    // sort tuples by position DESC order
     carTuples.sort((tupleA, tupleB) => tupleB[0] - tupleA[0]);
     
     for (let [carPosition, carSpeed] of carTuples) {
