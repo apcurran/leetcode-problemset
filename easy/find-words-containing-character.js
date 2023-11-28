@@ -6,7 +6,7 @@
  * space: O(n) -- (if return value is counted)
  * 
  * @param {string[]} words
- * @param {character} x
+ * @param {string} x
  * @return {number[]}
  */
 function findWordsContaining(words, x) {
