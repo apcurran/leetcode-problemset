@@ -50,7 +50,7 @@ function TreeNode(val, left, right) {
  * @return {boolean}
  */
 function isBalanced(root) {
-    return dfs(root)[0];
+    return dfs(root)[0]; // bool from dfs call
 }
 
 /**
@@ -65,8 +65,10 @@ function dfs(root) {
     const right = dfs(root.right);
     const [isLeftBalanced, leftHeight] = left;
     const [isRightBalanced, rightHeight] = right;
-    const heightsDifference = Math.abs(leftHeight - rightHeight);
-    const isTreeBalanced = (isLeftBalanced && isRightBalanced && heightsDifference <= 1);
+    const subtreeHeightsDifference = Math.abs(leftHeight - rightHeight);
+    // left subtree and right subtree must be balanced first (otherwise the entire tree is unbalanced) AND
+    // subtree heights must differ by no more than 1
+    const isTreeBalanced = isLeftBalanced && isRightBalanced && subtreeHeightsDifference <= 1;
     const currRootHeight = 1;
     const largestSubtreeHeight = Math.max(leftHeight, rightHeight);
 
