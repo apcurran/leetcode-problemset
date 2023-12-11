@@ -1,8 +1,40 @@
 "use strict";
 
+// /**
+//  * solution 1 -- brute force
+//  * time: O(n^2)
+//  * space: O(n)
+//  * 
+//  * @param {number[]} A
+//  * @param {number[]} B
+//  * @return {number[]}
+//  */
+// function findThePrefixCommonArray(A, B) {
+//     let results = new Array(A.length);
+
+//     for (let i = 0; i < A.length; i++) {
+//         // from 0 to i, count how many nums are present in both A & B
+//         const aNums = A.slice(0, i + 1);
+//         const bNums = B.slice(0, i + 1);
+//         let similarNumsCount = 0;
+
+//         for (let aValue of aNums) {
+//             const isNumPresentInB = bNums.includes(aValue);
+
+//             if (isNumPresentInB) {
+//                 similarNumsCount++;
+//             }
+//         }
+//         // update results at current index
+//         results[i] = similarNumsCount;
+//     }
+
+//     return results;
+// }
+
 /**
- * solution 1
- * time: O(n^2)
+ * solution 2 -- hashset
+ * time: O(n)
  * space: O(n)
  * 
  * @param {number[]} A
@@ -10,23 +42,31 @@
  * @return {number[]}
  */
 function findThePrefixCommonArray(A, B) {
-    let results = new Array(A.length);
+    let seenNums = new Set();
+    let similarNumsCount = 0;
+    let results = [];
 
     for (let i = 0; i < A.length; i++) {
-        // from 0 to i, count how many nums are present in both A & B
-        const aNums = A.slice(0, i + 1);
-        const bNums = B.slice(0, i + 1);
-        let similarNumsCount = 0;
+        const aNum = A[i];
+        const bNum = B[i];
 
-        for (let aValue of aNums) {
-            const isNumPresentInB = bNums.includes(aValue);
-
-            if (isNumPresentInB) {
-                similarNumsCount++;
-            }
+        if (seenNums.has(aNum)) {
+            similarNumsCount++;
         }
-        // update results at current index
-        results[i] = similarNumsCount;
+
+        if (seenNums.has(bNum)) {
+            similarNumsCount++;
+        }
+
+        if (aNum === bNum) {
+            similarNumsCount++;
+        }
+
+        seenNums
+            .add(aNum)
+            .add(bNum);
+
+        results.push(similarNumsCount);
     }
 
     return results;
