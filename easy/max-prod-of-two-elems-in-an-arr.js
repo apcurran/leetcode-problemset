@@ -3,7 +3,7 @@
 // /**
 //  * solution 1
 //  * time: O(n * log n) -- due to sorting first
-//  * space: O(1)
+//  * space: O(n) -- built-in uses timsort
 //  * 
 //  * @param {number[]} nums
 //  * @return {number}
