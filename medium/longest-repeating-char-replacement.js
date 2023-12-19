@@ -70,6 +70,8 @@ function characterReplacement(str, k) {
             left++;
         }
 
+        // current window is valid,
+        // possible update to max result length
         result = Math.max(result, getWindowLength(left, right));
     }
 
