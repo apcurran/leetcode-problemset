@@ -34,32 +34,65 @@
 //     return maxSumScore;
 // }
 
+// /**
+//  * solution 2 -- memory optimization
+//  * time: O(n^2)
+//  * space: O(1)
+//  * 
+//  * @param {string} str
+//  * @return {number}
+//  */
+// function maxScore(str) {
+//     let maxSumScore = 0;
+
+//     for (let i = 0; i < str.length - 1; i++) {
+//         let leftSubStrZerosCount = 0;
+
+//         for (let j = 0; j <= i; j++) {
+//             if (str[j] === "0") leftSubStrZerosCount++;
+//         }
+
+//         let rightSubStrOnesCount = 0;
+
+//         for (let j = i + 1; j < str.length; j++) {
+//             if (str[j] === "1") rightSubStrOnesCount++;
+//         }
+        
+//         const sumScore = leftSubStrZerosCount + rightSubStrOnesCount;
+//         maxSumScore = Math.max(maxSumScore, sumScore);
+//     }
+
+//     return maxSumScore;
+// }
+
 /**
- * solution 2 -- memory optimization
- * time: O(n^2)
+ * solution 2 -- two pass
+ * time: O(n)
  * space: O(1)
  * 
  * @param {string} str
  * @return {number}
  */
 function maxScore(str) {
+    let onesCount = 0;
+
+    for (let binNumStr of str) {
+        if (binNumStr === "1") onesCount++;
+    }
+
+    let zerosCount = 0;
     let maxSumScore = 0;
 
     for (let i = 0; i < str.length - 1; i++) {
-        let leftSubStrZerosCount = 0;
-
-        for (let j = 0; j <= i; j++) {
-            if (str[j] === "0") leftSubStrZerosCount++;
+        if (str[i] === "1") {
+            onesCount--;
+        } else {
+            zerosCount++;
         }
 
-        let rightSubStrOnesCount = 0;
-
-        for (let j = i + 1; j < str.length; j++) {
-            if (str[j] === "1") rightSubStrOnesCount++;
-        }
-        
-        const sumScore = leftSubStrZerosCount + rightSubStrOnesCount;
-        maxSumScore = Math.max(maxSumScore, sumScore);
+        // possible update to max score
+        const currentSum = zerosCount + onesCount;
+        maxSumScore = Math.max(maxSumScore, currentSum);
     }
 
     return maxSumScore;
