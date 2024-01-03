@@ -11,6 +11,12 @@
 function generateParenthesis(n) {
     let results = [];
 
+    /**
+     * @param {number} openN 
+     * @param {number} closedN 
+     * @param {string} parenthesisStr 
+     * @returns {void}
+     */
     function backtrack(openN, closedN, parenthesisStr) {
         if (openN === n && closedN === n) {
             // add valid, finished parentheses string into results
