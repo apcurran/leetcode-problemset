@@ -60,13 +60,15 @@ function numberGame(nums) {
         return a - b;
     });
 
+    let results = [];
     // iterate by pairs
     for (let i = 0; i < nums.length - 1; i += 2) {
-        // swap places
-        [nums[i], nums[i + 1]] = [nums[i + 1], nums[i]];
+        const aliceNum = nums[i];
+        const bobNum = nums[i + 1];
+        results.push(bobNum, aliceNum);
     }
 
-    return nums;
+    return results;
 }
 
 console.log(numberGame([5,4,2,3])); // [3,2,5,4]
