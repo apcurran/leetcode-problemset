@@ -9,7 +9,7 @@ function TreeNode(val, left, right) {
 }
 
 /**
- * Solution 1 -- iterative
+ * Solution 1 -- iterative DFS
  * time: O(n)
  * space: O(n)
  * 
@@ -19,6 +19,8 @@ function TreeNode(val, left, right) {
  * @return {number}
  */
 function rangeSumBST(root, low, high) {
+    if (root === null) return 0;
+
     let nodeStack = [root];
     let rangeSum = 0;
 
