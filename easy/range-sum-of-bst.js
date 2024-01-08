@@ -8,9 +8,45 @@ function TreeNode(val, left, right) {
     this.right = (right === undefined ? null : right);
 }
 
+// /**
+//  * Solution 1 -- iterative DFS
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {TreeNode} root
+//  * @param {number} low
+//  * @param {number} high
+//  * @return {number}
+//  */
+// function rangeSumBST(root, low, high) {
+//     if (root === null) return 0;
+
+//     let nodeStack = [root];
+//     let rangeSum = 0;
+
+//     while (nodeStack.length > 0) {
+//         const current = nodeStack.pop();
+//         const currVal = current.val;
+
+//         if (currVal >= low && currVal <= high) {
+//             rangeSum += currVal;
+//         }
+
+//         if (current.right) {
+//             nodeStack.push(current.right);
+//         }
+
+//         if (current.left) {
+//             nodeStack.push(current.left);
+//         }
+//     }
+
+//     return rangeSum;
+// }
+
 /**
- * Solution 1 -- iterative DFS
- * time: O(n)
+ * Solution 2 -- BFS (level order)
+ * time: O(n^2) -- array.shift() inside of while loop
  * space: O(n)
  * 
  * @param {TreeNode} root
@@ -21,23 +57,23 @@ function TreeNode(val, left, right) {
 function rangeSumBST(root, low, high) {
     if (root === null) return 0;
 
-    let nodeStack = [root];
+    let queue = [root];
     let rangeSum = 0;
 
-    while (nodeStack.length > 0) {
-        const current = nodeStack.pop();
-        const currVal = current.val;
+    while (queue.length > 0) {
+        const currentNode = queue.shift();
 
-        if (currVal >= low && currVal <= high) {
-            rangeSum += currVal;
+        if (currentNode.val >= low && currentNode.val <= high) {
+            rangeSum += currentNode?.val;
         }
 
-        if (current.right) {
-            nodeStack.push(current.right);
+        // add children
+        if (currentNode?.left) {
+            queue.push(currentNode.left);
         }
 
-        if (current.left) {
-            nodeStack.push(current.left);
+        if (currentNode?.right) {
+            queue.push(currentNode.right);
         }
     }
 
