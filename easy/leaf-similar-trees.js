@@ -106,8 +106,6 @@ function leafSimilar(root1, root2) {
 }
 
 /**
- * recursion
- * 
  * @param {TreeNode} root
  * @param {number[]} nodeLeafValues
  * @returns {void}
@@ -132,12 +130,5 @@ function getLeafValues(root, nodeLeafValues) {
 function areArraysEqual(arr1, arr2) {
     if (arr1.length !== arr2.length) return false;
 
-    for (let i = 0; i < arr1.length; i++) {
-        const arr1Value = arr1[i];
-        const arr2Value = arr2[i];
-
-        if (arr1Value !== arr2Value) return false;
-    }
-
-    return true;
+    return arr1.every((arr1Value, i) => arr1Value === arr2[i]);
 }
