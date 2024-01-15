@@ -33,6 +33,7 @@ function findWinners(matches) {
         }
     }
 
+    // convert Set objs to arrays and sort ASC order
     const matchLossesZero = [...zeroLoss].sort(sortAsc);
     const matchLossesOne = [...oneLoss].sort(sortAsc);
 
