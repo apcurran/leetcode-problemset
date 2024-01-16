@@ -13,12 +13,13 @@ function findMatrix(nums) {
     let results = [];
 
     for (let num of nums) {
-        if (frequencies[num] >= results.length) {
+        const numFreq = frequencies[num];
+
+        if (numFreq >= results.length) {
             // add a new empty subarray to results
             results.push([]);
         }
 
-        const numFreq = frequencies[num];
         results[numFreq].push(num);
         frequencies[num] += 1;
     }
