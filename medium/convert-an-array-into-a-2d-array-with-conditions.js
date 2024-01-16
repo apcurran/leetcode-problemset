@@ -48,6 +48,7 @@ function findMatrix(nums) {
         }
 
         results[numCurrentFreq].push(num);
+        // increment num frequency by 1 (to count current occurrence)
         frequencies.set(num, numCurrentFreq + 1);
     }
 
