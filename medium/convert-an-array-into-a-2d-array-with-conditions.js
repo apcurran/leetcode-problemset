@@ -1,7 +1,34 @@
 "use strict";
 
+// /**
+//  * solution 1
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number[][]}
+//  */
+// function findMatrix(nums) {
+//     let frequencies = new Array(nums.length + 1).fill(0);
+//     let results = [];
+
+//     for (let num of nums) {
+//         const numFreq = frequencies[num];
+
+//         if (numFreq >= results.length) {
+//             // add a new empty subarray to results
+//             results.push([]);
+//         }
+
+//         results[numFreq].push(num);
+//         frequencies[num] += 1;
+//     }
+
+//     return results;
+// }
+
 /**
- * solution 1
+ * solution 2 -- hashmap
  * time: O(n)
  * space: O(n)
  * 
@@ -9,19 +36,19 @@
  * @return {number[][]}
  */
 function findMatrix(nums) {
-    let frequencies = new Array(nums.length + 1).fill(0);
+    let frequencies = new Map();
     let results = [];
 
     for (let num of nums) {
-        const numFreq = frequencies[num];
+        const numCurrentFreq = frequencies.get(num) || 0;
 
-        if (numFreq >= results.length) {
+        if (numCurrentFreq >= results.length) {
             // add a new empty subarray to results
             results.push([]);
         }
 
-        results[numFreq].push(num);
-        frequencies[num] += 1;
+        results[numCurrentFreq].push(num);
+        frequencies.set(num, numCurrentFreq + 1);
     }
 
     return results;
