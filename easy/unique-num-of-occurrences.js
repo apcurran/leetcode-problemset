@@ -9,23 +9,17 @@
  * @return {boolean}
  */
 function uniqueOccurrences(arr) {
-    // create a map
     let numsMap = new Map();
-    // iterate list
+
     for (let num of arr) {
-        // record num and occurrences in map
-        if (!numsMap.has(num)) {
-            numsMap.set(num, 1);
-        } else {
-            const prevVal = numsMap.get(num);
-            numsMap.set(num, prevVal + 1);
-        }
+        const previousNumFreq = numsMap.get(num) || 0;
+        numsMap.set(num, previousNumFreq + 1);
     }
 
     // generate a unique Set from occurrences list
     const uniqueValsSet = new Set(numsMap.values());
 
-    // test if they are the same and return the bool val
+    // test if they are the same
     return uniqueValsSet.size === numsMap.size;
 }
 
