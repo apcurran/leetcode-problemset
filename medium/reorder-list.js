@@ -42,14 +42,14 @@ function reorderList(head) {
     secondHalfOfList = previous;
 
     while (secondHalfOfList !== null) {
-        const temp1 = firstHalfOfList.next;
-        const temp2 = secondHalfOfList.next;
+        const next1 = firstHalfOfList.next;
+        const next2 = secondHalfOfList.next;
 
         firstHalfOfList.next = secondHalfOfList;
-        secondHalfOfList.next = temp1;
+        secondHalfOfList.next = next1;
         // move pointers
-        firstHalfOfList = temp1;
-        secondHalfOfList = temp2;
+        firstHalfOfList = next1;
+        secondHalfOfList = next2;
     }
 }
 
