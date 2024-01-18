@@ -19,6 +19,7 @@ function removeNthFromEnd(head, nthFromEnd) {
     let current = head;
     let listLength = 0;
 
+    // first, we need to count the length of the entire linked list
     while (current !== null) {
         current = current.next;
         listLength++;
