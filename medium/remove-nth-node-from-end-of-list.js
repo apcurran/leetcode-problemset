@@ -33,6 +33,7 @@ function removeNthFromEnd(head, nthFromEnd) {
     // reuse pointer by reseting position back to the beginning
     current = head;
 
+    // this will stop at the node before the one to be deleted
     for (let i = 1; i < listLength - nthFromEnd; i++) {
         current = current.next;
     }
