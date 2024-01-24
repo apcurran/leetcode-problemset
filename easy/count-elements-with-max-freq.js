@@ -1,4 +1,3 @@
-
 /**
  * solution 1
  * time: O(n)
