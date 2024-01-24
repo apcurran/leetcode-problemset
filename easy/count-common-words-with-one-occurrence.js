@@ -1,7 +1,7 @@
 "uses strict";
 
 /**
- * solution 1
+ * solution 1 -- hashmap
  * n = words1 length
  * m = words2 length
  * time: O(n + m)
