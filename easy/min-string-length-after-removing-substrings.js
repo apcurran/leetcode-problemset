@@ -26,5 +26,27 @@ function minLength(s) {
     return stack.length;
 }
 
+// /**
+//  * solution 2 -- string replacement
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {string} s
+//  * @return {number}
+//  */
+// function minLength(s) {
+//     while (s.includes("AB") || s.includes("CD")) {
+//         if (s.includes("AB")) {
+//             s = s.replaceAll("AB", "");
+//         }
+
+//         if (s.includes("CD")) {
+//             s = s.replaceAll("CD", "");
+//         }
+//     }
+
+//     return s.length;
+// }
+
 console.log(minLength("ABFCACDB")); // 2
 console.log(minLength("ACBBD")); // 5
