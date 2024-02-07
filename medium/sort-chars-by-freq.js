@@ -16,27 +16,21 @@ function frequencySort(str) {
     // iterate str
     for (let char of str) {
         // cache chars in map for char -> freqVal
-        if (!charsMap.has(char)) {
-            // store new char
-            charsMap.set(char, 1);
-        } else {
-            // incr freqVal
-            const prevFreqVal = charsMap.get(char);
-            charsMap.set(char, prevFreqVal + 1);
-        }
+        const previousCharFreq = charsMap.get(char) || 0;
+        charsMap.set(char, previousCharFreq + 1);
     }
 
-    // sort map by freqVal
-    const sortedCharsTupleArr = [...charsMap.entries()].sort((a, b) => b[1] - a[1]);
+    // sort char tuples by frequency
+    const sortedCharTuples = [...charsMap.entries()].sort((charA, charB) => charB[1] - charA[1]);
     // create a resStr with most freq to least freq chars in order
-    let resStr = "";
+    let sortedChars = "";
 
-    for (let [char, freqVal] of sortedCharsTupleArr) {
-        const charMiniStr = char.repeat(freqVal);
-        resStr += charMiniStr;
+    for (let [char, charFreq] of sortedCharTuples) {
+        const charMiniStr = char.repeat(charFreq);
+        sortedChars += charMiniStr;
     }
 
-    return resStr;
+    return sortedChars;
 }
 
 console.log( frequencySort("tree") ); // "eetr" or "eert"
