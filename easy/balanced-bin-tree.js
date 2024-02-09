@@ -68,9 +68,9 @@ function dfs(root) {
     const subtreeHeightsDifference = Math.abs(leftHeight - rightHeight);
     // left subtree and right subtree must be balanced first (otherwise the entire tree is unbalanced) AND
     // subtree heights must differ by no more than 1
-    const isTreeBalanced = isLeftBalanced && isRightBalanced && subtreeHeightsDifference <= 1;
+    const isTreeHeightBalanced = isLeftBalanced && isRightBalanced && subtreeHeightsDifference <= 1;
     const currRootHeight = 1;
     const largestSubtreeHeight = Math.max(leftHeight, rightHeight);
 
-    return [isTreeBalanced, currRootHeight + largestSubtreeHeight];
+    return [isTreeHeightBalanced, currRootHeight + largestSubtreeHeight];
 }
