@@ -1,26 +1,50 @@
 "use strict";
 
+// /**
+//  * solution 1 -- hashmap
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function majorityElement(nums) {
+//     let numFrequencies = new Map();
+
+//     for (let num of nums) {
+//         const previousNumFrequency = numFrequencies.get(num) || 0;
+//         numFrequencies.set(num, previousNumFrequency + 1);
+//     }
+
+//     for (let [num, numFrequency] of numFrequencies) {
+//         if (numFrequency > (nums.length / 2)) {
+//             return num;
+//         }
+//     }
+// }
+
 /**
- * solution 1 -- hashmap
+ * solution 2
  * time: O(n)
- * space: O(n)
+ * space: O(1)
  * 
  * @param {number[]} nums
  * @return {number}
  */
 function majorityElement(nums) {
-    let numFrequencies = new Map();
+    let majorityNumberFrequency = 0;
+    let majorityNumber = 0;
 
     for (let num of nums) {
-        const previousNumFrequency = numFrequencies.get(num) || 0;
-        numFrequencies.set(num, previousNumFrequency + 1);
+        if (majorityNumberFrequency === 0) {
+            majorityNumber = num;
+        }
+
+        const amountToIncrement = num === majorityNumber ? 1 : -1;
+        majorityNumberFrequency += amountToIncrement;
     }
 
-    for (let [num, numFrequency] of numFrequencies) {
-        if (numFrequency > (nums.length / 2)) {
-            return num;
-        }
-    }
+    return majorityNumber;
 }
 
 console.log(majorityElement([3,2,3])); // 3
