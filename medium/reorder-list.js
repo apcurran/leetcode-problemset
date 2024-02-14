@@ -9,7 +9,7 @@ function ListNode(val, next) {
 /**
  * solution 1
  * time: O(n)
- * time: O(1)
+ * space: O(1)
  * 
  * @param {ListNode} head
  * @return {void} Do not return anything, modify head in-place instead.
