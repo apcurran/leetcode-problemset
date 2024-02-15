@@ -14,14 +14,14 @@ function largestPerimeter(nums) {
     });
 
     let result = -1;
-    let total = 0;
+    let sidesSum = 0;
 
     for (let num of nums) {
-        if (total > num) {
-            result = total + num;
+        if (sidesSum > num) {
+            result = sidesSum + num;
         }
 
-        total += num;
+        sidesSum += num;
     }
 
     return result;
