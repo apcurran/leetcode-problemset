@@ -1,7 +1,33 @@
 "use strict";
 
+// /**
+//  * solution 1
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {string} s
+//  * @return {boolean}
+//  */
+// function areNumbersAscending(s) {
+//     const nums = s
+//                     .split(" ")
+//                     .filter((value) => !Number.isNaN(Number(value)))
+//                     .map(Number);
+                
+//     for (let i = 0; i < nums.length; i++) {
+//         const currentNum = nums[i];
+//         const nextNum = nums[i + 1];
+
+//         if (nextNum - currentNum <= 0) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
 /**
- * solution 1
+ * solution 2
  * time: O(n)
  * space: O(n)
  * 
@@ -9,10 +35,7 @@
  * @return {boolean}
  */
 function areNumbersAscending(s) {
-    const nums = s
-                    .split(" ")
-                    .filter((value) => !Number.isNaN(Number(value)))
-                    .map(Number);
+    const nums = s.match(/\d{1,2}/g);
                 
     for (let i = 0; i < nums.length; i++) {
         const currentNum = nums[i];
