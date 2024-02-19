@@ -17,16 +17,34 @@
 //     return isPowerOfTwo(n / 2);
 // }
 
+// /**
+//  * Solution 2 -- math
+//  * time: O(1)
+//  * space: O(1)
+//  * 
+//  * @param {number} n
+//  * @return {boolean}
+//  */
+// function isPowerOfTwo(n) {
+//     return Number.isInteger(Math.log2(n));
+// }
+
 /**
- * Solution 2 -- math
- * time: O(1)
+ * Solution 3 -- loop
+ * time: O(1) -- bounded by 32 interations max
  * space: O(1)
  * 
  * @param {number} n
  * @return {boolean}
  */
 function isPowerOfTwo(n) {
-    return Number.isInteger(Math.log2(n));
+    let multipleOfTwo = 1;
+
+    while (multipleOfTwo < n) {
+        multipleOfTwo *= 2;
+    }
+
+    return multipleOfTwo === n;
 }
 
 console.log( isPowerOfTwo(16) ); // true -> 2^4 === 16
