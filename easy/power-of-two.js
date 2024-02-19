@@ -1,7 +1,10 @@
 "use strict";
 
 // /**
-//  * Solution 1 -- O(log n)
+//  * Solution 1
+//  * time: O(log n)
+//  * space: O(log n)
+//  * 
 //  * @param {number} n
 //  * @return {boolean}
 //  */
@@ -15,17 +18,15 @@
 // }
 
 /**
- * Solution 2 -- O(1)
+ * Solution 2 -- math
+ * time: O(1)
+ * space: O(1)
+ * 
  * @param {number} n
  * @return {boolean}
  */
 function isPowerOfTwo(n) {
-    if (n === 0) return false;
-
-    const baseTwoLog = Math.floor(Math.log2(n));
-    const expectedExponentiation = 2 ** baseTwoLog;
-    
-    return expectedExponentiation === n;
+    return Number.isInteger(Math.log2(n));
 }
 
 console.log( isPowerOfTwo(16) ); // true -> 2^4 === 16
