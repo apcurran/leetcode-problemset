@@ -28,9 +28,12 @@ function sortVowels(str) {
         const currentChar = str[i];
 
         if (isVowel(currentChar)) {
+            // add temp vowel to solution
             result += tempVowels[vowelPointer];
+            // increment vowel pointer to point at the next vowel in the list
             vowelPointer++;
         } else {
+            // add consonant to solution
             result += currentChar;
         }
     }
