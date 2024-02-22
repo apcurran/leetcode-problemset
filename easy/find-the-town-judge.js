@@ -12,9 +12,9 @@
 function findJudge(n, trust) {
     let trusted = new Array(n + 1).fill(0);
 
-    for (let [i, j] of trust) {
-        trusted[i]--;
-        trusted[j]++;
+    for (let [source, destination] of trust) {
+        trusted[source]--;
+        trusted[destination]++;
     }
 
     for (let i = 1; i < trusted.length; i++) {
