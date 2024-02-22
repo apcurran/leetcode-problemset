@@ -5,12 +5,12 @@
  * time: O(n)
  * space: O(n)
  * 
- * @param {number} n
+ * @param {number} totalPeople
  * @param {number[][]} trust
  * @return {number}
  */
-function findJudge(n, trust) {
-    let trusted = new Array(n + 1).fill(0);
+function findJudge(totalPeople, trust) {
+    let trusted = new Array(totalPeople + 1).fill(0);
 
     for (let [source, destination] of trust) {
         trusted[source]--;
@@ -18,11 +18,16 @@ function findJudge(n, trust) {
     }
 
     for (let i = 1; i < trusted.length; i++) {
-        if ((n - 1) === trusted[i]) {
+        // n - 1 edges going into the town judge
+        // since everyone, except the judge (who trusts nobody),
+        // trusts the judge
+        if ((totalPeople - 1) === trusted[i]) {
+            // identified judge
             return i;
         }
     }
 
+    // no judge found
     return -1;
 }
 
