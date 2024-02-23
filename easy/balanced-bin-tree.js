@@ -42,35 +42,29 @@ function TreeNode(val, left, right) {
 // }
 
 /**
- * solution 2 -- recursive
- * time: O(n)
- * space: O(n)
- * 
  * @param {TreeNode} root
  * @return {boolean}
  */
 function isBalanced(root) {
-    return dfs(root)[0]; // bool from dfs call
-}
+    /**
+     * @param {TreeNode} root 
+     * @returns {[boolean, number]} [isSubtreeBalanced, subtreeHeight]
+     */
+    function dfs(root) {
+        if (root === null) {
+            return [true, 0];
+        }
 
-/**
- * 
- * @param {TreeNode} root 
- * @returns {array} [isBalanced, treeHeight]
- */
-function dfs(root) {
-    if (root === null) return [true, 0];
+        const leftSubtree = dfs(root.left);
+        const rightSubtree = dfs(root.right);
+        const heightDiff = Math.abs(leftSubtree[1] - rightSubtree[1]);
+        const areSubtreesBalanced = leftSubtree[0] && rightSubtree[0];
+        const isCurrentBalanced = areSubtreesBalanced && heightDiff <= 1;
+        const currentNodeHeight = 1;
+        const currentHeight = currentNodeHeight + Math.max(leftSubtree[1], rightSubtree[1]);
 
-    const left = dfs(root.left);
-    const right = dfs(root.right);
-    const [isLeftBalanced, leftHeight] = left;
-    const [isRightBalanced, rightHeight] = right;
-    const subtreeHeightsDifference = Math.abs(leftHeight - rightHeight);
-    // left subtree and right subtree must be balanced first (otherwise the entire tree is unbalanced) AND
-    // subtree heights must differ by no more than 1
-    const isTreeHeightBalanced = isLeftBalanced && isRightBalanced && subtreeHeightsDifference <= 1;
-    const currRootHeight = 1;
-    const largestSubtreeHeight = Math.max(leftHeight, rightHeight);
+        return [isCurrentBalanced, currentHeight];
+    }
 
-    return [isTreeHeightBalanced, currRootHeight + largestSubtreeHeight];
+    return dfs(root)[0];
 }
