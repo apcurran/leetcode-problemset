@@ -11,31 +11,31 @@
 function minOperations(boxes) {
     let results = new Array(boxes.length).fill(0);
 
-    let notEmpty = 0;
-    let runningSum = 0;
+    let ballsCount = 0;
+    let movesCount = 0;
 
     for (let i = 0; i < boxes.length; i++) {
-        results[i] += runningSum;
+        results[i] += movesCount;
 
         if (boxes[i] === "1") {
-            notEmpty++;
+            ballsCount++;
         }
 
-        runningSum += notEmpty;
+        movesCount += ballsCount;
     }
 
     // reset vars
-    notEmpty = 0;
-    runningSum = 0;
+    ballsCount = 0;
+    movesCount = 0;
 
     for (let i = boxes.length - 1; i >= 0; i--) {
-        results[i] += runningSum;
+        results[i] += movesCount;
 
         if (boxes[i] === "1") {
-            notEmpty++;
+            ballsCount++;
         }
 
-        runningSum += notEmpty;
+        movesCount += ballsCount;
     }
 
     return results;
