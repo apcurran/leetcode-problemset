@@ -17,7 +17,7 @@ function maximumOddBinaryNumber(s) {
 
     const onesBits = "1".repeat(onesCount - 1);
     const zerosBits = "0".repeat(s.length - onesCount);
-    const finalOneBit = "1";
+    const finalOneBit = "1"; // this ensures an odd binary number
 
     return onesBits + zerosBits + finalOneBit;
 }
