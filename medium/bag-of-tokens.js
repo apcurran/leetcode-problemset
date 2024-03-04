@@ -10,7 +10,7 @@
  * @return {number}
  */
 function bagOfTokensScore(tokens, power) {
-    let result = 0;
+    let maxScore = 0;
     let score = 0;
     tokens.sort(function sortAsc(a, b) {
         return a - b;
@@ -28,7 +28,7 @@ function bagOfTokensScore(tokens, power) {
             left++;
             score++;
             // possible update to result
-            result = Math.max(result, score);
+            maxScore = Math.max(maxScore, score);
         } else if (score > 0) {
             power += rightValue;
             right--;
@@ -38,7 +38,7 @@ function bagOfTokensScore(tokens, power) {
         }
     }
 
-    return result;
+    return maxScore;
 }
 
 console.log(bagOfTokensScore([200,100], 150)); // 1
