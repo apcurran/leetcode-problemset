@@ -18,6 +18,9 @@ function hasCycle(head) {
     let slow = head;
     let fast = head;
 
+    // cannot loop unless the current fast pointer node exists, and
+    // the fast's next next node must exist (we access fast.next.next,
+    // if this was null we would be accessing null.next which fails)
     while (fast !== null && fast.next !== null) {
         // incr by one
         slow = slow.next;
