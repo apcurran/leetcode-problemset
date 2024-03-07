@@ -52,38 +52,72 @@
 //     return -1;
 // }
 
+// /**
+//  * solution 3 -- binary search
+//  * Time: O(n * log n)
+//  * Space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function findDuplicate(nums) {
+//     let left = 1;
+//     let right = nums.length - 1;
+//     let duplicate = -1;
+
+//     while (left <= right) {
+//         const current = left + Math.floor(((right - left) / 2));
+
+//         // count how many nums in array are <= current
+//         let count = 0;
+
+//         for (let num of nums) {
+//             if (num <= current) count++;
+//         }
+
+//         if (count > current) {
+//             duplicate = current;
+//             right = current - 1;
+//         } else {
+//             left = current + 1;
+//         }
+//     }
+
+//     return duplicate;
+// }
+
 /**
- * solution 3 -- binary search
- * Time: O(n * log n)
+ * solution 4 -- Floyd's algorithm (optimal)
+ * Time: O(n)
  * Space: O(1)
  * 
  * @param {number[]} nums
  * @return {number}
  */
 function findDuplicate(nums) {
-    let left = 1;
-    let right = nums.length - 1;
-    let duplicate = -1;
+    let slow = 0;
+    let fast = 0;
 
-    while (left <= right) {
-        const current = left + Math.floor(((right - left) / 2));
+    while (true) {
+        // advance slow by one
+        slow = nums[slow];
+        // advance fast by two
+        const fastNum = nums[fast];
+        fast = nums[fastNum];
 
-        // count how many nums in array are <= current
-        let count = 0;
-
-        for (let num of nums) {
-            if (num <= current) count++;
-        }
-
-        if (count > current) {
-            duplicate = current;
-            right = current - 1;
-        } else {
-            left = current + 1;
-        }
+        if (slow === fast) break;
     }
 
-    return duplicate;
+    let slow2 = 0;
+
+    while (true) {
+        slow = nums[slow];
+        slow2 = nums[slow2];
+
+        if (slow === slow2) break;
+    }
+
+    return slow;
 }
 
 console.log( findDuplicate([1, 3, 4, 2, 2], ) ); // 2
