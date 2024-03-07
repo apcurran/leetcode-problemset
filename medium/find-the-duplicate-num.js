@@ -32,7 +32,7 @@
 // }
 
 // /**
-//  * solution 2 -- arr as hashmap (modifys input -- not allowed in desc)
+//  * solution 2 -- modify inputs (not allowed in description)
 //  * Time: O(n)
 //  * Space: O(1)
 //  * 
@@ -40,14 +40,16 @@
 //  * @return {number}
 //  */
 // function findDuplicate(nums) {
-//     while (nums[0] !== nums[nums[0]]) {
-//         const next = nums[nums[0]];
-//         // swap
-//         nums[nums[0]] = nums[0];
-//         nums[0] = next;
+//     for (let num of nums) {
+//         const index = Math.abs(num);
+
+//         if (nums[index] < 0) return index;
+
+//         nums[index] = -nums[index];
 //     }
 
-//     return nums[0];
+//     // not found
+//     return -1;
 // }
 
 /**
