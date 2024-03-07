@@ -2,7 +2,7 @@
 
 // /**
 //  * Restriction -- must only use constant space and cannot modify original nums arr
-//  * 
+//  * solution 1
 //  * Time: O(n^2) -- too slow
 //  * Space: O(1)
 //  * 
@@ -53,7 +53,7 @@
 // }
 
 /**
- * solution 2 -- binary search
+ * solution 3 -- binary search
  * Time: O(n * log n)
  * Space: O(1)
  * 
