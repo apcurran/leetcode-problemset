@@ -9,14 +9,14 @@
  * @return {number}
  */
 function minOperations(n) {
-    let result = 0;
+    let operationsCount = 0;
 
     for (let i = 0; i < n / 2; i++) {
-        const count = n - ((2 * i) + 1);
-        result += count;
+        const currentOperations = n - ((2 * i) + 1);
+        operationsCount += currentOperations;
     }
 
-    return result;
+    return operationsCount;
 }
 
 console.log(minOperations(3)); // 2
