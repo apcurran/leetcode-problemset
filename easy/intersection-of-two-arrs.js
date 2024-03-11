@@ -72,5 +72,21 @@ function intersection(nums1, nums2) {
     return sharedValues;
 }
 
+// /**
+//  * solution 4 -- hashsets (with intersection method)
+//  * time: O(n + m)
+//  * space: O(x)
+//  * 
+//  * @param {number[]} nums1
+//  * @param {number[]} nums2
+//  * @return {number[]}
+//  */
+// function intersection(nums1, nums2) {
+//     const nums1Set = new Set(nums1);
+//     const nums2Set = new Set(nums2);
+
+//     return [...nums1Set.intersection(nums2Set)];
+// }
+
 console.log( intersection([1, 2, 2, 1], [2, 2]) ); // [2]
 console.log( intersection([4, 9, 5], [9, 4, 9, 8, 4]) ); // [9, 4]
