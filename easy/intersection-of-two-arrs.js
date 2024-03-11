@@ -25,23 +25,47 @@
 //     return [...resSet];
 // }
 
+// /**
+//  * solution 2 -- hashsets
+//  * time: O(n + m)
+//  * space: O(n + m)
+//  * 
+//  * @param {number[]} nums1
+//  * @param {number[]} nums2
+//  * @return {number[]}
+//  */
+// function intersection(nums1, nums2) {
+//     const nums1Set = new Set(nums1);
+//     const nums2Set = new Set(nums2);
+//     let sharedValues = [];
+
+//     for (let num1Value of nums1Set) {
+//         if (nums2Set.has(num1Value)) {
+//             sharedValues.push(num1Value);
+//         }
+//     }
+
+//     return sharedValues;
+// }
+
 /**
- * solution 2 -- hashsets
+ * solution 3 -- hashsets
  * time: O(n + m)
- * space: O(n + m)
+ * space: O(x)
  * 
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number[]}
  */
 function intersection(nums1, nums2) {
-    const nums1Set = new Set(nums1);
-    const nums2Set = new Set(nums2);
+    let seenValues = new Set(nums1);
     let sharedValues = [];
 
-    for (let num1Value of nums1Set) {
-        if (nums2Set.has(num1Value)) {
-            sharedValues.push(num1Value);
+    for (let num of nums2) {
+        if (seenValues.has(num)) {
+            sharedValues.push(num);
+            // remove, so we do not add the value twice
+            seenValues.delete(num);
         }
     }
 
