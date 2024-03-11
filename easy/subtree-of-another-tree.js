@@ -17,13 +17,14 @@ function TreeNode(val, left, right) {
  * @return {boolean}
  */
 function isSubtree(root, subRoot) {
+    // empty subroot is always a subtree of root (null node)
     if (subRoot === null) return true;
 
     if (root === null) return false;
 
-    // both trees are not empty
     if (areSameTrees(root, subRoot)) return true;
 
+    // otherwise, check child nodes of root tree
     return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
 }
 
@@ -34,13 +35,14 @@ function isSubtree(root, subRoot) {
  * @return {boolean}
  */
 function areSameTrees(tree1, tree2) {
-    // empty trees are technically the same
+    // empty trees are technically the same -> true
     if (tree1 === null && tree2 === null) return true;
-    // one empty, one not -> not equal
+    // one empty, one not empty -> false
     if (tree1 === null || tree2 === null) return false;
     // vals have to match
     if (tree1.val !== tree2.val) return false;
 
+    // check child nodes
     const areLeftSubtreesSame = areSameTrees(tree1.left, tree2.left);
     const areRightSubtreesSame = areSameTrees(tree1.right, tree2.right);
 
