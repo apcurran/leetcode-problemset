@@ -14,23 +14,23 @@ function generateParenthesis(n) {
     /**
      * @param {number} openN 
      * @param {number} closedN 
-     * @param {string} parenthesisStr 
+     * @param {string} parens 
      * @returns {void}
      */
-    function backtrack(openN, closedN, parenthesisStr) {
+    function backtrack(openN, closedN, parens) {
         if (openN === n && closedN === n) {
             // add valid, finished parentheses string into results
-            results.push(parenthesisStr);
+            results.push(parens);
 
             return;
         }
 
         if (openN < n) {
-            backtrack(openN + 1, closedN, parenthesisStr + "(");
+            backtrack(openN + 1, closedN, parens + "(");
         }
 
         if (closedN < openN) {
-            backtrack(openN, closedN + 1, parenthesisStr + ")");
+            backtrack(openN, closedN + 1, parens + ")");
         }
     }
 
