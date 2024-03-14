@@ -29,45 +29,81 @@
 //     return sumGoalSubarraysCount;
 // }
 
+// /**
+//  * solution 1 -- sliding window
+//  * time: O(n)
+//  * space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @param {number} goal
+//  * @return {number}
+//  */
+// function numSubarraysWithSum(nums, goal) {
+//     return helper(nums, goal) - helper(nums, goal - 1);
+// }
+
+// /**
+//  * 
+//  * @param {number[]} nums 
+//  * @param {number} goal 
+//  * @returns {number}
+//  */
+// function helper(nums, goal) {
+//     if (goal < 0) return 0;
+
+//     let left = 0;
+//     let currentSum = 0;
+//     let totalSubarraysLessThanOrEqualToGoal = 0;
+    
+//     for (let right = 0; right < nums.length; right++) {
+//         currentSum += nums[right];
+
+//         while (currentSum > goal) {
+//             currentSum -= nums[left];
+//             left++;
+//         }
+
+//         const windowSize = right - left + 1;
+//         totalSubarraysLessThanOrEqualToGoal += windowSize;
+//     }
+
+//     return totalSubarraysLessThanOrEqualToGoal;
+// }
+
 /**
- * solution 1 -- sliding window
+ * solution 1 -- hashmap
  * time: O(n)
- * space: O(1)
+ * space: O(n)
  * 
  * @param {number[]} nums
  * @param {number} goal
  * @return {number}
  */
 function numSubarraysWithSum(nums, goal) {
-    return helper(nums, goal) - helper(nums, goal - 1);
-}
-
-/**
- * 
- * @param {number[]} nums 
- * @param {number} goal 
- * @returns {number}
- */
-function helper(nums, goal) {
-    if (goal < 0) return 0;
-
-    let left = 0;
+    let totalSubarraysEqualToGoal = 0;
     let currentSum = 0;
-    let totalSubarraysLessThanOrEqualToGoal = 0;
-    
-    for (let right = 0; right < nums.length; right++) {
-        currentSum += nums[right];
+    let prefixSumsFrequencies = new Map();
 
-        while (currentSum > goal) {
-            currentSum -= nums[left];
-            left++;
+    for (let num of nums) {
+        currentSum += num;
+
+        if (currentSum === goal) {
+            totalSubarraysEqualToGoal++;
         }
 
-        const windowSize = right - left + 1;
-        totalSubarraysLessThanOrEqualToGoal += windowSize;
+        // check hashmap
+        if (prefixSumsFrequencies.has(currentSum - goal)) {
+            const prefixSumFrequency = prefixSumsFrequencies.get(currentSum - goal);
+            totalSubarraysEqualToGoal += prefixSumFrequency;
+        }
+
+        // get previous frequency
+        const previousFrequency = prefixSumsFrequencies.get(currentSum) || 0;
+        // update frequency
+        prefixSumsFrequencies.set(currentSum, previousFrequency + 1);
     }
 
-    return totalSubarraysLessThanOrEqualToGoal;
+    return totalSubarraysEqualToGoal;
 }
 
 console.log(numSubarraysWithSum([1,0,1,0,1], 2)); // 4
