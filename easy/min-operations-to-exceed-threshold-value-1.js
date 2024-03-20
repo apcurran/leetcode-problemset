@@ -10,13 +10,13 @@
  * @return {number}
  */
 function minOperations(nums, k) {
-    let thresholdNumsCount = 0;
+    let belowThresholdCount = 0;
 
     for (let num of nums) {
-        if (num >= k) thresholdNumsCount++;
+        if (num < k) belowThresholdCount++;
     }
 
-    return nums.length - thresholdNumsCount;
+    return belowThresholdCount;
 }
 
 console.log(minOperations([2,11,10,1,3], 10)); // 3
