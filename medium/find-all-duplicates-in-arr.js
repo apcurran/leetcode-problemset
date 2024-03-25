@@ -83,31 +83,53 @@
 // }
 
 /**
- * Solution 4
- * 
+ * Solution 3 -- hashset
  * Time: O(n)
- * Space: O(1)
+ * Space: O(n)
  * @param {number[]} nums
  * @return {number[]}
  */
 function findDuplicates(nums) {
+    let seenNums = new Set();
     let resArr = [];
 
-    for (let i = 0; i < nums.length; i++) {
-        const index = Math.abs(nums[i]) - 1;
-
-        if (nums[index] < 0) {
-            // If the num is negative, it is a duplicate
-            const dupNum = index + 1;
-            resArr.push(dupNum);
+    for (let num of nums) {
+        if (seenNums.has(num)) {
+            resArr.push(num);
         }
 
-        // Set num to negative once seen the first time
-        nums[index] = -nums[index];
+        seenNums.add(num);
     }
 
     return resArr;
 }
+
+// /**
+//  * Solution 4
+//  * 
+//  * Time: O(n)
+//  * Space: O(1)
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
+// function findDuplicates(nums) {
+//     let resArr = [];
+
+//     for (let i = 0; i < nums.length; i++) {
+//         const index = Math.abs(nums[i]) - 1;
+
+//         if (nums[index] < 0) {
+//             // If the num is negative, it is a duplicate
+//             const dupNum = index + 1;
+//             resArr.push(dupNum);
+//         }
+
+//         // Set num to negative once seen the first time
+//         nums[index] = -nums[index];
+//     }
+
+//     return resArr;
+// }
 
 console.log( findDuplicates([4,3,2,7,8,2,3,1]) ); // [2, 3]
 console.log( findDuplicates([1,1,2]) ); // [1]
