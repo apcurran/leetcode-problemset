@@ -31,8 +31,26 @@
 //     return smallestPos;
 // }
 
+// /**
+//  * solution 2 -- Correct, but not within problem constraints O(n) time and O(1) space
+//  * time: O(n)
+//  * space: O(n)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function firstMissingPositive (nums) {
+//     const numsSet = new Set(nums);
+
+//     for (let i = 1; i <= nums.length; i++) {
+//         if (!numsSet.has(i)) return i;
+//     }
+
+//     return nums.length + 1;
+// }
+
 /**
- * solution 2 -- Correct, but not within problem constraints O(n) time and O(1) space
+ * solution 3 -- Correct, but not within problem constraints O(n) time and O(1) space
  * time: O(n)
  * space: O(n)
  * 
@@ -40,10 +58,17 @@
  * @return {number}
  */
 function firstMissingPositive (nums) {
-    const numsSet = new Set(nums);
+    let seenNums = new Array(nums.length + 1);
+
+    for (let num of nums) {
+        if (num > 0 && num <= nums.length) {
+            // mark elements in the lookup array
+            seenNums[num] = true;
+        }
+    }
 
     for (let i = 1; i <= nums.length; i++) {
-        if (!numsSet.has(i)) return i;
+        if (!seenNums[i]) return i;
     }
 
     return nums.length + 1;
