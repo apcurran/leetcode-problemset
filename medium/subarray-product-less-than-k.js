@@ -1,7 +1,33 @@
 "use strict";
 
+// /**
+//  * solution 1 -- brute force
+//  * time: O(n^2)
+//  * space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @param {number} k
+//  * @return {number}
+//  */
+// function numSubarrayProductLessThanK(nums, k) {
+//     let validSubarraysCount = 0;
+
+//     for (let i = 0; i < nums.length; i++) {
+//         let product = 1;
+
+//         for (let j = i; j < nums.length; j++) {
+//             if (nums[j] * product >= k) break;
+
+//             product *= nums[j];
+//             validSubarraysCount++;
+//         }
+//     }
+
+//     return validSubarraysCount;
+// }
+
 /**
- * solution 1 -- two pointers
+ * solution 2 -- two pointers
  * time: O(n)
  * space: O(1)
  * 
