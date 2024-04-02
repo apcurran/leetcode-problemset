@@ -66,7 +66,6 @@ function isIsomorphic(s, t) {
     // if str lens do not match -> return false
     if (s.length !== t.length) return false;
 
-    // iterate and cache letters/indices of s chars
     let sMap = new Map();
     let tMap = new Map();
 
@@ -74,6 +73,8 @@ function isIsomorphic(s, t) {
         const sChar = s[i];
         const tChar = t[i];
 
+        // chars in s -> t have to map in both directions (t -> s)
+        // otherwise, they are not isomorphic strings
         if (sMap.has(sChar) && sMap.get(sChar) !== tChar ||
             tMap.has(tChar) && tMap.get(tChar) !== sChar) {
             return false;
