@@ -1,9 +1,45 @@
 "use strict";
 
+// /**
+//  * solution 1 -- correct, but TLE (brute force)
+//  * time: O(n * k)
+//  * space: O(n + k)
+//  * 
+//  * @param {number[]} nums
+//  * @param {number} k
+//  * @return {number[]}
+//  */
+// function maxSlidingWindow(nums, k) {
+//     let maxValues = [];
+
+//     // iterate nums by 1 each time
+//     for (let i = 0; i <= nums.length - k; i++) {
+//         // check current window of length k
+//         const chunk = nums.slice(i, i + k);
+//         const chunkMax = getMax(chunk);
+//         maxValues.push(chunkMax);
+//     }
+
+//     return maxValues;
+// }
+
+// /**
+//  * @param {number[]} nums 
+//  */
+// function getMax(nums) {
+//     let max = nums[0];
+
+//     for (let i = 1; i < nums.length; i++) {
+//         max = Math.max(max, nums[i]);
+//     }
+
+//     return max;
+// }
+
 /**
- * solution 1 -- correct, but TLE (brute force)
+ * solution 2 -- correct, but TLE (brute force)
  * time: O(n * k)
- * space: O(n + k)
+ * space: O(n)
  * 
  * @param {number[]} nums
  * @param {number} k
@@ -15,22 +51,25 @@ function maxSlidingWindow(nums, k) {
     // iterate nums by 1 each time
     for (let i = 0; i <= nums.length - k; i++) {
         // check current window of length k
-        const chunk = nums.slice(i, i + k);
-        const chunkMax = getMax(chunk);
+        const start = i;
+        const end = i + k;
+        const chunkMax = getMax(nums, start, end);
         maxValues.push(chunkMax);
     }
 
     return maxValues;
 }
 
-
 /**
- * @param {number[]} nums 
+ * @param {number[]} nums
+ * @param {number} start
+ * @param {number} end
+ * @returns {number}
  */
-function getMax(nums) {
-    let max = nums[0];
+function getMax(nums, start, end) {
+    let max = nums[start];
 
-    for (let i = 1; i < nums.length; i++) {
+    for (let i = start + 1; i < end; i++) {
         max = Math.max(max, nums[i]);
     }
 
