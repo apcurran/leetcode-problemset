@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1 -- correct, but TLE
+ * solution 1 -- correct, but TLE (brute force)
  * time: O(n * k)
  * space: O(n + k)
  * 
