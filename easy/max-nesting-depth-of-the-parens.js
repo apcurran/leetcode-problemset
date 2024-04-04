@@ -47,17 +47,16 @@
  */
 function maxDepth(str) {
     let maxNestingCount = 0;
-    let currentCount = 0;
+    let currentNestingCount = 0;
 
     for (let character of str) {
         if (character === "(") {
-            currentCount++;
-            maxNestingCount = Math.max(maxNestingCount, currentCount);
+            currentNestingCount++;
+        } else if (character === ")") {
+            currentNestingCount--;
         }
 
-        if (character === ")") {
-            currentCount--;
-        }
+        maxNestingCount = Math.max(maxNestingCount, currentNestingCount);
     }
 
     return maxNestingCount;
