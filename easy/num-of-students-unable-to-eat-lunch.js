@@ -61,7 +61,7 @@ function countStudents(students, sandwiches) {
             results--;
             count.set(sandwich, currentCount - 1);
         } else {
-            return results;
+            break;
         }
     }
 
