@@ -14,27 +14,19 @@ function TreeNode(val, left, right) {
  * @param {TreeNode} root
  * @param {number} val
  * @param {number} depth
- * @return {TreeNode}
+ * @return {TreeNode|null}
  */
-function addOneRow(root, val, depth, currentLocation = 1) {
+function addOneRow(root, val, depth) {
+    if (root === null) return null;
+
     if (depth === 1) {
-        // add root
-        const newRoot = new TreeNode(val, root);
-
-        return newRoot;
-    }
-
-    if (depth - 1 === currentLocation) {
-        root.left = new TreeNode(val, root.left);
+        root = new TreeNode(val, root, null);
+    } else if (depth === 2) {
+        root.left = new TreeNode(val, root.left, null);
         root.right = new TreeNode(val, null, root.right);
     } else {
-        if (root.left) {
-            addOneRow(root.left, val, depth, currentLocation + 1);
-        }
-
-        if (root.right) {
-            addOneRow(root.right, val, depth, currentLocation + 1);
-        }
+        addOneRow(root.left, val, depth - 1);
+        addOneRow(root.right, val, depth - 1);
     }
 
     return root;
