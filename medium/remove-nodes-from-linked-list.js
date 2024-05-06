@@ -43,6 +43,17 @@ function ListNode(val, next) {
 //     return resultList;
 // }
 
+const a = new ListNode(5);
+const b = new ListNode(2);
+const c = new ListNode(13);
+const d = new ListNode(3);
+const e = new ListNode(8);
+
+a.next = b;
+b.next = c;
+c.next = d;
+d.next = e;
+
 /**
  * solution 1 -- recursive
  * time: O(n)
@@ -70,3 +81,6 @@ function removeNodes(head) {
         return head;
     }
 }
+
+// 5 -> 2 -> 13 -> 3 -> 8
+console.log(removeNodes(a)); // 13 -> 8
