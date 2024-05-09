@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1 -- correct, but TLE
+ * solution 1 -- correct, but TLE (simulation)
  * n = happinessScores
  * time: O(k * n)
  * space: O(1)
