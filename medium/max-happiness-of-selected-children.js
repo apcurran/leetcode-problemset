@@ -84,10 +84,11 @@ function maximumHappinessSum(happinessScores, k) {
     let turns = 0;
 
     for (let i = 0; i < k; i++) {
-        const current = happinessScores[i] - turns;
+        // calculate current child's happiness - the number of decrements iterations (turns) this would have had on remaining happiness scores
+        const currentHappinessScore = happinessScores[i] - turns;
         
-        if (current > 0) {
-            totalHappiness += current;
+        if (currentHappinessScore > 0) {
+            totalHappiness += currentHappinessScore;
         }
 
         turns++;
