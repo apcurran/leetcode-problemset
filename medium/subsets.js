@@ -1,37 +1,66 @@
 "use strict";
 
+// /**
+//  * solution 1 -- backtracking (recursion)
+//  * time: O(n * 2^n)
+//  * space: O(n)
+//  * 
+//  * @param {number[]} nums
+//  * @return {number[][]}
+//  */
+// function subsets(nums) {
+//     /** @type {[][]} */
+//     let results = [];
+//     let currentSubset = [];
+
+//     function dfs(i) {
+//         if (i >= nums.length) {
+//             const subsetCopy = [...currentSubset];
+//             results.push(subsetCopy);
+
+//             return;
+//         }
+
+//         // decision to include current number
+//         currentSubset.push(nums[i]);
+//         // continue to next i value
+//         dfs(i + 1);
+
+//         // decision to exclude current number
+//         currentSubset.pop();
+//         dfs(i + 1);
+//     }
+
+//     dfs(0);
+
+//     return results;
+// }
+
 /**
- * solution 1 -- recursion
+ * solution 2 -- cascading
  * time: O(n * 2^n)
- * space: O(n)
+ * space: O(n * 2^n)
  * 
  * @param {number[]} nums
  * @return {number[][]}
  */
 function subsets(nums) {
-    /** @type {[][]} */
-    let results = [];
-    let currentSubset = [];
+    let results = [[]];
 
-    function dfs(i) {
-        if (i >= nums.length) {
-            const subsetCopy = [...currentSubset];
-            results.push(subsetCopy);
+    for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        let subsets = [];
 
-            return;
+        for (let current of results) {
+            const temp = current.slice();
+            temp.push(num);
+            subsets.push(temp);
         }
 
-        // decision to include current number
-        currentSubset.push(nums[i]);
-        // continue to next i value
-        dfs(i + 1);
-
-        // decision to exclude current number
-        currentSubset.pop();
-        dfs(i + 1);
+        for (let current of subsets) {
+            results.push(current);
+        }
     }
-
-    dfs(0);
 
     return results;
 }
