@@ -20,6 +20,7 @@ function isSubtree(root, subRoot) {
     // empty subroot is always a subtree of root (null node)
     if (subRoot === null) return true;
 
+    // cannot have a subRoot identical to root if root is null
     if (root === null) return false;
 
     if (areSameTrees(root, subRoot)) return true;
