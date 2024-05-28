@@ -9,6 +9,9 @@
  * @return {number}
  */
 function specialArray(nums) {
+    // if nums has any numbers,
+    // there can never be 0 numbers >= 0
+    // therefore, x starts at 1
     for (let x = 1; x <= nums.length; x++) {
         let counter = 0;
 
