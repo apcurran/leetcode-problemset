@@ -16,10 +16,11 @@ function numSteps(binaryStr) {
         const lastDigit = binaryStr[binaryStr.length - 1];
 
         if (lastDigit === "0") {
-            // even num
+            // even num, divide by two
             const binaryNumStrDividedByTwo = binaryStr.slice(0, -1);
             binaryStr = binaryNumStrDividedByTwo;
         } else {
+            // odd num, add one
             const binaryNumStrPlusOne = binaryAddOne(binaryStr);
             binaryStr = binaryNumStrPlusOne;
         }
