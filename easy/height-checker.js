@@ -5,7 +5,7 @@
  * time: O(n * log n)
  * space: O(n)
  * 
- * @param {number[]} actualHeights
+ * @param {number[]} heights
  * @return {number}
  */
 function heightChecker(heights) {
