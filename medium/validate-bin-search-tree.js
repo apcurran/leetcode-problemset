@@ -56,5 +56,10 @@ function isValidBST(root, leftBoundary = -Infinity, rightBoundary = Infinity) {
 
     if (root.val >= rightBoundary) return false;
 
-    return isValidBST(root.left, leftBoundary, root.val) && isValidBST(root.right, root.val, rightBoundary);
+    // update right boundary to current root's value
+    const isValidLeftSubtree = isValidBST(root.left, leftBoundary, root.val);
+    // update left boundary to current root's value
+    const isValidRightSubtree = isValidBST(root.right, root.val, rightBoundary);
+
+    return isValidLeftSubtree && isValidRightSubtree;
 }
