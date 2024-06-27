@@ -30,7 +30,7 @@
 // }
 
 /**
- * solution 1
+ * solution 2
  * time: O(n * log n) -- array.sort()
  * space: O(n)
  * 
