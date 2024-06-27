@@ -10,13 +10,13 @@
  * @return {number}
  */
 function findCenter(edges) {
-    const firstArr = edges[0];
-    const secondArr = edges[1];
+    const firstEdge = edges[0];
+    const secondEdge = edges[1];
     
-    for (let i = 0; i < firstArr.length; i++) {
-        const currFirstArrNum = firstArr[i];
+    for (let i = 0; i < firstEdge.length; i++) {
+        const currFirstArrNum = firstEdge[i];
 
-        if (secondArr.includes(currFirstArrNum)) return currFirstArrNum;
+        if (secondEdge.includes(currFirstArrNum)) return currFirstArrNum;
     }
     
     return -1;
