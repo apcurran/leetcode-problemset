@@ -1,7 +1,29 @@
 "use strict";
 
+// /**
+//  * solution 1
+//  * time: O(n)
+//  * space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @return {boolean}
+//  */
+// function threeConsecutiveOdds(nums) {
+//     for (let i = 0; i < nums.length - 2; i++) {
+//         const firstNum = nums[i];
+//         const secondNum = nums[i + 1];
+//         const thirdNum = nums[i + 2];
+
+//         if (firstNum % 2 !== 0 && secondNum % 2 !== 0 && thirdNum % 2 !== 0) {
+//             return true;
+//         }
+//     }
+
+//     return false;
+// }
+
 /**
- * solution 1
+ * solution 2 -- counter
  * time: O(n)
  * space: O(1)
  * 
@@ -9,12 +31,19 @@
  * @return {boolean}
  */
 function threeConsecutiveOdds(nums) {
-    for (let i = 0; i < nums.length - 2; i++) {
-        const firstNum = nums[i];
-        const secondNum = nums[i + 1];
-        const thirdNum = nums[i + 2];
+    let consecutiveOddsCount = 0;
 
-        if (firstNum % 2 !== 0 && secondNum % 2 !== 0 && thirdNum % 2 !== 0) {
+    for (let i = 0; i < nums.length; i++) {
+        const currentNum = nums[i];
+
+        if (currentNum % 2 === 1) {
+            // odd num
+            consecutiveOddsCount++;
+        } else {
+            consecutiveOddsCount = 0;
+        }
+
+        if (consecutiveOddsCount === 3) {
             return true;
         }
     }
