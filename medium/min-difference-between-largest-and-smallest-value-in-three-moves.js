@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1
+ * solution 1 -- two pointers
  * time: O(n * log n)
  * space: O(n)
  * 
