@@ -32,7 +32,7 @@ function rangeSum(nums, n, left, right) {
 
     let sumFromLeftToRight = 0;
 
-    for (let i = left - 1; i <= right - 1; i++) {
+    for (let i = left - 1; i < right; i++) {
         sumFromLeftToRight += subarraySums[i];
     }
 
