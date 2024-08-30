@@ -2,8 +2,8 @@
 
 // /**
 //  * solution 1 -- recursion
-//  * time: O(n^2)
-//  * space: O(n)
+//  * time: O(k * n)
+//  * space: O(k)
 //  * 
 //  * @param {number[]} nums
 //  * @param {number} k
@@ -23,7 +23,7 @@
 
 /**
  * solution 2 -- iterative
- * time: O(n^2)
+ * time: O(k * n)
  * space: O(1)
  * 
  * @param {number[]} nums
