@@ -21,7 +21,7 @@ function longestCommonPrefix(arr1, arr2) {
         }
     }
 
-    let result = 0;
+    let longestPrefixLength = 0;
 
     for (let num of largerArr) {
         while (num && !prefixSet.has(num)) {
@@ -29,11 +29,11 @@ function longestCommonPrefix(arr1, arr2) {
         }
 
         if (num !== 0) {
-            result = Math.max(result, String(num).length);
+            longestPrefixLength = Math.max(longestPrefixLength, String(num).length);
         }
     }
 
-    return result;
+    return longestPrefixLength;
 }
 
 console.log(longestCommonPrefix([1,10,100], [1000])); // 3
