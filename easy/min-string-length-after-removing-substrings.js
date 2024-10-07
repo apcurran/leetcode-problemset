@@ -12,14 +12,13 @@ function minLength(s) {
     let stack = [];
 
     for (let char of s) {
-        if (stack.length > 0 && char === "B" && stack.at(-1) === "A") {
-            // if non-empty stack, and top of stack is "A" with current char "B" (adjacent "AB", remove)
+        stack.push(char);
+
+        if (stack.length >= 2 &&
+            (stack.at(-2) === "A" && stack.at(-1) === "B") ||
+            (stack.at(-2) === "C" && stack.at(-1) === "D")) {
             stack.pop();
-        } else if (stack.length > 0 && char === "D" && stack.at(-1) === "C") {
-            // if non-empty stack, and top of stack is "D" with current char "C" (adjacent "CD", remove)
             stack.pop();
-        } else {
-            stack.push(char);
         }
     }
 
