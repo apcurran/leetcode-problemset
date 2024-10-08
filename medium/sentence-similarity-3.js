@@ -2,7 +2,7 @@
 
 /**
  * solution 1 -- two pointers
- * time: O(min(s1, s2))
+ * time: O(s1 + s2)
  * space: O(s1 + s2)
  * 
  * @param {string} sentence1
