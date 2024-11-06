@@ -18,17 +18,16 @@ function canSortArray(nums) {
             if (nums[j] <= nums[j + 1]) {
                 // no swap, values are already in order
                 continue;
+            }
+            // same number of setbits for each value
+            if (getSetBitsCount(nums[j]) === getSetBitsCount(nums[j + 1])) {
+                // swap values
+                const tempNumA = nums[j];
+                const tempNumB = nums[j + 1];
+                nums[j + 1] = tempNumA;
+                nums[j] = tempNumB;
             } else {
-                // same number of setbits for each value
-                if (getSetBitsCount(nums[j]) === getSetBitsCount(nums[j + 1])) {
-                    // swap values
-                    const tempNumA = nums[j];
-                    const tempNumB = nums[j + 1];
-                    nums[j + 1] = tempNumA;
-                    nums[j] = tempNumB;
-                } else {
-                    return false;
-                }
+                return false;
             }
         }
     }
