@@ -16,7 +16,7 @@ function canSortArray(nums) {
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < n - i - 1; j++) {
             if (nums[j] <= nums[j + 1]) {
-                // no swap
+                // no swap, values are already in order
                 continue;
             } else {
                 // same number of setbits for each value
