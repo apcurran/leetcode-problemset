@@ -3,9 +3,9 @@
 /**
  * solution 1 -- brute force
  * n = nums length
- * m = chunk length
- * time: O(n * (m * log m))
- * space: O(n + m)
+ * k = chunk length
+ * time: O(n * k)
+ * space: O(n + k)
  * 
  * @param {number[]} nums
  * @param {number} k
@@ -18,7 +18,7 @@ function resultsArray(nums, k) {
         // check k size chunk
         const chunk = nums.slice(i, i + k);
         // if elements are consecutive and sorted ASC
-        if (isConsecutive(chunk) && isSortedAsc(chunk)) {
+        if (isConsecutive(chunk)) {
             // get max value
             const maxValue = Math.max(...chunk);
             // record max in results array
@@ -44,27 +44,6 @@ function isConsecutive(arr) {
         }
 
         previousValue = currentValue;
-    }
-
-    return true;
-}
-
-/**
- * @param {number[]} arr 
- * @returns {boolean}
- */
-function isSortedAsc(arr) {
-    const sortedArr = arr.toSorted(function sortedAsc(a, b) {
-        return a - b;
-    });
-
-    for (let i = 0; i < arr.length; i++) {
-        const originalArrValue = arr[i];
-        const sortedArrValue = sortedArr[i];
-
-        if (originalArrValue !== sortedArrValue) {
-            return false;
-        }
     }
 
     return true;
