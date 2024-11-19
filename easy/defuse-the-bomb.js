@@ -22,7 +22,7 @@ function decrypt(code, k) {
             }
         } else {
             for (let j = i - 1; j > i - 1 - Math.abs(k); j--) {
-                results[i] += code[j % n];
+                results[i] += code[(j + n) % n];
             }
         }
     }
