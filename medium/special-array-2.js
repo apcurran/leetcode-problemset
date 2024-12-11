@@ -1,26 +1,50 @@
 "use strict";
 
 /**
+ * solution 1 -- brute force (TLE on the last test!)
+ * n = nums length
+ * m = queries length
+ * b = badIndices length
+ * time: O(n + (m * b))
+ * space: O(1) -- excluding results
+ * 
  * @param {number[]} nums
  * @param {number[][]} queries
  * @return {boolean[]}
  */
 function isArraySpecial(nums, queries) {
+    let badIndices = [];
+
+    for (let i = 0; i < nums.length - 1; i++) {
+        // if both nums are even OR
+        // if both nums are odd (no differing parity)
+        if ((nums[i] % 2 === 0 && nums[i + 1] % 2 === 0) || (nums[i] % 2 !== 0 && nums[i + 1] % 2 !== 0)) {
+            badIndices.push(i);
+        }
+    }
+
     let results = [];
     // iterate queries array
     for (let [queryStart, queryEnd] of queries) {
+        let found = false;
         // iterate range
-        for (let i = queryStart; i <= queryEnd; i++) {
-            const num1 = nums[i];
-            const num2 = nums[i + 1];
-            // if all adjacent nums in range are differing in odd/even status
-            if (num1 % 2 !== 0 && num2 % 2 !== 0) {
-                
+        for (let index of badIndices) {
+            if (index >= queryEnd) {
+                results.push(true);
+                found = true;
+
+                break;
             }
-                // add true to results array
-                // otherwise, add false to results
+
+            if (index < queryEnd && index >= queryStart) {
+                results.push(false);
+                found = true;
+
+                break;
+            }
         }
 
+        if (!found) results.push(true);
     }
 
     return results;
