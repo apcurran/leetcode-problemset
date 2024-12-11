@@ -24,10 +24,10 @@ function isArraySpecial(nums, queries) {
     }
 
     let results = [];
-    // iterate queries array
+
     for (let [queryStart, queryEnd] of queries) {
         let found = false;
-        // iterate range
+        
         for (let index of badIndices) {
             if (index >= queryEnd) {
                 results.push(true);
