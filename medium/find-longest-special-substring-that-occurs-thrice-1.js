@@ -1,6 +1,10 @@
 "use strict";
 
 /**
+ * solution 1 brute force
+ * time: O()
+ * space: O(n^2)
+ * 
  * @param {string} str
  * @return {number}
  */
