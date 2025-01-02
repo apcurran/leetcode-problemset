@@ -46,9 +46,26 @@
  */
 function vowelStrings(words, queries) {
     const VOWELS = "aeiou";
+    let prefixCount = new Array(words.length + 1).fill(0);
+
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i];
+        let isVowel = 0;
+
+        if (VOWELS.includes(word[0]) && VOWELS.includes(word[word.length - 1])) {
+            isVowel = 1;
+        }
+
+        prefixCount[i + 1] = prefixCount[i] + isVowel;
+    }
+
     let results = [];
 
-    
+    for (let i = 0; i < queries.length; i++) {
+        const [queryStart, queryEnd] = queries[i];
+        const amount = prefixCount[queryEnd + 1] - prefixCount[queryStart];
+        results.push(amount);
+    }
     
     return results;
 }
