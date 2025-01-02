@@ -63,8 +63,8 @@ function vowelStrings(words, queries) {
 
     for (let i = 0; i < queries.length; i++) {
         const [queryStart, queryEnd] = queries[i];
-        const amount = prefixCount[queryEnd + 1] - prefixCount[queryStart];
-        results.push(amount);
+        const validWordsInRange = prefixCount[queryEnd + 1] - prefixCount[queryStart];
+        results.push(validWordsInRange);
     }
     
     return results;
