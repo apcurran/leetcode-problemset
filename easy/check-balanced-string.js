@@ -2,19 +2,18 @@
 
 /**
  * solution 1
- * time: O(n) -- stringify num
- * space: O(n) -- stringify num
+ * time: O(n)
+ * space: O(1)
  * 
  * @param {string} num
  * @return {boolean}
  */
 function isBalanced(num) {
-    const strNum = String(num);
     let evenIndiceValuesSum = 0;
     let oddIndiceValuesSum = 0;
 
-    for (let i = 0; i < strNum.length; i++) {
-        const digit = Number(strNum[i]);
+    for (let i = 0; i < num.length; i++) {
+        const digit = Number(num[i]);
 
         if (i % 2 === 0) {
             evenIndiceValuesSum += digit;
