@@ -22,33 +22,27 @@
 // }
 
 /**
- * solution 2 -- brute force (slightly optimized)
- * time: O(n^2)
+ * solution 3 -- prefix/suffix sums
+ * time: O(n)
  * space: O(1)
  * 
  * @param {number[]} nums
  * @return {number}
  */
 function waysToSplitArray(nums) {
-    let counter = 0;
+    let leftSum = 0;
+    let rightSum = nums.reduce((sum, current) => sum + current, 0);
+    let result = 0;
 
     for (let i = 0; i < nums.length - 1; i++) {
-        let prefixSum = 0;
+        const currentElement = nums[i];
+        leftSum += currentElement;
+        rightSum -= currentElement;
 
-        for (let j = 0; j <= i; j++) {
-            prefixSum += nums[j];
-        }
-
-        let suffixSum = 0;
-
-        for (let j = i + 1; j < nums.length; j++) {
-            suffixSum += nums[j];
-        }
-
-        if (prefixSum >= suffixSum) counter++;
+        if (leftSum >= rightSum) result++;
     }
 
-    return counter;
+    return result;
 }
 
 console.log(waysToSplitArray([10,4,-8,7])); // 2
