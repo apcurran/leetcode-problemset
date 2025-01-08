@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1
+ * solution 1 -- brute force
  * n = words length
  * s = str2 length
  * time: O(n^2 * s)
