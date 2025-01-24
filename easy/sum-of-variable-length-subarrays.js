@@ -13,13 +13,10 @@ function subarraySum(nums) {
 
     for (let i = 0; i < nums.length; i++) {
         const startPoint = Math.max(0, i - nums[i]);
-        let subarraySum = 0;
 
         for (let j = startPoint; j <= i; j++) {
-            subarraySum += nums[j];
+            totalSum += nums[j];
         }
-
-        totalSum += subarraySum;
     }
 
     return totalSum;
