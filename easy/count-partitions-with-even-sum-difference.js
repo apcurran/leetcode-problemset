@@ -27,4 +27,4 @@ function countPartitions(nums) {
     return count;
 }
 
-console.log(countPartitions([10,10,3,7,6])); // 4
+console.log(countPartitions([10, 10, 3, 7, 6])); // 4
