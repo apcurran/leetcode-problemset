@@ -8,7 +8,7 @@ function TreeNode(val, left, right) {
 
 /**
  * solution 1 -- modified DFS
- * time: O(n^2)
+ * time: O(n)
  * space: O(n)
  * 
  * @param {TreeNode} root
