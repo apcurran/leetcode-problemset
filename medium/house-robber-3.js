@@ -22,11 +22,11 @@ function rob(root) {
     function dfs(root) {
         if (!root) return [0, 0];
 
-        let leftPair = dfs(root.left);
-        let rightPair = dfs(root.right);
+        const leftPair = dfs(root.left);
+        const rightPair = dfs(root.right);
 
-        let withRoot = root.val + leftPair[1] + rightPair[1];
-        let withoutRoot = Math.max(...leftPair) + Math.max(...rightPair);
+        const withRoot = root.val + leftPair[1] + rightPair[1];
+        const withoutRoot = Math.max(...leftPair) + Math.max(...rightPair);
 
         return [withRoot, withoutRoot];
     }
