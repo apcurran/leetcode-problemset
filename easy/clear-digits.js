@@ -29,11 +29,10 @@
  * @return {string}
  */
 function clearDigits(str) {
-    const digits = "0123456789";
     let stack = [];
 
     for (let char of str) {
-        if (digits.includes(char)) {
+        if (char >= "0" && char <= "9") {
             // digit found
                 // delete previous stack top item
                 // skip adding this current char
