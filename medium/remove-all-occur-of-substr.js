@@ -18,7 +18,7 @@ function removeOccurrences(str, part) {
 }
 
 // /**
-//  * solution 1 -- iterative
+//  * solution 2 -- iterative
 //  * time: O(n^2)
 //  * space: O(n)
 //  * 
