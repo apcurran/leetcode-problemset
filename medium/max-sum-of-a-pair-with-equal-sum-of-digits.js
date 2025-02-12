@@ -4,7 +4,7 @@
  * solution 1 -- brute force (TLE)
  * x = nums[i] value
  * y = nums[y] value
- * time: O(n^2 * max(x, y))
+ * time: O(n^2 * max(log x, log y))
  * space: O(1)
  * 
  * @param {number[]} nums
