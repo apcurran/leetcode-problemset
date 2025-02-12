@@ -2,8 +2,8 @@
 
 /**
  * solution 1 -- brute force (TLE)
- * x = nums[i]
- * y = nums[y]
+ * x = nums[i] value
+ * y = nums[y] value
  * time: O(n^2 * max(x, y))
  * space: O(1) -- split creates a new array
  * 
