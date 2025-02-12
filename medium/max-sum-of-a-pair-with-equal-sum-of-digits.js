@@ -5,7 +5,7 @@
  * x = nums[i] value
  * y = nums[y] value
  * time: O(n^2 * max(x, y))
- * space: O(1) -- split creates a new array
+ * space: O(1)
  * 
  * @param {number[]} nums
  * @return {number}
