@@ -15,8 +15,8 @@ class NeighborSum {
      * @return {number}
      */
     adjacentSum(value) {
-        let valueRow = 0;
-        let valueCol = 0;
+        let valueRow = -1;
+        let valueCol = -1;
 
         outerLoop: for (let row = 0; row < this.grid.length; row++) {
             for (let col = 0; col < this.totalCols; col++) {
@@ -44,8 +44,8 @@ class NeighborSum {
      * @return {number}
      */
     diagonalSum(value) {
-        let valueRow = 0;
-        let valueCol = 0;
+        let valueRow = -1;
+        let valueCol = -1;
 
         outerLoop: for (let row = 0; row < this.grid.length; row++) {
             for (let col = 0; col < this.totalCols; col++) {
