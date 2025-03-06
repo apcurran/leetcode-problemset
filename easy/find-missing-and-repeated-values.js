@@ -27,9 +27,9 @@ function findMissingAndRepeatedValues(grid) {
     
     let missingNum = 0;
 
-    for (let value = 1; value <= n * n; value++) {
-        if (!seenNums.has(value)) {
-            missingNum = value;
+    for (let num = 1; num <= n * n; num++) {
+        if (!seenNums.has(num)) {
+            missingNum = num;
 
             break;
         }
