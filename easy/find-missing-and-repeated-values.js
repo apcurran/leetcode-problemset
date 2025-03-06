@@ -10,22 +10,22 @@
  * @return {[number, number]} [repeatedNum, missingNum]
  */
 function findMissingAndRepeatedValues(grid) {
+    const n = grid.length;
     let seenNums = new Set();
     let repeatedNum = 0;
-    let missingNum = 0;
-
-    for (let row = 0; row < grid.length; row++) {
+    
+    for (let row = 0; row < n; row++) {
         for (let col = 0; col < grid.length; col++) {
             const num = grid[row][col];
-
+            
             if (seenNums.has(num)) repeatedNum = num;
-
+            
             seenNums.add(num);
         }
     }
-
-    const n = grid.length;
     
+    let missingNum = 0;
+
     for (let value = 1; value <= n * n; value++) {
         if (!seenNums.has(value)) {
             missingNum = value;
