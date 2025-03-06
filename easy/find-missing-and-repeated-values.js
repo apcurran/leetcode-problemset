@@ -3,8 +3,8 @@
 /**
  * solution 1 -- hashset cache
  * n = grid length
- * time: O(n^2)
- * space: O(n^2)
+ * time: O(n^2) -- iterate through all grid values
+ * space: O(n^2) -- hashset will hold all grid values
  * 
  * @param {number[][]} grid
  * @return {[number, number]} [repeatedNum, missingNum]
