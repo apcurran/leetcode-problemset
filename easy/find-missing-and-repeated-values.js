@@ -15,12 +15,13 @@ function findMissingAndRepeatedValues(grid) {
     let repeatedNum = 0;
     
     for (let row = 0; row < n; row++) {
-        for (let col = 0; col < grid.length; col++) {
-            const num = grid[row][col];
+        for (let col = 0; col < n; col++) {
+            const currentNum = grid[row][col];
             
-            if (seenNums.has(num)) repeatedNum = num;
+            // record repeatedNum, but keep going to visit all nums for seenNums Set
+            if (seenNums.has(currentNum)) repeatedNum = currentNum;
             
-            seenNums.add(num);
+            seenNums.add(currentNum);
         }
     }
     
