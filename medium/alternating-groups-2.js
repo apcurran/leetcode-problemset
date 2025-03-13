@@ -14,6 +14,7 @@ function numberOfAlternatingGroups(colors, k) {
     let left = 0;
     let result = 0;
 
+    // add k to deal with circular nature of array
     for (let right = 1; right < n + k - 1; right++) {
         // check alternating status
         if (colors[right % n] === colors[(right - 1) % n]) {
