@@ -30,7 +30,13 @@ function numberOfSubstrings(s) {
             // at least 1 of each "a", "b", and "c"?
             // add to results counter
             if (aCount !== 0 && bCount !== 0 && cCount !== 0) {
-                result++;
+                // optimization -- skip recounting a match we already know will work
+                // add however many new characters occur after current match left in string
+                
+                // almost passes judgement (53/54 tests pass)
+                result += s.length - j;
+
+                break;
             }
         }
     }
