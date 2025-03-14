@@ -31,8 +31,8 @@ function numberOfSubstrings(s) {
             // add to results counter
             if (aCount !== 0 && bCount !== 0 && cCount !== 0) {
                 // optimization -- skip recounting a match we already know will work
-                // add however many new characters occur after current match left in string
-                
+                // add how ever many new characters occur after current match left in string
+
                 // almost passes judgement (53/54 tests pass)
                 result += s.length - j;
 
