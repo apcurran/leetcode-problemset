@@ -9,9 +9,8 @@
  * @return {boolean}
  */
 function divideArray(nums) {
-    // check if nums len is even (for equal pairs)
     if (nums.length % 2 !== 0) return false;
-    // cache num and occurences
+    
     let numCounts = new Map();
 
     for (let num of nums) {
@@ -19,9 +18,12 @@ function divideArray(nums) {
         numCounts.set(num, prevCount + 1);
     }
 
-    // iterate cache and check if occurences val is even
-    for (let numCount of numCounts.values()) {
-        if (numCount % 2 !== 0) return false;
+    // // iterate cache and check if occurences val is even
+    for (let [, numCount] of numCounts) {
+        if (numCount % 2 !== 0) {
+            // odd count -> can't make all even pairs!
+            return false;
+        }
     }
 
     return true;
