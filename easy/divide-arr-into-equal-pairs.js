@@ -54,5 +54,34 @@ function divideArray(nums) {
     return seenNums.size === 0;
 }
 
+// /**
+//  * solution 3 -- sorting
+//  * time: O(n * log n) -- array.sort()
+//  * space: O(n) -- array.sort() uses linear space
+//  * 
+//  * @param {number[]} nums
+//  * @return {boolean}
+//  */
+// function divideArray(nums) {
+//     if (nums.length % 2 !== 0) return false;
+
+//     nums.sort(function sortAsc(a, b) {
+//         return a - b;
+//     });
+
+//     for (let i = 0; i < nums.length - 1; i += 2) {
+//         const currentNum = nums[i];
+//         const nextNum = nums[i + 1];
+
+//         if (currentNum !== nextNum) {
+//             // pair does NOT match,
+//             // return false early
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
 console.log( divideArray([3, 2, 3, 2, 2, 2]) ); // true
 console.log( divideArray([1, 2, 3, 4]) ); // false
