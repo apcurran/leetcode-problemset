@@ -23,6 +23,7 @@ function minOperations(nums) {
     let result = 0;
 
     for (let i = 0; i < nums.length - 2; i++) {
+        // skip 1 bits, only looking to flip 0s
         if (nums[i] === 1) {
             continue;
         }
