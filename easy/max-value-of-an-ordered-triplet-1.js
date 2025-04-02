@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * solution 1 -- nested loops
+ * solution 1 -- brute force
  * time: O(n^3)
  * space: O(1)
  * 
