@@ -9,9 +9,9 @@
  * @return {number[]}
  */
 function minCosts(costs) {
+    let smallestCost = costs[0];
     let results = new Array(costs.length);
     results[0] = costs[0];
-    let smallestCost = costs[0];
 
     for (let i = 1; i < costs.length; i++) {
         smallestCost = Math.min(smallestCost, costs[i]);
