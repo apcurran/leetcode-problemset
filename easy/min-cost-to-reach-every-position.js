@@ -14,7 +14,9 @@ function minCosts(costs) {
     results[0] = costs[0];
 
     for (let i = 1; i < costs.length; i++) {
+        // compare smallest cost so far with current cost, take smallest
         smallestCost = Math.min(smallestCost, costs[i]);
+        // update current index with smallest cost so far
         results[i] = smallestCost;
     }
 
