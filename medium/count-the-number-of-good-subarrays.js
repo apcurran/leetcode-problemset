@@ -54,11 +54,11 @@ function countGood(nums, k) {
         let goodPairsSubarrayCounter = 0;
 
         for (let j = i; j < nums.length; j++) {
-            const current = hashmap.get(nums[j]) || 0;
+            const currentNumFrequency = hashmap.get(nums[j]) || 0;
             // update counter
-            goodPairsSubarrayCounter += current;
+            goodPairsSubarrayCounter += currentNumFrequency;
             // update hashmap
-            hashmap.set(nums[j], current + 1);
+            hashmap.set(nums[j], currentNumFrequency + 1);
 
             if (goodPairsSubarrayCounter >= k) {
                 resultsCount++;
