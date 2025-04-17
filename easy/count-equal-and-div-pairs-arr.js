@@ -11,21 +11,18 @@
  */
 function countPairs(nums, k) {
     let pairsCount = 0;
-    // iterate nums arr
+    
     for (let i = 0; i < nums.length; i++) {
         const outerNum = nums[i];
 
-        // iterate nums arr again
         for (let j = i + 1; j < nums.length; j++) {
             const innerNum = nums[j];
 
             if (outerNum !== innerNum) continue;
 
-            // equal nums
-            const indexProd = i * j;
+            const isIndicesProductDivisibleByK = (i * j) % k === 0;
 
-            // is product div by 2?
-            if (indexProd % k === 0) pairsCount++;
+            if (isIndicesProductDivisibleByK) pairsCount++;
         }
     }
 
