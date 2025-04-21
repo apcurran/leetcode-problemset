@@ -18,9 +18,10 @@ function numRabbits(answers) {
 
     let total = 0;
 
-    for (let [key, value] of map) {
-        const amount = Math.ceil(value / (key + 1)) * (key + 1);
-        total += amount;
+    for (let [x, count] of map) {
+        const groupSize = x + 1;
+        const groups = Math.ceil(count / groupSize);
+        total += groups * groupSize;
     }
 
     return total;
