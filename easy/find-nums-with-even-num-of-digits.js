@@ -3,8 +3,9 @@
 // /**
 //  * solution 1
 //  * n = len of nums arr
-//  * time: O(n)
-//  * space: O(1)
+//  * m = length of current num string
+//  * time: O(n * m)
+//  * space: O(m)
 //  * 
 //  * @param {number[]} nums
 //  * @return {number}
@@ -25,8 +26,8 @@
 /**
  * solution 2 -- .filter() method
  * n = len of nums arr
- * time: O(n)
- * space: O(n)
+ * time: O(n * m)
+ * space: O(n + m)
  * 
  * @param {number[]} nums
  * @return {number}
