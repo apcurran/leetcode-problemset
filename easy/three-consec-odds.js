@@ -22,8 +22,38 @@
 //     return false;
 // }
 
+// /**
+//  * solution 2 -- counter
+//  * time: O(n)
+//  * space: O(1)
+//  * 
+//  * @param {number[]} nums
+//  * @return {boolean}
+//  */
+// function threeConsecutiveOdds(nums) {
+//     let consecutiveOddsCount = 0;
+
+//     for (let i = 0; i < nums.length; i++) {
+//         const currentNum = nums[i];
+
+//         if (currentNum % 2 === 1) {
+//             // odd num
+//             consecutiveOddsCount++;
+//         } else {
+//             // otherwise, reset since this value is even
+//             consecutiveOddsCount = 0;
+//         }
+
+//         if (consecutiveOddsCount === 3) {
+//             return true;
+//         }
+//     }
+
+//     return false;
+// }
+
 /**
- * solution 2 -- counter
+ * solution 3 -- odd product
  * time: O(n)
  * space: O(1)
  * 
@@ -31,20 +61,11 @@
  * @return {boolean}
  */
 function threeConsecutiveOdds(nums) {
-    let consecutiveOddsCount = 0;
+    for (let i = 0; i < nums.length - 2; i++) {
+        const product = nums[i] * nums[i + 1] * nums[i + 2];
 
-    for (let i = 0; i < nums.length; i++) {
-        const currentNum = nums[i];
-
-        if (currentNum % 2 === 1) {
-            // odd num
-            consecutiveOddsCount++;
-        } else {
-            // otherwise, reset since this value is even
-            consecutiveOddsCount = 0;
-        }
-
-        if (consecutiveOddsCount === 3) {
+        if (product % 2 === 1) {
+            // three odds multiplied produces an odd result
             return true;
         }
     }
