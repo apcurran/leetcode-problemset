@@ -40,6 +40,7 @@ function threeConsecutiveOdds(nums) {
             // odd num
             consecutiveOddsCount++;
         } else {
+            // otherwise, reset since this value is even
             consecutiveOddsCount = 0;
         }
 
