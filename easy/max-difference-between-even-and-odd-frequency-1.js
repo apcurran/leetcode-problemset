@@ -35,4 +35,4 @@ function maxDifference(str) {
 }
 
 console.log(maxDifference("aaaaabbc")); // 3
-console.log(maxDifference("abcabcab")); // 
+console.log(maxDifference("abcabcab")); // 1
