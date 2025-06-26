@@ -8,7 +8,7 @@
  * 
  * @param {string} str
  * @param {number} k
- * @param {character} fill
+ * @param {string} fill - a single char
  * @return {string[]}
  */
 function divideString(str, k, fill) {
