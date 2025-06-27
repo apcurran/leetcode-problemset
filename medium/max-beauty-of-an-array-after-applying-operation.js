@@ -57,6 +57,6 @@ function maximumBeauty(nums, k) {
     return right - left; // window size
 }
 
-console.log(maximumBeauty([4,6,1,2], 2)); // 3
-console.log(maximumBeauty([1,1,1,1], 10)); // 4
+console.log(maximumBeauty([4, 6, 1, 2], 2)); // 3
+console.log(maximumBeauty([1, 1, 1, 1], 10)); // 4
 

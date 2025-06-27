@@ -32,6 +32,6 @@ function findNonMinOrMax(nums) {
     }
 }
 
-console.log( findNonMinOrMax([3,2,1,4]) ); // 2 or 3
-console.log( findNonMinOrMax([1,2]) ); // -1
-console.log( findNonMinOrMax([2,1,3]) ); // 2
+console.log( findNonMinOrMax([3, 2, 1, 4]) ); // 2 or 3
+console.log( findNonMinOrMax([1, 2]) ); // -1
+console.log( findNonMinOrMax([2, 1, 3]) ); // 2

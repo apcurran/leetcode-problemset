@@ -23,7 +23,7 @@ MinStack.prototype.pop = function() {
  * @returns {number}
  */
 MinStack.prototype.top = function() {
-   return this.stack[this.stack.length - 1];
+    return this.stack[this.stack.length - 1];
 };
 
 /**

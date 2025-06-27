@@ -43,5 +43,5 @@ function getShortestRootWord(currentWord, uniqueWords) {
     return shortestRoot;
 }
 
-console.log(replaceWords(["cat","bat","rat"], "the cattle was rattled by the battery"));
+console.log(replaceWords(["cat", "bat", "rat"], "the cattle was rattled by the battery"));
 // "the cat was rat by the bat"

@@ -43,4 +43,4 @@ function garbageCollection(garbagePickups, travelTimes) {
     return maxMetalTime + maxPaperTime + maxGlassTime + metalPickupsCount + paperPickupsCount + glassPickupsCount;
 }
 
-console.log(garbageCollection(["G","P","GP","GG"], [2,4,3])); // 21 (minutes)
+console.log(garbageCollection(["G", "P", "GP", "GG"], [2, 4, 3])); // 21 (minutes)

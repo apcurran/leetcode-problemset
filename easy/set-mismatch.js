@@ -36,4 +36,4 @@ function findErrorNums(actualNums) {
     return [duplicateNum, missingNum];
 }
 
-console.log(findErrorNums([1,2,2,4])); // [2, 3]
+console.log(findErrorNums([1, 2, 2, 4])); // [2, 3]

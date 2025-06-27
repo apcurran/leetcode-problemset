@@ -34,5 +34,5 @@ function findMinArrowShots(points) {
     return result;
 }
 
-console.log(findMinArrowShots([[10,16],[2,8],[1,6],[7,12]])); // 2
-console.log(findMinArrowShots([[1,2],[3,4],[5,6],[7,8]])); // 4
+console.log(findMinArrowShots([[10, 16], [2, 8], [1, 6], [7, 12]])); // 2
+console.log(findMinArrowShots([[1, 2], [3, 4], [5, 6], [7, 8]])); // 4

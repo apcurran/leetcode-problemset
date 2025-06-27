@@ -18,6 +18,6 @@ function finalValueAfterOperations(operations) {
     return xVal;
 }
 
-console.log( finalValueAfterOperations(["--X","X++","X++"]) ); // 1
-console.log( finalValueAfterOperations(["++X","++X","X++"]) ); // 3
-console.log( finalValueAfterOperations(["X++","++X","--X","X--"]) ); // 0
+console.log( finalValueAfterOperations(["--X", "X++", "X++"]) ); // 1
+console.log( finalValueAfterOperations(["++X", "++X", "X++"]) ); // 3
+console.log( finalValueAfterOperations(["X++", "++X", "--X", "X--"]) ); // 0

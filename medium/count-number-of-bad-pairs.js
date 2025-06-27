@@ -50,5 +50,5 @@ function countBadPairs(nums) {
     return totalPairs - goodPairs;
 }
 
-console.log(countBadPairs([4,1,3,3])); // 5
-console.log(countBadPairs([1,2,3,4,5])); // 0
+console.log(countBadPairs([4, 1, 3, 3])); // 5
+console.log(countBadPairs([1, 2, 3, 4, 5])); // 0

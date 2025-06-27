@@ -86,4 +86,4 @@ function longestMonotonicSubarray(nums) {
     return overallMaxLength;
 }
 
-console.log(longestMonotonicSubarray([1,4,3,3,2])); // 2
+console.log(longestMonotonicSubarray([1, 4, 3, 3, 2])); // 2

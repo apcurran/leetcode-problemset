@@ -28,5 +28,5 @@ function canMakeArithmeticProgression(arr) {
     return true;
 }
 
-console.log( canMakeArithmeticProgression([3,5,1]) ); // true
-console.log( canMakeArithmeticProgression([1,2,4]) ); // false
+console.log( canMakeArithmeticProgression([3, 5, 1]) ); // true
+console.log( canMakeArithmeticProgression([1, 2, 4]) ); // false

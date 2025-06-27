@@ -50,4 +50,4 @@ function mostPoints(questions, i = 0, cache = new Array(questions.length)) {
     return mostPossiblePoints;
 }
 
-console.log( mostPoints([[3,2],[4,3],[4,4],[2,5]]) ); // 5
+console.log( mostPoints([[3, 2], [4, 3], [4, 4], [2, 5]]) ); // 5

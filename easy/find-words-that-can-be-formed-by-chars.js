@@ -53,5 +53,5 @@ function countCharacters(words, chars) {
     return goodStrLengthsSum;
 }
 
-console.log( countCharacters(["cat","bt","hat","tree"], "atach") ); // 6
-console.log( countCharacters(["hello","world","leetcode"], "welldonehoneyr") ); // 10
+console.log( countCharacters(["cat", "bt", "hat", "tree"], "atach") ); // 6
+console.log( countCharacters(["hello", "world", "leetcode"], "welldonehoneyr") ); // 10

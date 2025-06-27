@@ -17,7 +17,7 @@ function Node(val, next, random) {
 function copyRandomList(head) {
     // set null val to map to null
     let nodesCache = new Map([
-        [null, null]
+        [null, null],
     ]);
     let current = head;
 

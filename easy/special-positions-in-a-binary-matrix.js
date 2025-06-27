@@ -47,4 +47,4 @@ function numSpecial(mat) {
     return specialCellsCount;
 }
 
-console.log(numSpecial([[1,0,0], [0,1,0], [0,0,1]])); // 3
+console.log(numSpecial([[1, 0, 0], [0, 1, 0], [0, 0, 1]])); // 3

@@ -90,6 +90,6 @@ function buyChoco(prices, money) {
 }
 
 console.log(buyChoco([1, 2, 2], 3)); // 0
-console.log(buyChoco([3,2,3], 3)); // 3
-console.log(buyChoco([98,54,6,34,66,63,52,39], 62)); // 22
-console.log(buyChoco([95,88,91,60,98,6,73,16,53,50], 22)); // 0
+console.log(buyChoco([3, 2, 3], 3)); // 3
+console.log(buyChoco([98, 54, 6, 34, 66, 63, 52, 39], 62)); // 22
+console.log(buyChoco([95, 88, 91, 60, 98, 6, 73, 16, 53, 50], 22)); // 0

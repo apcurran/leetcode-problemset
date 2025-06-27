@@ -27,5 +27,5 @@ function removeSubfolders(folders) {
     return results;
 }
 
-console.log(removeSubfolders(["/a","/a/b","/c/d","/c/d/e","/c/f"]));
+console.log(removeSubfolders(["/a", "/a/b", "/c/d", "/c/d/e", "/c/f"]));
 // ["/a","/c/d","/c/f"]

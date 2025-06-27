@@ -25,6 +25,6 @@ function findSpecialInteger(arr) {
     }
 }
 
-console.log(findSpecialInteger([1,2,2,6,6,6,6,7,10])); // 6
-console.log(findSpecialInteger([1,1])); // 1
-console.log(findSpecialInteger([1,2,3,3])); // 3
+console.log(findSpecialInteger([1, 2, 2, 6, 6, 6, 6, 7, 10])); // 6
+console.log(findSpecialInteger([1, 1])); // 1
+console.log(findSpecialInteger([1, 2, 3, 3])); // 3

@@ -25,5 +25,5 @@ function maximumCount(nums) {
     return Math.max(negativeNumsCount, positiveNumsCount);
 }
 
-console.log( maximumCount([-2,-1,-1,1,2,3]) ); // 3
-console.log( maximumCount([-3,-2,-1,0,0,1,2]) ); // 3
+console.log( maximumCount([-2, -1, -1, 1, 2, 3]) ); // 3
+console.log( maximumCount([-3, -2, -1, 0, 0, 1, 2]) ); // 3

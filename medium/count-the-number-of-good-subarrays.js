@@ -69,4 +69,4 @@ function countGood(nums, k) {
     return resultsCount;
 }
 
-console.log(countGood([3,1,4,3,2,2,4], 2)); // 4
+console.log(countGood([3, 1, 4, 3, 2, 2, 4], 2)); // 4

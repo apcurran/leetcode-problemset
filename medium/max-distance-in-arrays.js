@@ -19,7 +19,7 @@ function maxDistance(arrays) {
         largestDifference = Math.max(
             largestDifference,
             currentArray.at(-1) - currentMin,
-            currentMax - currentArray[0]
+            currentMax - currentArray[0],
         );
 
         currentMin = Math.min(currentMin, currentArray[0]);
@@ -29,4 +29,4 @@ function maxDistance(arrays) {
     return largestDifference;
 }
 
-console.log(maxDistance([[1,2,3],[4,5],[1,2,3]])); // 4
+console.log(maxDistance([[1, 2, 3], [4, 5], [1, 2, 3]])); // 4

@@ -27,4 +27,4 @@ function numRabbits(answers) {
     return total;
 }
 
-console.log(numRabbits([1,1,2])); // 5
+console.log(numRabbits([1, 1, 2])); // 5

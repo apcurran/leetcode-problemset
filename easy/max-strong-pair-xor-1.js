@@ -29,6 +29,6 @@ function maximumStrongPairXor(nums) {
     return maxXORValue;
 }
 
-console.log(maximumStrongPairXor([1,2,3,4,5])); // 7
-console.log(maximumStrongPairXor([10,100])); // 0
-console.log(maximumStrongPairXor([5,6,25,30])); // 7
+console.log(maximumStrongPairXor([1, 2, 3, 4, 5])); // 7
+console.log(maximumStrongPairXor([10, 100])); // 0
+console.log(maximumStrongPairXor([5, 6, 25, 30])); // 7

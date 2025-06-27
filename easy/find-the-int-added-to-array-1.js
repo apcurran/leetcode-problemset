@@ -30,4 +30,4 @@ function getMin(nums) {
     return min;
 }
 
-console.log(addedInteger([2,6,4], [9,7,5])); // 3
+console.log(addedInteger([2, 6, 4], [9, 7, 5])); // 3

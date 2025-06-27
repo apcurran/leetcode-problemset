@@ -43,4 +43,4 @@ function minOperations(nums) {
     return result;
 }
 
-console.log(minOperations([0,1,1,1,0,0])); // 3
+console.log(minOperations([0, 1, 1, 1, 0, 0])); // 3

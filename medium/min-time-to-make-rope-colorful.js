@@ -35,4 +35,4 @@ function minCost(colors, neededTime) {
     return totalTime;
 }
 
-console.log(minCost("abaac", [1,2,3,4,5])); // 3
+console.log(minCost("abaac", [1, 2, 3, 4, 5])); // 3

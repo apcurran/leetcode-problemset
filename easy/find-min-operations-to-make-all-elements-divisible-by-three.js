@@ -22,4 +22,4 @@ function minimumOperations(nums) {
     return counter;
 }
 
-console.log(minimumOperations([1,2,3,4])); // 3
+console.log(minimumOperations([1, 2, 3, 4])); // 3

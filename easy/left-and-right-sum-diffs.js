@@ -44,5 +44,5 @@ function leftRigthDifference(nums) {
     return leftAndRightSumDiffs;
 }
 
-console.log( leftRigthDifference([10,4,8,3]) ); // [15,1,11,22]
+console.log( leftRigthDifference([10, 4, 8, 3]) ); // [15,1,11,22]
 console.log( leftRigthDifference([1]) ); // [0]

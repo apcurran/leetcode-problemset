@@ -52,5 +52,5 @@ function duplicateNumbersXOR(nums) {
     return result;
 }
 
-console.log(duplicateNumbersXOR([1,2,1,3])); // 1
-console.log(duplicateNumbersXOR([1,2,2,1])); // 3 (1 ^ 2 === 3)
+console.log(duplicateNumbersXOR([1, 2, 1, 3])); // 1
+console.log(duplicateNumbersXOR([1, 2, 2, 1])); // 3 (1 ^ 2 === 3)

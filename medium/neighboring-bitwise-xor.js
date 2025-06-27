@@ -21,6 +21,6 @@ function doesValidArrayExist(derived) {
     return first === last;
 }
 
-console.log(doesValidArrayExist([1,1,0])); // true
-console.log(doesValidArrayExist([1,1])); // true
-console.log(doesValidArrayExist([1,0])); // false
+console.log(doesValidArrayExist([1, 1, 0])); // true
+console.log(doesValidArrayExist([1, 1])); // true
+console.log(doesValidArrayExist([1, 0])); // false

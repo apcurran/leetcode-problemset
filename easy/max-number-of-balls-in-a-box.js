@@ -17,8 +17,8 @@ function countBalls(lowLimit, highLimit) {
 
     for (let i = lowLimit; i <= highLimit; i++) {
         const boxNumber = String(i)
-                            .split("")
-                            .reduce((sum, current) => sum + Number(current), 0);
+            .split("")
+            .reduce((sum, current) => sum + Number(current), 0);
         const previousBoxCount = boxes.get(boxNumber) || 0;
         const updatedBoxCount = previousBoxCount + 1;
         boxes.set(boxNumber, updatedBoxCount);

@@ -106,5 +106,5 @@ function numSubarraysWithSum(nums, goal) {
     return totalSubarraysEqualToGoal;
 }
 
-console.log(numSubarraysWithSum([1,0,1,0,1], 2)); // 4
-console.log(numSubarraysWithSum([0,0,0,0,0], 0)); // 15
+console.log(numSubarraysWithSum([1, 0, 1, 0, 1], 2)); // 4
+console.log(numSubarraysWithSum([0, 0, 0, 0, 0], 0)); // 15

@@ -34,5 +34,5 @@ function checkPossibility(nums) {
     return true;
 }
 
-console.log( checkPossibility([4,2,3]) ); // true (could modify the 4)
-console.log( checkPossibility([4,2,1]) ); // false
+console.log( checkPossibility([4, 2, 3]) ); // true (could modify the 4)
+console.log( checkPossibility([4, 2, 1]) ); // false

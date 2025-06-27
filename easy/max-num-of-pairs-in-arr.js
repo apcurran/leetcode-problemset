@@ -38,6 +38,6 @@ function numberOfPairs(nums) {
     return [pairsCounter, leftoversCounter];
 }
 
-console.log( numberOfPairs([1,3,2,1,3,2,2]) ); // [3, 1] -- 3 pairs formed and 1 leftover int in numsArr
-console.log( numberOfPairs([1,1]) ); // [1, 0]
+console.log( numberOfPairs([1, 3, 2, 1, 3, 2, 2]) ); // [3, 1] -- 3 pairs formed and 1 leftover int in numsArr
+console.log( numberOfPairs([1, 1]) ); // [1, 0]
 console.log( numberOfPairs([0]) ); // [0, 1]

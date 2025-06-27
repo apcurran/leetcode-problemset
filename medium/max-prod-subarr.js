@@ -25,4 +25,4 @@ function maxProduct(nums) {
     return result;
 }
 
-console.log( maxProduct([2,3,-2,4]) ); // 6
+console.log( maxProduct([2, 3, -2, 4]) ); // 6

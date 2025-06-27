@@ -41,7 +41,7 @@ function createCounter(initialValue) {
     return {
         increment,
         decrement,
-        reset
+        reset,
     };
 }
 

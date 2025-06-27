@@ -57,5 +57,5 @@ function maxWidthRamp(nums) {
     return result;
 }
 
-console.log(maxWidthRamp([6,0,8,2,1,5])); // 4
-console.log(maxWidthRamp([9,8,1,0,1,9,4,0,4,1])); // 7
+console.log(maxWidthRamp([6, 0, 8, 2, 1, 5])); // 4
+console.log(maxWidthRamp([9, 8, 1, 0, 1, 9, 4, 0, 4, 1])); // 7

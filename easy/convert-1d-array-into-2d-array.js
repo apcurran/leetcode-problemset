@@ -33,4 +33,4 @@ function construct2DArray(original, m, n) {
     return result;
 }
 
-console.log(construct2DArray([1,2,3,4], 2, 2)); // [[1, 2], [3, 4]]
+console.log(construct2DArray([1, 2, 3, 4], 2, 2)); // [[1, 2], [3, 4]]

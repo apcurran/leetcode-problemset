@@ -20,5 +20,5 @@ function minPairSum(nums) {
     return best;
 }
 
-console.log( minPairSum([3,5,2,3]) ); // 7
-console.log( minPairSum([3,5,4,2,4,6]) ); // 8
+console.log( minPairSum([3, 5, 2, 3]) ); // 7
+console.log( minPairSum([3, 5, 4, 2, 4, 6]) ); // 8

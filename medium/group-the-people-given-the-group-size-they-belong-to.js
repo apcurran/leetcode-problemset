@@ -32,4 +32,4 @@ function groupThePeople(groupSizes) {
     return results;
 }
 
-console.log(groupThePeople([3,3,3,3,3,1,3])); // [[5], [0,1,2], [3,4,6]]
+console.log(groupThePeople([3, 3, 3, 3, 3, 1, 3])); // [[5], [0,1,2], [3,4,6]]

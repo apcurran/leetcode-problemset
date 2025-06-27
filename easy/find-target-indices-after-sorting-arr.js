@@ -24,5 +24,5 @@ function targetIndices(nums, target) {
     return targetIdxArr;
 }
 
-console.log( targetIndices([1,2,5,2,3], 2) ); // [1, 2]
-console.log( targetIndices([1,2,5,2,3], 3) ); // [3]
+console.log( targetIndices([1, 2, 5, 2, 3], 2) ); // [1, 2]
+console.log( targetIndices([1, 2, 5, 2, 3], 3) ); // [3]

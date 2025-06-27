@@ -60,5 +60,5 @@ function numOfSubarrays(arr) {
     return result;
 }
 
-console.log(numOfSubarrays([1,3,5])); // 4
-console.log(numOfSubarrays([2,4,6])); // 0
+console.log(numOfSubarrays([1, 3, 5])); // 4
+console.log(numOfSubarrays([2, 4, 6])); // 0

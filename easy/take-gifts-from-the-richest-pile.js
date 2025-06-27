@@ -20,4 +20,4 @@ function pickGifts(gifts, k) {
     return gifts.reduce((sum, currentGiftsPile) => sum + currentGiftsPile, 0);
 }
 
-console.log( pickGifts([25,64,9,4,100], 4) ); // 29
+console.log( pickGifts([25, 64, 9, 4, 100], 4) ); // 29

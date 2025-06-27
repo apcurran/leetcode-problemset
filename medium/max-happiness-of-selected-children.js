@@ -97,4 +97,4 @@ function maximumHappinessSum(happinessScores, k) {
     return totalHappiness;
 }
 
-console.log(maximumHappinessSum([1,2,3], 2)); // 4
+console.log(maximumHappinessSum([1, 2, 3], 2)); // 4

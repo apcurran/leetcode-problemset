@@ -66,9 +66,9 @@ function deleteGreatestValue(grid) {
 
 console.log( deleteGreatestValue(
     [
-        [1,2,4],
-        [3,3,1]
-    ]
+        [1, 2, 4],
+        [3, 3, 1],
+    ],
 ) ); // 8
 
 console.log( deleteGreatestValue([[10]]) ); // 10

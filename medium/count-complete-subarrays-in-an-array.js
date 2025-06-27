@@ -29,5 +29,5 @@ function countCompleteSubarrays(nums) {
     return result;
 }
 
-console.log(countCompleteSubarrays([1,3,1,2,2])); // 4
-console.log(countCompleteSubarrays([5,5,5,5])); // 10
+console.log(countCompleteSubarrays([1, 3, 1, 2, 2])); // 4
+console.log(countCompleteSubarrays([5, 5, 5, 5])); // 10

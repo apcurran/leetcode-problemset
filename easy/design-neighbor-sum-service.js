@@ -74,8 +74,8 @@ const obj = new NeighborSum(
     [
         [0, 1, 2],
         [3, 4, 5],
-        [6, 7, 8]
-    ]
+        [6, 7, 8],
+    ],
 );
 const param_1 = obj.adjacentSum(1); // 6
 const param_2 = obj.diagonalSum(4); // 16

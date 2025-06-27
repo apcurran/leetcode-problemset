@@ -38,5 +38,5 @@ function findMissingAndRepeatedValues(grid) {
     return [repeatedNum, missingNum];
 }
 
-console.log(findMissingAndRepeatedValues([[1,3],[2,2]])); // [2, 4]
-console.log(findMissingAndRepeatedValues([[9,1,7],[8,9,2],[3,4,6]])); // [9, 5]
+console.log(findMissingAndRepeatedValues([[1, 3], [2, 2]])); // [2, 4]
+console.log(findMissingAndRepeatedValues([[9, 1, 7], [8, 9, 2], [3, 4, 6]])); // [9, 5]

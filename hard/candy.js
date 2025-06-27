@@ -39,5 +39,5 @@ function candy(ratings) {
     return candies.reduce((sum, current) => sum + current, 0);
 }
 
-console.log(candy([1,0,2])); // 5
-console.log(candy([1,2,2])); // 4
+console.log(candy([1, 0, 2])); // 5
+console.log(candy([1, 2, 2])); // 4

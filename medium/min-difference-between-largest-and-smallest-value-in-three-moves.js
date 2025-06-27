@@ -27,5 +27,5 @@ function minDifference(nums) {
     return result;
 }
 
-console.log(minDifference([5,3,2,4])); // 0
-console.log(minDifference([1,5,0,10,14])); // 1
+console.log(minDifference([5, 3, 2, 4])); // 0
+console.log(minDifference([1, 5, 0, 10, 14])); // 1

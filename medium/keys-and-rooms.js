@@ -24,4 +24,4 @@ function canVisitAllRooms(rooms) {
     return accessibleRooms.size === rooms.length;
 }
 
-console.log(canVisitAllRooms([[1,3],[3,0,1],[2],[0]])); // false
+console.log(canVisitAllRooms([[1, 3], [3, 0, 1], [2], [0]])); // false

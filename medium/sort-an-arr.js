@@ -86,7 +86,7 @@ function sortArray(numsArr) {
 
     return merge(
         sortArray(leftArr),
-        sortArray(rightArr)
+        sortArray(rightArr),
     );
 }
 

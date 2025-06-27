@@ -8,8 +8,8 @@
 function lengthOfLastWord(str) {
     const trimmedStr = str.trim();
     const lastWord = trimmedStr
-                        .split(" ")
-                        .slice(-1)[0];
+        .split(" ")
+        .slice(-1)[0];
 
     return lastWord.length;
 }

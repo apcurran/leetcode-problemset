@@ -36,5 +36,5 @@ function isNumEven(num) {
     return num % 2 === 0;
 }
 
-console.log(isArraySpecial([2,1,4])); // true
-console.log(isArraySpecial([4,3,1,6])); // false
+console.log(isArraySpecial([2, 1, 4])); // true
+console.log(isArraySpecial([4, 3, 1, 6])); // false

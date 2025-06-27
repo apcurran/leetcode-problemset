@@ -32,4 +32,4 @@ function findDifference(nums1, nums2) {
     return [numsNotInNums2, numsNotInNums1];
 }
 
-console.log( findDifference([1,2,3], [2,4,6]) ); // [[1,3], [4,6]]
+console.log( findDifference([1, 2, 3], [2, 4, 6]) ); // [[1,3], [4,6]]

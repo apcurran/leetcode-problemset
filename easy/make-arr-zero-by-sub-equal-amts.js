@@ -19,4 +19,4 @@ function minimumOperations(nums) {
     return uniqueNumbers.size;
 }
 
-console.log( minimumOperations([1,5,0,3,5]) ); // 3
+console.log( minimumOperations([1, 5, 0, 3, 5]) ); // 3

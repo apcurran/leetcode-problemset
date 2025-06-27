@@ -10,9 +10,9 @@
  */
 function splitNum(num) {
     const digits = String(num)
-                    .split("")
-                    .map(Number)
-                    .sort((digitA, digitB) => digitA - digitB);
+        .split("")
+        .map(Number)
+        .sort((digitA, digitB) => digitA - digitB);
 
     let num1Str = "";
     let num2Str = "";

@@ -23,10 +23,10 @@
  */
 function isPalindrome(x) {
     const reversedXStr = x
-                            .toString()
-                            .split("")
-                            .reverse()
-                            .join("");
+        .toString()
+        .split("")
+        .reverse()
+        .join("");
 
     return Number(reversedXStr) === x;
 }

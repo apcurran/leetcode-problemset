@@ -18,7 +18,7 @@ function maxNumberOfBalloons(text) {
         ["a", 1],
         ["l", 2],
         ["o", 2],
-        ["n", 1]
+        ["n", 1],
     ]);
 
     let textMap = new Map();

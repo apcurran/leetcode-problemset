@@ -23,5 +23,5 @@ function distinctDifferenceArray(nums) {
     return results; 
 }
 
-console.log(distinctDifferenceArray([1,2,3,4,5])); // [-3,-1,1,3,5]
-console.log(distinctDifferenceArray([3,2,3,4,2])); // [-2,-1,0,2,3]
+console.log(distinctDifferenceArray([1, 2, 3, 4, 5])); // [-3,-1,1,3,5]
+console.log(distinctDifferenceArray([3, 2, 3, 4, 2])); // [-2,-1,0,2,3]

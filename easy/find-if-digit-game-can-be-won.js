@@ -29,6 +29,6 @@ function canAliceWin(nums) {
     }
 }
 
-console.log(canAliceWin([1,2,3,4,10])); // false 10 sum === 10 sum
-console.log(canAliceWin([1,2,3,4,5,14])); // true
-console.log(canAliceWin([5,5,5,25])); // true
+console.log(canAliceWin([1, 2, 3, 4, 10])); // false 10 sum === 10 sum
+console.log(canAliceWin([1, 2, 3, 4, 5, 14])); // true
+console.log(canAliceWin([5, 5, 5, 25])); // true

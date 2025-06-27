@@ -29,4 +29,4 @@ function merge(intervals) {
     return results;
 }
 
-console.log(merge([[1,3],[2,6],[8,10],[15,18]])); // [[1,6],[8,10],[15,18]] (merged)
+console.log(merge([[1, 3], [2, 6], [8, 10], [15, 18]])); // [[1,6],[8,10],[15,18]] (merged)

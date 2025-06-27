@@ -30,4 +30,4 @@ function specialArray(nums) {
     return -1;
 }
 
-console.log(specialArray([0,4,3,0,4])); // 3
+console.log(specialArray([0, 4, 3, 0, 4])); // 3

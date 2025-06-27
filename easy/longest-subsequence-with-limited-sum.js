@@ -31,4 +31,4 @@ function answerQueries(nums, queries) {
     return longestSubsequences;
 }
 
-console.log( answerQueries([4,5,2,1], [3,10,21]) ); // [2, 3, 4]
+console.log( answerQueries([4, 5, 2, 1], [3, 10, 21]) ); // [2, 3, 4]

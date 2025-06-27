@@ -43,5 +43,5 @@ function minSetSize(arr) {
     return numSetRemovalCount;
 }
 
-console.log( minSetSize([3,3,3,3,5,5,5,2,2,7]) ); // 2
-console.log( minSetSize([7,7,7,7,7,7]) ); // 1
+console.log( minSetSize([3, 3, 3, 3, 5, 5, 5, 2, 2, 7]) ); // 2
+console.log( minSetSize([7, 7, 7, 7, 7, 7]) ); // 1

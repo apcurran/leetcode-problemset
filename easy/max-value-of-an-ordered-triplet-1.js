@@ -51,4 +51,4 @@ function maximumTripletValue(nums) {
     return maxValue;
 }
 
-console.log(maximumTripletValue([12,6,1,2,7])); // 77
+console.log(maximumTripletValue([12, 6, 1, 2, 7])); // 77

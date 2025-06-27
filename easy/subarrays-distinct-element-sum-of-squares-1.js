@@ -23,4 +23,4 @@ function sumCounts(nums) {
     return distinctCount;
 }
 
-console.log(sumCounts([1,2,1])); // 15
+console.log(sumCounts([1, 2, 1])); // 15

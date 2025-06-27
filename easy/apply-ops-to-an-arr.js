@@ -33,4 +33,4 @@ function applyOperations(nums) {
     return [...nonZeros, ...zeros];
 }
 
-console.log(applyOperations([1,2,2,1,1,0])); // [1,4,2,0,0,0]
+console.log(applyOperations([1, 2, 2, 1, 1, 0])); // [1,4,2,0,0,0]

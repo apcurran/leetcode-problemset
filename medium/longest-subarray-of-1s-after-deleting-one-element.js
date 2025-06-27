@@ -38,5 +38,5 @@ function longestSubarray(nums) {
     return longestOnesWindowCount;
 }
 
-console.log( longestSubarray([1,1,0,1]) ); // 3
-console.log( longestSubarray([0,1,1,1,0,1,1,0,1]) ); // 5
+console.log( longestSubarray([1, 1, 0, 1]) ); // 3
+console.log( longestSubarray([0, 1, 1, 1, 0, 1, 1, 0, 1]) ); // 5

@@ -1,9 +1,9 @@
 "use strict";
 
 // Definition for a Node.
-function TreeNode(val,children) {
-   this.val = val;
-   this.children = children;
+function TreeNode(val, children) {
+    this.val = val;
+    this.children = children;
 }
 
 /**

@@ -54,5 +54,5 @@ function timeRequiredToBuy(tickets, k) {
     return totalTimeInSeconds;
 }
 
-console.log(timeRequiredToBuy([2,3,2], 2)); // 6
-console.log(timeRequiredToBuy([5,1,1,1], 0)); // 8
+console.log(timeRequiredToBuy([2, 3, 2], 2)); // 6
+console.log(timeRequiredToBuy([5, 1, 1, 1], 0)); // 8

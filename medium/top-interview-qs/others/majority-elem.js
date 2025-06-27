@@ -32,5 +32,5 @@ function majorityElement(nums) {
     return maxNum;
 }
 
-console.log( majorityElement([1,1,1,2,2,2,2]) ); // 2
-console.log( majorityElement([3,2,3]) ); // 3
+console.log( majorityElement([1, 1, 1, 2, 2, 2, 2]) ); // 2
+console.log( majorityElement([3, 2, 3]) ); // 3

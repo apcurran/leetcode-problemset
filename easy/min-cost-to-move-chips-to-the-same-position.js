@@ -25,5 +25,5 @@ function minCostToMoveChips(positions) {
     return Math.min(evenPositionsCount, oddPositionsCount);
 }
 
-console.log( minCostToMoveChips([1,2,3]) ); // 1
-console.log( minCostToMoveChips([2,2,2,3,3]) ); // 2
+console.log( minCostToMoveChips([1, 2, 3]) ); // 1
+console.log( minCostToMoveChips([2, 2, 2, 3, 3]) ); // 2

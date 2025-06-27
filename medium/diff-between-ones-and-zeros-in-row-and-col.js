@@ -37,5 +37,5 @@ function onesMinusZeros(grid) {
     return diffMatrix;
 }
 
-console.log(onesMinusZeros([[0,1,1], [1,0,1], [0,0,1]]));
+console.log(onesMinusZeros([[0, 1, 1], [1, 0, 1], [0, 0, 1]]));
 // [[0,0,4],[0,0,4],[-2,-2,2]]

@@ -46,4 +46,4 @@ function minSum(nums1, nums2) {
     return Math.max(sum1, sum2);
 }
 
-console.log(minSum([3,2,0,1,0], [6,5,0])); // 12
+console.log(minSum([3, 2, 0, 1, 0], [6, 5, 0])); // 12

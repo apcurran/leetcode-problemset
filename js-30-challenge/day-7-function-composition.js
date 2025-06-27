@@ -10,7 +10,7 @@
  * @return {Function}
  */
 const compose = function(functions) {
-	return function(x) {
+    return function(x) {
         if (functions.length === 0) return x;
 
         let result = x;

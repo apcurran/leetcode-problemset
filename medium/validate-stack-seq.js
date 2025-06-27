@@ -26,4 +26,4 @@ function validateStackSequences(pushed, popped) {
 }
 
 console.log( validateStackSequences([1, 2, 3, 4, 5], [4, 5, 3, 2, 1]) ); // true
-console.log( validateStackSequences([1,2,3,4,5], [4,3,5,1,2]) ); // false
+console.log( validateStackSequences([1, 2, 3, 4, 5], [4, 3, 5, 1, 2]) ); // false

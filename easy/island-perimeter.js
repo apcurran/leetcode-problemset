@@ -48,4 +48,4 @@ function islandPerimeter(grid) {
     return totalPerimeter;
 }
 
-console.log( islandPerimeter([[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]) ); // 16
+console.log( islandPerimeter([[0, 1, 0, 0], [1, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]) ); // 16

@@ -31,4 +31,4 @@ function kthSmallestPrimeFraction(arr, k) {
     // return max value associated array combo
 }
 
-console.log(kthSmallestPrimeFraction([1,2,3,5], 3)); // [2, 5]
+console.log(kthSmallestPrimeFraction([1, 2, 3, 5], 3)); // [2, 5]

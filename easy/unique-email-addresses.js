@@ -16,8 +16,8 @@ function numUniqueEmails(emails) {
         // remove "." char from localName portion
         // then, only take portion of localName before "+" char
         const updatedLocalName = localName
-                                    .replace(/\./g, "")
-                                    .split("+")[0];
+            .replace(/\./g, "")
+            .split("+")[0];
         const finalStr = updatedLocalName + "@" + domain;
         uniqueEmailsSet.add(finalStr);
     }
@@ -29,23 +29,23 @@ console.log( numUniqueEmails(
     [
         "test.email+alex@leetcode.com",
         "test.e.mail+bob.cathy@leetcode.com",
-        "testemail+david@lee.tcode.com"
-    ]
+        "testemail+david@lee.tcode.com",
+    ],
 ) ); // 2
 
 console.log( numUniqueEmails(
     [
         "a@leetcode.com",
         "b@leetcode.com",
-        "c@leetcode.com"
-    ]
+        "c@leetcode.com",
+    ],
 ) ); // 3
 
 console.log( numUniqueEmails(
     [
         "test.email+alex@leetcode.com",
-        "test.email.leet+alex@code.com"
-    ]
+        "test.email.leet+alex@code.com",
+    ],
 ) ); // 2
 
 

@@ -30,5 +30,5 @@ function findIntersectionValues(nums1, nums2) {
     return [num1CommonCount, num2CommonCount];
 }
 
-console.log(findIntersectionValues([4,3,2,3,1], [2,2,5,2,3,6])); // [3, 4]
-console.log(findIntersectionValues([3,4,2,3], [1,5])); // [0, 0]
+console.log(findIntersectionValues([4, 3, 2, 3, 1], [2, 2, 5, 2, 3, 6])); // [3, 4]
+console.log(findIntersectionValues([3, 4, 2, 3], [1, 5])); // [0, 0]

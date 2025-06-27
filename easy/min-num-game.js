@@ -71,4 +71,4 @@ function numberGame(nums) {
     return results;
 }
 
-console.log(numberGame([5,4,2,3])); // [3,2,5,4]
+console.log(numberGame([5, 4, 2, 3])); // [3,2,5,4]

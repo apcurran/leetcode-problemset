@@ -66,16 +66,16 @@
  */
 function countNegatives(grid) {
     return grid
-            .flat()
-            .filter((num) => num < 0)
-            .length;
+        .flat()
+        .filter((num) => num < 0)
+        .length;
 }
 
-console.log( countNegatives([[4,3,2,-1],
-                             [3,2,1,-1],
-                             [1,1,-1,-2],
-                             [-1,-1,-2,-3]]) ); // 8
+console.log( countNegatives([[4, 3, 2, -1],
+    [3, 2, 1, -1],
+    [1, 1, -1, -2],
+    [-1, -1, -2, -3]]) ); // 8
 
-console.log( countNegatives([[3,2],
-                             [1,0]]) ); // 0
+console.log( countNegatives([[3, 2],
+    [1, 0]]) ); // 0
 

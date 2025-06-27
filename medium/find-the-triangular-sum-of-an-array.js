@@ -52,4 +52,4 @@ function triangularSum(nums) {
     return nums[0];
 }
 
-console.log( triangularSum([1,2,3,4,5]) ); // 8
+console.log( triangularSum([1, 2, 3, 4, 5]) ); // 8

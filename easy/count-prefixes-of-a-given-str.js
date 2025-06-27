@@ -53,4 +53,4 @@ function countPrefixes(words, s) {
     return totalValidPrefixes;
 }
 //                          +1           +1        +1
-console.log( countPrefixes(["a","b","c","ab","bc","abc"], "abc") ); // 3
+console.log( countPrefixes(["a", "b", "c", "ab", "bc", "abc"], "abc") ); // 3

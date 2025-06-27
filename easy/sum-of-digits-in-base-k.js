@@ -13,8 +13,8 @@ function sumBase(n, k) {
     const numStr = Number(n).toString(k);
 
     return numStr
-            .split("")
-            .reduce((sum, currNum) => sum + Number(currNum), 0);
+        .split("")
+        .reduce((sum, currNum) => sum + Number(currNum), 0);
 }
 
 console.log( sumBase(34, 6) ); // 54 is 5 + 4 = 9

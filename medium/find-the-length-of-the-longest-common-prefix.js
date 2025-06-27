@@ -36,4 +36,4 @@ function longestCommonPrefix(arr1, arr2) {
     return longestPrefixLength;
 }
 
-console.log(longestCommonPrefix([1,10,100], [1000])); // 3
+console.log(longestCommonPrefix([1, 10, 100], [1000])); // 3

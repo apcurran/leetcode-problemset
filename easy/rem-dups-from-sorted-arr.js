@@ -23,4 +23,4 @@ function removeDuplicates(nums) {
     return slowPointer;
 }
 
-console.log( removeDuplicates([0,0,1,1,1,2,2,3,3,4]) ); // 5, nums = [0,1,2,3,4,_,_,_,_,_]
+console.log( removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]) ); // 5, nums = [0,1,2,3,4,_,_,_,_,_]

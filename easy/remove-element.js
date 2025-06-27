@@ -21,5 +21,5 @@ function removeElement(nums, val) {
     return nums.length;
 }
 
-console.log( removeElement([3,2,2,3], 3) ); // 2 elems [2,2,_,_]
-console.log( removeElement([0,1,2,2,3,0,4,2], 2) ); // 5 elems [0,1,4,0,3,_,_,_]
+console.log( removeElement([3, 2, 2, 3], 3) ); // 2 elems [2,2,_,_]
+console.log( removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2) ); // 5 elems [0,1,4,0,3,_,_,_]

@@ -35,6 +35,6 @@ function rowAndMaximumOnes(matrix) {
     return [maxRowIndex, maxRowOnesCount];
 }
 
-console.log( rowAndMaximumOnes([[0,0,0], [0,1,1]]) ); // [1, 2]
-console.log( rowAndMaximumOnes([[0,0], [1,1], [0,0]]) ); // [1, 2]
+console.log( rowAndMaximumOnes([[0, 0, 0], [0, 1, 1]]) ); // [1, 2]
+console.log( rowAndMaximumOnes([[0, 0], [1, 1], [0, 0]]) ); // [1, 2]
 console.log( rowAndMaximumOnes([[0], [0]]) ); // [0, 0]

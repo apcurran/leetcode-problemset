@@ -55,5 +55,5 @@ function findMatrix(nums) {
     return results;
 }
 
-console.log(findMatrix([1,3,4,1,2,3,1]));
+console.log(findMatrix([1, 3, 4, 1, 2, 3, 1]));
 // [[1,3,4,2], [1,3], [1]]

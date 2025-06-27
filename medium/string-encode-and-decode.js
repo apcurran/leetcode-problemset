@@ -53,6 +53,6 @@ class Solution {
 }
 
 const encoder = new Solution();
-const encodedWord = encoder.encode(["neet","code","love","you"]);
+const encodedWord = encoder.encode(["neet", "code", "love", "you"]);
 const decodedWords = encoder.decode(encodedWord);
 console.log(decodedWords);

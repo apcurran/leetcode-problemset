@@ -31,5 +31,5 @@ function nearestValidPoint(x, y, points) {
     return smallestDistanceIndex;
 }
 
-console.log( nearestValidPoint(3, 4, [[1,2],[3,1],[2,4],[2,3],[4,4]]) ); // 2
-console.log( nearestValidPoint(3, 4, [[2,3]]) ); // -1
+console.log( nearestValidPoint(3, 4, [[1, 2], [3, 1], [2, 4], [2, 3], [4, 4]]) ); // 2
+console.log( nearestValidPoint(3, 4, [[2, 3]]) ); // -1

@@ -24,8 +24,8 @@ function minDeletionSize(strs) {
     return deleteCount;
 }
 
-console.log(minDeletionSize(["cba","daf","ghi"])); // 1
+console.log(minDeletionSize(["cba", "daf", "ghi"])); // 1
 // c b a
 // d a f
 // g h i
-console.log(minDeletionSize(["zyx","wvu","tsr"])); // 3
+console.log(minDeletionSize(["zyx", "wvu", "tsr"])); // 3

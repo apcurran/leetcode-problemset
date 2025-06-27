@@ -12,7 +12,7 @@ function isValid(str) {
     const pairBrackets = new Map([
         ["{", "}"],
         ["(", ")"],
-        ["[", "]"]
+        ["[", "]"],
     ]);
     let openBracketStack = [];
 

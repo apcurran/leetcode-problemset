@@ -31,5 +31,5 @@ function findTheArrayConcVal(nums) {
     return concatValue;
 }
 
-console.log(findTheArrayConcVal([7,52,2,4])); // 596
-console.log(findTheArrayConcVal([5,14,13,8,12])); // 673
+console.log(findTheArrayConcVal([7, 52, 2, 4])); // 596
+console.log(findTheArrayConcVal([5, 14, 13, 8, 12])); // 673

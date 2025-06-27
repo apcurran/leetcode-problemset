@@ -23,6 +23,6 @@ function minOperations(nums, k) {
     return numsGreaterThanK.size;
 }
 
-console.log(minOperations([5,2,5,4,5], 2)); // 2
-console.log(minOperations([2,1,2], 2)); // -1
-console.log(minOperations([9,7,5,3], 1)); // 4
+console.log(minOperations([5, 2, 5, 4, 5], 2)); // 2
+console.log(minOperations([2, 1, 2], 2)); // -1
+console.log(minOperations([9, 7, 5, 3], 1)); // 4

@@ -18,4 +18,4 @@ function maximumXOR(nums) {
     return result;
 }
 
-console.log(maximumXOR([3,2,4,6])); // 7
+console.log(maximumXOR([3, 2, 4, 6])); // 7

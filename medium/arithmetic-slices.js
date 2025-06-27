@@ -31,6 +31,6 @@ function numberOfArithmeticSlices(nums) {
     return arithmeticSlicesCount;
 }
 
-console.log( numberOfArithmeticSlices([1,2,3,4]) ); // 3
+console.log( numberOfArithmeticSlices([1, 2, 3, 4]) ); // 3
 console.log( numberOfArithmeticSlices([1]) ); // 0
-console.log( numberOfArithmeticSlices([1,2,3]) ); // 1
+console.log( numberOfArithmeticSlices([1, 2, 3]) ); // 1

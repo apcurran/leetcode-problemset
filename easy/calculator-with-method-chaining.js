@@ -72,5 +72,5 @@ class Calculator {
 }
 
 new Calculator(10)
-        .power(5)
-        .getResult(); // 10 + 5 - 7 = 8
+    .power(5)
+    .getResult(); // 10 + 5 - 7 = 8

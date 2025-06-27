@@ -33,4 +33,4 @@ function separateDigits(nums) {
     return Array.from(nums.join(""), Number);
 }
 
-console.log( separateDigits([13,25,83,77]) ); // [1,3,2,5,8,3,7,7]
+console.log( separateDigits([13, 25, 83, 77]) ); // [1,3,2,5,8,3,7,7]

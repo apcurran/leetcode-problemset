@@ -23,4 +23,4 @@ function findWordsContaining(words, x) {
     return results;
 }
 
-console.log(findWordsContaining(["leet","code"], "e")); // [0, 1]
+console.log(findWordsContaining(["leet", "code"], "e")); // [0, 1]

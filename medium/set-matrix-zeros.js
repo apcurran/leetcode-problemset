@@ -32,5 +32,5 @@ function setZeroes(matrix) {
     }
 }
 
-console.log(setZeroes([[1,1,1],[1,0,1],[1,1,1]]));
+console.log(setZeroes([[1, 1, 1], [1, 0, 1], [1, 1, 1]]));
 // [[1,0,1], [0,0,0], [1,0,1]]

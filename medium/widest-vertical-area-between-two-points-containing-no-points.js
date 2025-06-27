@@ -23,4 +23,4 @@ function maxWidthOfVerticalArea(points) {
     return maxWidth;
 }
 
-console.log(maxWidthOfVerticalArea([[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]])); // 3
+console.log(maxWidthOfVerticalArea([[3, 1], [9, 0], [1, 0], [1, 4], [5, 3], [8, 8]])); // 3

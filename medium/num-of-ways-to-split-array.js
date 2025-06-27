@@ -45,4 +45,4 @@ function waysToSplitArray(nums) {
     return result;
 }
 
-console.log(waysToSplitArray([10,4,-8,7])); // 2
+console.log(waysToSplitArray([10, 4, -8, 7])); // 2

@@ -112,4 +112,4 @@ function successfulPairs(spells, potions, success) {
     return results;
 }
 
-console.log( successfulPairs([5,1,3], [1,2,3,4,5], 7) ); // [4,0,3]
+console.log( successfulPairs([5, 1, 3], [1, 2, 3, 4, 5], 7) ); // [4,0,3]

@@ -41,5 +41,5 @@ function destCity(paths) {
     }
 }
 
-console.log( destCity([["London","New York"], ["New York","Lima"], ["Lima","Sao Paulo"]]) ); // "Sao Paulo"
-console.log( destCity([["B","C"], ["D","B"], ["C","A"]]) ); // "A"
+console.log( destCity([["London", "New York"], ["New York", "Lima"], ["Lima", "Sao Paulo"]]) ); // "Sao Paulo"
+console.log( destCity([["B", "C"], ["D", "B"], ["C", "A"]]) ); // "A"

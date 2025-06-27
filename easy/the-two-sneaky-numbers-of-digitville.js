@@ -23,4 +23,4 @@ function getSneakyNumbers(nums) {
     return sneakyNums;
 }
 
-console.log(getSneakyNumbers([0,3,2,1,3,2])); // [2, 3]
+console.log(getSneakyNumbers([0, 3, 2, 1, 3, 2])); // [2, 3]

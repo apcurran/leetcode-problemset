@@ -56,9 +56,9 @@ function interchangeableRectangles(rectangles) {
 
 console.log( interchangeableRectangles(
     [
-        [4,8],
-        [3,6],
-        [10,20],
-        [15,30]
-    ]
+        [4, 8],
+        [3, 6],
+        [10, 20],
+        [15, 30],
+    ],
 ) ); // 6

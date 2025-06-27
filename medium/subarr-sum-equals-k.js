@@ -41,7 +41,7 @@ function subarraySum(nums, k) {
     let currentSum = 0;
     let cache = new Map([
         // empty subarr
-        [0, 1]
+        [0, 1],
     ]);
     let validSubarraysCount = 0;
 
@@ -57,4 +57,4 @@ function subarraySum(nums, k) {
     return validSubarraysCount;
 }
 
-console.log( subarraySum([1,2,3], 3) ); // 2
+console.log( subarraySum([1, 2, 3], 3) ); // 2

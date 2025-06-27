@@ -21,4 +21,4 @@ function hIndex(citations) {
     return citations.length;
 }
 
-console.log(hIndex([3,0,6,1,5])); // 3
+console.log(hIndex([3, 0, 6, 1, 5])); // 3

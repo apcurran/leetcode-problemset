@@ -34,5 +34,5 @@ function isVowelString(str) {
     return vowels.includes(beginningLetter) && vowels.includes(endingLetter);
 }
 
-console.log(vowelStrings(["are","amy","u"], 0, 2)); // 2
-console.log(vowelStrings(["hey","aeo","mu","ooo","artro"], 1, 4)); // 3
+console.log(vowelStrings(["are", "amy", "u"], 0, 2)); // 2
+console.log(vowelStrings(["hey", "aeo", "mu", "ooo", "artro"], 1, 4)); // 3

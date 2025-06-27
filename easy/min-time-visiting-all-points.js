@@ -26,4 +26,4 @@ function minTimeToVisitAllPoints(points) {
     return totalSeconds;
 }
 
-console.log( minTimeToVisitAllPoints([[1,1], [3,4], [-1,0]]) ); // 7
+console.log( minTimeToVisitAllPoints([[1, 1], [3, 4], [-1, 0]]) ); // 7

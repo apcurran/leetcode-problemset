@@ -27,5 +27,5 @@ function finalPositionOfSnake(n, commands) {
     return cellPosition;
 }
 
-console.log(finalPositionOfSnake(2, ["RIGHT","DOWN"])); // 3
-console.log(finalPositionOfSnake(3, ["DOWN","RIGHT","UP"])); // 1
+console.log(finalPositionOfSnake(2, ["RIGHT", "DOWN"])); // 3
+console.log(finalPositionOfSnake(3, ["DOWN", "RIGHT", "UP"])); // 1

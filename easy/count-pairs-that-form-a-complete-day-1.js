@@ -27,5 +27,5 @@ function countCompleteDayPairs(hours) {
     return completeDaysCount;
 }
 
-console.log(countCompleteDayPairs([12,12,30,24,24])); // 2
-console.log(countCompleteDayPairs([72,48,24,3])); // 3
+console.log(countCompleteDayPairs([12, 12, 30, 24, 24])); // 2
+console.log(countCompleteDayPairs([72, 48, 24, 3])); // 3

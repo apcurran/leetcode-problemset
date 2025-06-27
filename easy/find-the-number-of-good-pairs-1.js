@@ -31,4 +31,4 @@ function numberOfPairs(nums1, nums2, k) {
     return goodCounter;
 }
 
-console.log(numberOfPairs([1,3,4], [1,3,4], 1)); // 5
+console.log(numberOfPairs([1, 3, 4], [1, 3, 4], 1)); // 5

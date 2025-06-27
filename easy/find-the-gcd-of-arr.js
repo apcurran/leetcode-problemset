@@ -44,5 +44,5 @@ function getSmallestAndLargestNums(arr) {
     return [smallestNum, largestNum];
 }
 
-console.log( findGCD([2,5,6,9,10]) ); // 2
-console.log( findGCD([7,5,6,8,3]) ); // 1
+console.log( findGCD([2, 5, 6, 9, 10]) ); // 2
+console.log( findGCD([7, 5, 6, 8, 3]) ); // 1

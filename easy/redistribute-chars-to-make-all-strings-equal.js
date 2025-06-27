@@ -30,5 +30,5 @@ function makeEqual(words) {
     return true;
 }
 
-console.log(makeEqual(["abc","aabc","bc"])); // true
-console.log(makeEqual(["ab","a"])); // false
+console.log(makeEqual(["abc", "aabc", "bc"])); // true
+console.log(makeEqual(["ab", "a"])); // false

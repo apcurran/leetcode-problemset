@@ -32,5 +32,5 @@ function getSum(arr) {
     return sum;
 }
 
-console.log(findChampion([[0,1],[0,0]])); // 0
-console.log(findChampion([[0,0,1],[1,0,1],[0,0,0]])); // 1
+console.log(findChampion([[0, 1], [0, 0]])); // 0
+console.log(findChampion([[0, 0, 1], [1, 0, 1], [0, 0, 0]])); // 1

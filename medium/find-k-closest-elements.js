@@ -27,4 +27,4 @@ function findClosestElements(arr, k, x) {
     return arr.slice(left, left + k);
 }
 
-console.log(findClosestElements([1,2,3,4,5], 4, 3)); // [1,2,3,4]
+console.log(findClosestElements([1, 2, 3, 4, 5], 4, 3)); // [1,2,3,4]

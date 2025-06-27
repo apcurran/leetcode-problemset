@@ -72,4 +72,4 @@ function findThePrefixCommonArray(A, B) {
     return results;
 }
 
-console.log(findThePrefixCommonArray([1,3,2,4], [3,1,2,4])); // [0,2,3,4]
+console.log(findThePrefixCommonArray([1, 3, 2, 4], [3, 1, 2, 4])); // [0,2,3,4]

@@ -34,8 +34,8 @@ function countSubarrays(nums, k) {
     return result;
 }
 
-console.log(countSubarrays([1,3,2,3,3], 2)); // 6
-console.log(countSubarrays([1,4,2,1], 3)); // 0
+console.log(countSubarrays([1, 3, 2, 3, 3], 2)); // 6
+console.log(countSubarrays([1, 4, 2, 1], 3)); // 0
 
 /**
  * @param {number[]} arr 

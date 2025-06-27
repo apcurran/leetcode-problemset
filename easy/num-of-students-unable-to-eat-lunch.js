@@ -68,5 +68,5 @@ function countStudents(students, sandwiches) {
     return results;
 }
 
-console.log( countStudents([1,1,0,0], [0,1,0,1]) ); // 0
-console.log( countStudents([1,1,1,0,0,1], [1,0,0,0,1,1]) ); // 3
+console.log( countStudents([1, 1, 0, 0], [0, 1, 0, 1]) ); // 0
+console.log( countStudents([1, 1, 1, 0, 0, 1], [1, 0, 0, 0, 1, 1]) ); // 3

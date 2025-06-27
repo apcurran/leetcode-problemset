@@ -31,4 +31,4 @@ function mergeTriplets(triplets, target) {
     return validTriplet.size === 3;
 }
 
-console.log( mergeTriplets([[2,5,3],[1,8,4],[1,7,5]], [2,7,5]) ); // true
+console.log( mergeTriplets([[2, 5, 3], [1, 8, 4], [1, 7, 5]], [2, 7, 5]) ); // true

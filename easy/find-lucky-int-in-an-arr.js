@@ -39,6 +39,6 @@ function findLucky(arr) {
     return -1;
 }
 
-console.log( findLucky([2,2,3,4]) ); // 2
-console.log( findLucky([1,2,2,3,3,3]) ); // 3
-console.log( findLucky([2,2,2,3,3]) ); // -1
+console.log( findLucky([2, 2, 3, 4]) ); // 2
+console.log( findLucky([1, 2, 2, 3, 3, 3]) ); // 3
+console.log( findLucky([2, 2, 2, 3, 3]) ); // -1

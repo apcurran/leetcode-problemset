@@ -29,4 +29,4 @@ function reductionOperations(nums) {
 }
 
 // console.log(reductionOperations([5,1,3])); // 3
-console.log(reductionOperations([1,1,2,2,3])); // 4
+console.log(reductionOperations([1, 1, 2, 2, 3])); // 4

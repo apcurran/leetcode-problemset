@@ -29,4 +29,4 @@ function maxSubarraySumCircular(nums) {
     return Math.max(globalMax, fullSum - globalMin);
 }
 
-console.log( maxSubarraySumCircular([5,-3,5]) ); // 10
+console.log( maxSubarraySumCircular([5, -3, 5]) ); // 10

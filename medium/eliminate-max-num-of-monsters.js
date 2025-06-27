@@ -34,4 +34,4 @@ function eliminateMaximum(dist, speed) {
     return resultCount;
 }
 
-console.log( eliminateMaximum([1,3,4], [1,1,1]) ); // 3
+console.log( eliminateMaximum([1, 3, 4], [1, 1, 1]) ); // 3

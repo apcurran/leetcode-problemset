@@ -10,8 +10,8 @@
  */
 function countDigits(num) {    
     const digitsStr = num
-                        .toString()
-                        .split("");
+        .toString()
+        .split("");
     let divisibleCounter = 0;
     
     for (let digitStr of digitsStr) {

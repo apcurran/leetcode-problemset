@@ -21,4 +21,4 @@ function runningSum(nums) {
     return resultArr;
 }
 
-console.log( runningSum([1,2,3,4]) ); // [1,3,6,10] -- Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
+console.log( runningSum([1, 2, 3, 4]) ); // [1,3,6,10] -- Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].

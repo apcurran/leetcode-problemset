@@ -48,5 +48,5 @@ function countTestedDevices(batteryPercentages) {
     return testedDevicesCount;
 }
 
-console.log(countTestedDevices([1,1,2,1,3])); // 3
-console.log(countTestedDevices([0,1,2])); // 2
+console.log(countTestedDevices([1, 1, 2, 1, 3])); // 3
+console.log(countTestedDevices([0, 1, 2])); // 2

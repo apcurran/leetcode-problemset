@@ -25,5 +25,5 @@ function findPeaks(mountain) {
     return peaks;
 }
 
-console.log(findPeaks([2,4,4])); // []
-console.log(findPeaks([1,4,3,8,5])); // [1,3]
+console.log(findPeaks([2, 4, 4])); // []
+console.log(findPeaks([1, 4, 3, 8, 5])); // [1,3]

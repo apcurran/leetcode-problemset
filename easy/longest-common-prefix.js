@@ -29,4 +29,4 @@ function longestCommonPrefix(strs) {
     return maxPrefix;
 }
 
-console.log( longestCommonPrefix(["flower","flow","flight"]) ); // "fl"
+console.log( longestCommonPrefix(["flower", "flow", "flight"]) ); // "fl"

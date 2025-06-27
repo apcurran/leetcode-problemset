@@ -34,4 +34,4 @@ function maxFrequency(nums, k) {
     return res;
 }
 
-console.log( maxFrequency([1,2,4], 5) ); // 3
+console.log( maxFrequency([1, 2, 4], 5) ); // 3

@@ -76,6 +76,6 @@ function maximumSubarraySum(nums, k) {
     return maxSum;
 }
 
-console.log(maximumSubarraySum([1,5,4,2,9,9,9], 3)); // 15
-console.log(maximumSubarraySum([4,4,4], 3)); // 0
-console.log(maximumSubarraySum([1,1,1,7,8,9], 3)); // 24
+console.log(maximumSubarraySum([1, 5, 4, 2, 9, 9, 9], 3)); // 15
+console.log(maximumSubarraySum([4, 4, 4], 3)); // 0
+console.log(maximumSubarraySum([1, 1, 1, 7, 8, 9], 3)); // 24

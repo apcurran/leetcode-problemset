@@ -39,7 +39,7 @@ function countWords(words1, words2) {
     return counter;
 }
 
-console.log(countWords(["leetcode","is","amazing","as","is"], ["amazing","leetcode","is"]));
+console.log(countWords(["leetcode", "is", "amazing", "as", "is"], ["amazing", "leetcode", "is"]));
 // 2
-console.log(countWords(["a","ab"], ["a","a","a","ab"]));
+console.log(countWords(["a", "ab"], ["a", "a", "a", "ab"]));
 // 1

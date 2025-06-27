@@ -35,6 +35,6 @@ function canArrange(arr, k) {
     return true;
 }
 
-console.log(canArrange([1,2,3,4,5,10,6,7,8,9], 5)); // true
-console.log(canArrange([1,2,3,4,5,6], 7)); // true
-console.log(canArrange([1,2,3,4,5,6], 10)); // false
+console.log(canArrange([1, 2, 3, 4, 5, 10, 6, 7, 8, 9], 5)); // true
+console.log(canArrange([1, 2, 3, 4, 5, 6], 7)); // true
+console.log(canArrange([1, 2, 3, 4, 5, 6], 10)); // false

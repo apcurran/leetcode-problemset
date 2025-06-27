@@ -19,6 +19,6 @@ function minOperations(nums, k) {
     return belowThresholdCount;
 }
 
-console.log(minOperations([2,11,10,1,3], 10)); // 3
-console.log(minOperations([1,1,2,4,9], 1)); // 0
-console.log(minOperations([1,1,2,4,9], 9)); // 4
+console.log(minOperations([2, 11, 10, 1, 3], 10)); // 3
+console.log(minOperations([1, 1, 2, 4, 9], 1)); // 0
+console.log(minOperations([1, 1, 2, 4, 9], 9)); // 4

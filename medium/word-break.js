@@ -33,4 +33,4 @@ function wordBreak(s, wordDict) {
     return dpCache[0];
 }
 
-console.log(wordBreak("leetcode", ["leet","code"])); // true
+console.log(wordBreak("leetcode", ["leet", "code"])); // true

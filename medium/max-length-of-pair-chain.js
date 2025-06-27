@@ -23,5 +23,5 @@ function findLongestChain(pairs) {
     return resultLength;
 }
 
-console.log(findLongestChain([[1,2],[2,3],[3,4]])); // 2
-console.log(findLongestChain([[1,2],[7,8],[4,5]])); // 3
+console.log(findLongestChain([[1, 2], [2, 3], [3, 4]])); // 2
+console.log(findLongestChain([[1, 2], [7, 8], [4, 5]])); // 3

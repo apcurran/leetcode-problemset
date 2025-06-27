@@ -22,4 +22,4 @@ function maximumTripletValue(nums) {
     return result;
 }
 
-console.log(maximumTripletValue([12,6,1,2,7])); // 77
+console.log(maximumTripletValue([12, 6, 1, 2, 7])); // 77

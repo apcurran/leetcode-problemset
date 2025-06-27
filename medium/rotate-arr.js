@@ -58,4 +58,4 @@ function reverseArr(nums, start, end) {
 //     return nums;
 // }
 
-console.log( rotate([1,2,3,4,5,6,7], 3) ); // [5, 6, 7, 1, 2, 3, 4]
+console.log( rotate([1, 2, 3, 4, 5, 6, 7], 3) ); // [5, 6, 7, 1, 2, 3, 4]

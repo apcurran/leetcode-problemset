@@ -98,4 +98,4 @@ function sumNumDigits(num) {
     return sum;
 }
 
-console.log(maximumSum([18,43,36,13,7])); // 54
+console.log(maximumSum([18, 43, 36, 13, 7])); // 54

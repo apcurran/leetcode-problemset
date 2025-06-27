@@ -51,5 +51,5 @@ function getCommon(nums1, nums2) {
     return -1;
 }
 
-console.log(getCommon([1,2,3], [2,4])); // 2
-console.log(getCommon([1,2,3,6], [2,3,4,5])); // 2
+console.log(getCommon([1, 2, 3], [2, 4])); // 2
+console.log(getCommon([1, 2, 3, 6], [2, 3, 4, 5])); // 2

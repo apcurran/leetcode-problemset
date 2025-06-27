@@ -75,5 +75,5 @@ function getLargestElemIndex(arr) {
     return largestElemIndex;
 }
 
-console.log( maximizeSum([1,2,3,4,5], 3) ); // 18
-console.log( maximizeSum([5,5,5], 2) ); // 11
+console.log( maximizeSum([1, 2, 3, 4, 5], 3) ); // 18
+console.log( maximizeSum([5, 5, 5], 2) ); // 11

@@ -28,5 +28,5 @@ function countPrefixSuffixPairs(words) {
     return validPairsCount;
 }
 
-console.log(countPrefixSuffixPairs(["a","aba","ababa","aa"])); // 4
-console.log(countPrefixSuffixPairs(["a","abb"])); // 0
+console.log(countPrefixSuffixPairs(["a", "aba", "ababa", "aa"])); // 4
+console.log(countPrefixSuffixPairs(["a", "abb"])); // 0

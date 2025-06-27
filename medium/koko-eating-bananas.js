@@ -96,4 +96,4 @@ function getMax(arr) {
     return max;
 }
 
-console.log( minEatingSpeed([3,6,7,11], 8) ); // 4
+console.log( minEatingSpeed([3, 6, 7, 11], 8) ); // 4

@@ -47,4 +47,4 @@ function average(salary) {
     return salarySumExcludingMinMax / salaryLengthExcludingMinMax;
 }
 
-console.log( average([4000,3000,1000,2000]) ); // 2500
+console.log( average([4000, 3000, 1000, 2000]) ); // 2500

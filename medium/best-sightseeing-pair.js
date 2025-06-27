@@ -44,4 +44,4 @@ function maxScoreSightseeingPair(values) {
     return max;
 }
 
-console.log(maxScoreSightseeingPair([8,1,5,2,6])); // 11
+console.log(maxScoreSightseeingPair([8, 1, 5, 2, 6])); // 11

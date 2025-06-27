@@ -21,4 +21,4 @@ function shuffle(nums, n) {
     return resArr;
 }
 
-console.log( shuffle([2,5,1,3,4,7], 3) ); // [2,3,5,4,1,7]
+console.log( shuffle([2, 5, 1, 3, 4, 7], 3) ); // [2,3,5,4,1,7]

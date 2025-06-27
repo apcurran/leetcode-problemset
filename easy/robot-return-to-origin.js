@@ -13,7 +13,7 @@ function judgeCircle(moves) {
         ["L", 0],
         ["R", 0],
         ["U", 0],
-        ["D", 0]
+        ["D", 0],
     ]);
 
     for (let moveDir of moves) {

@@ -40,7 +40,7 @@ function getFinalState(nums, k, multiplier) {
     return nums;
 }
 
-console.log(getFinalState([2,1,3,5,6], 5, 2)); // [8,4,6,5,6]
+console.log(getFinalState([2, 1, 3, 5, 6], 5, 2)); // [8,4,6,5,6]
 
 /**
  * @param {number[]} nums 

@@ -19,4 +19,4 @@ function numOfStrings(patterns, word) {
     return foundPatternsCount;
 }
 
-console.log( numOfStrings(["a","abc","bc","d"],"abc") ); // 3
+console.log( numOfStrings(["a", "abc", "bc", "d"], "abc") ); // 3

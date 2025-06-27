@@ -64,6 +64,6 @@ function asteroidCollision(asteroids) {
     return stack;
 }
 
-console.log( asteroidCollision([5,10,-5]) ); // [5, 10]
-console.log( asteroidCollision([10,2,-5]) ); // [10]
-console.log( asteroidCollision([-2,-1,1,2]) ); // [-2,-1,1,2]
+console.log( asteroidCollision([5, 10, -5]) ); // [5, 10]
+console.log( asteroidCollision([10, 2, -5]) ); // [10]
+console.log( asteroidCollision([-2, -1, 1, 2]) ); // [-2,-1,1,2]

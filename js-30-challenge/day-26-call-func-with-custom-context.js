@@ -16,5 +16,7 @@ Function.prototype.callPolyfill = function(context, ...args) {
 };
 
 
-function increment() { this.count++; return this.count; }
+function increment() {
+    this.count++; return this.count; 
+}
 console.log( increment.callPolyfill({count: 1}) ); // 2

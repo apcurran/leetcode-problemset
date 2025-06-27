@@ -59,5 +59,5 @@ function chalkReplacer(chalk, k) {
 //     return 0;
 // }
 
-console.log(chalkReplacer([5,1,5], 22)); // 0
-console.log(chalkReplacer([3,4,1,2], 25)); // 1
+console.log(chalkReplacer([5, 1, 5], 22)); // 0
+console.log(chalkReplacer([3, 4, 1, 2], 25)); // 1

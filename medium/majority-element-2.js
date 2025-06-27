@@ -28,5 +28,5 @@ function majorityElement(nums) {
     return results;
 }
 
-console.log(majorityElement([3,2,3])); // [3]
-console.log(majorityElement([1,2])); // [1,2]
+console.log(majorityElement([3, 2, 3])); // [3]
+console.log(majorityElement([1, 2])); // [1,2]

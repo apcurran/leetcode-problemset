@@ -21,5 +21,5 @@ function returnToBoundaryCount(nums) {
     return boundaryHitsCount;
 }
 
-console.log(returnToBoundaryCount([2,3,-5])); // 1
-console.log(returnToBoundaryCount([3,2,-3,-4])); // 0
+console.log(returnToBoundaryCount([2, 3, -5])); // 1
+console.log(returnToBoundaryCount([3, 2, -3, -4])); // 0

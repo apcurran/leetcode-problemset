@@ -26,4 +26,4 @@ function removeAnagrams(words) {
     return resArr;
 }
 
-console.log( removeAnagrams(["abba","baba","bbaa","cd","cd"]) ); // ["abba","cd"]
+console.log( removeAnagrams(["abba", "baba", "bbaa", "cd", "cd"]) ); // ["abba","cd"]

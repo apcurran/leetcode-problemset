@@ -38,6 +38,6 @@ function similarPairs(words) {
     return similarPairsCount;
 }
 
-console.log( similarPairs(["aba","aabb","abcd","bac","aabc"]) ); // 2
-console.log( similarPairs(["aabb","ab","ba"]) ); // 3
-console.log( similarPairs(["nba","cba","dba"]) ); // 0
+console.log( similarPairs(["aba", "aabb", "abcd", "bac", "aabc"]) ); // 2
+console.log( similarPairs(["aabb", "ab", "ba"]) ); // 3
+console.log( similarPairs(["nba", "cba", "dba"]) ); // 0

@@ -14,8 +14,8 @@ function selfDividingNumbers(left, right) {
     for (let i = left; i <= right; i++) {
         const wholeNum = i;
         const numDigitArr = String(i)
-                            .split("")
-                            .map((digit) => +digit);
+            .split("")
+            .map((digit) => +digit);
         
         for (let digit of numDigitArr) {
             // skip running rest of num if it contains a 0 digit

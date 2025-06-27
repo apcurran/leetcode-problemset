@@ -73,4 +73,4 @@ function sortArrayByParity(nums) {
     return nums;
 }
 
-console.log( sortArrayByParity([3,1,2,4]) ); // [2, 4, 3, 1]
+console.log( sortArrayByParity([3, 1, 2, 4]) ); // [2, 4, 3, 1]

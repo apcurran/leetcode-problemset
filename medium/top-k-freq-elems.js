@@ -76,5 +76,5 @@ function topKFrequent(nums, k) {
     return resultArr;
 }
 
-console.log( topKFrequent([1,1,1,2,2,3], 2) ); // [1, 2]
+console.log( topKFrequent([1, 1, 1, 2, 2, 3], 2) ); // [1, 2]
 console.log( topKFrequent([1], 1) ); // [1]

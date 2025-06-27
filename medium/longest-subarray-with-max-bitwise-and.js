@@ -57,5 +57,5 @@ function longestSubarray(nums) {
     return result;
 }
 
-console.log(longestSubarray([1,2,3,3,2,2])); // 2
-console.log(longestSubarray([1,2,3,4])); // 1
+console.log(longestSubarray([1, 2, 3, 3, 2, 2])); // 2
+console.log(longestSubarray([1, 2, 3, 4])); // 1

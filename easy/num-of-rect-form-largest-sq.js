@@ -21,4 +21,4 @@ function countGoodRectangles(rectangles) {
 }
 
 console.log( countGoodRectangles([[5, 8], [3, 9], [5, 12], [16, 5]]) ); // [5, 3, 5, 5] -> 3
-console.log( countGoodRectangles([[2, 3] ,[3, 7], [4, 3], [3, 7]]) ); // 3
+console.log( countGoodRectangles([[2, 3], [3, 7], [4, 3], [3, 7]]) ); // 3

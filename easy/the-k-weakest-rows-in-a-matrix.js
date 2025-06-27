@@ -30,21 +30,21 @@ function kWeakestRows(matrix, k) {
     }
 
     return soldierCountsFromRows
-            .sort((a, b) => {
-                const array1SoldierCountOfRow = a[0];
-                const array2SoldierCountOfRow = b[0];
+        .sort((a, b) => {
+            const array1SoldierCountOfRow = a[0];
+            const array2SoldierCountOfRow = b[0];
 
-                return array1SoldierCountOfRow - array2SoldierCountOfRow;
-            })
-            .slice(0, k)
-            .map((tuple) => tuple[1]);
+            return array1SoldierCountOfRow - array2SoldierCountOfRow;
+        })
+        .slice(0, k)
+        .map((tuple) => tuple[1]);
 }
 
 console.log(kWeakestRows(
     [[1, 1, 0, 0, 0],
-    [1, 1, 1, 1, 0],
-    [1, 0, 0, 0, 0],
-    [1, 1, 0, 0, 0],
-    [1, 1, 1, 1, 1]],
-    3
+        [1, 1, 1, 1, 0],
+        [1, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0],
+        [1, 1, 1, 1, 1]],
+    3,
 )); // [2,0,3]

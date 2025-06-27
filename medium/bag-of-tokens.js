@@ -41,5 +41,5 @@ function bagOfTokensScore(tokens, power) {
     return maxScore;
 }
 
-console.log(bagOfTokensScore([200,100], 150)); // 1
-console.log(bagOfTokensScore([100,200,300,400], 200)); // 2
+console.log(bagOfTokensScore([200, 100], 150)); // 1
+console.log(bagOfTokensScore([100, 200, 300, 400], 200)); // 2

@@ -34,8 +34,8 @@ function clearDigits(str) {
     for (let char of str) {
         if (char >= "0" && char <= "9") {
             // digit found
-                // delete previous stack top item
-                // skip adding this current char
+            // delete previous stack top item
+            // skip adding this current char
             stack.pop();
         } else {
             stack.push(char);

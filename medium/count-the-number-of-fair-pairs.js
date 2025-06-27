@@ -77,5 +77,5 @@ function binarySearch(nums, left, right, target) {
     return right;
 }
 
-console.log(countFairPairs([0,1,7,4,4,5], 3, 6)); // 6
-console.log(countFairPairs([1,7,9,2,5], 11, 11)); // 1
+console.log(countFairPairs([0, 1, 7, 4, 4, 5], 3, 6)); // 6
+console.log(countFairPairs([1, 7, 9, 2, 5], 11, 11)); // 1

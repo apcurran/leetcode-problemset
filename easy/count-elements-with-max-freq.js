@@ -26,4 +26,4 @@ function maxFrequencyElements(nums) {
     return sum;
 }
 
-console.log(maxFrequencyElements([1,2,2,3,1,4])); // 4
+console.log(maxFrequencyElements([1, 2, 2, 3, 1, 4])); // 4

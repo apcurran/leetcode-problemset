@@ -65,4 +65,4 @@ function groupAnagrams(strs) {
     return results;
 }
 
-console.log( groupAnagrams(["eat","tea","tan","ate","nat","bat"]) ); // [["bat"],["nat","tan"],["ate","eat","tea"]]
+console.log( groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]) ); // [["bat"],["nat","tan"],["ate","eat","tea"]]

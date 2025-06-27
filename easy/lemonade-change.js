@@ -40,4 +40,4 @@ function lemonadeChange(bills) {
     return true;
 }
 
-console.log( lemonadeChange([5,5,5,10,20]) ); // true
+console.log( lemonadeChange([5, 5, 5, 10, 20]) ); // true

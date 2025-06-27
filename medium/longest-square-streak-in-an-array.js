@@ -32,4 +32,4 @@ function longestSquareStreak(nums) {
     return longestStreak <= 1 ? -1 : longestStreak;
 }
 
-console.log(longestSquareStreak([4,3,6,16,8,2])); // 3 -> [4, 16, 2]
+console.log(longestSquareStreak([4, 3, 6, 16, 8, 2])); // 3 -> [4, 16, 2]

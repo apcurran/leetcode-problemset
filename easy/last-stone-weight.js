@@ -51,6 +51,6 @@ function lastStoneWeight(stones) {
     return lastStoneWeight(stones);
 }
 
-console.log( lastStoneWeight([2,7,4,1,8,1]) ); // 1
+console.log( lastStoneWeight([2, 7, 4, 1, 8, 1]) ); // 1
 console.log( lastStoneWeight([1]) ); // 1
-console.log( lastStoneWeight([2,2]) ); // 0
+console.log( lastStoneWeight([2, 2]) ); // 0

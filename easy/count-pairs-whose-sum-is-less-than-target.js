@@ -58,4 +58,4 @@ function countPairs(nums, target) {
     return pairsCount;
 }
 
-console.log(countPairs([-1,1,2,3,1], 2)); // 3
+console.log(countPairs([-1, 1, 2, 3, 1], 2)); // 3

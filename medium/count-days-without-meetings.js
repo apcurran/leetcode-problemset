@@ -28,4 +28,4 @@ function countDays(days, meetings) {
     return result;
 }
 
-console.log(countDays(10, [[5,7],[1,3],[9,10]])); // 2
+console.log(countDays(10, [[5, 7], [1, 3], [9, 10]])); // 2

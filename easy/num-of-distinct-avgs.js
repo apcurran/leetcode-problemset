@@ -22,5 +22,5 @@ function distinctAverages(nums) {
     return uniqueAvgs.size;
 }
 
-console.log( distinctAverages([4,1,4,0,3,5]) ); // 2
-console.log( distinctAverages([1,100]) ); // 1
+console.log( distinctAverages([4, 1, 4, 0, 3, 5]) ); // 2
+console.log( distinctAverages([1, 100]) ); // 1

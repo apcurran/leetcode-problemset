@@ -61,4 +61,4 @@ function sumDigits(num) {
     return sum;
 }
 
-console.log(minElement([999,19,199])); // 10
+console.log(minElement([999, 19, 199])); // 10

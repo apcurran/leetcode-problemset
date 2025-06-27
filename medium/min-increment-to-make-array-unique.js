@@ -27,4 +27,4 @@ function minIncrementForUnique(nums) {
     return incrementCount;
 }
 
-console.log(minIncrementForUnique([1,2,2])); // 1
+console.log(minIncrementForUnique([1, 2, 2])); // 1

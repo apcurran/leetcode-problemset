@@ -35,5 +35,5 @@ function stoneGame(piles) {
     return aliceScore >= bobScore;
 }
 
-console.log( stoneGame([5,3,4,5]) ); // true
-console.log( stoneGame([3,7,2,3]) ); // true
+console.log( stoneGame([5, 3, 4, 5]) ); // true
+console.log( stoneGame([3, 7, 2, 3]) ); // true

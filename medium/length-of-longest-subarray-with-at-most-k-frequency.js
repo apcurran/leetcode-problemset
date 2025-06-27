@@ -38,5 +38,5 @@ function maxSubarrayLength(nums, k) {
     return longestSubarrayLength;
 }
 
-console.log(maxSubarrayLength([1,2,3,1,2,3,1,2], 2)); // 6
-console.log(maxSubarrayLength([1,2,2,2], 1)); // 2
+console.log(maxSubarrayLength([1, 2, 3, 1, 2, 3, 1, 2], 2)); // 6
+console.log(maxSubarrayLength([1, 2, 2, 2], 1)); // 2

@@ -22,5 +22,5 @@ function numberOfPoints(nums) {
     return points.size;
 }
 
-console.log(numberOfPoints([[3,6],[1,5],[4,7]])); // 7
-console.log(numberOfPoints([[1,3],[5,8]])); // 7
+console.log(numberOfPoints([[3, 6], [1, 5], [4, 7]])); // 7
+console.log(numberOfPoints([[1, 3], [5, 8]])); // 7

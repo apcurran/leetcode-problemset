@@ -42,18 +42,18 @@ console.log( countMatches(
     [
         ["phone", "blue", "pixel"],
         ["computer", "silver", "lenovo"],
-        ["phone", "gold", "iphone"]
+        ["phone", "gold", "iphone"],
     ],
     "color",
-    "silver"
+    "silver",
 ) ); // 1
 
 console.log( countMatches(
     [
         ["phone", "blue", "pixel"],
         ["computer", "silver", "phone"],
-        ["phone", "gold", "iphone"]
+        ["phone", "gold", "iphone"],
     ],
     "type",
-    "phone"
+    "phone",
 ) ); // 2

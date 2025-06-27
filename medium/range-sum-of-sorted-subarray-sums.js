@@ -39,4 +39,4 @@ function rangeSum(nums, n, left, right) {
     return sumFromLeftToRight % MOD_AMOUNT;
 }
 
-console.log(rangeSum([1,2,3,4], 4, 1, 5)); // 13
+console.log(rangeSum([1, 2, 3, 4], 4, 1, 5)); // 13

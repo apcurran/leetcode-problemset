@@ -34,4 +34,4 @@ function addSpaces(str, spaces) {
     return results.join("");
 }
 
-console.log(addSpaces("LeetcodeHelpsMeLearn", [8,13,15])); // "Leetcode Helps Me Learn"
+console.log(addSpaces("LeetcodeHelpsMeLearn", [8, 13, 15])); // "Leetcode Helps Me Learn"

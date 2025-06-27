@@ -38,8 +38,8 @@ function maxEqualRowsAfterFlips(matrix) {
 
 console.log(maxEqualRowsAfterFlips(
     [
-        [0,0,0],
-        [0,0,1],
-        [1,1,0]
-    ]
+        [0, 0, 0],
+        [0, 0, 1],
+        [1, 1, 0],
+    ],
 )); // 2

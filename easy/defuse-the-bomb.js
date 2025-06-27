@@ -30,4 +30,4 @@ function decrypt(code, k) {
     return results;
 }
 
-console.log(decrypt([5,7,1,4], 3)); // [12,10,16,13]
+console.log(decrypt([5, 7, 1, 4], 3)); // [12,10,16,13]

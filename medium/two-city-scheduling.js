@@ -36,4 +36,4 @@ function twoCitySchedCost(costs) {
     return res;
 }
 
-console.log( twoCitySchedCost([[10,20], [30,200], [400,50], [30,20]]) ); // 110
+console.log( twoCitySchedCost([[10, 20], [30, 200], [400, 50], [30, 20]]) ); // 110

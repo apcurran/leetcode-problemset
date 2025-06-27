@@ -30,5 +30,5 @@ function sumIndicesWithKSetBits(nums, k) {
     return sum;
 }
 
-console.log(sumIndicesWithKSetBits([5,10,1,5,2], 1)); // 13
-console.log(sumIndicesWithKSetBits([4,3,2,1], 2)); // 1
+console.log(sumIndicesWithKSetBits([5, 10, 1, 5, 2], 1)); // 13
+console.log(sumIndicesWithKSetBits([4, 3, 2, 1], 2)); // 1

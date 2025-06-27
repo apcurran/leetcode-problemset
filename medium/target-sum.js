@@ -35,4 +35,4 @@ function findTargetSumWays(nums, target) {
     return waysToTarget(0, 0);
 }
 
-console.log(findTargetSumWays([1,1,1,1,1], 3)); // 5
+console.log(findTargetSumWays([1, 1, 1, 1, 1], 3)); // 5

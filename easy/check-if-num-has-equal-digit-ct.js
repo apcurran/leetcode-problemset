@@ -10,8 +10,8 @@
  */
 function digitCount(num) {
     const digitsArr = num
-                        .split("")
-                        .map((digitStr) => Number(digitStr));
+        .split("")
+        .map((digitStr) => Number(digitStr));
     let digitsMap = new Map();
 
     for (let digit of digitsArr) {

@@ -21,7 +21,11 @@ function reduce(nums, fn, init) {
     return accumulator;
 }
 
-console.log( reduce([1,2,3,4], function sum(accum, curr) { return accum + curr; }, 0 ) );
+console.log( reduce([1, 2, 3, 4], function sum(accum, curr) {
+    return accum + curr; 
+}, 0 ) );
 // 10 
-console.log( reduce([1,2,3,4], function sum(accum, curr) { return accum + curr * curr; }, 100 ) );
+console.log( reduce([1, 2, 3, 4], function sum(accum, curr) {
+    return accum + curr * curr; 
+}, 100 ) );
 // 130

@@ -21,5 +21,5 @@ function isAcronym(words, s) {
     return s === firstLetters;
 }
 
-console.log(isAcronym(["alice","bob","charlie"], "abc")); // true
-console.log(isAcronym(["an","apple"], "a")); // false
+console.log(isAcronym(["alice", "bob", "charlie"], "abc")); // true
+console.log(isAcronym(["an", "apple"], "a")); // false

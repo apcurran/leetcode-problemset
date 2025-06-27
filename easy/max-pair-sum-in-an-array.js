@@ -42,4 +42,4 @@ function getMaxDigit(num) {
     return max;
 }
 
-console.log(maxSum([51,71,17,24,42])); // 88
+console.log(maxSum([51, 71, 17, 24, 42])); // 88

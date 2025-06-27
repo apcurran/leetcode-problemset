@@ -34,5 +34,5 @@ function largestSumAfterKNegations(nums, k) {
     return nums.reduce((sum, currentNum) => sum + currentNum, 0);
 }
 
-console.log( largestSumAfterKNegations([4,2,3], 1) ); // 5
-console.log( largestSumAfterKNegations([3,-1,0,2], 3) ); // 6
+console.log( largestSumAfterKNegations([4, 2, 3], 1) ); // 5
+console.log( largestSumAfterKNegations([3, -1, 0, 2], 3) ); // 6

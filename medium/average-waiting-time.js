@@ -54,5 +54,5 @@ function averageWaitingTime(customers) {
     return average;
 }
 
-console.log(averageWaitingTime([[1,2],[2,5],[4,3]])); // 5
-console.log(averageWaitingTime([[5,2],[5,4],[10,3],[20,1]])); // 3.25
+console.log(averageWaitingTime([[1, 2], [2, 5], [4, 3]])); // 5
+console.log(averageWaitingTime([[5, 2], [5, 4], [10, 3], [20, 1]])); // 3.25

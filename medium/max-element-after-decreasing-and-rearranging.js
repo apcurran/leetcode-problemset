@@ -20,4 +20,4 @@ function maximumElementAfterDecrementingAndRearranging(arr) {
     return previous;
 }
 
-console.log(maximumElementAfterDecrementingAndRearranging([2,2,1,2,1])); // 2
+console.log(maximumElementAfterDecrementingAndRearranging([2, 2, 1, 2, 1])); // 2

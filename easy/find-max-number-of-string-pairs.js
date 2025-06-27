@@ -42,6 +42,6 @@ function reverseWord(str) {
     return reversed;
 }
 
-console.log( maximumNumberOfStringPairs(["cd","ac","dc","ca","zz"]) ); // 2
-console.log( maximumNumberOfStringPairs(["ab","ba","cc"]) ); // 1
-console.log( maximumNumberOfStringPairs(["aa","ab"]) ); // 0
+console.log( maximumNumberOfStringPairs(["cd", "ac", "dc", "ca", "zz"]) ); // 2
+console.log( maximumNumberOfStringPairs(["ab", "ba", "cc"]) ); // 1
+console.log( maximumNumberOfStringPairs(["aa", "ab"]) ); // 0

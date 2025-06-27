@@ -28,4 +28,4 @@ function numberOfBeams(bank) {
     return result;
 }
 
-console.log(numberOfBeams(["011001","000000","010100","001000"])); // 8
+console.log(numberOfBeams(["011001", "000000", "010100", "001000"])); // 8

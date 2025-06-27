@@ -57,5 +57,5 @@ function maximumValue(strs) {
     return maxVal;
 }
 
-console.log( maximumValue(["alic3","bob","3","4","00000"]) ); // 5
-console.log( maximumValue(["1","01","001","0001"]) ); // 1
+console.log( maximumValue(["alic3", "bob", "3", "4", "00000"]) ); // 5
+console.log( maximumValue(["1", "01", "001", "0001"]) ); // 1

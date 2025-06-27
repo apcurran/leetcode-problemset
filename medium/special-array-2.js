@@ -151,4 +151,4 @@ function isArraySpecial(nums, queries) {
     return results;
 }
 
-console.log(isArraySpecial([4,3,1,6], [[0,2],[2,3]])); // [false, true]
+console.log(isArraySpecial([4, 3, 1, 6], [[0, 2], [2, 3]])); // [false, true]

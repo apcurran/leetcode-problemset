@@ -23,4 +23,4 @@ function sumOfSquares(nums) {
     return sum;
 }
 
-console.log(sumOfSquares([1,2,3,4])); // 21
+console.log(sumOfSquares([1, 2, 3, 4])); // 21

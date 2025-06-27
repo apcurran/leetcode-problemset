@@ -39,4 +39,4 @@ function firstCompleteIndex(arr, mat) {
     return -1;
 }
 
-console.log(firstCompleteIndex([1,3,4,2], [[1,4],[2,3]])); // 2
+console.log(firstCompleteIndex([1, 3, 4, 2], [[1, 4], [2, 3]])); // 2

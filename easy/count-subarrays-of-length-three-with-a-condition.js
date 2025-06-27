@@ -25,5 +25,5 @@ function countSubarrays(nums) {
     return count;
 }
 
-console.log(countSubarrays([1,2,1,4,1])); // 1
-console.log(countSubarrays([1,1,1])); // 0
+console.log(countSubarrays([1, 2, 1, 4, 1])); // 1
+console.log(countSubarrays([1, 1, 1])); // 0

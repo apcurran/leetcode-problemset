@@ -29,7 +29,7 @@ function canPlaceFlowers(flowerbed, n) {
     return n <= canPlantCount;
 }
 
-console.log( canPlaceFlowers([1,0,0,0,1], 1) ); // true
-console.log( canPlaceFlowers([1,0,0,0,1], 2) ); // false
-console.log( canPlaceFlowers([1,0,0,0,0,1], 2) ); // false
-console.log( canPlaceFlowers([1,0,0,0,0,0,1], 2) ); // true
+console.log( canPlaceFlowers([1, 0, 0, 0, 1], 1) ); // true
+console.log( canPlaceFlowers([1, 0, 0, 0, 1], 2) ); // false
+console.log( canPlaceFlowers([1, 0, 0, 0, 0, 1], 2) ); // false
+console.log( canPlaceFlowers([1, 0, 0, 0, 0, 0, 1], 2) ); // true

@@ -19,9 +19,9 @@ function areOccurrencesEqual(str) {
 
     // iterate cache and check if curr val is same as others
     const idealCount = charCache
-                        .entries()
-                        .next()
-                        .value[1];
+        .entries()
+        .next()
+        .value[1];
 
     for (let occurCount of charCache.values()) {
         if (occurCount !== idealCount) return false;
