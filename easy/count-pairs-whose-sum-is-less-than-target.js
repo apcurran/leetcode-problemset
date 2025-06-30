@@ -2,7 +2,7 @@
 //  * solution 1
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} target
 //  * @return {number}
@@ -31,7 +31,7 @@
  * solution 2 -- two pointers
  * time: O(n * log n) -- sort
  * space: O(n) -- sort
- * 
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {number}

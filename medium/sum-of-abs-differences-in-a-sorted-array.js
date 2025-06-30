@@ -4,7 +4,7 @@
  * solution 1 -- correct, but TLE
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */

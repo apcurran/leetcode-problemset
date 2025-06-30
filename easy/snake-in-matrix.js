@@ -4,7 +4,7 @@
  * solution 1
  * time: O(c)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @param {string[]} commands
  * @return {number}

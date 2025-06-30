@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} hours
  * @param {number} target
  * @return {number}

@@ -1,9 +1,9 @@
 "use strict";
 
 /**
- * 
+ *
  * @param {number} n
- * @returns {number} 
+ * @returns {number}
  */
 function countPrimes(n) {
     let count = 0;
@@ -15,11 +15,10 @@ function countPrimes(n) {
     return count;
 }
 
-
 /**
- * 
+ *
  * @param {number} num
- * @returns {boolean} 
+ * @returns {boolean}
  */
 function isPrime(num) {
     if (num <= 1) return false;
@@ -31,6 +30,6 @@ function isPrime(num) {
     return true;
 }
 
-console.log( countPrimes(1) ); // 0
-console.log( countPrimes(0) ); // 0
-console.log( countPrimes(10) ); // 4
+console.log(countPrimes(1)); // 0
+console.log(countPrimes(0)); // 0
+console.log(countPrimes(10)); // 4

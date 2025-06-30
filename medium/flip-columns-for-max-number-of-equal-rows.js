@@ -6,7 +6,7 @@
  * m = columns length
  * time: O(n * m)
  * space: O(n * m)
- * 
+ *
  * @param {number[][]} matrix
  * @return {number}
  */
@@ -36,10 +36,10 @@ function maxEqualRowsAfterFlips(matrix) {
     return max;
 }
 
-console.log(maxEqualRowsAfterFlips(
-    [
+console.log(
+    maxEqualRowsAfterFlips([
         [0, 0, 0],
         [0, 0, 1],
         [1, 1, 0],
-    ],
-)); // 2
+    ]),
+); // 2

@@ -13,7 +13,7 @@
 //  * solution 1 -- recursion
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @param {number} targetSum
 //  * @param {number} currentSum
@@ -40,7 +40,7 @@
  * solution 2 -- recursion (slightly cleaner)
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @param {number} sum
  * @return {boolean}
@@ -49,7 +49,7 @@ function hasPathSum(root, sum) {
     if (root === null) return false;
 
     if (root.left === null && root.right === null) {
-        return sum === root.val; 
+        return sum === root.val;
     }
 
     const currSum = sum - root.val;

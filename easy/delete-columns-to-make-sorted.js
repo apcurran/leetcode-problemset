@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(1)
- * 
+ *
  * @param {string[]} strs
  * @return {number}
  */

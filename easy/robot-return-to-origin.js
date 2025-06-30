@@ -4,7 +4,7 @@
  * solution 1 -- cache Map
  * time: O(n)
  * space: O(1) -- space will be only four total vals in map, this will never change
- * 
+ *
  * @param {string} moves
  * @return {boolean}
  */
@@ -29,5 +29,5 @@ function judgeCircle(moves) {
     return vertDiff === 0 && horizDiff === 0;
 }
 
-console.log( judgeCircle("UD") );
-console.log( judgeCircle("LL") );
+console.log(judgeCircle("UD"));
+console.log(judgeCircle("LL"));

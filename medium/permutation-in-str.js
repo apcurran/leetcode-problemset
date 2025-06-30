@@ -6,7 +6,7 @@
 //  * m = s2
 //  * time: O( m * (n * log(n)) )
 //  * space: O( n )
-//  * 
+//  *
 //  * @param {string} s1
 //  * @param {string} s2
 //  * @return {boolean}
@@ -24,7 +24,7 @@
 // }
 
 // /**
-//  * @param {string} str 
+//  * @param {string} str
 //  * @returns {string}
 //  */
 // function getSortedStr(str) {
@@ -40,7 +40,7 @@
  * m = s2
  * time: O(n)
  * space: O(1) -- hashmap contains 26 chars at most
- * 
+ *
  * @param {string} s1
  * @param {string} s2
  * @return {boolean}
@@ -76,8 +76,8 @@ function checkInclusion(s1, s2) {
 }
 
 /**
- * @param {Map} s1Map 
- * @param {Map} s2Map 
+ * @param {Map} s1Map
+ * @param {Map} s2Map
  * @returns {boolean}
  */
 function charCountsMatch(s1Map, s2Map) {

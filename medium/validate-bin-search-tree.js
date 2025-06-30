@@ -2,16 +2,16 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 // /**
 //  * solution 1 -- recursion
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {boolean}
 //  */
@@ -20,9 +20,9 @@ function TreeNode(val, left, right) {
 // }
 
 // /**
-//  * @param {TreeNode} root 
-//  * @param {number} left 
-//  * @param {number} right 
+//  * @param {TreeNode} root
+//  * @param {number} left
+//  * @param {number} right
 //  * @returns {boolean}
 //  */
 // function validate(root, left, right) {
@@ -43,7 +43,7 @@ function TreeNode(val, left, right) {
  * solution 2 -- recursion (more concise)
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @param {number} leftBoundary
  * @param {number} rightBoundary

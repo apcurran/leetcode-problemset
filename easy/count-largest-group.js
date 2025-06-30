@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n * m)
 //  * space: O(n + m)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number}
 //  */
@@ -37,7 +37,7 @@
  * solution 2
  * time: O(n * log m)
  * space: O(n)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -52,7 +52,10 @@ function countLargestGroup(n) {
         map.set(digitSum, previousDigitSumValues);
 
         // update largest arr length
-        largestArrsLength = Math.max(largestArrsLength, previousDigitSumValues.length);
+        largestArrsLength = Math.max(
+            largestArrsLength,
+            previousDigitSumValues.length,
+        );
     }
 
     let result = 0;
@@ -67,7 +70,7 @@ function countLargestGroup(n) {
 }
 
 /**
- * @param {number} num 
+ * @param {number} num
  * @returns {number}
  */
 function calcDigitsSum(num) {

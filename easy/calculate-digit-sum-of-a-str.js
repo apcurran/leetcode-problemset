@@ -4,7 +4,7 @@
  * solution 1 -- recursion
  * time: O(n * k * log n)
  * space: O(log n)
- * 
+ *
  * @param {string} str
  * @param {number} k
  * @return {string}
@@ -17,7 +17,7 @@ function digitSum(str, k) {
     // split up into chunks
     for (let i = 0; i < str.length; i += k) {
         let chunkTotal = 0;
-        
+
         for (let j = i; j < i + k; j++) {
             const currentNumStr = str[j];
 

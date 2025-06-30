@@ -1,6 +1,6 @@
 /**
  * Definition for isBadVersion()
- * 
+ *
  * @param {integer} version number
  * @return {boolean} whether the version is bad
  * isBadVersion = function(version) {
@@ -18,7 +18,7 @@ function solution(isBadVersion) {
      * solution 1 -- bin search
      * time: O(log n)
      * space: O(1)
-     * 
+     *
      * @param {number} n Total versions
      * @return {number} The first bad version
      */

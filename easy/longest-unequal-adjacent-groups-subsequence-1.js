@@ -4,7 +4,7 @@
  * solution 1 -- greedy
  * time: O(n)
  * space: O(1) -- without results array included
- * 
+ *
  * @param {string[]} words
  * @param {number[]} groups
  * @return {string[]}

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n) -- if results are included
- * 
+ *
  * @param {number[]} mountainHeights
  * @param {number} threshold
  * @return {number[]}

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(1)
  * space: O(1)
- * 
+ *
  * @param {number} celsius
  * @return {number[]}
  */
@@ -15,4 +15,4 @@ function convertTemperature(celsius) {
     return [kelvinTemperature, fahrenheitTemperature];
 }
 
-console.log( convertTemperature(36.5) ); // [309.65000, 97.70000]
+console.log(convertTemperature(36.5)); // [309.65000, 97.70000]

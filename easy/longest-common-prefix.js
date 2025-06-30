@@ -6,7 +6,7 @@
  * m = word len
  * time: O(n * m)
  * space: O(m)
- * 
+ *
  * @param {string[]} strs
  * @return {string}
  */
@@ -29,4 +29,4 @@ function longestCommonPrefix(strs) {
     return maxPrefix;
 }
 
-console.log( longestCommonPrefix(["flower", "flow", "flight"]) ); // "fl"
+console.log(longestCommonPrefix(["flower", "flow", "flight"])); // "fl"

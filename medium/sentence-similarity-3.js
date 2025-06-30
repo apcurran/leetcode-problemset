@@ -4,7 +4,7 @@
  * solution 1 -- two pointers
  * time: O(s1 + s2)
  * space: O(s1 + s2)
- * 
+ *
  * @param {string} sentence1
  * @param {string} sentence2
  * @return {boolean}
@@ -23,7 +23,11 @@ function areSentencesSimilar(sentence1, sentence2) {
     let l1 = 0;
     let l2 = 0;
 
-    while (l1 < sentence1Words.length && l2 < sentence2Words.length && sentence1Words[l1] === sentence2Words[l2]) {
+    while (
+        l1 < sentence1Words.length &&
+        l2 < sentence2Words.length &&
+        sentence1Words[l1] === sentence2Words[l2]
+    ) {
         l1++;
         l2++;
     }

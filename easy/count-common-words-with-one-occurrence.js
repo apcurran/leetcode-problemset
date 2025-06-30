@@ -6,7 +6,7 @@
  * m = words2 length
  * time: O(n + m)
  * space: O(n + m)
- * 
+ *
  * @param {string[]} words1
  * @param {string[]} words2
  * @return {number}
@@ -39,7 +39,12 @@ function countWords(words1, words2) {
     return counter;
 }
 
-console.log(countWords(["leetcode", "is", "amazing", "as", "is"], ["amazing", "leetcode", "is"]));
+console.log(
+    countWords(
+        ["leetcode", "is", "amazing", "as", "is"],
+        ["amazing", "leetcode", "is"],
+    ),
+);
 // 2
 console.log(countWords(["a", "ab"], ["a", "a", "a", "ab"]));
 // 1

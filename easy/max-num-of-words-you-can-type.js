@@ -6,7 +6,7 @@
  * x = broken letters string length
  * m = word string length
  * time: O(n * x * m)
- * 
+ *
  * @param {string} text
  * @param {string} brokenLetters
  * @return {number}
@@ -32,4 +32,4 @@ function canBeTypedWords(text, brokenLetters) {
     return words.length - brokenWordsCount;
 }
 
-console.log( canBeTypedWords("hello world", "ad") ); // 1
+console.log(canBeTypedWords("hello world", "ad")); // 1

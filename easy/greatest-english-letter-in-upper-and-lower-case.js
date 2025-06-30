@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} letters
  * @return {string}
  */
@@ -16,7 +16,10 @@ function greatestLetter(letters) {
         const lowercaseLetter = letter.toLowerCase();
         const uppercaseLetter = letter.toUpperCase();
 
-        if (!uniqueLetters.has(lowercaseLetter) || !uniqueLetters.has(uppercaseLetter)) {
+        if (
+            !uniqueLetters.has(lowercaseLetter) ||
+            !uniqueLetters.has(uppercaseLetter)
+        ) {
             continue;
         }
 
@@ -32,5 +35,5 @@ function greatestLetter(letters) {
     return maxLetter.toUpperCase();
 }
 
-console.log( greatestLetter("lEeTcOdE") ); // "E"
-console.log( greatestLetter("arRAzFif") ); // "R"
+console.log(greatestLetter("lEeTcOdE")); // "E"
+console.log(greatestLetter("arRAzFif")); // "R"

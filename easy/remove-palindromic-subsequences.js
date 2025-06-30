@@ -4,7 +4,7 @@
  * solution 1 -- two pointers
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} s
  * @return {number}
  */
@@ -18,8 +18,8 @@ function removePalindromeSub(s) {
 }
 
 /**
- * 
- * @param {string} str 
+ *
+ * @param {string} str
  * @returns {boolean}
  */
 function isPalindrome(str) {

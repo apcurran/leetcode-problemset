@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -25,4 +25,4 @@ function zeroFilledSubarray(nums) {
     return totalZeroSubarrsCount;
 }
 
-console.log( zeroFilledSubarray([1, 3, 0, 0, 2, 0, 0, 4]) ); // 6
+console.log(zeroFilledSubarray([1, 3, 0, 0, 2, 0, 0, 4])); // 6

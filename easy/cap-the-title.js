@@ -6,7 +6,7 @@
  * m = len of individual word
  * time: O(n * m)
  * space: O(n)
- * 
+ *
  * @param {string} title
  * @return {string}
  */
@@ -14,7 +14,7 @@ function capitalizeTitle(title) {
     // split words into arr
     const wordsArr = title.split(" ");
     let resStrArr = [];
-    
+
     // iterate word arr
     for (let word of wordsArr) {
         // for each word, check len
@@ -24,7 +24,8 @@ function capitalizeTitle(title) {
             resStrArr.push(loweredWord);
         } else {
             // else cap first letter of word and then lower all others
-            const casedWord = word[0].toUpperCase() + word.slice(1).toLowerCase();
+            const casedWord =
+                word[0].toUpperCase() + word.slice(1).toLowerCase();
             // add word to resStrArr
             resStrArr.push(casedWord);
         }
@@ -33,5 +34,5 @@ function capitalizeTitle(title) {
     return resStrArr.join(" ");
 }
 
-console.log( capitalizeTitle("capiTalIze tHe titLe") ); // "Capitalize The Title"
-console.log( capitalizeTitle("First leTTeR Of EACH Word") ); // "First Letter of Each Word"
+console.log(capitalizeTitle("capiTalIze tHe titLe")); // "Capitalize The Title"
+console.log(capitalizeTitle("First leTTeR Of EACH Word")); // "First Letter of Each Word"

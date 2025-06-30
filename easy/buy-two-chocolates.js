@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} prices
 //  * @param {number} money
 //  * @return {number}
@@ -38,7 +38,7 @@
 //  * solution 2 -- sort
 //  * time: O(n * log n)
 //  * space: O(n) -- Array.prototype.sort()
-//  * 
+//  *
 //  * @param {number[]} prices
 //  * @param {number} money
 //  * @return {number}
@@ -60,7 +60,7 @@
  * solution 3 -- two min nums
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} prices
  * @param {number} money
  * @return {number}

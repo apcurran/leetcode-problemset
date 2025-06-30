@@ -4,7 +4,7 @@
  * solution 1 -- diff between smallest ints
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number}
@@ -17,7 +17,7 @@ function addedInteger(nums1, nums2) {
 }
 
 /**
- * @param {number[]} nums 
+ * @param {number[]} nums
  * @returns {number}
  */
 function getMin(nums) {

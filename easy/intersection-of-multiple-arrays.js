@@ -6,7 +6,7 @@
  * m = num array length
  * time: O(m * n * m)
  * space: O(m)
- * 
+ *
  * @param {number[][]} nums
  * @return {number[]}
  */
@@ -29,4 +29,10 @@ function intersection(nums) {
     return results.sort((a, b) => a - b);
 }
 
-console.log( intersection([[3, 1, 2, 4, 5], [1, 2, 3, 4], [3, 4, 5, 6]]) ); // [3,4]
+console.log(
+    intersection([
+        [3, 1, 2, 4, 5],
+        [1, 2, 3, 4],
+        [3, 4, 5, 6],
+    ]),
+); // [3,4]

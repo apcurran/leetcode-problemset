@@ -1,11 +1,10 @@
 "use strict";
 
-
 // /**
 //  * solution 1
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {string}
 //  */
@@ -26,7 +25,7 @@
 // }
 
 // /**
-//  * @param {string} str 
+//  * @param {string} str
 //  * @returns {string}
 //  */
 // function reverseString(str) {
@@ -43,7 +42,7 @@
  * solution 2 -- simplified
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {string}
  */

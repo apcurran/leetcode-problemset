@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
@@ -18,18 +18,18 @@ function isArraySpecial(nums) {
         // keep going,
         // otherwise,
         // return false
-        
+
         if (currentNumParity === nextNumParity) {
             return false;
         }
     }
-    
+
     // after checking all pairs, return true
     return true;
 }
 
 /**
- * @param {number} num 
+ * @param {number} num
  * @returns {boolean}
  */
 function isNumEven(num) {

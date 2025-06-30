@@ -4,7 +4,7 @@
  * solution 1 -- nested loops
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */

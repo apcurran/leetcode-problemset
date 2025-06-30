@@ -5,7 +5,7 @@
 //  * n = nums length
 //  * time: O(n * log n + k)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number}
@@ -33,7 +33,7 @@
  * n = nums length
  * time: O(n + k)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -56,7 +56,7 @@ function maximizeSum(nums, k) {
 }
 
 /**
- * @param {number[]} arr 
+ * @param {number[]} arr
  * @returns {number} index of largest elem
  */
 function getLargestElemIndex(arr) {
@@ -75,5 +75,5 @@ function getLargestElemIndex(arr) {
     return largestElemIndex;
 }
 
-console.log( maximizeSum([1, 2, 3, 4, 5], 3) ); // 18
-console.log( maximizeSum([5, 5, 5], 2) ); // 11
+console.log(maximizeSum([1, 2, 3, 4, 5], 3)); // 18
+console.log(maximizeSum([5, 5, 5], 2)); // 11

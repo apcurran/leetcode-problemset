@@ -4,7 +4,7 @@
  * solution 1 -- stack
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
@@ -30,5 +30,5 @@ function find132pattern(nums) {
     return false;
 }
 
-console.log( find132pattern([1, 2, 3, 4]) ); // false
-console.log( find132pattern([3, 1, 4, 2]) ); // true
+console.log(find132pattern([1, 2, 3, 4])); // false
+console.log(find132pattern([3, 1, 4, 2])); // true

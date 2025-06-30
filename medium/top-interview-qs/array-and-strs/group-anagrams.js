@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * (k * log k))
  * space: O(n * k)
- * 
+ *
  * @param {string[]} strs
  * @return {string[][]}
  */
@@ -13,10 +13,7 @@ function groupAnagrams(strs) {
 
     for (let str of strs) {
         // key for map val
-        const sortedStr = str
-            .split("")
-            .sort()
-            .join("");
+        const sortedStr = str.split("").sort().join("");
         // map val
         const anagramGroup = anagramsMap.get(sortedStr) || [];
         // add curr anagram to str anagram list
@@ -28,5 +25,5 @@ function groupAnagrams(strs) {
     return [...anagramsMap.values()];
 }
 
-console.log( groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]) );
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
 // [["bat"],["nat","tan"],["ate","eat","tea"]]

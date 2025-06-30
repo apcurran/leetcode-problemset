@@ -4,10 +4,10 @@
  * Solution 1 -- two pointer approach
  * m = num of elems in nums1
  * n = num of elems in nums2
- * 
+ *
  * time: O(m + n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums1
  * @param {number} m
  * @param {number[]} nums2

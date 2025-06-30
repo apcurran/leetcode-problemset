@@ -4,7 +4,7 @@
  * solution 1 -- Set cache
  * time: O(n^2) -- spread operation within a loop
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -32,7 +32,7 @@ function thirdMax(nums) {
 //  * solution 2 -- sort & Set
 //  * time: O(n log n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -47,6 +47,6 @@ function thirdMax(nums) {
 //     return [...distinctNums][2];
 // }
 
-console.log( thirdMax([2, 1, 3]) ); // 1
-console.log( thirdMax([1, 2]) ); // 2
-console.log( thirdMax([2, 2, 3, 1]) ); // 1
+console.log(thirdMax([2, 1, 3])); // 1
+console.log(thirdMax([1, 2])); // 2
+console.log(thirdMax([2, 2, 3, 1])); // 1

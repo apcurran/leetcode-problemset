@@ -4,7 +4,7 @@
  * solution 1 -- sliding window
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @param {number} maxCost

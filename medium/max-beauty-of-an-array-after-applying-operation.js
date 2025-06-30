@@ -4,7 +4,7 @@
 //  * solution 1 -- sliding window
 //  * time: O(n * log n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number}
@@ -34,7 +34,7 @@
  * solution 2 -- sliding window (optimized)
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -59,4 +59,3 @@ function maximumBeauty(nums, k) {
 
 console.log(maximumBeauty([4, 6, 1, 2], 2)); // 3
 console.log(maximumBeauty([1, 1, 1, 1], 10)); // 4
-

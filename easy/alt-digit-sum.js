@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -16,17 +16,17 @@ function alternateDigitSum(n) {
 
     for (let i = 0; i < digitsStr.length; i++) {
         const digit = Number(digitsStr[i]);
-        
+
         // add digits to total
         if (i % 2 === 0) {
             digitsSum += digit;
         } else {
-            digitsSum += (-digit);
+            digitsSum += -digit;
         }
     }
 
     return digitsSum;
 }
 
-console.log( alternateDigitSum(521) ); // 4
-console.log( alternateDigitSum(886996) ); // 886996
+console.log(alternateDigitSum(521)); // 4
+console.log(alternateDigitSum(886996)); // 886996

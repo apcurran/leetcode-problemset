@@ -4,7 +4,7 @@
 //  * solution 1 -- nested loops (time-limit exceeded)
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {boolean}
@@ -36,7 +36,7 @@
  * solution 2 -- cache
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {boolean}

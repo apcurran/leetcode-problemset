@@ -4,7 +4,7 @@
  * solution 1 -- modulus op
  * time: O(1)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {boolean}
  */

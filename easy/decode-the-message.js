@@ -6,7 +6,7 @@
 //  * message = m
 //  * time: O(n + m)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} key
 //  * @param {string} message
 //  * @return {string}
@@ -37,7 +37,7 @@
  * message = m
  * time: O(n + m)
  * space: O(n)
- * 
+ *
  * @param {string} key
  * @param {string} message
  * @return {string}
@@ -63,7 +63,7 @@ function decodeMessage(key, message) {
 }
 
 /**
- * @param {string} str 
+ * @param {string} str
  * @returns {string[]}
  */
 function getUniqueLetters(str) {
@@ -78,5 +78,10 @@ function getUniqueLetters(str) {
     return [...uniqueLetters];
 }
 
-console.log(decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"));
+console.log(
+    decodeMessage(
+        "the quick brown fox jumps over the lazy dog",
+        "vkbs bs t suepuv",
+    ),
+);
 // "this is a secret"

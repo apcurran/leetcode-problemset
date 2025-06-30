@@ -4,7 +4,7 @@
  * solution 1 -- dynamic programming (bottom up)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -21,4 +21,3 @@ function countOrders(n) {
 
 console.log(countOrders(2)); // 6
 console.log(countOrders(3)); // 90
-

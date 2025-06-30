@@ -5,7 +5,7 @@
 //  * n = happinessScores
 //  * time: O(k * n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} happinessScores
 //  * @param {number} k
 //  * @return {number}
@@ -34,7 +34,7 @@
 // console.log(maximumHappinessSum([1,2,3], 2)); // 4
 
 // /**
-//  * @param {number[]} nums 
+//  * @param {number[]} nums
 //  * @returns {[number, number]} [maxValue, maxIndex]
 //  */
 // function getMax(nums) {
@@ -52,7 +52,7 @@
 // }
 
 // /**
-//  * @param {number[]} nums 
+//  * @param {number[]} nums
 //  * @returns {number[]} mutate original array
 //  */
 // function decrementScores(nums) {
@@ -70,7 +70,7 @@
  * n = happinessScores
  * time: O(n * log n + k)
  * space: O(n)
- * 
+ *
  * @param {number[]} happinessScores
  * @param {number} k
  * @return {number}
@@ -86,7 +86,7 @@ function maximumHappinessSum(happinessScores, k) {
     for (let i = 0; i < k; i++) {
         // calculate current child's happiness - the number of decrements iterations (turns) this would have had on remaining happiness scores
         const currentHappinessScore = happinessScores[i] - turns;
-        
+
         if (currentHappinessScore > 0) {
             totalHappiness += currentHappinessScore;
         }

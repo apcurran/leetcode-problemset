@@ -4,7 +4,7 @@
 //  * solution 1 -- recursive dfs
 //  * time: O(n)
 //  * space: O(log base10 (n))
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number[]}
 //  */
@@ -33,7 +33,7 @@
  * solution 2 -- iterative
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {number[]}
  */

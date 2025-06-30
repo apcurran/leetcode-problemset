@@ -1,29 +1,29 @@
 "use strict";
 
 function ListNode(val, next) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- recursive
  * time: O(n * m)
  * space: O(n + m)
- * 
+ *
  * @param {ListNode} head
  * @param {TreeNode} root
  * @return {boolean}
  */
 function isSubPath(head, root) {
     /**
-     * @param {ListNode} currentListNode 
-     * @param {TreeNode} currentTreeNode 
+     * @param {ListNode} currentListNode
+     * @param {TreeNode} currentTreeNode
      * @returns {boolean}
      */
     function helper(currentListNode, currentTreeNode) {
@@ -41,7 +41,7 @@ function isSubPath(head, root) {
             helper(currentListNode.next, currentTreeNode.right)
         );
     }
-    
+
     if (helper(head, root)) {
         return true;
     }
@@ -50,8 +50,5 @@ function isSubPath(head, root) {
         return false;
     }
 
-    return (
-        isSubPath(head, root.left) ||
-        isSubPath(head, root.right)
-    );
+    return isSubPath(head, root.left) || isSubPath(head, root.right);
 }

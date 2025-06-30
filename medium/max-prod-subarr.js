@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -18,11 +18,11 @@ function maxProduct(nums) {
         const product2 = num * currentMin;
         currentMax = Math.max(product1, product2, num);
         currentMin = Math.min(product1, product2, num);
-        
+
         result = Math.max(result, currentMax);
     }
 
     return result;
 }
 
-console.log( maxProduct([2, 3, -2, 4]) ); // 6
+console.log(maxProduct([2, 3, -2, 4])); // 6

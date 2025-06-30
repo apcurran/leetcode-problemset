@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -33,7 +33,7 @@
  * solution 2
  * time: O(n * log n) -- array.sort()
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */

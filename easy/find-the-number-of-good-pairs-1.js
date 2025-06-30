@@ -6,7 +6,7 @@
  * m = nums2 length
  * time: O(n * m)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @param {number} k

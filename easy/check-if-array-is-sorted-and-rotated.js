@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^2) -- array.shift() and isSortedAsc func called during loop
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {boolean}
 //  */
@@ -27,7 +27,7 @@
 // console.log(check([1,2,3])); // true
 
 // /**
-//  * @param {number[]} nums 
+//  * @param {number[]} nums
 //  * @returns {boolean}
 //  */
 // function isSortedAsc(nums) {
@@ -45,14 +45,14 @@
  * solution 2
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
 function check(nums) {
     const n = nums.length;
     let count = 1;
-    
+
     if (n === 1) return true;
 
     for (let i = 0; i < 2 * n; i++) {

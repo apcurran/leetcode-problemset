@@ -4,7 +4,7 @@
 //  * solution 1 -- stack
 //  * time: O(n^2) - arr.shift() is O(n) due to moving all other vals after front is removed
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} students
 //  * @param {number[]} sandwiches
 //  * @return {number}
@@ -40,7 +40,7 @@
  * solution 1 -- hashmap
  * time: O(n)
  * space: O(1) -- space will never surpass O(2), since only 1 and 0 can be counted
- * 
+ *
  * @param {number[]} students
  * @param {number[]} sandwiches
  * @return {number}
@@ -68,5 +68,5 @@ function countStudents(students, sandwiches) {
     return results;
 }
 
-console.log( countStudents([1, 1, 0, 0], [0, 1, 0, 1]) ); // 0
-console.log( countStudents([1, 1, 1, 0, 0, 1], [1, 0, 0, 0, 1, 1]) ); // 3
+console.log(countStudents([1, 1, 0, 0], [0, 1, 0, 1])); // 0
+console.log(countStudents([1, 1, 1, 0, 0, 1], [1, 0, 0, 0, 1, 1])); // 3

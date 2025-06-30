@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} s
  * @return {number}
  */
@@ -20,11 +20,14 @@ function minSwaps(s) {
         }
 
         // always set max extras to current max
-        maxExtraClosingBracketsCount = Math.max(maxExtraClosingBracketsCount, currentExtraClosingBracketsCount);
+        maxExtraClosingBracketsCount = Math.max(
+            maxExtraClosingBracketsCount,
+            currentExtraClosingBracketsCount,
+        );
     }
 
     return Math.floor((maxExtraClosingBracketsCount + 1) / 2);
 }
 
-console.log( minSwaps("][][") ); // 1
-console.log( minSwaps("]]][[[") ); // 2
+console.log(minSwaps("][][")); // 1
+console.log(minSwaps("]]][[[")); // 2

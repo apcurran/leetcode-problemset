@@ -4,7 +4,7 @@
  * solution 1
  * time: O(a + b + c)
  * space: O(a + b + c)
- * 
+ *
  * @param {string} firstWord
  * @param {string} secondWord
  * @param {string} targetWord
@@ -15,14 +15,15 @@ function isSumEqual(firstWord, secondWord, targetWord) {
     const secondWordNumericalValue = getStringNumericalValue(secondWord);
     const targetWordNumericalValue = getStringNumericalValue(targetWord);
     // add firstWord numerical value and secondWord numerical value for sum
-    const sumOfFirstAndSecondWordValues = firstWordNumericalValue + secondWordNumericalValue;
-    
+    const sumOfFirstAndSecondWordValues =
+        firstWordNumericalValue + secondWordNumericalValue;
+
     return sumOfFirstAndSecondWordValues === targetWordNumericalValue;
 }
 
 /**
- * 
- * @param {string} str 
+ *
+ * @param {string} str
  * @returns {number}
  */
 function getStringNumericalValue(str) {
@@ -37,5 +38,5 @@ function getStringNumericalValue(str) {
     return Number(result);
 }
 
-console.log( isSumEqual("acb", "cba", "cdb") ); // true
-console.log( isSumEqual("aaa", "a", "aab") ); // false
+console.log(isSumEqual("acb", "cba", "cdb")); // true
+console.log(isSumEqual("aaa", "a", "aab")); // false

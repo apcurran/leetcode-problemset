@@ -4,7 +4,7 @@
  * solution 1 -- Set
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {string}
  */
@@ -18,4 +18,4 @@ function repeatedCharacter(str) {
     }
 }
 
-console.log( repeatedCharacter("abccbaacz") );
+console.log(repeatedCharacter("abccbaacz"));

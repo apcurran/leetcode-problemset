@@ -4,7 +4,7 @@
  * solution 1
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {number} start
  * @param {number} goal
  * @return {number}

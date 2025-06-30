@@ -13,7 +13,7 @@
 //  * solution 1 -- recursive
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {number[]}
 //  */
@@ -26,8 +26,8 @@
 // }
 
 // /**
-//  * @param {TreeNode} node 
-//  * @param {number[]} arr 
+//  * @param {TreeNode} node
+//  * @param {number[]} arr
 //  * @returns {void}
 //  */
 // function recursiveHelper(node, arr) {
@@ -44,7 +44,7 @@
  * solution 1 -- iterative
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number[]}
  */

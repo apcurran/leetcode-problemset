@@ -5,11 +5,11 @@
  * "+" - Record a new score that is the sum of the previous two scores. It is guaranteed there will always be two previous scores.
  * "D" - Record a new score that is double the previous score. It is guaranteed there will always be a previous score.
  * "C" - Invalidate the previous score, removing it from the record. It is guaranteed there will always be a previous score.
- * 
+ *
  * Solution 1
  * Time: O(n)
  * Space: O(n)
- * 
+ *
  * @param {string[]} opsArr
  * @return {number}
  */
@@ -64,5 +64,5 @@ function removeOp(numArr) {
     numArr.pop();
 }
 
-console.log( calPoints(["5", "2", "C", "D", "+"]) ); // 30
-console.log( calPoints(["5", "-2", "4", "C", "D", "9", "+", "+"]) ); // 27
+console.log(calPoints(["5", "2", "C", "D", "+"])); // 30
+console.log(calPoints(["5", "-2", "4", "C", "D", "9", "+", "+"])); // 27

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {string}
  */
@@ -22,5 +22,5 @@ function makeFancyString(str) {
     return strArr.join("");
 }
 
-console.log( makeFancyString("leeetcode") ); // "leetcode"
-console.log( makeFancyString("aaabaaaa") ); // "aabaa"
+console.log(makeFancyString("leeetcode")); // "leetcode"
+console.log(makeFancyString("aaabaaaa")); // "aabaa"

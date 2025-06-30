@@ -4,7 +4,7 @@
  * solution 1 -- Set cache
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -20,7 +20,10 @@ function findMaxK(nums) {
         const isNegNumFound = uniqueNums.has(-num);
 
         if (isNegNumFound) {
-            largestPositiveIntWithExistingNegative = Math.max(largestPositiveIntWithExistingNegative, num);
+            largestPositiveIntWithExistingNegative = Math.max(
+                largestPositiveIntWithExistingNegative,
+                num,
+            );
         }
     }
 

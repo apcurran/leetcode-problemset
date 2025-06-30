@@ -1,18 +1,17 @@
 "use strict";
 
-
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 // /**
 //  * Solution 1 -- iterative DFS
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @param {number} low
 //  * @param {number} high
@@ -48,7 +47,7 @@ function TreeNode(val, left, right) {
 //  * Solution 2 -- BFS (level order)
 //  * time: O(n^2) -- array.shift() inside of while loop
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @param {number} low
 //  * @param {number} high
@@ -84,7 +83,7 @@ function TreeNode(val, left, right) {
  * Solution 2 -- recursive DFS
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @param {number} low
  * @param {number} high

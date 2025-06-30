@@ -1,16 +1,16 @@
 "use strict";
 
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- recursive DFS
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root1
  * @param {TreeNode} root2
  * @return {boolean}
@@ -29,8 +29,12 @@ function flipEquiv(root1, root2) {
         return false;
     }
 
-    const noSwap = flipEquiv(root1.left, root2.left) && flipEquiv(root1.right, root2.right);
-    const swap = flipEquiv(root1.left, root2.right) && flipEquiv(root1.right, root2.left);
+    const noSwap =
+        flipEquiv(root1.left, root2.left) &&
+        flipEquiv(root1.right, root2.right);
+    const swap =
+        flipEquiv(root1.left, root2.right) &&
+        flipEquiv(root1.right, root2.left);
 
     return noSwap || swap;
 }

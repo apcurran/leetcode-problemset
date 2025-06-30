@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force (TLE)
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} target
 //  * @param {number[]} nums
 //  * @return {number}
@@ -36,7 +36,7 @@
  * solution 2 -- sliding window
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} target
  * @param {number[]} nums
  * @return {number}
@@ -65,6 +65,6 @@ function minSubArrayLen(target, nums) {
     return resLen;
 }
 
-console.log( minSubArrayLen(7, [2, 3, 1, 2, 4, 3]) ); // 2 (4, 3)
-console.log( minSubArrayLen(4, [1, 4, 4]) ); // 1
-console.log( minSubArrayLen(11, [1, 1, 1, 1, 1, 1, 1, 1]) ); // 0
+console.log(minSubArrayLen(7, [2, 3, 1, 2, 4, 3])); // 2 (4, 3)
+console.log(minSubArrayLen(4, [1, 4, 4])); // 1
+console.log(minSubArrayLen(11, [1, 1, 1, 1, 1, 1, 1, 1])); // 0

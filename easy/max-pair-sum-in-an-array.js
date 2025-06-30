@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -26,7 +26,7 @@ function maxSum(nums) {
 }
 
 /**
- * @param {number} num 
+ * @param {number} num
  * @returns {number}
  */
 function getMaxDigit(num) {

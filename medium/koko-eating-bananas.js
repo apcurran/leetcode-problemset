@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(max(n) * n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} piles
 //  * @param {number} hoursLeft
 //  * @return {number} k bananas per pile
@@ -29,7 +29,7 @@
 // }
 
 // /**
-//  * @param {number[]} arr 
+//  * @param {number[]} arr
 //  * @returns {number}
 //  */
 // function getMaxElementInList(arr) {
@@ -46,7 +46,7 @@
  * solution 2 -- binary search
  * time: O(log(max(n)) * n)
  * space: O(1)
- * 
+ *
  * @param {number[]} piles
  * @param {number} h
  * @return {number}
@@ -83,7 +83,7 @@ function minEatingSpeed(piles, h) {
 }
 
 /**
- * @param {number[]} arr 
+ * @param {number[]} arr
  * @returns {number}
  */
 function getMax(arr) {
@@ -96,4 +96,4 @@ function getMax(arr) {
     return max;
 }
 
-console.log( minEatingSpeed([3, 6, 7, 11], 8) ); // 4
+console.log(minEatingSpeed([3, 6, 7, 11], 8)); // 4

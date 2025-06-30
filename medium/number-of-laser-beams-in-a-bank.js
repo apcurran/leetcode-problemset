@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(1)
- * 
+ *
  * @param {string[]} bank
  * @return {number}
  */
@@ -20,7 +20,7 @@ function numberOfBeams(bank) {
         }
 
         if (devicesCounter > 0) {
-            result += (previous * devicesCounter);
+            result += previous * devicesCounter;
             previous = devicesCounter;
         }
     }

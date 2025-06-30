@@ -4,7 +4,7 @@
  * solution 1 -- hashset
  * time: O(sqrt(c))
  * space: O(sqrt(c));
- * 
+ *
  * @param {number} c
  * @return {boolean}
  */
@@ -19,7 +19,7 @@ function judgeSquareSum(c) {
     let a = 0;
 
     while (a * a <= c) {
-        const target = c - (a * a);
+        const target = c - a * a;
 
         if (squareRoots.has(target)) {
             return true;

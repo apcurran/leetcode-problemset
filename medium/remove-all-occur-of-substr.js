@@ -4,7 +4,7 @@
  * solution 1 -- recursive
  * time: O(n^2)
  * space: O(n^2)
- * 
+ *
  * @param {string} str
  * @param {string} part
  * @return {string}
@@ -21,7 +21,7 @@ function removeOccurrences(str, part) {
 //  * solution 2 -- iterative
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @param {string} part
 //  * @return {string}
@@ -34,5 +34,5 @@ function removeOccurrences(str, part) {
 //     return str;
 // }
 
-console.log( removeOccurrences("daabcbaabcbc", "abc") ); // "dab"
-console.log( removeOccurrences("axxxxyyyyb", "xy") ); // "ab"
+console.log(removeOccurrences("daabcbaabcbc", "abc")); // "dab"
+console.log(removeOccurrences("axxxxyyyyb", "xy")); // "ab"

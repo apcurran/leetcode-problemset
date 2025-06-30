@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
@@ -31,7 +31,7 @@ function leftRigthDifference(nums) {
     }
 
     rightSums.push(0);
-    
+
     let leftAndRightSumDiffs = [];
 
     for (let i = 0; i < leftSums.length; i++) {
@@ -44,5 +44,5 @@ function leftRigthDifference(nums) {
     return leftAndRightSumDiffs;
 }
 
-console.log( leftRigthDifference([10, 4, 8, 3]) ); // [15,1,11,22]
-console.log( leftRigthDifference([1]) ); // [0]
+console.log(leftRigthDifference([10, 4, 8, 3])); // [15,1,11,22]
+console.log(leftRigthDifference([1])); // [0]

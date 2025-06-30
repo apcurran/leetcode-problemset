@@ -4,7 +4,7 @@
  * solution 1 -- iterative
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {number[]} hours
  * @return {number}
  */
@@ -13,7 +13,7 @@ function countCompleteDayPairs(hours) {
 
     for (let i = 0; i < hours.length; i++) {
         const firstElem = hours[i];
-        
+
         for (let j = i + 1; j < hours.length; j++) {
             const secondElem = hours[j];
             const hoursSum = firstElem + secondElem;

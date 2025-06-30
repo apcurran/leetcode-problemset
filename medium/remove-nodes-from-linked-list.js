@@ -1,15 +1,15 @@
 "use strict";
 
 function ListNode(val, next) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 // /**
 //  * solution 1 -- iterative
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {ListNode}
 //  */
@@ -58,7 +58,7 @@ d.next = e;
  * solution 1 -- recursive
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {ListNode} head
  * @return {ListNode}
  */

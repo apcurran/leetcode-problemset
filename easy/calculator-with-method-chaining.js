@@ -1,14 +1,14 @@
 "use strict";
 
 class Calculator {
-    /** 
+    /**
      * @param {number} value
      */
     constructor(value) {
         this.current = value;
     }
 
-    /** 
+    /**
      * @param {number} value
      * @return {Calculator}
      */
@@ -18,7 +18,7 @@ class Calculator {
         return this;
     }
 
-    /** 
+    /**
      * @param {number} value
      * @return {Calculator}
      */
@@ -28,7 +28,7 @@ class Calculator {
         return this;
     }
 
-    /** 
+    /**
      * @param {number} value
      * @return {Calculator}
      */
@@ -38,7 +38,7 @@ class Calculator {
         return this;
     }
 
-    /** 
+    /**
      * @param {number} value
      * @return {Calculator}
      */
@@ -52,7 +52,7 @@ class Calculator {
         return this;
     }
 
-    /** 
+    /**
      * @param {number} value
      * @return {Calculator}
      */
@@ -63,7 +63,7 @@ class Calculator {
         return this;
     }
 
-    /** 
+    /**
      * @return {number}
      */
     getResult() {
@@ -71,6 +71,4 @@ class Calculator {
     }
 }
 
-new Calculator(10)
-    .power(5)
-    .getResult(); // 10 + 5 - 7 = 8
+new Calculator(10).power(5).getResult(); // 10 + 5 - 7 = 8

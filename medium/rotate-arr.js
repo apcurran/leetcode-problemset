@@ -4,9 +4,9 @@
  * solution 1 -- two-pointer technique
  * time: O(n)
  * space: O(1)
- * 
- * @param {number[]} nums 
- * @param {number} k 
+ *
+ * @param {number[]} nums
+ * @param {number} k
  * @returns {number[]}
  */
 function rotate(nums, k) {
@@ -24,9 +24,9 @@ function rotate(nums, k) {
 }
 
 /**
- * @param {number[]} nums 
- * @param {number} start 
- * @param {number} end 
+ * @param {number[]} nums
+ * @param {number} start
+ * @param {number} end
  */
 function reverseArr(nums, start, end) {
     while (start < end) {
@@ -41,9 +41,9 @@ function reverseArr(nums, start, end) {
 //  * solution 2 -- correct, but TLE
 //  * time: O(n)
 //  * space: O(n)
-//  * 
-//  * @param {number[]} nums 
-//  * @param {number} k 
+//  *
+//  * @param {number[]} nums
+//  * @param {number} k
 //  * @returns {number[]}
 //  */
 // function rotate(nums, k) {
@@ -58,4 +58,4 @@ function reverseArr(nums, start, end) {
 //     return nums;
 // }
 
-console.log( rotate([1, 2, 3, 4, 5, 6, 7], 3) ); // [5, 6, 7, 1, 2, 3, 4]
+console.log(rotate([1, 2, 3, 4, 5, 6, 7], 3)); // [5, 6, 7, 1, 2, 3, 4]

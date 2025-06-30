@@ -1,15 +1,15 @@
 "use strict";
 
 function ListNode(val, next) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 /**
  * solution 1 -- simulation
  * time: O(n * log(min(a, b)))
  * space: O(1)
- * 
+ *
  * @param {ListNode} head
  * @return {ListNode}
  */
@@ -36,8 +36,8 @@ function insertGreatestCommonDivisors(head) {
 }
 
 /**
- * @param {number} a 
- * @param {number} b 
+ * @param {number} a
+ * @param {number} b
  * @returns {number}
  */
 function gcd(a, b) {

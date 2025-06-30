@@ -2,7 +2,7 @@
 
 /**
  * solution 1
- * 
+ *
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @param {number[]} nums3

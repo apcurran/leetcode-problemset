@@ -12,7 +12,7 @@
 //  * solution 1 -- iterative
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {ListNode}
 //  */
@@ -36,7 +36,7 @@
  * solution 2 -- two-pointer technique
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {ListNode} head
  * @return {ListNode}
  */
@@ -54,4 +54,3 @@ function middleNode(head) {
     // slow pointer must be in the middle of the list when the fast pointer is at the end
     return slowPointer;
 }
-

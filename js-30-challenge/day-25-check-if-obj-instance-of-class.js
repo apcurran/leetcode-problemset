@@ -4,15 +4,17 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {any} obj
  * @param {any} classFunction
  * @return {boolean}
  */
 const checkIfInstanceOf = function (obj, classFunction) {
-    if (obj === undefined ||
+    if (
+        obj === undefined ||
         obj === null ||
-        typeof classFunction !== "function") {
+        typeof classFunction !== "function"
+    ) {
         return false;
     }
 
@@ -30,4 +32,4 @@ const checkIfInstanceOf = function (obj, classFunction) {
     return false;
 };
 
-console.log( checkIfInstanceOf(new Date(), Date) ); // true
+console.log(checkIfInstanceOf(new Date(), Date)); // true

@@ -4,7 +4,7 @@
  * solution 1 -- greedy
  * time: O(n * log n)
  * space: O(n) -- JS engine using Timsort algorithm
- * 
+ *
  * @param {number[][]} intervals
  * @return {number}
  */
@@ -27,4 +27,11 @@ function eraseOverlapIntervals(intervals) {
     return removedIntervalsCount;
 }
 
-console.log( eraseOverlapIntervals([[1, 2], [2, 3], [3, 4], [1, 3]]) ); // 1
+console.log(
+    eraseOverlapIntervals([
+        [1, 2],
+        [2, 3],
+        [3, 4],
+        [1, 3],
+    ]),
+); // 1

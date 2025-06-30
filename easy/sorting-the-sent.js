@@ -14,7 +14,7 @@ function sortSentence(sentence) {
     wordsArr.sort((word1, word2) => {
         const word1Num = Number(word1.match(wordNumRegex)[0]);
         const word2Num = Number(word2.match(wordNumRegex)[0]);
-        
+
         return word1Num - word2Num;
     });
 
@@ -23,4 +23,4 @@ function sortSentence(sentence) {
     return wordsSent.replace(/\d/g, "");
 }
 
-console.log( sortSentence("is2 sentence4 This1 a3") ); // "This is a sentence"
+console.log(sortSentence("is2 sentence4 This1 a3")); // "This is a sentence"

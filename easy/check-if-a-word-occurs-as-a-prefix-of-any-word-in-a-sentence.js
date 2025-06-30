@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(n)
- * 
+ *
  * @param {string} sentence
  * @param {string} searchWord
  * @return {number} index of the word in sentence (1-indexed) where searchWord is a prefix of this word

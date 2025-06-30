@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n * m)
 //  * space: O(n) || O(m) -- smaller of two arrs
-//  * 
+//  *
 //  * @param {number[]} nums1
 //  * @param {number[]} nums2
 //  * @return {number[]}
@@ -29,7 +29,7 @@
 //  * solution 2 -- hashsets
 //  * time: O(n + m)
 //  * space: O(n + m)
-//  * 
+//  *
 //  * @param {number[]} nums1
 //  * @param {number[]} nums2
 //  * @return {number[]}
@@ -52,7 +52,7 @@
  * solution 3 -- hashsets
  * time: O(n + m)
  * space: O(x)
- * 
+ *
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number[]}
@@ -76,7 +76,7 @@ function intersection(nums1, nums2) {
 //  * solution 4 -- hashsets (with intersection method)
 //  * time: O(n + m)
 //  * space: O(x)
-//  * 
+//  *
 //  * @param {number[]} nums1
 //  * @param {number[]} nums2
 //  * @return {number[]}
@@ -88,5 +88,5 @@ function intersection(nums1, nums2) {
 //     return [...nums1Set.intersection(nums2Set)];
 // }
 
-console.log( intersection([1, 2, 2, 1], [2, 2]) ); // [2]
-console.log( intersection([4, 9, 5], [9, 4, 9, 8, 4]) ); // [9, 4]
+console.log(intersection([1, 2, 2, 1], [2, 2])); // [2]
+console.log(intersection([4, 9, 5], [9, 4, 9, 8, 4])); // [9, 4]

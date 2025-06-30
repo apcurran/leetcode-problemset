@@ -10,7 +10,7 @@ function TreeNode(val) {
 //  * solution 1 -- DFS iterative
 //  * time: O(log n) -- halving each time until LCA node is found
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @param {TreeNode} p
 //  * @param {TreeNode} q
@@ -37,7 +37,7 @@ function TreeNode(val) {
  * solution 1 -- DFS recursion
  * time: O(log n) -- halving each time until LCA node is found
  * space: O(log n)
- * 
+ *
  * @param {TreeNode} root
  * @param {TreeNode} p
  * @param {TreeNode} q
@@ -57,14 +57,14 @@ function lowestCommonAncestor(root, p, q) {
 }
 
 const a = new TreeNode(6);
-const b = new TreeNode(2); 
-const c = new TreeNode(8); 
-const d = new TreeNode(0); 
-const e = new TreeNode(4); 
-const f = new TreeNode(3); 
-const g = new TreeNode(5); 
-const h = new TreeNode(7); 
-const i = new TreeNode(9); 
+const b = new TreeNode(2);
+const c = new TreeNode(8);
+const d = new TreeNode(0);
+const e = new TreeNode(4);
+const f = new TreeNode(3);
+const g = new TreeNode(5);
+const h = new TreeNode(7);
+const i = new TreeNode(9);
 
 a.left = b;
 a.right = c;
@@ -75,4 +75,4 @@ e.right = g;
 c.left = h;
 c.right = i;
 
-console.log( lowestCommonAncestor(a, b, c) ); // node -> val === 6
+console.log(lowestCommonAncestor(a, b, c)); // node -> val === 6

@@ -30,7 +30,7 @@
  * solution 2 -- bitwise operators only
  * time: O(1)
  * space: O(1)
- * 
+ *
  * @param {number} n - a positive integer
  * @return {number} - a positive integer
  */
@@ -45,4 +45,4 @@ function reverseBits(n) {
     return result >>> 0; // convert result value to unsigned 32-bit int
 }
 
-console.log(reverseBits(00000010100101000001111010011100)); // 
+console.log(reverseBits(00000010100101000001111010011100)); //

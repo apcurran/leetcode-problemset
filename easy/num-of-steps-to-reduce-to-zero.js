@@ -4,7 +4,7 @@
 //  * Solution 1
 //  * Time: O(n)
 //  * Space: O(1)
-//  * 
+//  *
 //  * @param {number} num
 //  * @return {number}
 //  */
@@ -29,7 +29,7 @@
  * Solution 2 -- recursive
  * Time: O(n)
  * Space: O(n) -- tracking call stack
- * 
+ *
  * @param {number} num
  * @return {number}
  */
@@ -43,5 +43,5 @@ function numberOfSteps(num, count = 0) {
     }
 }
 
-console.log( numberOfSteps(14) ); // 6
-console.log( numberOfSteps(8) ); // 4
+console.log(numberOfSteps(14)); // 6
+console.log(numberOfSteps(8)); // 4

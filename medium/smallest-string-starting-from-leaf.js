@@ -1,23 +1,23 @@
 "use strict";
 
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- DFS
  * time: O(n^2)
  * space: O(n + m)
- * 
+ *
  * @param {TreeNode} root
  * @return {string}
  */
 function smallestFromLeaf(root) {
     /**
-     * @param {TreeNode} root 
-     * @param {string} currentStr 
+     * @param {TreeNode} root
+     * @param {string} currentStr
      * @returns {string}
      */
     function helper(root, currentStr) {

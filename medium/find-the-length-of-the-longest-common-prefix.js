@@ -4,7 +4,7 @@
  * solution 1 -- hashset
  * time: O(n * m)
  * space: O(n + d)
- * 
+ *
  * @param {number[]} arr1
  * @param {number[]} arr2
  * @return {number}
@@ -29,7 +29,10 @@ function longestCommonPrefix(arr1, arr2) {
         }
 
         if (num !== 0) {
-            longestPrefixLength = Math.max(longestPrefixLength, String(num).length);
+            longestPrefixLength = Math.max(
+                longestPrefixLength,
+                String(num).length,
+            );
         }
     }
 

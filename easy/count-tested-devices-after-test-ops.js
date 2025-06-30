@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} batteryPercentages
 //  * @return {number}
 //  */
@@ -32,7 +32,7 @@
  * solution 2 -- optimized
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} batteryPercentages
  * @return {number}
  */

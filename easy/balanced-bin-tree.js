@@ -1,16 +1,16 @@
 "use strict";
 
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 // /**
 //  * solution 1
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {boolean}
 //  */
@@ -28,7 +28,7 @@ function TreeNode(val, left, right) {
 // }
 
 // /**
-//  * @param {TreeNode} root 
+//  * @param {TreeNode} root
 //  * @returns {number}
 //  */
 // function getDepth(root) {
@@ -46,7 +46,7 @@ function TreeNode(val, left, right) {
  */
 function isBalanced(root) {
     /**
-     * @param {TreeNode} root 
+     * @param {TreeNode} root
      * @returns {[boolean, number]} [isSubtreeBalanced, subtreeHeight]
      */
     function dfs(root) {
@@ -63,7 +63,8 @@ function isBalanced(root) {
         // also, the difference between left and right heights must differ by no more than 1 (definition of height-balanced trees)
         const isCurrentBalanced = areSubtreesBalanced && heightDiff <= 1;
         const currentNodeHeight = 1;
-        const currentHeight = currentNodeHeight + Math.max(leftSubtree[1], rightSubtree[1]);
+        const currentHeight =
+            currentNodeHeight + Math.max(leftSubtree[1], rightSubtree[1]);
 
         return [isCurrentBalanced, currentHeight];
     }

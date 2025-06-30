@@ -4,7 +4,7 @@
 //  * solution 1 -- slow, but correct Set solution
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {number}
 //  */
@@ -38,7 +38,7 @@
 //  * solution 2
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {number}
 //  */
@@ -70,9 +70,9 @@
 
 /**
  * solution 3 -- sliding window variation
- * time: O(n) 
+ * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {number}
  */
@@ -80,7 +80,7 @@ function lengthOfLongestSubstring(str) {
     let seenChars = new Set();
     let leftPointer = 0;
     let maxSubstrLength = 0;
-    
+
     for (let rightPointer = 0; rightPointer < str.length; rightPointer++) {
         // duplicate char
         while (seenChars.has(str[rightPointer])) {
@@ -96,6 +96,6 @@ function lengthOfLongestSubstring(str) {
     return maxSubstrLength;
 }
 
-console.log( lengthOfLongestSubstring("abcabcbb") ); // 3
-console.log( lengthOfLongestSubstring("bbbbb") ); // 1
-console.log( lengthOfLongestSubstring("pwwkew") ); // 3
+console.log(lengthOfLongestSubstring("abcabcbb")); // 3
+console.log(lengthOfLongestSubstring("bbbbb")); // 1
+console.log(lengthOfLongestSubstring("pwwkew")); // 3

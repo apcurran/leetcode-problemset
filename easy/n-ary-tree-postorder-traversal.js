@@ -10,7 +10,7 @@ function TreeNode(val, children) {
 //  * solution 1 -- iterative DFS
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode|null} root
 //  * @return {number[]}
 //  */
@@ -34,7 +34,7 @@ function TreeNode(val, children) {
  * solution 2 -- recursive DFS
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode|null} root
  * @return {number[]}
  */
@@ -45,9 +45,9 @@ function postorder(root) {
 }
 
 /**
- * @param {TreeNode|null} root 
+ * @param {TreeNode|null} root
  * @returns {number[]}
-*/
+ */
 function recurse(root, results) {
     if (root === null) return results;
 

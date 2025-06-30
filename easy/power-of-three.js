@@ -5,7 +5,7 @@
 //  * b = 3
 //  * time: O(logb * n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {boolean}
 //  */
@@ -24,7 +24,7 @@
  * b = 3
  * time: O(logb * n)
  * space: O(logb * n)
- * 
+ *
  * @param {number} n
  * @return {boolean}
  */
@@ -36,6 +36,6 @@ function isPowerOfThree(n) {
     return isPowerOfThree(n / 3);
 }
 
-console.log( isPowerOfThree(27) ); // true
-console.log( isPowerOfThree(0) ); // false
-console.log( isPowerOfThree(9) ); // true
+console.log(isPowerOfThree(27)); // true
+console.log(isPowerOfThree(0)); // false
+console.log(isPowerOfThree(9)); // true

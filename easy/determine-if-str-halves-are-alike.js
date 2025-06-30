@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {boolean}
  */
@@ -18,11 +18,13 @@ function halvesAreAlike(str) {
     for (let char of firstHalf) {
         const lowerChar = char.toLowerCase();
 
-        if (lowerChar === "a" ||
+        if (
+            lowerChar === "a" ||
             lowerChar === "e" ||
             lowerChar === "i" ||
             lowerChar === "o" ||
-            lowerChar === "u") {
+            lowerChar === "u"
+        ) {
             firstHalfVowelCount++;
         }
     }
@@ -30,11 +32,13 @@ function halvesAreAlike(str) {
     for (let char of secondHalf) {
         const lowerChar = char.toLowerCase();
 
-        if (lowerChar === "a" ||
+        if (
+            lowerChar === "a" ||
             lowerChar === "e" ||
             lowerChar === "i" ||
             lowerChar === "o" ||
-            lowerChar === "u") {
+            lowerChar === "u"
+        ) {
             secondHalfVowelCount++;
         }
     }

@@ -2,16 +2,16 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 // /**
 //  * solution 1 -- DFS stack
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {TreeNode}
 //  */
@@ -38,7 +38,7 @@ function TreeNode(val, left, right) {
 //  * solution 2 -- Recursive DFS stack
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {TreeNode|null}
 //  */
@@ -60,7 +60,7 @@ function TreeNode(val, left, right) {
  * solution 3 -- Recursive DFS stack
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {TreeNode|null}
  */
@@ -75,7 +75,7 @@ function invertTree(root) {
     // recursive cases
     invertTree(root.left);
     invertTree(root.right);
-    
+
     return root;
 }
 
@@ -83,7 +83,7 @@ function invertTree(root) {
 //  * solution 4 -- BFS queue
 //  * time: O(n^2) -- due to O(n) array.shift() inside of loop
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {TreeNode}
 //  */

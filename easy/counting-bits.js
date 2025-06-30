@@ -4,10 +4,10 @@
  * solution 1
  * n = input n number
  * m = bin ones count for each bin number i of arr
- * 
+ *
  * time: O(n * m)
  * space: O(m)
- * 
+ *
  * @param {number} n
  * @return {number[]}
  */
@@ -28,5 +28,5 @@ function countBits(n) {
     return resArr;
 }
 
-console.log( countBits(2) ); // [0,1,1]
-console.log( countBits(5) ); // [0,1,1,2,1,2]
+console.log(countBits(2)); // [0,1,1]
+console.log(countBits(5)); // [0,1,1,2,1,2]

@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
@@ -28,7 +28,7 @@
 // }
 
 // /**
-//  * @param {number[]} arr 
+//  * @param {number[]} arr
 //  * @returns {[number, number]} [minValue, minIndex]
 //  */
 // function getMinValueAndIndex(arr) {
@@ -51,7 +51,7 @@
  * solution 2 -- sorting
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */

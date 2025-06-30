@@ -6,7 +6,7 @@
  * w = weights length
  * time: O(n * w)
  * space: O(1)
- * 
+ *
  * @param {number[]} weights
  * @param {number} days
  * @return {number}
@@ -34,9 +34,9 @@ console.log(shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)); // 15
 
 // HELPER FUNCS
 /**
- * @param {number[]} weights 
- * @param {number} capacity 
- * @param {number} days 
+ * @param {number[]} weights
+ * @param {number} capacity
+ * @param {number} days
  * @returns {boolean}
  */
 function canShip(weights, capacity, days) {
@@ -56,7 +56,7 @@ function canShip(weights, capacity, days) {
 }
 
 /**
- * @param {number[]} arr 
+ * @param {number[]} arr
  * @returns {number}
  */
 function getMax(arr) {

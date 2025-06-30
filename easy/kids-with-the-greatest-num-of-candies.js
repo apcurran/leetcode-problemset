@@ -4,7 +4,7 @@
 //  * Solution 1
 //  * Time: O(n)
 //  * Space: O(n)
-//  * 
+//  *
 //  * @param {number[]} candies
 //  * @param {number} extraCandies
 //  * @return {boolean[]}
@@ -19,7 +19,7 @@
  * Solution 2 -- slight optimization -- not copying (spreading) arr with startingMaxCandies
  * Time: O(n)
  * Space: O(n)
- * 
+ *
  * @param {number[]} candies
  * @param {number} extraCandies
  * @return {boolean[]}
@@ -34,7 +34,7 @@ function kidsWithCandies(candies, extraCandies) {
     }
 
     let results = [];
-    
+
     for (let candyAmount of candies) {
         const totalCandySum = candyAmount + extraCandies;
 
@@ -48,4 +48,4 @@ function kidsWithCandies(candies, extraCandies) {
     return results;
 }
 
-console.log( kidsWithCandies([2, 3, 5, 1, 3], 3) ); // [true, true, true, false, true]
+console.log(kidsWithCandies([2, 3, 5, 1, 3], 3)); // [true, true, true, false, true]

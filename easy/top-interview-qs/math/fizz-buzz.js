@@ -6,7 +6,7 @@
  */
 function fizzBuzz(n) {
     let resultArr = [];
-    
+
     for (let i = 1; i <= n; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
             resultArr.push("FizzBuzz");
@@ -22,4 +22,4 @@ function fizzBuzz(n) {
     return resultArr;
 }
 
-console.log( fizzBuzz(3) ); // ["1","2","Fizz"]
+console.log(fizzBuzz(3)); // ["1","2","Fizz"]

@@ -6,7 +6,7 @@
 //  * m = num digits length
 //  * time: O(n * m)
 //  * space: O(m) copy of digits with string coercion and split
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -31,7 +31,7 @@
  * m = num digits length
  * time: O(n * m)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -47,12 +47,12 @@ function minElement(nums) {
 }
 
 /**
- * @param {number} num 
+ * @param {number} num
  * @returns {number}
  */
 function sumDigits(num) {
     let sum = 0;
-    
+
     while (num > 0) {
         sum += num % 10;
         num = Math.floor(num / 10);

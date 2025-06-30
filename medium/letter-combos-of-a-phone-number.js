@@ -4,7 +4,7 @@
  * solution 1 -- backtracking
  * time: O(n * 4^n)
  * space: O(n)
- * 
+ *
  * @param {string} digits
  * @return {string[]}
  */
@@ -25,8 +25,8 @@ function letterCombinations(digits) {
     ]);
 
     /**
-     * @param {number} i 
-     * @param {string} currentStr 
+     * @param {number} i
+     * @param {string} currentStr
      * @returns {void} -- side-effect with results from letterCombinations func
      */
     function backtrack(i, currentStr) {

@@ -4,7 +4,7 @@
  * solution 1 -- greedy
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} gas
  * @param {number[]} cost
  * @return {number}

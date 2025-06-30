@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {boolean}
 //  */
@@ -26,7 +26,7 @@
 //  * solution 2 -- counter
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {boolean}
 //  */
@@ -56,7 +56,7 @@
  * solution 3 -- odd product
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
@@ -73,5 +73,5 @@ function threeConsecutiveOdds(nums) {
     return false;
 }
 
-console.log( threeConsecutiveOdds([2, 6, 4, 1]) ); // false
-console.log( threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12]) ); // true
+console.log(threeConsecutiveOdds([2, 6, 4, 1])); // false
+console.log(threeConsecutiveOdds([1, 2, 34, 3, 4, 5, 7, 23, 12])); // true

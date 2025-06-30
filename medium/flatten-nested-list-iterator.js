@@ -41,7 +41,7 @@ class NestedIterator {
         this.dfs(nestedList);
         this.stack.reverse();
     }
-    
+
     /**
      * @returns {number}
      */
@@ -57,7 +57,7 @@ class NestedIterator {
     }
 
     /**
-     * @param {array} nestedList 
+     * @param {array} nestedList
      */
     dfs(nestedList) {
         for (let value of nestedList) {

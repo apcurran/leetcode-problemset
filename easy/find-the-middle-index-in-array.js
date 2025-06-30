@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -26,7 +26,7 @@
  * solution 2 -- optimized (prefix and postfix values)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -47,6 +47,6 @@ function findMiddleIndex(nums) {
     return -1;
 }
 
-console.log( findMiddleIndex([2, 3, -1, 8, 4]) ); // 3
-console.log( findMiddleIndex([1, -1, 4]) ); // 2
-console.log( findMiddleIndex([2, 5]) ); // -1
+console.log(findMiddleIndex([2, 3, -1, 8, 4])); // 3
+console.log(findMiddleIndex([1, -1, 4])); // 2
+console.log(findMiddleIndex([2, 5])); // -1

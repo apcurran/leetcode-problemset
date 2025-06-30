@@ -4,7 +4,7 @@
  * solution 1
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {boolean}
  */
@@ -19,5 +19,5 @@ function checkPowersOfThree(n) {
     return true;
 }
 
-console.log( checkPowersOfThree(12) ); // true
+console.log(checkPowersOfThree(12)); // true
 // console.log( checkPowersOfThree(21) ); // false

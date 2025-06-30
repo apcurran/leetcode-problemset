@@ -10,7 +10,7 @@ function ListNode(val) {
  * solution 1 -- tortoise and hare pointers (slow -> incr by one, fast -> incr by two)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {ListNode} head
  * @return {boolean}
  */
@@ -37,7 +37,7 @@ function hasCycle(head) {
 //  * solution 2 -- Set obj
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {boolean}
 //  */
@@ -61,7 +61,7 @@ function hasCycle(head) {
 //  * solution 3 -- flag visited nodes
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {boolean}
 //  */

@@ -6,7 +6,7 @@
  * m = num bits length
  * time: O(n^2)
  * space: O(m)
- * 
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
@@ -36,7 +36,7 @@ function canSortArray(nums) {
 }
 
 /**
- * @param {number} num 
+ * @param {number} num
  * @returns {number}
  */
 function getSetBitsCount(num) {

@@ -2,16 +2,16 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- recursive
  * time: O(m * n)
  * space: O(m + n)
- * 
+ *
  * @param {TreeNode} root
  * @param {TreeNode} subRoot
  * @return {boolean}
@@ -30,7 +30,7 @@ function isSubtree(root, subRoot) {
 }
 
 /**
- * 
+ *
  * @param {TreeNode} tree1
  * @param {TreeNode} tree2
  * @return {boolean}

@@ -2,15 +2,15 @@
 
 // Definition for singly-linked list.
 function ListNode(val, next) {
-    this.val = (val===undefined ? 0 : val);
-    this.next = (next===undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 // /**
 //  * solution 1 -- iterative
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @param {number} targetVal
 //  * @return {ListNode}
@@ -43,7 +43,7 @@ function ListNode(val, next) {
  * solution 2 -- recursive
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {ListNode} head
  * @param {number} targetVal
  * @return {ListNode}

@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force (correct, but TLE)
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {string} s
 //  * @return {number}
 //  */
@@ -48,16 +48,16 @@
  * solution 2 -- sliding window
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} s
  * @return {number}
  */
 function numberOfSubstrings(s) {
     let left = 0;
     let charCount = {
-        "a": 0,
-        "b": 0,
-        "c": 0,
+        a: 0,
+        b: 0,
+        c: 0,
     };
     let result = 0;
 

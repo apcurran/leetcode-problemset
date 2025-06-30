@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2) -- array.shift() inside of for loop
  * space: O(n)
- * 
+ *
  * @param {number[]} deck
  * @return {number[]}
  */

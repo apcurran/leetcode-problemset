@@ -4,7 +4,7 @@
 //  * solution 1 -- Correct, but not within problem constraints O(n) time and O(1) space
 //  * time: O(n * log n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -35,7 +35,7 @@
 //  * solution 2 -- Correct, but not within problem constraints O(n) time and O(1) space
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -53,11 +53,11 @@
  * solution 3 -- Correct, but not within problem constraints O(n) time and O(1) space
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
-function firstMissingPositive (nums) {
+function firstMissingPositive(nums) {
     let seenNums = new Array(nums.length + 1);
 
     for (let num of nums) {
@@ -74,7 +74,7 @@ function firstMissingPositive (nums) {
     return nums.length + 1;
 }
 
-console.log( firstMissingPositive([1, 2, 0]) ); // 3
-console.log( firstMissingPositive([3, 4, -1, 1]) ); // 2
-console.log( firstMissingPositive([7, 8, 9, 11, 12]) ); // 1
-console.log( firstMissingPositive([0, 2, 2, 1, 1]) ); // 3
+console.log(firstMissingPositive([1, 2, 0])); // 3
+console.log(firstMissingPositive([3, 4, -1, 1])); // 2
+console.log(firstMissingPositive([7, 8, 9, 11, 12])); // 1
+console.log(firstMissingPositive([0, 2, 2, 1, 1])); // 3

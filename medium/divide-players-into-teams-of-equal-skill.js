@@ -4,7 +4,7 @@
  * solution 1 -- sort and two-pointers
  * time: O(n * log n)
  * space: O(n) -- array.sort() built-in space
- * 
+ *
  * @param {number[]} skill
  * @return {number}
  */
@@ -36,7 +36,7 @@ function dividePlayers(skill) {
         left++;
         right--;
     }
-    
+
     return totalChemistry;
 }
 

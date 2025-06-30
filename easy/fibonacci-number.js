@@ -2,7 +2,7 @@
 
 /**
  * Solution 1 -- O(n)
- * @param {number} n 
+ * @param {number} n
  * @returns {number}
  */
 function fib(n) {
@@ -23,7 +23,7 @@ function fib(n) {
 
 // /**
 //  * Solution 2 -- O(1)
-//  * @param {number} n 
+//  * @param {number} n
 //  * @returns {number}
 //  */
 // function fib(n) {

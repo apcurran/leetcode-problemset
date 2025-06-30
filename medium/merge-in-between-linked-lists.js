@@ -2,8 +2,8 @@
 
 // Definition for singly-linked list.
 function ListNode(val, next) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 /**
@@ -12,7 +12,7 @@ function ListNode(val, next) {
  * m = list 2
  * time: O(n + m)
  * space: O(1)
- * 
+ *
  * @param {ListNode} list1
  * @param {number} a
  * @param {number} b

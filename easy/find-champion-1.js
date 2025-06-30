@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {number[][]} grid
  * @return {number}
  */
@@ -19,7 +19,7 @@ function findChampion(grid) {
 }
 
 /**
- * @param {number[]} arr 
+ * @param {number[]} arr
  * @returns {number} sum
  */
 function getSum(arr) {
@@ -32,5 +32,16 @@ function getSum(arr) {
     return sum;
 }
 
-console.log(findChampion([[0, 1], [0, 0]])); // 0
-console.log(findChampion([[0, 0, 1], [1, 0, 1], [0, 0, 0]])); // 1
+console.log(
+    findChampion([
+        [0, 1],
+        [0, 0],
+    ]),
+); // 0
+console.log(
+    findChampion([
+        [0, 0, 1],
+        [1, 0, 1],
+        [0, 0, 0],
+    ]),
+); // 1

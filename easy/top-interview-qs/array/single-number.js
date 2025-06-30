@@ -20,7 +20,7 @@
 //  * Solution 2
 //  * Time: O(n)
 //  * Space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -41,7 +41,7 @@
  * Solution 3
  * Time: O(n)
  * Space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -58,21 +58,16 @@ function singleNumber(nums) {
 
         numSet.add(num);
     }
-    
+
     // get first elem of Set obj
-    return numSet
-        .values()
-        .next()
-        .value;
+    return numSet.values().next().value;
 }
-
-
 
 // /**
 //  * Solution 4 -- bit manipulation with XOR
 //  * Time: O(n)
 //  * Space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */

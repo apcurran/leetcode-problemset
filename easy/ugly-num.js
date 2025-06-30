@@ -4,7 +4,7 @@
  * solution 1
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {boolean}
  */
@@ -24,7 +24,7 @@ function isUgly(n) {
     return n > 0;
 }
 
-console.log( isUgly(6) ); // true
-console.log( isUgly(1) ); // true
-console.log( isUgly(14) ); // false
-console.log( isUgly(8) ); // true
+console.log(isUgly(6)); // true
+console.log(isUgly(1)); // true
+console.log(isUgly(14)); // false
+console.log(isUgly(8)); // true

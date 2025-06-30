@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @param {number} k
 //  * @return {number}
@@ -45,7 +45,7 @@
  * solution 2
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @param {number} k
  * @return {number}
@@ -59,7 +59,8 @@ function characterReplacement(str, k) {
         const currentChar = str[right];
         const charCount = charCounts.get(currentChar) || 0;
         charCounts.set(currentChar, charCount + 1);
-        const charAmtToReplace = getWindowLength(left, right) - getMax(charCounts.values());
+        const charAmtToReplace =
+            getWindowLength(left, right) - getMax(charCounts.values());
 
         if (charAmtToReplace > k) {
             // k is not large enough to support replacing more chars,
@@ -79,8 +80,8 @@ function characterReplacement(str, k) {
 }
 
 /**
- * @param {number} left 
- * @param {number} right 
+ * @param {number} left
+ * @param {number} right
  * @returns {number}
  */
 function getWindowLength(left, right) {
@@ -88,7 +89,7 @@ function getWindowLength(left, right) {
 }
 
 /**
- * @param {Iterable} iterable 
+ * @param {Iterable} iterable
  * @returns {number}
  */
 function getMax(iterable) {
@@ -101,5 +102,5 @@ function getMax(iterable) {
     return max;
 }
 
-console.log( characterReplacement("ABAB", 2) ); // 4
-console.log( characterReplacement("AABABBA", 1) ); // 4
+console.log(characterReplacement("ABAB", 2)); // 4
+console.log(characterReplacement("AABABBA", 1)); // 4

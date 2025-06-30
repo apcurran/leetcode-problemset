@@ -4,8 +4,8 @@
 //  * solution 1 -- iterative DP bottom-up
 //  * time: O(n)
 //  * space: O(1)
-//  * 
-//  * @param {number[]} cost 
+//  *
+//  * @param {number[]} cost
 //  * @returns {number}
 //  */
 // function minCostClimbingStairs(cost) {
@@ -25,8 +25,8 @@
 //  * solution 2 -- recursive DP top-down
 //  * time: O(2^n)
 //  * space: O(n)
-//  * 
-//  * @param {number[]} costArr 
+//  *
+//  * @param {number[]} costArr
 //  * @returns {number}
 //  */
 // function minCostClimbingStairs(costArr) {
@@ -56,8 +56,8 @@
  * solution 3 -- recursive DP top-down with cache (memo)
  * time: O(n)
  * space: O(n)
- * 
- * @param {number[]} costArr 
+ *
+ * @param {number[]} costArr
  * @returns {number}
  */
 function minCostClimbingStairs(costArr, cache = new Map()) {
@@ -88,5 +88,5 @@ function minCost(costArr, n, cache) {
     return result;
 }
 
-console.log( minCostClimbingStairs([10, 15, 20]) ); // 15
-console.log( minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]) ); // 6
+console.log(minCostClimbingStairs([10, 15, 20])); // 15
+console.log(minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1])); // 6

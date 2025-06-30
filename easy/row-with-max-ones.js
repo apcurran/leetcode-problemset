@@ -6,7 +6,7 @@
  * m = row columns length
  * time: O(n * m)
  * space: O(1)
- * 
+ *
  * @param {number[][]} matrix
  * @return {number[]}
  */
@@ -35,6 +35,17 @@ function rowAndMaximumOnes(matrix) {
     return [maxRowIndex, maxRowOnesCount];
 }
 
-console.log( rowAndMaximumOnes([[0, 0, 0], [0, 1, 1]]) ); // [1, 2]
-console.log( rowAndMaximumOnes([[0, 0], [1, 1], [0, 0]]) ); // [1, 2]
-console.log( rowAndMaximumOnes([[0], [0]]) ); // [0, 0]
+console.log(
+    rowAndMaximumOnes([
+        [0, 0, 0],
+        [0, 1, 1],
+    ]),
+); // [1, 2]
+console.log(
+    rowAndMaximumOnes([
+        [0, 0],
+        [1, 1],
+        [0, 0],
+    ]),
+); // [1, 2]
+console.log(rowAndMaximumOnes([[0], [0]])); // [0, 0]

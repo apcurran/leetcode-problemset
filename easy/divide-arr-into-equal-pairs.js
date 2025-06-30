@@ -4,7 +4,7 @@
 //  * solution 1 -- hashmap
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {boolean}
 //  */
@@ -33,7 +33,7 @@
  * solution 2 -- hashset
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
@@ -58,7 +58,7 @@ function divideArray(nums) {
 //  * solution 3 -- sorting
 //  * time: O(n * log n) -- array.sort()
 //  * space: O(n) -- array.sort() uses linear space
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {boolean}
 //  */
@@ -83,5 +83,5 @@ function divideArray(nums) {
 //     return true;
 // }
 
-console.log( divideArray([3, 2, 3, 2, 2, 2]) ); // true
-console.log( divideArray([1, 2, 3, 4]) ); // false
+console.log(divideArray([3, 2, 3, 2, 2, 2])); // true
+console.log(divideArray([1, 2, 3, 4])); // false

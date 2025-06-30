@@ -4,7 +4,7 @@
  * solution 1 - str sort
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {string}
  */
@@ -18,4 +18,4 @@ function largestNumber(nums) {
     return nums.join("");
 }
 
-console.log( largestNumber([3, 30, 34, 5, 9]) ); // "9534330"
+console.log(largestNumber([3, 30, 34, 5, 9])); // "9534330"

@@ -6,7 +6,7 @@
  * m = num digits length
  * time: O(n * m)
  * space: O(m)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -15,7 +15,7 @@ function sumOfEncryptedInt(nums) {
 }
 
 /**
- * @param {number} num 
+ * @param {number} num
  * @returns {number}
  */
 function encrypt(num) {

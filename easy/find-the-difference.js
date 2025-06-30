@@ -5,7 +5,7 @@
 //  * n = t length
 //  * Time: O(n log n) -- due to sorting of strings
 //  * Space: O(n)
-//  * 
+//  *
 //  * @param {string} s
 //  * @param {string} t
 //  * @return {string}
@@ -21,7 +21,7 @@
 //     for (let i = 0; i < sortedT.length; i++) {
 //         const currTChar = sortedT[i];
 //         const currSChar = sortedS[i];
-        
+
 //         // Check curr t char and compare to curr s char
 //         if (currSChar !== currTChar) {
 //             // If different, return curr t char (diff char)
@@ -35,7 +35,7 @@
 //  * n = t length
 //  * Time: O(n) -- t is the same s length + 1
 //  * Space: O(1) -- technically O(26) since there are only 26 alpha chars
-//  * 
+//  *
 //  * @param {string} s
 //  * @param {string} t
 //  * @return {string}
@@ -70,7 +70,7 @@
  * n = t length
  * Time: O(n)
  * Space: O(1)
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @return {string}
@@ -96,6 +96,6 @@ function findTheDifference(s, t) {
     return String.fromCharCode(charCodesDiff);
 }
 
-console.log( findTheDifference("abcd", "abcde") ); // "e"
-console.log( findTheDifference("adz", "abdz") ); // "b"
-console.log( findTheDifference("", "y") ); // "y"
+console.log(findTheDifference("abcd", "abcde")); // "e"
+console.log(findTheDifference("adz", "abdz")); // "b"
+console.log(findTheDifference("", "y")); // "y"

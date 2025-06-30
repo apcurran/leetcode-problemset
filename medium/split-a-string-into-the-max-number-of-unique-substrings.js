@@ -4,14 +4,14 @@
  * solution 1 -- backtracking
  * time: O(n^2 * 2^n)
  * space: O(n)
- * 
+ *
  * @param {string} s
  * @return {number}
  */
 function maxUniqueSplit(s) {
     /**
-     * @param {number} i 
-     * @param {Set} currSet 
+     * @param {number} i
+     * @param {Set} currSet
      * @returns {number}
      */
     function dfs(i, currSet) {

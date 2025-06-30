@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} encoded
  * @param {number} first
  * @return {number[]}
@@ -22,4 +22,4 @@ function decode(encoded, first) {
     return results;
 }
 
-console.log( decode([1, 2, 3], 1) ); // [1,0,2,1]
+console.log(decode([1, 2, 3], 1)); // [1,0,2,1]

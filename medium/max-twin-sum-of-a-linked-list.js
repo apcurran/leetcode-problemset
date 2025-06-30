@@ -1,17 +1,16 @@
 "use strict";
 
-
 // Definition for singly-linked list.
 function ListNode(val, next) {
-    this.val = (val===undefined ? 0 : val);
-    this.next = (next===undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 // /**
 //  * solution 1
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {number}
 //  */
@@ -39,7 +38,7 @@ function ListNode(val, next) {
  * solution 2 - update three pointers (slow, fast, and previous)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {ListNode} head
  * @return {number}
  */

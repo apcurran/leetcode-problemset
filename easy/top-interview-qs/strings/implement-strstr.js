@@ -13,6 +13,6 @@ function strStr(haystack, needle) {
     return haystack.indexOf(needle);
 }
 
-console.log( strStr("hello", "ll") );
-console.log( strStr("aaaaa", "bba") );
-console.log( strStr("", "") );
+console.log(strStr("hello", "ll"));
+console.log(strStr("aaaaa", "bba"));
+console.log(strStr("", ""));

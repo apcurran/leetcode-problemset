@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} date
  * @return {string}
  */
@@ -22,12 +22,12 @@ function convertDateToBinary(date) {
 }
 
 /**
- * @param {string} strNum 
+ * @param {string} strNum
  * @returns {string}
  */
 function removeLeadingZeros(strNum) {
     let result = strNum;
-    
+
     while (result[0] === "0" && result.length > 0) {
         result = result.slice(1);
     }

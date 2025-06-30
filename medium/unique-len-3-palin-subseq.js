@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force (TLE)
 //  * time: O(n^3)
 //  * space: O(n) -- hashset
-//  * 
+//  *
 //  * @param {string} s
 //  * @return {number}
 //  */
@@ -30,7 +30,7 @@
  * solution 2 -- hashset
  * time: O(n)
  * space: O(26) -> O(1)
- * 
+ *
  * @param {string} s
  * @return {number}
  */
@@ -53,4 +53,4 @@ function countPalindromicSubsequence(s) {
     return result;
 }
 
-console.log( countPalindromicSubsequence("aabca") ); // 3
+console.log(countPalindromicSubsequence("aabca")); // 3

@@ -24,5 +24,5 @@ function fairCandySwap(aliceSizes, bobSizes) {
     return [];
 }
 
-console.log( fairCandySwap([1, 1], [2, 2]) ); // [1, 2]
-console.log( fairCandySwap([1, 2, 5], [2, 4]) ); // [5, 4]
+console.log(fairCandySwap([1, 1], [2, 2])); // [1, 2]
+console.log(fairCandySwap([1, 2, 5], [2, 4])); // [5, 4]

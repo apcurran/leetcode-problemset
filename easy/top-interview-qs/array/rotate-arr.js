@@ -2,8 +2,8 @@
 
 // /**
 //  * NOTE: functional, but too slow
-//  * @param {array} nums 
-//  * @param {number} k 
+//  * @param {array} nums
+//  * @param {number} k
 //  * @returns {array}
 //  */
 // function rotate(nums, k) {
@@ -19,7 +19,7 @@
  * Solution 2
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {array} nums - array of num elems
  * @param {number} k - steps to rotate
  * @returns {array} - final rotated array
@@ -48,5 +48,5 @@ function reverse(nums, start, end) {
     }
 }
 
-console.log( rotate([1, 2, 3, 4, 5, 6, 7], 3) ); //  [5, 6, 7, 1, 2, 3, 4]
-console.log( rotate([-1, -100, 3, 99], 2) ); //  [3, 99, -1, -100]
+console.log(rotate([1, 2, 3, 4, 5, 6, 7], 3)); //  [5, 6, 7, 1, 2, 3, 4]
+console.log(rotate([-1, -100, 3, 99], 2)); //  [3, 99, -1, -100]

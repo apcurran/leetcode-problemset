@@ -4,7 +4,7 @@
  * solution 1
  * time: O(r * c * (r + c))
  * space: O(1)
- * 
+ *
  * @param {number[][]} mat
  * @return {number}
  */
@@ -47,4 +47,10 @@ function numSpecial(mat) {
     return specialCellsCount;
 }
 
-console.log(numSpecial([[1, 0, 0], [0, 1, 0], [0, 0, 1]])); // 3
+console.log(
+    numSpecial([
+        [1, 0, 0],
+        [0, 1, 0],
+        [0, 0, 1],
+    ]),
+); // 3

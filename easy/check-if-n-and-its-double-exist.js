@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} arr
 //  * @return {boolean}
 //  */
@@ -22,7 +22,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} arr
  * @return {boolean}
  */
@@ -39,6 +39,6 @@ function checkIfExist(arr) {
     return false;
 }
 
-console.log( checkIfExist([10, 2, 5, 3]) ); // true
-console.log( checkIfExist([7, 1, 14, 11]) ); // true
-console.log( checkIfExist([3, 1, 7, 11]) ); // false
+console.log(checkIfExist([10, 2, 5, 3])); // true
+console.log(checkIfExist([7, 1, 14, 11])); // true
+console.log(checkIfExist([3, 1, 7, 11])); // false

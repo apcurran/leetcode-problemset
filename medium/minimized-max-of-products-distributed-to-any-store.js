@@ -4,14 +4,14 @@
  * solution 1 -- binary search
  * time: O(q * log * max(q))
  * space: O(q)
- * 
+ *
  * @param {number} n
  * @param {number[]} quantities
  * @return {number} the minimum possible x value
  */
 function minimizedMaximum(n, quantities) {
     /**
-     * @param {number} x 
+     * @param {number} x
      * @returns {boolean}
      */
     function canDistribute(x) {

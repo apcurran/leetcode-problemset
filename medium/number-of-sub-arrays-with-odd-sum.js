@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} arr
 //  * @return {number}
 //  */
@@ -31,7 +31,7 @@
  * solution 2 -- prefix sum
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} arr
  * @return {number}
  */

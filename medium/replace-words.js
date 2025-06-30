@@ -4,7 +4,7 @@
  * solution 1 -- hashset
  * time: O(s * d * w^2)
  * space: O(s + d + w)
- * 
+ *
  * @param {string[]} dictionary
  * @param {string} sentence
  * @return {string}
@@ -23,8 +23,8 @@ function replaceWords(dictionary, sentence) {
 }
 
 /**
- * @param {string} currentWord 
- * @param {Set} uniqueWords 
+ * @param {string} currentWord
+ * @param {Set} uniqueWords
  * @returns {string}
  */
 function getShortestRootWord(currentWord, uniqueWords) {
@@ -43,5 +43,10 @@ function getShortestRootWord(currentWord, uniqueWords) {
     return shortestRoot;
 }
 
-console.log(replaceWords(["cat", "bat", "rat"], "the cattle was rattled by the battery"));
+console.log(
+    replaceWords(
+        ["cat", "bat", "rat"],
+        "the cattle was rattled by the battery",
+    ),
+);
 // "the cat was rat by the bat"

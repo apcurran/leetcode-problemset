@@ -4,7 +4,7 @@
  * solution 1 -- iterative
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @return {number}
  */
@@ -25,4 +25,4 @@ function balancedStringSplit(str) {
     return matchesAmt;
 }
 
-console.log( balancedStringSplit("RLRRLLRLRL") ); // 4
+console.log(balancedStringSplit("RLRRLLRLRL")); // 4

@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(n * k)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number}
@@ -35,7 +35,7 @@
  * solution 2 -- sliding window
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -58,5 +58,5 @@ function findMaxAverage(nums, k) {
     return maxSum / k;
 }
 
-console.log( findMaxAverage([1, 12, -5, -6, 50, 3], 4) ); // 12.75
-console.log( findMaxAverage([-1], 1) ); // -1
+console.log(findMaxAverage([1, 12, -5, -6, 50, 3], 4)); // 12.75
+console.log(findMaxAverage([-1], 1)); // -1

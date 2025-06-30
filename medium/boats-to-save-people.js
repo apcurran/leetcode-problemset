@@ -4,7 +4,7 @@
  * solution 1 -- two-pointer technique
  * time: O(n * log n)
  * space: O(1)
- * 
+ *
  * @param {number[]} people
  * @param {number} limit
  * @return {number}
@@ -25,7 +25,10 @@ function numRescueBoats(people, limit) {
         boatsCount++;
 
         // there is a person left and enough weight to hold the person
-        if (leftPointer <= rightPointer && remainingWeight >= people[leftPointer]) {
+        if (
+            leftPointer <= rightPointer &&
+            remainingWeight >= people[leftPointer]
+        ) {
             leftPointer++;
         }
     }

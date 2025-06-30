@@ -4,7 +4,7 @@
  * solution 1 -- prefix sum
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} chalk
  * @param {number} k
  * @return {number}
@@ -21,7 +21,7 @@ function chalkReplacer(chalk, k) {
     }
 
     k %= chalkSum;
-    
+
     for (let i = 0; i < chalk.length; i++) {
         const currentChalkPieces = chalk[i];
 
@@ -37,7 +37,7 @@ function chalkReplacer(chalk, k) {
 //  * solution 2 -- brute force (correct, but TLE)
 //  * time: O(k * n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} chalk
 //  * @param {number} k
 //  * @return {number}

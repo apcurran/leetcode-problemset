@@ -4,7 +4,7 @@ let hashMap = new Map();
 
 /**
  * Encodes a URL to a shortened URL.
- * 
+ *
  * time: O(1)
  * space: O(1)
  *
@@ -23,7 +23,7 @@ function encode(longUrl) {
 
 /**
  * Decodes a shortened URL to its original URL.
- * 
+ *
  * time: O(1)
  * space: O(1)
  *

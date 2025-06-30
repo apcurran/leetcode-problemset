@@ -4,7 +4,7 @@
 //  * solution 1 -- correct, but TLE (brute force)
 //  * time: O(n * k)
 //  * space: O(n + k)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number[]}
@@ -24,7 +24,7 @@
 // }
 
 // /**
-//  * @param {number[]} nums 
+//  * @param {number[]} nums
 //  */
 // function getMax(nums) {
 //     let max = nums[0];
@@ -40,7 +40,7 @@
 //  * solution 2 -- correct, but TLE (brute force)
 //  * time: O(n * k)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number[]}
@@ -80,7 +80,7 @@
  * solution 3 -- deque
  * time: O(n * k)
  * space: O(n + k)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}

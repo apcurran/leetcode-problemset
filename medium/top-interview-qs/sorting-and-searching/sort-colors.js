@@ -4,7 +4,7 @@
  * solution 1 -- bubble sort
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
@@ -21,4 +21,4 @@ function sortColors(nums) {
     }
 }
 
-console.log( sortColors([2, 0, 2, 1, 1, 0]) ); // [0,0,1,1,2,2]
+console.log(sortColors([2, 0, 2, 1, 1, 0])); // [0,0,1,1,2,2]

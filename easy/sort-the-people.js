@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * (n + log n))
  * space: O(n)
- * 
+ *
  * @param {string[]} names
  * @param {number[]} heights
  * @return {string[]}
@@ -26,8 +26,8 @@ function sortPeople(names, heights) {
     for (let i = 0; i < namesWithHeights.length; i++) {
         namesWithHeights[i] = namesWithHeights[i].split(":")[0];
     }
-    
+
     return namesWithHeights;
 }
 
-console.log( sortPeople(["Mary", "John", "Emma"], [180, 165, 170]) ); // ["Mary","Emma","John"]
+console.log(sortPeople(["Mary", "John", "Emma"], [180, 165, 170])); // ["Mary","Emma","John"]

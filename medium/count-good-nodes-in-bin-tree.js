@@ -2,16 +2,16 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 // /**
 //  * solution 1 -- recursion
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {number}
 //  */
@@ -19,13 +19,13 @@ function TreeNode(val, left, right) {
 //     let goodNodesCount = 0;
 
 //     /**
-//      * @param {TreeNode} root 
-//      * @param {number} maxValue 
+//      * @param {TreeNode} root
+//      * @param {number} maxValue
 //      * @returns {void}
 //      */
 //     function dfs(root, maxValue) {
 //         if (root === null) return;
-    
+
 //         if (root.val >= maxValue) {
 //             maxValue = root.val;
 //             goodNodesCount++;
@@ -44,7 +44,7 @@ function TreeNode(val, left, right) {
  * solution 2 -- iterative
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number}
  */
@@ -54,7 +54,7 @@ function goodNodes(root) {
 
     while (stack.length > 0) {
         let [node, maxValueSoFar] = stack.pop();
-        
+
         if (node.val >= maxValueSoFar) {
             goodNodesCount++;
             maxValueSoFar = node.val;
@@ -68,11 +68,9 @@ function goodNodes(root) {
             stack.push([node.left, maxValueSoFar]);
         }
     }
-    
+
     return goodNodesCount;
 }
-
-
 
 const a = new TreeNode(3);
 const b = new TreeNode(1);
@@ -87,4 +85,4 @@ b.left = d;
 c.left = e;
 c.right = f;
 
-console.log( goodNodes(a) ); // 4
+console.log(goodNodes(a)); // 4

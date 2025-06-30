@@ -2,16 +2,16 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- BFS
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number[]}
  */
@@ -50,7 +50,7 @@ function rightSideView(root) {
 //  * solution 2 -- reverse BFS (right to left)
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {number[]}
 //  */
@@ -89,7 +89,7 @@ function rightSideView(root) {
 //  * solution 3 -- DFS recursion
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {number[]}
 //  */
@@ -102,10 +102,10 @@ function rightSideView(root) {
 // }
 
 // /**
-//  * 
-//  * @param {TreeNode} root 
-//  * @param {number} level 
-//  * @param {number[]} results 
+//  *
+//  * @param {TreeNode} root
+//  * @param {number} level
+//  * @param {number[]} results
 //  * @returns {void}
 //  */
 // function dfs(root, level, results) {
@@ -132,4 +132,4 @@ a.right = c;
 b.right = d;
 c.right = e;
 
-console.log( rightSideView(a) ); // [1, 3, 4]
+console.log(rightSideView(a)); // [1, 3, 4]

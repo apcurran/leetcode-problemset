@@ -8,8 +8,8 @@ class MyQueue {
     /**
      * time: O(1)
      * space: O(1)
-     * 
-     * @param {number} x 
+     *
+     * @param {number} x
      * @returns {void}
      */
     push(x) {
@@ -19,7 +19,7 @@ class MyQueue {
     /**
      * time: O(n) - shifting removes from front of stack, which causes all other elems to move over by one
      * space: O(1)
-     * 
+     *
      * @returns {number}
      */
     pop() {
@@ -31,7 +31,7 @@ class MyQueue {
     /**
      * time: O(1)
      * space: O(1)
-     * 
+     *
      * @returns {number}
      */
     peek() {
@@ -41,7 +41,7 @@ class MyQueue {
     /**
      * time: O(1)
      * space: O(1)
-     * 
+     *
      * @returns {boolean}
      */
     empty() {
@@ -49,7 +49,7 @@ class MyQueue {
     }
 }
 
-/** 
+/**
  * Your MyQueue object will be instantiated and called as such:
  * var obj = new MyQueue()
  * obj.push(x)

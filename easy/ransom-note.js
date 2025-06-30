@@ -4,7 +4,7 @@
  * solution 1 -- map cache
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} ransomNote
  * @param {string} magazine
  * @return {boolean}
@@ -36,6 +36,6 @@ function canConstruct(ransomNote, magazine) {
     return true;
 }
 
-console.log( canConstruct("aa", "ab") ); // false
-console.log( canConstruct("a", "b") ); // false
-console.log( canConstruct("aa", "aab") ); // true
+console.log(canConstruct("aa", "ab")); // false
+console.log(canConstruct("a", "b")); // false
+console.log(canConstruct("aa", "aab")); // true

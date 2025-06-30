@@ -4,7 +4,7 @@
 //  * solution 1 -- recursive DFS
 //  * time: O(n)
 //  * space: O(n) -- callstack
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {number}
 //  */
@@ -23,7 +23,7 @@
 //  * solution 2 -- BFS
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {number}
 //  */
@@ -58,7 +58,7 @@
  * solution 3 -- interative DFS
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number}
  */

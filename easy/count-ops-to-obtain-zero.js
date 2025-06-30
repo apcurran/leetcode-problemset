@@ -2,7 +2,7 @@
 
 /**
  * solution 1
- * 
+ *
  * @param {number} num1
  * @param {number} num2
  * @return {number}
@@ -25,5 +25,5 @@ function countOperations(num1, num2) {
     return counter;
 }
 
-console.log( countOperations(2, 3) ); // 3
-console.log( countOperations(10, 10) ); // 1
+console.log(countOperations(2, 3)); // 3
+console.log(countOperations(10, 10)); // 1

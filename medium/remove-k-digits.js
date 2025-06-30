@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} num
 //  * @param {number} k
 //  * @return {string}
@@ -59,7 +59,7 @@
  * solution 2
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} num
  * @param {number} k
  * @return {string}
@@ -85,9 +85,7 @@ function removeKdigits(num, k) {
     }
 
     // remove the last k digits from stack
-    const result = stack
-        .slice(0, stack.length - k)
-        .join("");
+    const result = stack.slice(0, stack.length - k).join("");
     // return digits, unless result is an empty string,
     // then return "0"
     return result === "" ? "0" : result;

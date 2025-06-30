@@ -40,7 +40,7 @@ function reverse(num) {
 
     const resultNum = Number(resultStr);
 
-    if (Math.abs((2 ** 31) - 1) < resultNum) {
+    if (Math.abs(2 ** 31 - 1) < resultNum) {
         return 0;
     }
 

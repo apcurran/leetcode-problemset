@@ -4,7 +4,7 @@
 //  * solution 1 -- DP bottom-up
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -24,7 +24,7 @@
 // }
 
 // /**
-//  * @param {number[]} arr 
+//  * @param {number[]} arr
 //  * @return {number}
 //  */
 // function getMax(arr) {
@@ -41,7 +41,7 @@
  * solution 2 -- slightly more concise
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -56,7 +56,10 @@ function lengthOfLIS(nums) {
             if (nums[j] < nums[i]) {
                 const currentMax = Math.max(dpCache[i], dpCache[j] + 1);
                 dpCache[i] = currentMax;
-                longestSubsequenceLength = Math.max(longestSubsequenceLength, currentMax);
+                longestSubsequenceLength = Math.max(
+                    longestSubsequenceLength,
+                    currentMax,
+                );
             }
         }
     }

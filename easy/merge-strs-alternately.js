@@ -4,7 +4,7 @@
  * solution 1 -- iterative
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} word1
  * @param {string} word2
  * @return {string}
@@ -22,5 +22,5 @@ function mergeAlternately(word1, word2) {
     return resWord;
 }
 
-console.log( mergeAlternately("abc", "pqr") ); // "apbqcr"
-console.log( mergeAlternately("ab", "pqrs") ); // "apbqrs"
+console.log(mergeAlternately("abc", "pqr")); // "apbqcr"
+console.log(mergeAlternately("ab", "pqrs")); // "apbqrs"

@@ -4,7 +4,7 @@
  * solution 1 -- two-pointer technique
  * time: O(n^2)
  * space: O(n^2)
- * 
+ *
  * @param {number[]} nums
  * @return {number[][]}
  */

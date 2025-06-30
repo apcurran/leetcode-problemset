@@ -4,7 +4,7 @@
 //  * solution 1 -- iterative
 //  * time: O(n^2) -- array.includes() within loop
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -20,7 +20,7 @@
 //  * solution 2 -- sort
 //  * time: O(n * log n)
 //  * space: O(n) -- sorting uses linear space
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -44,14 +44,14 @@
  * solution 3 -- math (Gauss summation formula)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
 function missingNumber(nums) {
     const allNumsSum = (nums.length * (nums.length + 1)) / 2;
     const actualNumsSum = nums.reduce((sum, current) => sum + current, 0);
-    
+
     return allNumsSum - actualNumsSum;
 }
 

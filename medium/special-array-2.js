@@ -7,7 +7,7 @@
 //  * b = badIndices length
 //  * time: O(n + (m * b))
 //  * space: O(n) -- excluding results
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number[][]} queries
 //  * @return {boolean[]}
@@ -27,7 +27,7 @@
 
 //     for (let [queryStart, queryEnd] of queries) {
 //         let found = false;
-        
+
 //         for (let index of badIndices) {
 //             if (index >= queryEnd) {
 //                 results.push(true);
@@ -56,7 +56,7 @@
 //  * m = queries length
 //  * time: O(n + m * log m)
 //  * space: O(n) -- excluding results
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number[][]} queries
 //  * @return {boolean[]}
@@ -89,9 +89,9 @@
 // }
 
 // /**
-//  * @param {number} start 
-//  * @param {number} end 
-//  * @param {number[]} arr 
+//  * @param {number} start
+//  * @param {number} end
+//  * @param {number[]} arr
 //  * @returns {boolean}
 //  */
 // function binarySearch(start, end, arr) {
@@ -120,7 +120,7 @@
  * m = queries length
  * time: O(n + m)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number[][]} queries
  * @return {boolean[]}
@@ -144,11 +144,20 @@ function isArraySpecial(nums, queries) {
 
     for (let i = 0; i < queries.length; i++) {
         const [queryStart, queryEnd] = queries[i];
-        const isViolatingQuery = badIndices[queryEnd] - badIndices[queryStart] === 0;
+        const isViolatingQuery =
+            badIndices[queryEnd] - badIndices[queryStart] === 0;
         results[i] = isViolatingQuery;
     }
 
     return results;
 }
 
-console.log(isArraySpecial([4, 3, 1, 6], [[0, 2], [2, 3]])); // [false, true]
+console.log(
+    isArraySpecial(
+        [4, 3, 1, 6],
+        [
+            [0, 2],
+            [2, 3],
+        ],
+    ),
+); // [false, true]

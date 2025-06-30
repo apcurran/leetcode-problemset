@@ -4,7 +4,7 @@
  * solution 1 -- DP
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -33,4 +33,4 @@ function calcRobberyTotal(nums) {
     return rob2;
 }
 
-console.log( rob([1, 2, 3, 1]) ); // 4
+console.log(rob([1, 2, 3, 1])); // 4

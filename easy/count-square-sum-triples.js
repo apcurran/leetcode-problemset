@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^3)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number}
 //  */
@@ -28,7 +28,7 @@
  * solution 2
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -37,9 +37,9 @@ function countTriples(n) {
 
     for (let a = 1; a <= n; a++) {
         for (let b = 2; b <= n; b++) {
-            const c = Math.trunc( Math.sqrt((a * a) + (b * b)) );
+            const c = Math.trunc(Math.sqrt(a * a + b * b));
 
-            if ((a * a) + (b * b) === (c * c) && c <= n) {
+            if (a * a + b * b === c * c && c <= n) {
                 triplesCount++;
             }
         }
@@ -48,5 +48,5 @@ function countTriples(n) {
     return triplesCount;
 }
 
-console.log( countTriples(5) ); // 2
-console.log( countTriples(10) ); // 4
+console.log(countTriples(5)); // 2
+console.log(countTriples(10)); // 4

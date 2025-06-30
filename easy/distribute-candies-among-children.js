@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^3)
  * space: O(1)
- * 
+ *
  * @param {number} totalCandies
  * @param {number} candyLimit
  * @return {number}

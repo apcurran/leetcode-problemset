@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[][]} ghosts
  * @param {number[]} target
  * @return {boolean}
@@ -15,7 +15,8 @@ function escapeGhosts(ghosts, target) {
 
     for (let ghost of ghosts) {
         const [ghostX, ghostY] = ghost;
-        const ghostDistance = Math.abs(ghostX - targetX) + Math.abs(ghostY - targetY);
+        const ghostDistance =
+            Math.abs(ghostX - targetX) + Math.abs(ghostY - targetY);
 
         if (ghostDistance <= playerDistance) return false;
     }
@@ -23,5 +24,13 @@ function escapeGhosts(ghosts, target) {
     return true;
 }
 
-console.log( escapeGhosts([[1, 0], [0, 3]], [0, 1]) ); // true
-console.log( escapeGhosts([[1, 0]], [2, 0]) ); // false
+console.log(
+    escapeGhosts(
+        [
+            [1, 0],
+            [0, 3],
+        ],
+        [0, 1],
+    ),
+); // true
+console.log(escapeGhosts([[1, 0]], [2, 0])); // false

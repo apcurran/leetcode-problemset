@@ -23,7 +23,7 @@ class Solution {
      * n = total chars for all words combined
      * time: O(n)
      * space: O(n)
-     * 
+     *
      * @param {string} combinedWord
      * @returns {string[]}
      */
@@ -42,9 +42,12 @@ class Solution {
             // we now need the word length amount
             const wordLength = Number(combinedWord.slice(i, j));
             // obtain word by only slicing out the word without the delimiter or wordLength num included
-            const currentDecodedWord = combinedWord.slice(j + 1, j + 1 + wordLength);
+            const currentDecodedWord = combinedWord.slice(
+                j + 1,
+                j + 1 + wordLength,
+            );
             words.push(currentDecodedWord);
-            // move i pointer forwards    
+            // move i pointer forwards
             i = j + 1 + wordLength;
         }
 

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^3)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
@@ -30,4 +30,4 @@ function threeSumClosest(nums, target) {
     return closestSumToTarget;
 }
 
-console.log( threeSumClosest([-1, 2, 1, -4], 1) ); // 2
+console.log(threeSumClosest([-1, 2, 1, -4], 1)); // 2

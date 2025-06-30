@@ -4,7 +4,7 @@
  * solution 1 -- two pointer
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @return {boolean}
@@ -26,7 +26,7 @@ function isSubsequence(s, t) {
     return sPointer === s.length;
 }
 
-console.log( isSubsequence("abc", "ahbgdc") ); // true
-console.log( isSubsequence("axc", "ahbgdc") ); // false
-console.log( isSubsequence("acb", "ahbgdc") ); // false
-console.log( isSubsequence("aaaaaa", "bbaaaa") ); // false
+console.log(isSubsequence("abc", "ahbgdc")); // true
+console.log(isSubsequence("axc", "ahbgdc")); // false
+console.log(isSubsequence("acb", "ahbgdc")); // false
+console.log(isSubsequence("aaaaaa", "bbaaaa")); // false

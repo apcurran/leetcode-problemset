@@ -4,7 +4,7 @@
  * solution 1 -- map obj
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @return {number}
  */
@@ -26,7 +26,11 @@ function romanToInt(str) {
         const nextRomanNumeral = str[i + 1];
         const isNextInBounds = i + 1 < str.length;
 
-        if (isNextInBounds && romanNumerals.get(currRomanNumeral) < romanNumerals.get(nextRomanNumeral)) {
+        if (
+            isNextInBounds &&
+            romanNumerals.get(currRomanNumeral) <
+                romanNumerals.get(nextRomanNumeral)
+        ) {
             // subtract vals
             resVal -= romanNumerals.get(currRomanNumeral);
         } else {
@@ -38,5 +42,5 @@ function romanToInt(str) {
     return resVal;
 }
 
-console.log( romanToInt("III") ); // 3
-console.log( romanToInt("MCMXCIV") ); // 1994
+console.log(romanToInt("III")); // 3
+console.log(romanToInt("MCMXCIV")); // 1994

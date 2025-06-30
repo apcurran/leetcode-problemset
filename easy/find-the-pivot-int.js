@@ -4,7 +4,7 @@
 //  * solution 1 -- summation formula
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number}
 //  */
@@ -21,9 +21,9 @@
 // }
 
 // /**
-//  * 
-//  * @param {number} a 
-//  * @param {number} b 
+//  *
+//  * @param {number} a
+//  * @param {number} b
 //  * @returns {number}
 //  */
 // function getSequenceSum(a, b) {
@@ -34,7 +34,7 @@
 //  * solution 2 -- brute force
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number}
 //  */
@@ -64,7 +64,7 @@
  * solution 3 -- two pointers
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -97,4 +97,4 @@ function pivotInteger(n) {
     return -1;
 }
 
-console.log( pivotInteger(8) ); // 6
+console.log(pivotInteger(8)); // 6

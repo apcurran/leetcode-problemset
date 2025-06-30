@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
@@ -33,4 +33,4 @@ function rearrangeArray(nums) {
     return res;
 }
 
-console.log( rearrangeArray([1, 2, 3, 4, 5]) ); // [1,2,4,5,3]
+console.log(rearrangeArray([1, 2, 3, 4, 5])); // [1,2,4,5,3]

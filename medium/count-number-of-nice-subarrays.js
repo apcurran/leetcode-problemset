@@ -4,7 +4,7 @@
 //  * solution 1 -- Correct, but TLE
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number}
@@ -33,7 +33,7 @@
  * solution 2 -- 3 pointer sliding window
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -67,7 +67,7 @@ function numberOfSubarrays(nums, k) {
                 middle++;
             }
 
-            niceSubarraysCount += (middle - left) + 1; // window size
+            niceSubarraysCount += middle - left + 1; // window size
         }
     }
 

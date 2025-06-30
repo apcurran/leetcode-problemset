@@ -4,7 +4,7 @@
  * solution 1 -- brute force
  * time: O(n^2 * log n)
  * space: O(n^2)
- * 
+ *
  * @param {number[]} nums
  * @param {number} n
  * @param {number} left
@@ -13,7 +13,7 @@
  */
 function rangeSum(nums, n, left, right) {
     // build subarray sum list
-    const MOD_AMOUNT = (10 ** 9) + 7;
+    const MOD_AMOUNT = 10 ** 9 + 7;
     let subarraySums = [];
 
     for (let i = 0; i < n; i++) {

@@ -4,7 +4,7 @@
 //  * solution 1 -- no bitwise ops
 //  * time: O(x + y)
 //  * space: O(x + y)
-//  * 
+//  *
 //  * @param {number} x
 //  * @param {number} y
 //  * @return {number}
@@ -34,7 +34,7 @@
  * solution 2 -- bitwise XOR operator
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number} x
  * @param {number} y
  * @return {number}

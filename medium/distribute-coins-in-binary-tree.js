@@ -1,16 +1,16 @@
 "use strict";
 
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- DFS recursion
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number}
  */
@@ -18,8 +18,8 @@ function distributeCoins(root) {
     let result = 0;
 
     /**
-     * 
-     * @param {TreeNode} root 
+     *
+     * @param {TreeNode} root
      * @returns {[number, number]} [nodesCount, coinsCount]
      */
     function dfs(root) {

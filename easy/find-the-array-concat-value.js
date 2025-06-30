@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n) -- String() calls within loop
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */

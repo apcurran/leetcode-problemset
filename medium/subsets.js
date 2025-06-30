@@ -4,7 +4,7 @@
 //  * solution 1 -- backtracking (recursion)
 //  * time: O(n * 2^n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[][]}
 //  */
@@ -40,7 +40,7 @@
  * solution 2 -- cascading
  * time: O(n * 2^n)
  * space: O(n * 2^n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[][]}
  */
@@ -65,4 +65,4 @@ function subsets(nums) {
     return results;
 }
 
-console.log( subsets([1, 2, 3]) ); // [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+console.log(subsets([1, 2, 3])); // [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]

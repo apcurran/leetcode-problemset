@@ -4,7 +4,7 @@
 //  * Solution 1 -- Quicksort ES6
 //  * Time: O(n^2)
 //  * Space: O(n^2)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
@@ -33,7 +33,7 @@
 //  * Solution 2 -- built-in array.sort() method
 //  * Time: O(n log n)
 //  * Space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
@@ -45,7 +45,7 @@
 //  * Solution 2 -- recursive
 //  * Time: O(n^2)
 //  * Space: O(n^2)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
@@ -73,7 +73,7 @@
  * Solution 2 -- Merge Sort
  * Time: O(n log n)
  * Space: O(n)
- * 
+ *
  * @param {number[]} numsArr
  * @return {number[]}
  */
@@ -84,10 +84,7 @@ function sortArray(numsArr) {
     const leftArr = numsArr.slice(0, middleIndex);
     const rightArr = numsArr.slice(middleIndex);
 
-    return merge(
-        sortArray(leftArr),
-        sortArray(rightArr),
-    );
+    return merge(sortArray(leftArr), sortArray(rightArr));
 }
 
 function merge(leftArr, rightArr) {
@@ -108,7 +105,11 @@ function merge(leftArr, rightArr) {
         }
     }
 
-    return [...resultArr, ...leftArr.slice(leftIndex), ...rightArr.slice(rightIndex)];
+    return [
+        ...resultArr,
+        ...leftArr.slice(leftIndex),
+        ...rightArr.slice(rightIndex),
+    ];
 }
 
 console.log(sortArray([5, 2, 3, 1])); // [1, 2, 3, 5]

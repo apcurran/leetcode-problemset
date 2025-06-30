@@ -10,15 +10,13 @@ function Node(val, next, random) {
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {Node} head
  * @return {Node}
  */
 function copyRandomList(head) {
     // set null val to map to null
-    let nodesCache = new Map([
-        [null, null],
-    ]);
+    let nodesCache = new Map([[null, null]]);
     let current = head;
 
     while (current !== null) {

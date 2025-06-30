@@ -4,7 +4,7 @@
 //  * solution 1 -- brute-force (correct, but TLE)
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number}
@@ -32,7 +32,7 @@
  * solution 2 -- hashmap
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -49,7 +49,7 @@ function subarraySum(nums, k) {
         currentSum += num;
         const difference = currentSum - k;
         validSubarraysCount += cache.get(difference) || 0;
-        
+
         const sumCount = cache.get(currentSum) || 0;
         cache.set(currentSum, sumCount + 1);
     }
@@ -57,4 +57,4 @@ function subarraySum(nums, k) {
     return validSubarraysCount;
 }
 
-console.log( subarraySum([1, 2, 3], 3) ); // 2
+console.log(subarraySum([1, 2, 3], 3)); // 2

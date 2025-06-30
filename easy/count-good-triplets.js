@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(n^3)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} arr
 //  * @param {number} a
 //  * @param {number} b
@@ -35,7 +35,7 @@
  * solution 2 -- brute force (optimized)
  * time: O(n^3)
  * space: O(1)
- * 
+ *
  * @param {number[]} arr
  * @param {number} a
  * @param {number} b
@@ -51,7 +51,7 @@ function countGoodTriplets(arr, a, b, c) {
 
             for (let k = j + 1; k < arr.length; k++) {
                 if (Math.abs(arr[j] - arr[k]) > b) continue;
-                
+
                 if (Math.abs(arr[i] - arr[k]) <= c) {
                     goodTripletCount++;
                 }

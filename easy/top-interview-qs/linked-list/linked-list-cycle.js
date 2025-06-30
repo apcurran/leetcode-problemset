@@ -10,7 +10,7 @@ function ListNode(val) {
 //  * solution 1 -- Set obj
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {boolean}
 //  */
@@ -35,7 +35,7 @@ function ListNode(val) {
  * solution 2 -- Floyd's Tortoise and Hare (slow & fast ptrs)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {ListNode} head
  * @return {boolean}
  */

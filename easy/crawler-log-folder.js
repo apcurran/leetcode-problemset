@@ -4,7 +4,7 @@
 //  * solution 1 -- counter simulation
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {string[]} logs
 //  * @return {number}
 //  */
@@ -30,7 +30,7 @@
  * solution 2 -- stack simulation
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string[]} logs
  * @return {number}
  */

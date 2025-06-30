@@ -14,5 +14,5 @@ function checkIfPangram(sentence) {
     return joinedUniqueChars === alphabetStr;
 }
 
-console.log( checkIfPangram("thequickbrownfoxjumpsoverthelazydog") ); // true
-console.log( checkIfPangram("leetcode") ); // false
+console.log(checkIfPangram("thequickbrownfoxjumpsoverthelazydog")); // true
+console.log(checkIfPangram("leetcode")); // false

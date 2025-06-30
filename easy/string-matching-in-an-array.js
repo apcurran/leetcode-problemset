@@ -6,7 +6,7 @@
  * m = otherWord length
  * time: O(n^2 * m)
  * space: O(n)
- * 
+ *
  * @param {string[]} words
  * @return {string[]}
  */

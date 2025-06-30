@@ -6,7 +6,7 @@
  * m = matrix columns
  * time: O(n * m + n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[][]} matrix
  * @param {number} k
  * @return {number[]}
@@ -40,11 +40,15 @@ function kWeakestRows(matrix, k) {
         .map((tuple) => tuple[1]);
 }
 
-console.log(kWeakestRows(
-    [[1, 1, 0, 0, 0],
-        [1, 1, 1, 1, 0],
-        [1, 0, 0, 0, 0],
-        [1, 1, 0, 0, 0],
-        [1, 1, 1, 1, 1]],
-    3,
-)); // [2,0,3]
+console.log(
+    kWeakestRows(
+        [
+            [1, 1, 0, 0, 0],
+            [1, 1, 1, 1, 0],
+            [1, 0, 0, 0, 0],
+            [1, 1, 0, 0, 0],
+            [1, 1, 1, 1, 1],
+        ],
+        3,
+    ),
+); // [2,0,3]

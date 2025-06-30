@@ -2,15 +2,15 @@
 
 // Definition for singly-linked list.
 function ListNode(val, next) {
-    this.val = (val===undefined ? 0 : val);
-    this.next = (next===undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 /**
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {ListNode} head
  * @return {void} Do not return anything, modify head in-place instead.
  */
@@ -62,4 +62,4 @@ a.next = b;
 b.next = c;
 c.next = d;
 
-console.log( reorderList(a) ); // list should now be 1 -> 4 -> 2 -> 3
+console.log(reorderList(a)); // list should now be 1 -> 4 -> 2 -> 3

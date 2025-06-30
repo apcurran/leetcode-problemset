@@ -2,7 +2,7 @@
  * solution 1 -- map cache
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {boolean}
@@ -34,5 +34,5 @@ function checkSubarraySum(nums, k) {
     return false;
 }
 
-console.log( checkSubarraySum([23, 2, 4, 6, 7], 6) ); // true (2, 4)
-console.log( checkSubarraySum([23, 2, 6, 4, 7], 13) ); // false
+console.log(checkSubarraySum([23, 2, 4, 6, 7], 6)); // true (2, 4)
+console.log(checkSubarraySum([23, 2, 6, 4, 7], 13)); // false

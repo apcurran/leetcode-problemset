@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @return {number}
  */
@@ -32,6 +32,6 @@ function maxPower(str) {
     return maxPower;
 }
 
-console.log( maxPower("leetcode") ); // 2
-console.log( maxPower("abbcccddddeeeeedcba") ); // 5
-console.log( maxPower("cc") ); // 2
+console.log(maxPower("leetcode")); // 2
+console.log(maxPower("abbcccddddeeeeedcba")); // 5
+console.log(maxPower("cc")); // 2

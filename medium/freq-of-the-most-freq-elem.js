@@ -4,7 +4,7 @@
  * solution 1 -- sort and sliding window combo
  * time: O(n * log n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -34,4 +34,4 @@ function maxFrequency(nums, k) {
     return res;
 }
 
-console.log( maxFrequency([1, 2, 4], 5) ); // 3
+console.log(maxFrequency([1, 2, 4], 5)); // 3

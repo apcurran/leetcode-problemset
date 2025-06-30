@@ -5,7 +5,7 @@
 //  *
 //  * time: O(n^2)
 //  * space: O(1) - if not counting output arr as extra space
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
@@ -31,10 +31,10 @@
 
 /**
  * solution 2
- * 
+ *
  * time: O(n)
  * space: O(1) - if not counting output arr as extra space
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
@@ -64,6 +64,5 @@ function productExceptSelf(nums) {
     return resArr;
 }
 
-console.log( productExceptSelf([1, 2, 3, 4]) ); // [24,12,8,6]
-console.log( productExceptSelf([-1, 1, 0, -3, 3]) ); // [0,0,9,0,0]
-
+console.log(productExceptSelf([1, 2, 3, 4])); // [24,12,8,6]
+console.log(productExceptSelf([-1, 1, 0, -3, 3])); // [0,0,9,0,0]

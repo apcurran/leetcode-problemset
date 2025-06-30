@@ -4,7 +4,7 @@
 //  * solution 1 -- correct, but TLE
 //  * time: O(n^3)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {boolean}
 //  */
@@ -32,7 +32,7 @@
  * solution 2
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
@@ -54,7 +54,7 @@ function increasingTriplet(nums) {
     return false;
 }
 
-console.log( increasingTriplet([1, 2, 3, 4, 5]) ); // true
-console.log( increasingTriplet([5, 4, 3, 2, 1]) ); // false
-console.log( increasingTriplet([2, 1, 5, 0, 4, 6]) ); // true
-console.log( increasingTriplet([20, 100, 10, 12, 5, 13]) ); // true
+console.log(increasingTriplet([1, 2, 3, 4, 5])); // true
+console.log(increasingTriplet([5, 4, 3, 2, 1])); // false
+console.log(increasingTriplet([2, 1, 5, 0, 4, 6])); // true
+console.log(increasingTriplet([20, 100, 10, 12, 5, 13])); // true

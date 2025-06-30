@@ -4,7 +4,7 @@
 //  * solution 0 -- brute force
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -25,7 +25,7 @@
 //  * solution 1
 //  * time: O(n * log n) -- due to sorting first
 //  * space: O(n) -- built-in uses timsort
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -41,7 +41,7 @@
 //  * solution 2
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -62,7 +62,7 @@
  * solution 3 -- two-pointer technique
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -85,6 +85,6 @@ function maxProduct(nums) {
     return maxProd;
 }
 
-console.log( maxProduct([3, 4, 5, 2]) ); // 12
-console.log( maxProduct([1, 5, 4, 5]) ); // 16
-console.log( maxProduct([3, 7]) ); // 12
+console.log(maxProduct([3, 4, 5, 2])); // 12
+console.log(maxProduct([1, 5, 4, 5])); // 16
+console.log(maxProduct([3, 7])); // 12

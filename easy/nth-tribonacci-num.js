@@ -4,7 +4,7 @@
 //  * solution 1 -- dynamic programming (recursion)
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number}
 //  */
@@ -18,7 +18,7 @@
 //         return cache.get(n);
 //     }
 
-//     // not in cache, 
+//     // not in cache,
 //     const value = tribonacci(n - 1, cache) + tribonacci(n - 2, cache) + tribonacci(n - 3, cache);
 //     // compute and store
 //     cache.set(n, value);
@@ -30,7 +30,7 @@
 //  * solution 2 -- dynamic programming (bottom up)
 //  * time: O(n)
 //  * space: O(n) -- due to array buffer
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number}
 //  */
@@ -43,7 +43,7 @@
 //     // by problem definition
 //     results[1] = 1;
 //     results[2] = 1;
-    
+
 //     for (let i = 3; i <= n; i++) {
 //         const answer = results[i - 1] + results[i - 2] + results[i - 3];
 //         results[i] = answer;
@@ -56,7 +56,7 @@
  * solution 3 -- dynamic programming (bottom up -- optimized)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -79,5 +79,5 @@ function tribonacci(n) {
     return c;
 }
 
-console.log( tribonacci(4) ); // 4
-console.log( tribonacci(25) ); // 1389537
+console.log(tribonacci(4)); // 4
+console.log(tribonacci(25)); // 1389537

@@ -4,7 +4,7 @@
  * solution 1 -- sliding window
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -38,7 +38,7 @@ console.log(countSubarrays([1, 3, 2, 3, 3], 2)); // 6
 console.log(countSubarrays([1, 4, 2, 1], 3)); // 0
 
 /**
- * @param {number[]} arr 
+ * @param {number[]} arr
  * @returns {number}
  */
 function getMax(arr) {

@@ -4,7 +4,7 @@
 //  * solution 1 -- stack
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} temperatures
 //  * @return {number[]}
 //  */
@@ -31,7 +31,7 @@
  * solution 1 -- stack alt using tuple arrays [temp, index]
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} temperatures
  * @return {number[]}
  */
@@ -43,7 +43,7 @@ function dailyTemperatures(temperatures) {
         const temp = temperatures[i];
 
         while (stack.length > 0 && temp > stack[stack.length - 1][0]) {
-            const topOfStackIndex = (stack.pop())[1];
+            const topOfStackIndex = stack.pop()[1];
             const daysUntilTempIncreases = i - topOfStackIndex;
             results[topOfStackIndex] = daysUntilTempIncreases;
         }
@@ -58,7 +58,7 @@ function dailyTemperatures(temperatures) {
 //  * solution 2 -- iterative
 //  * time: O(n^2) -- slow, but passes tests
 //  * space: O(n) -- results array
-//  * 
+//  *
 //  * @param {number[]} temperatures
 //  * @return {number[]}
 //  */
@@ -83,4 +83,4 @@ function dailyTemperatures(temperatures) {
 //     return results;
 // }
 
-console.log( dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]) ); // [1,1,4,2,1,1,0,0]
+console.log(dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73])); // [1,1,4,2,1,1,0,0]

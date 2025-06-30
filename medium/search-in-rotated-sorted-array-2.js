@@ -4,7 +4,7 @@
  * solution 1 -- brute force
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {boolean}

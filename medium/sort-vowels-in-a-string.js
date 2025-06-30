@@ -4,7 +4,7 @@
  * solution 1 -- sort vowels
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {string}
  */
@@ -37,20 +37,27 @@ function sortVowels(str) {
             result += currentChar;
         }
     }
-    
+
     return result;
 }
 
 /**
- * @param {string} char 
+ * @param {string} char
  * @returns {boolean}
  */
 function isVowel(char) {
-    return char === "a" || char === "A" ||
-           char === "e" || char === "E" ||
-           char === "i" || char === "I" ||
-           char === "o" || char === "O" ||
-           char === "u" || char === "U";
+    return (
+        char === "a" ||
+        char === "A" ||
+        char === "e" ||
+        char === "E" ||
+        char === "i" ||
+        char === "I" ||
+        char === "o" ||
+        char === "O" ||
+        char === "u" ||
+        char === "U"
+    );
 }
 
 console.log(sortVowels("lEetcOde")); // "lEOtcede"

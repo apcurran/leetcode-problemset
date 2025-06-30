@@ -4,7 +4,7 @@
 //  * solution 1 -- correct, but too slow
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -27,7 +27,7 @@
  * solution 2
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -63,5 +63,5 @@ function findMin(nums) {
     return min;
 }
 
-console.log( findMin([3, 4, 5, 1, 2]) ); // 1
-console.log( findMin([11, 13, 15, 17]) ); // 11
+console.log(findMin([3, 4, 5, 1, 2])); // 1
+console.log(findMin([11, 13, 15, 17])); // 11

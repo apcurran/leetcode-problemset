@@ -4,7 +4,7 @@
  * Solution 1 -- Two-pointer approach
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {string}
  */
@@ -48,5 +48,5 @@ function swapLetters(strArr, i, j) {
     strArr[j] = temp;
 }
 
-console.log( reverseOnlyLetters("ab-cd") ); // "dc-ba"
-console.log( reverseOnlyLetters("a-bC-dEf-ghIj") ); // "j-Ih-gfE-dCba"
+console.log(reverseOnlyLetters("ab-cd")); // "dc-ba"
+console.log(reverseOnlyLetters("a-bC-dEf-ghIj")); // "j-Ih-gfE-dCba"

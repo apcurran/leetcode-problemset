@@ -9,7 +9,7 @@ function Node(val, children) {
  * solution 1 -- BFS (level order traversal)
  * time: O(n^3)
  * space: O(n)
- * 
+ *
  * @param {Node|null} root
  * @return {number[][]}
  */

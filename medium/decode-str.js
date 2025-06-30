@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2)
  * space: O(n + m)
- * 
+ *
  * @param {string} str
  * @return {string}
  */
@@ -32,7 +32,6 @@ function decodeString(str) {
 
             const miniStr = subStr.repeat(Number(numBeforeOpeningBracket));
             stack.push(miniStr);
-
         } else {
             stack.push(char);
         }
@@ -42,11 +41,11 @@ function decodeString(str) {
 }
 
 /**
- * @param {string} str 
+ * @param {string} str
  * @returns {boolean}
  */
 function strValIsDigit(str) {
     return "0123456789".includes(str);
 }
 
-console.log( decodeString("3[a]2[bc]") ); // "aaabcbc"
+console.log(decodeString("3[a]2[bc]")); // "aaabcbc"

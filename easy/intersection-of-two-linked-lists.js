@@ -12,7 +12,7 @@ function ListNode(val) {
  * m = list 2 len
  * time: O(n + m)
  * space: O(n)
- * 
+ *
  * @param {ListNode} headA
  * @param {ListNode} headB
  * @return {ListNode|null}

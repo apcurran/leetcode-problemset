@@ -2,14 +2,14 @@
 
 /**
  * Solution 1
- * 
+ *
  * Time: O(n log n) - due to sorting
  * Space: O(n)
- * 
+ *
  * You are given an integer array arr.
  * You can choose a set of integers and remove all the occurrences of these integers in the array.
  * Return the minimum size of the set so that at least half of the integers of the array are removed.
- * 
+ *
  * @param {number[]} arr
  * @return {number}
  */
@@ -27,7 +27,9 @@ function minSetSize(arr) {
     }
 
     // Sorted numCache by value (number of occurrences)
-    let sortedNumCache = new Map([...numCache.entries()].sort((a, b) => b[1] - a[1]));
+    let sortedNumCache = new Map(
+        [...numCache.entries()].sort((a, b) => b[1] - a[1]),
+    );
     let n = arr.length;
     let currArrLen = arr.length;
     // Check cache to see the highest num of occurrences and start by removing that key num from arr.
@@ -43,5 +45,5 @@ function minSetSize(arr) {
     return numSetRemovalCount;
 }
 
-console.log( minSetSize([3, 3, 3, 3, 5, 5, 5, 2, 2, 7]) ); // 2
-console.log( minSetSize([7, 7, 7, 7, 7, 7]) ); // 1
+console.log(minSetSize([3, 3, 3, 3, 5, 5, 5, 2, 2, 7])); // 2
+console.log(minSetSize([7, 7, 7, 7, 7, 7])); // 1

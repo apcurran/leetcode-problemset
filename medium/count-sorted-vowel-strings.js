@@ -9,7 +9,7 @@ function countVowelStrings(n) {
 }
 
 /**
- * @param {number} n 
+ * @param {number} n
  * @param {number} vowelNum
  * @returns {number} - result
  */
@@ -27,5 +27,5 @@ function vowelHelper(n, vowelNum) {
     return result;
 }
 
-console.log( countVowelStrings(1) ); // 5
-console.log( countVowelStrings(2) ); // 15
+console.log(countVowelStrings(1)); // 5
+console.log(countVowelStrings(2)); // 15

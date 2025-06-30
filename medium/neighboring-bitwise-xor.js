@@ -4,7 +4,7 @@
  * solution 1 (simulation)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} derived
  * @return {boolean}
  */

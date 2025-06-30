@@ -5,7 +5,7 @@ class TimeLimitedCache {
         this.cache = new Map();
     }
 
-    /** 
+    /**
      * @param {number} key
      * @param {number} value
      * @param {number} duration until expiration in ms
@@ -24,15 +24,15 @@ class TimeLimitedCache {
         return Boolean(valueInCache);
     }
 
-    /** 
+    /**
      * @param {number} key
      * @return {number} value associated with key
      */
     get(key) {
         return this.cache.has(key) ? this.cache.get(key).value : -1;
     }
-    
-    /** 
+
+    /**
      * @return {number} count of non-expired keys
      */
     count() {
@@ -41,6 +41,6 @@ class TimeLimitedCache {
 }
 
 const obj = new TimeLimitedCache();
-console.log( obj.set(1, 42, 1000) ); // false
-console.log( obj.get(1) ); // 42
-console.log( obj.count() ); // 1
+console.log(obj.set(1, 42, 1000)); // false
+console.log(obj.get(1)); // 42
+console.log(obj.count()); // 1

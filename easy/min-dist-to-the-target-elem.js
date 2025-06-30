@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} target
  * @param {number} start
@@ -25,4 +25,4 @@ function getMinDistance(nums, target, start) {
     return minOverallDistance;
 }
 
-console.log( getMinDistance([1, 2, 3, 4, 5], 5, 3) ); // 1
+console.log(getMinDistance([1, 2, 3, 4, 5], 5, 3)); // 1

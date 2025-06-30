@@ -4,7 +4,7 @@
  * solution 1 -- sorting
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[][]} points
  * @return {number}
  */
@@ -19,8 +19,17 @@ function maxWidthOfVerticalArea(points) {
         const xValuesDiff = nextTupleXValue - currentTupleXValue;
         maxWidth = Math.max(maxWidth, xValuesDiff);
     }
-    
+
     return maxWidth;
 }
 
-console.log(maxWidthOfVerticalArea([[3, 1], [9, 0], [1, 0], [1, 4], [5, 3], [8, 8]])); // 3
+console.log(
+    maxWidthOfVerticalArea([
+        [3, 1],
+        [9, 0],
+        [1, 0],
+        [1, 4],
+        [5, 3],
+        [8, 8],
+    ]),
+); // 3

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(n)
- * 
+ *
  * @param {Function[]} functions
  * @param {number} n
  * @return {Function}
@@ -28,4 +28,6 @@ const promisePool = async function (functions, n) {
 };
 
 const sleep = (t) => new Promise((res) => setTimeout(res, t));
-console.log( promisePool([() => sleep(500), () => sleep(400)], 1).then(console.log) ); // After 900ms
+console.log(
+    promisePool([() => sleep(500), () => sleep(400)], 1).then(console.log),
+); // After 900ms

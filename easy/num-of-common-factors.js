@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} a
  * @param {number} b
  * @return {number}
@@ -27,5 +27,5 @@ function commonFactors(a, b) {
     return commonFactorCount;
 }
 
-console.log( commonFactors(12, 6) ); // 4
-console.log( commonFactors(25, 30) ); // 2
+console.log(commonFactors(12, 6)); // 4
+console.log(commonFactors(25, 30)); // 2

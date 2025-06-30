@@ -4,7 +4,7 @@
  * solution 1 -- sort and check
  * time: O(m * (n * log n))
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number[]} l
  * @param {number[]} r
@@ -22,7 +22,7 @@ function checkArithmeticSubarrays(nums, l, r) {
 }
 
 /**
- * @param {number[]} nums 
+ * @param {number[]} nums
  * @returns {boolean}
  */
 function isArithmeticSequence(nums) {

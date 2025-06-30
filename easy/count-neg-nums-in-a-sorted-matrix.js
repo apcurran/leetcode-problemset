@@ -6,7 +6,7 @@
 //  * m = len of nums in each row
 //  * time: O(n * m)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[][]} grid
 //  * @return {number}
 //  */
@@ -28,7 +28,7 @@
 //  * m = len of nums in each row
 //  * time: O(n * m)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[][]} grid
 //  * @return {number}
 //  */
@@ -60,22 +60,26 @@
  * m = len of nums in each row
  * time: O(n * m)
  * space: O(n)
- * 
+ *
  * @param {number[][]} grid
  * @return {number}
  */
 function countNegatives(grid) {
-    return grid
-        .flat()
-        .filter((num) => num < 0)
-        .length;
+    return grid.flat().filter((num) => num < 0).length;
 }
 
-console.log( countNegatives([[4, 3, 2, -1],
-    [3, 2, 1, -1],
-    [1, 1, -1, -2],
-    [-1, -1, -2, -3]]) ); // 8
+console.log(
+    countNegatives([
+        [4, 3, 2, -1],
+        [3, 2, 1, -1],
+        [1, 1, -1, -2],
+        [-1, -1, -2, -3],
+    ]),
+); // 8
 
-console.log( countNegatives([[3, 2],
-    [1, 0]]) ); // 0
-
+console.log(
+    countNegatives([
+        [3, 2],
+        [1, 0],
+    ]),
+); // 0

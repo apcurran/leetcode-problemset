@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * log n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -28,5 +28,5 @@ function minimumDifference(nums, k) {
     return minDiff;
 }
 
-console.log( minimumDifference([90], 1) ); // 0
-console.log( minimumDifference([9, 4, 1, 7], 2) ); // 2
+console.log(minimumDifference([90], 1)); // 0
+console.log(minimumDifference([9, 4, 1, 7], 2)); // 2

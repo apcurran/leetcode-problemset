@@ -4,7 +4,7 @@
  * solution 1 -- counting 1 bits
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} s
  * @return {string}
  */

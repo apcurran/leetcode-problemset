@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string[]} words
  * @param {number} left
  * @param {number} right
@@ -23,7 +23,7 @@ function vowelStrings(words, left, right) {
 }
 
 /**
- * @param {string} str 
+ * @param {string} str
  * @returns {boolean}
  */
 function isVowelString(str) {

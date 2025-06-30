@@ -4,13 +4,13 @@
 //  * solution 1 -- using built-in sqrt func (not meeting problem constraints)
 //  * time: O(1)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} num
 //  * @return {boolean}
 //  */
 // function isPerfectSquare(num) {
 //     const sqrtNum = Math.sqrt(num);
-    
+
 //     return Number.isInteger(sqrtNum);
 // }
 
@@ -18,7 +18,7 @@
 //  * solution 2 -- valid math solution
 //  * time: O(sqrt(n))
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} num
 //  * @return {boolean}
 //  */
@@ -37,7 +37,7 @@
 //  * solution 3 -- squaring solution
 //  * time: O(sqrt(n))
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} num
 //  * @return {boolean}
 //  */
@@ -56,10 +56,10 @@
 // }
 
 /**
- * solution 4 -- 
+ * solution 4 --
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {number} num
  * @return {boolean}
  */
@@ -86,5 +86,5 @@ function isPerfectSquare(num) {
     return false;
 }
 
-console.log( isPerfectSquare(16) ); // true
-console.log( isPerfectSquare(14) ); // false
+console.log(isPerfectSquare(16)); // true
+console.log(isPerfectSquare(14)); // false

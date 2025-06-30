@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force (TLE)
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -25,7 +25,7 @@
  * solution 3 -- prefix/suffix sums
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */

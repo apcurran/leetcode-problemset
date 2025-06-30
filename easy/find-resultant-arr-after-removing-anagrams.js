@@ -6,7 +6,7 @@
  * m = word len
  * time: O(n * (m * log m))
  * space: O(n)
- * 
+ *
  * @param {string[]} words
  * @return {string[]}
  */
@@ -26,4 +26,4 @@ function removeAnagrams(words) {
     return resArr;
 }
 
-console.log( removeAnagrams(["abba", "baba", "bbaa", "cd", "cd"]) ); // ["abba","cd"]
+console.log(removeAnagrams(["abba", "baba", "bbaa", "cd", "cd"])); // ["abba","cd"]

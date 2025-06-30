@@ -4,7 +4,7 @@
  * solution 1 -- Kadane's Algorithm
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -29,4 +29,4 @@ function maxSubarraySumCircular(nums) {
     return Math.max(globalMax, fullSum - globalMin);
 }
 
-console.log( maxSubarraySumCircular([5, -3, 5]) ); // 10
+console.log(maxSubarraySumCircular([5, -3, 5])); // 10

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @param {number} m
  * @return {number}
@@ -21,7 +21,7 @@ function differenceOfSums(n, m) {
         }
     }
 
-    return nonDivisibleNumsSum - divisibleNumsSum; 
+    return nonDivisibleNumsSum - divisibleNumsSum;
 }
 
 console.log(differenceOfSums(10, 3)); // 19

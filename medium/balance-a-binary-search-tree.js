@@ -1,16 +1,16 @@
 "use strict";
 
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- inorder recursive
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {TreeNode|null}
  */
@@ -20,13 +20,17 @@ function balanceBST(root) {
     let inOrderNodeValues = [];
     // build sorted inorder list
     inOrderTraversal(root, inOrderNodeValues);
-    
-    return createBalancedBST(inOrderNodeValues, 0, inOrderNodeValues.length - 1);
+
+    return createBalancedBST(
+        inOrderNodeValues,
+        0,
+        inOrderNodeValues.length - 1,
+    );
 }
 
 /**
- * @param {TreeNode} root 
- * @param {number[]} inOrderValues 
+ * @param {TreeNode} root
+ * @param {number[]} inOrderValues
  * @returns {void}
  */
 function inOrderTraversal(root, inOrderValues) {
@@ -38,9 +42,9 @@ function inOrderTraversal(root, inOrderValues) {
 }
 
 /**
- * @param {number[]} inorderList 
- * @param {number} start 
- * @param {number} end 
+ * @param {number[]} inorderList
+ * @param {number} start
+ * @param {number} end
  * @returns {TreeNode|null}
  */
 function createBalancedBST(inorderList, start, end) {

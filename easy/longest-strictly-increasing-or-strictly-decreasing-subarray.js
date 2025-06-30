@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -40,7 +40,7 @@
 
 //         maxLength = Math.max(maxLength, currentLength);
 //     }
-    
+
 //     return maxLength;
 // }
 
@@ -48,7 +48,7 @@
  * solution 2 -- optimal, single loop
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -78,11 +78,14 @@ function longestMonotonicSubarray(nums) {
         }
 
         // check for current max
-        const currentMax = Math.max(maxIncreasingSubarrLength, maxDecrasingSubarrLength);
+        const currentMax = Math.max(
+            maxIncreasingSubarrLength,
+            maxDecrasingSubarrLength,
+        );
         // update global max
         overallMaxLength = Math.max(overallMaxLength, currentMax);
     }
-    
+
     return overallMaxLength;
 }
 

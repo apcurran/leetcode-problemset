@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(max(n, m) * log (max(n, m)))
 //  * space: O(max(n, m))
-//  * 
+//  *
 //  * @param {number[][]} nums1
 //  * @param {number[][]} nums2
 //  * @return {number[][]}
@@ -34,7 +34,7 @@
  * solution 2 -- merge sort like (two pointers)
  * time: O(n + m))
  * space: O(1) -- not including results array space
- * 
+ *
  * @param {number[][]} nums1
  * @param {number[][]} nums2
  * @return {number[][]}
@@ -83,5 +83,18 @@ function mergeArrays(nums1, nums2) {
     return results;
 }
 
-console.log(mergeArrays([[1, 2], [2, 3], [4, 5]], [[1, 4], [3, 2], [4, 1]]));
+console.log(
+    mergeArrays(
+        [
+            [1, 2],
+            [2, 3],
+            [4, 5],
+        ],
+        [
+            [1, 4],
+            [3, 2],
+            [4, 1],
+        ],
+    ),
+);
 // [[1,6],[2,3],[3,2],[4,6]]

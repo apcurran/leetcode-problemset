@@ -6,7 +6,7 @@
  * s = str2 length
  * time: O(n^2 * s)
  * space: O(1)
- * 
+ *
  * @param {string[]} words
  * @return {number}
  */

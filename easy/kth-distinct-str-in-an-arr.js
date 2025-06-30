@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string[]} arr
 //  * @param {number} k
 //  * @return {string}
@@ -36,7 +36,7 @@
  * solution 2 -- brute force
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {string[]} arr
  * @param {number} k
  * @return {string}
@@ -44,7 +44,7 @@
 function kthDistinct(arr, k) {
     for (let i = 0; i < arr.length; i++) {
         let distinctFlag = true;
-        
+
         for (let j = 0; j < arr.length; j++) {
             if (i === j) continue;
 

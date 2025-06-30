@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} s
  * @param {string} letter
  * @return {number}
@@ -24,4 +24,4 @@ function percentageLetter(s, letter) {
     return Math.floor((sLetterCount / s.length) * 100);
 }
 
-console.log( percentageLetter("foobar", "o") ); // 33 (percent)
+console.log(percentageLetter("foobar", "o")); // 33 (percent)

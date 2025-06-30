@@ -4,13 +4,13 @@
  * solution 1
  * time: O(1)
  * space: O(1)
- * 
+ *
  * @param {Function} fn
  * @param {number} timeMs
  * @return {Function}
  */
-const timeLimit = function(fn, timeMs) {
-    return async function(...args) {
+const timeLimit = function (fn, timeMs) {
+    return async function (...args) {
         return new Promise((resolve, reject) => {
             const timeout = setTimeout(() => {
                 reject("Time Limit Exceeded");

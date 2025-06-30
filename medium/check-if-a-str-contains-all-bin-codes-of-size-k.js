@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * k)
  * space: O(n * k)
- * 
+ *
  * @param {string} str
  * @param {number} k
  * @return {boolean}
@@ -21,4 +21,4 @@ function hasAllCodes(str, k) {
     return uniqueBinStrs.size === totalPossibleBinStrCombos;
 }
 
-console.log( hasAllCodes("00110110", 2) ); // true
+console.log(hasAllCodes("00110110", 2)); // true

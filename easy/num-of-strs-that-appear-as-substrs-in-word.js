@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(1)
- * 
+ *
  * @param {string[]} patterns
  * @param {string} word
  * @return {number}
@@ -19,4 +19,4 @@ function numOfStrings(patterns, word) {
     return foundPatternsCount;
 }
 
-console.log( numOfStrings(["a", "abc", "bc", "d"], "abc") ); // 3
+console.log(numOfStrings(["a", "abc", "bc", "d"], "abc")); // 3

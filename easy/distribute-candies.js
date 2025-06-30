@@ -4,7 +4,7 @@
  * solution 1 -- Set obj
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} candyTypes
  * @return {number}
  */

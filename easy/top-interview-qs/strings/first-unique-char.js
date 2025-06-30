@@ -4,7 +4,7 @@
 //  * Solution 1
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {number}
 //  */
@@ -32,7 +32,7 @@
  * Solution 2 -- fastest submission
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {number}
  */
@@ -65,7 +65,7 @@ function firstUniqChar(str) {
 //  * Solution 3
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {number}
 //  */

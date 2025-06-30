@@ -4,7 +4,7 @@
  * solution 1
  * time: O(log m * n)
  * space: O(1)
- * 
+ *
  * @param {number} num
  * @return {number}
  */
@@ -16,7 +16,7 @@ function countEven(num) {
         let digitsSum = 0;
 
         while (n !== 0) {
-            digitsSum += (n % 10); // add current digit
+            digitsSum += n % 10; // add current digit
             n = Math.trunc(n / 10); // get next digit in num
         }
 

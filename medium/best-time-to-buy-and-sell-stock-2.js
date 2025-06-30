@@ -4,7 +4,7 @@
  * solution 1 -- two-pointers
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} prices
  * @return {number}
  */
@@ -24,5 +24,5 @@ function maxProfit(prices) {
     return total;
 }
 
-console.log( maxProfit([7, 1, 5, 3, 6, 4]) ); // (3 + 4) -> 7
-console.log( maxProfit([1, 2, 3, 4, 5]) ); // 4
+console.log(maxProfit([7, 1, 5, 3, 6, 4])); // (3 + 4) -> 7
+console.log(maxProfit([1, 2, 3, 4, 5])); // 4

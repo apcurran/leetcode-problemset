@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} dominoes
  * @return {string}
  */
@@ -25,13 +25,22 @@ function pushDominoes(dominoes) {
         const [dominoeIndex, dominoeDirection] = queue.shift();
 
         if (dominoeDirection === "L") {
-            if (dominoeIndex > 0 && dominoesList[dominoeIndex - 1] === standingStraightUpDominoe) {
+            if (
+                dominoeIndex > 0 &&
+                dominoesList[dominoeIndex - 1] === standingStraightUpDominoe
+            ) {
                 queue.push([dominoeIndex - 1, "L"]);
                 dominoesList[dominoeIndex - 1] = "L";
             }
         } else if (dominoeDirection === "R") {
-            if (dominoeIndex + 1 < dominoesList.length && dominoesList[dominoeIndex + 1] === standingStraightUpDominoe) {
-                if (dominoeIndex + 2 < dominoesList.length && dominoesList[dominoeIndex + 2] === "L") {
+            if (
+                dominoeIndex + 1 < dominoesList.length &&
+                dominoesList[dominoeIndex + 1] === standingStraightUpDominoe
+            ) {
+                if (
+                    dominoeIndex + 2 < dominoesList.length &&
+                    dominoesList[dominoeIndex + 2] === "L"
+                ) {
                     queue.shift(); // remove left leaning dominoe
                 } else {
                     queue.push([dominoeIndex + 1, "R"]);
@@ -44,4 +53,4 @@ function pushDominoes(dominoes) {
     return dominoesList.join("");
 }
 
-console.log( pushDominoes(".L.R...LR..L..") ); // "LL.RR.LLRRLL.."
+console.log(pushDominoes(".L.R...LR..L..")); // "LL.RR.LLRRLL.."

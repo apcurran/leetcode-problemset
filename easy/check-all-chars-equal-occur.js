@@ -4,7 +4,7 @@
  * solution 1 -- cache
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {boolean}
  */
@@ -18,10 +18,7 @@ function areOccurrencesEqual(str) {
     }
 
     // iterate cache and check if curr val is same as others
-    const idealCount = charCache
-        .entries()
-        .next()
-        .value[1];
+    const idealCount = charCache.entries().next().value[1];
 
     for (let occurCount of charCache.values()) {
         if (occurCount !== idealCount) return false;
@@ -30,5 +27,5 @@ function areOccurrencesEqual(str) {
     return true;
 }
 
-console.log( areOccurrencesEqual("abacbc") ); // true
-console.log( areOccurrencesEqual("aaabb") ); // false
+console.log(areOccurrencesEqual("abacbc")); // true
+console.log(areOccurrencesEqual("aaabb")); // false

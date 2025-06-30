@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -20,4 +20,4 @@ function sumOfMultiples(n) {
     return sum;
 }
 
-console.log( sumOfMultiples(7) ); // 3 + 5 + 6 + 7 -> 21
+console.log(sumOfMultiples(7)); // 3 + 5 + 6 + 7 -> 21

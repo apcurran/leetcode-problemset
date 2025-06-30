@@ -2,8 +2,8 @@
 
 // Definition for singly-linked list.
 function ListNode(val, next) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 const a = new ListNode(1);
@@ -21,7 +21,7 @@ d.next = e;
 //  * solution 1 -- iterative
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {ListNode}
 //  */
@@ -47,7 +47,7 @@ d.next = e;
 //  * solution 2 -- recursive
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {ListNode|null}
 //  */
@@ -70,7 +70,7 @@ d.next = e;
  * solution 3 -- recursive alternative
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {ListNode} head
  * @return {ListNode|null}
  */
@@ -79,9 +79,8 @@ function reverseList(head, previous = null) {
 
     const nextTemp = head.next;
     head.next = previous;
-    
+
     return reverseList(nextTemp, head);
 }
 
-console.log( reverseList(a) ); // 5 -> 4 -> 3 -> 2 -> 1
-
+console.log(reverseList(a)); // 5 -> 4 -> 3 -> 2 -> 1

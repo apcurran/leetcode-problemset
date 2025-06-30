@@ -4,7 +4,7 @@
  * solution 1
  * time: O(1) -- cache
  * space: O(n)
- * 
+ *
  * @param {Function} fn
  */
 function memoize(fn) {
@@ -29,4 +29,4 @@ const memoizedFn = memoize(function (a, b) {
 });
 memoizedFn(2, 3); // 5
 memoizedFn(2, 3); // 5
-console.log(callCount); // 1 
+console.log(callCount); // 1

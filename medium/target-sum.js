@@ -4,15 +4,15 @@
  * solution 1 -- recursion (brute force)
  * time: O(2^n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
 function findTargetSumWays(nums, target) {
     /**
-     * @param {number} i 
-     * @param {number} currSum 
+     * @param {number} i
+     * @param {number} currSum
      * @returns {number}
      */
     function waysToTarget(i, currSum) {

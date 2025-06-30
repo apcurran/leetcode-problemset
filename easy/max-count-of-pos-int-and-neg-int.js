@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -25,5 +25,5 @@ function maximumCount(nums) {
     return Math.max(negativeNumsCount, positiveNumsCount);
 }
 
-console.log( maximumCount([-2, -1, -1, 1, 2, 3]) ); // 3
-console.log( maximumCount([-3, -2, -1, 0, 0, 1, 2]) ); // 3
+console.log(maximumCount([-2, -1, -1, 1, 2, 3])); // 3
+console.log(maximumCount([-3, -2, -1, 0, 0, 1, 2])); // 3

@@ -4,7 +4,7 @@
  * solution 1 -- Set cache
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @return {number} count of "good" strings without repeated chars
  */
@@ -23,4 +23,4 @@ function countGoodSubstrings(str) {
     return goodStrsCount;
 }
 
-console.log( countGoodSubstrings("xyzzaz") );
+console.log(countGoodSubstrings("xyzzaz"));

@@ -6,7 +6,7 @@
  * focus purely on the sign of the number instead
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -29,8 +29,8 @@ function arraySign(nums) {
 }
 
 /**
- * 
- * @param {number} num 
+ *
+ * @param {number} num
  * @returns {-1|1|0}
  */
 function signFunc(num) {

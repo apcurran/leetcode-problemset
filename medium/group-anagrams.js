@@ -4,7 +4,7 @@
 //  * Solution 1
 //  * time: O(n * m * log m)
 //  * space: O(n + m)
-//  * 
+//  *
 //  * @param {string[]} strsArr
 //  * @return {string[][]}
 //  */
@@ -18,7 +18,7 @@
 //                                 .split("")
 //                                 .sort()
 //                                 .join("");
-        
+
 //         if (strsMap.has(alphaSortedStr)) {
 //             // Check if key exists in map, if so, then store original str in map as a val in an arr
 //             const strArrValues = strsMap.get(alphaSortedStr);
@@ -39,7 +39,7 @@
  * Solution 1
  * time: O(n * m * log m)
  * space: O(n + m)
- * 
+ *
  * @param {string[]} strsArr
  * @return {string[][]}
  */
@@ -61,8 +61,8 @@ function groupAnagrams(strs) {
     for (let [, anagramsGroupList] of anagramsCache) {
         results.push(anagramsGroupList);
     }
-    
+
     return results;
 }
 
-console.log( groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]) ); // [["bat"],["nat","tan"],["ate","eat","tea"]]
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])); // [["bat"],["nat","tan"],["ate","eat","tea"]]

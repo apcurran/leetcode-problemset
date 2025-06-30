@@ -4,7 +4,7 @@
  * solution 1 -- stack
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} path
  * @return {string}
  */
@@ -27,5 +27,5 @@ function simplifyPath(path) {
     return `/${revisedPath}`;
 }
 
-console.log( simplifyPath("/home//foo/") ); // "/home/foo"
-console.log( simplifyPath("/../") ); // "/"
+console.log(simplifyPath("/home//foo/")); // "/home/foo"
+console.log(simplifyPath("/../")); // "/"

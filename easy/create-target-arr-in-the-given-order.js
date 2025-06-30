@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2) -- due to splice possibly forcing shifting of elems' positions
  * space: O(n)
- * 
+ *
  * @param {number[]} numsArr
  * @param {number[]} indexArr
  * @return {number[]}
@@ -22,4 +22,4 @@ function createTargetArray(numsArr, indexArr) {
     return targetArr;
 }
 
-console.log( createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1]) ); // [0,4,1,3,2]
+console.log(createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1])); // [0,4,1,3,2]

@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^3)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[][]} grid
 //  * @return {number}
 //  */
@@ -35,7 +35,7 @@
  * solution 2 -- optimizations
  * time: O(n * (m * log m))
  * space: O(n)
- * 
+ *
  * @param {number[][]} grid
  * @return {number}
  */
@@ -64,11 +64,11 @@ function deleteGreatestValue(grid) {
     return maxResult;
 }
 
-console.log( deleteGreatestValue(
-    [
+console.log(
+    deleteGreatestValue([
         [1, 2, 4],
         [3, 3, 1],
-    ],
-) ); // 8
+    ]),
+); // 8
 
-console.log( deleteGreatestValue([[10]]) ); // 10
+console.log(deleteGreatestValue([[10]])); // 10

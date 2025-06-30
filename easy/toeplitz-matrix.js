@@ -4,7 +4,7 @@
  * solution 1
  * time: O(m * n)
  * space: O(1)
- * 
+ *
  * @param {number[][]} matrix
  * @return {boolean}
  */
@@ -23,16 +23,16 @@ function isToeplitzMatrix(matrix) {
     return true;
 }
 
-console.log( isToeplitzMatrix(
-    [
+console.log(
+    isToeplitzMatrix([
         [1, 2, 3, 4],
         [5, 1, 2, 3],
         [9, 5, 1, 2],
-    ],
-) ); // true
-console.log( isToeplitzMatrix(
-    [
+    ]),
+); // true
+console.log(
+    isToeplitzMatrix([
         [1, 2],
         [2, 2],
-    ],
-) ); // false
+    ]),
+); // false

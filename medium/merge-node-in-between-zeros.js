@@ -2,8 +2,8 @@
 
 // Definition for singly-linked list.
 function ListNode(val, next) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 const a = new ListNode(0);
@@ -27,7 +27,7 @@ g.next = h;
  * solution 1 -- slow, but correct
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {ListNode} head
  * @return {ListNode}
  */
@@ -65,4 +65,4 @@ function mergeNodes(head) {
     return sumNodes[1];
 }
 
-console.log( mergeNodes(a) ); // 4 -> 11
+console.log(mergeNodes(a)); // 4 -> 11

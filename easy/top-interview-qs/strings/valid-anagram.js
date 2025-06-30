@@ -39,6 +39,6 @@ function getCharMap(str) {
     return charMap;
 }
 
-console.log( isAnagram("anagram", "nagaram") ); // true
-console.log( isAnagram("rat", "car") ); // false
-console.log( isAnagram("a", "ab") ); // false
+console.log(isAnagram("anagram", "nagaram")); // true
+console.log(isAnagram("rat", "car")); // false
+console.log(isAnagram("a", "ab")); // false

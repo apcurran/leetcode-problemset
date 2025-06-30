@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @param {number} k
  * @return {string}
@@ -35,4 +35,4 @@ function removeDuplicates(str, k) {
     return result;
 }
 
-console.log( removeDuplicates("deeedbbcccbdaa", 3) ); // "aa"
+console.log(removeDuplicates("deeedbbcccbdaa", 3)); // "aa"

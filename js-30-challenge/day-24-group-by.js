@@ -4,11 +4,11 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {Function} fn
  * @return {object}
  */
-Array.prototype.groupBy = function(fn) {
+Array.prototype.groupBy = function (fn) {
     const currentArr = this;
     let result = {};
 
@@ -25,5 +25,4 @@ Array.prototype.groupBy = function(fn) {
     return result;
 };
 
-
-console.log( [1, 2, 3].groupBy(String) ); // {"1":[1],"2":[2],"3":[3]}
+console.log([1, 2, 3].groupBy(String)); // {"1":[1],"2":[2],"3":[3]}

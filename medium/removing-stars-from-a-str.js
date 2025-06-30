@@ -4,7 +4,7 @@
 //  * solution 1 -- recursion (stack overflow on large inputs)
 //  * time: O(n^2)
 //  * space: O(n^2)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {string}
 //  */
@@ -28,7 +28,7 @@
 //  * solution 2 -- iterative
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {string}
 //  */
@@ -50,7 +50,7 @@
  * solution 3 -- stack
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {string}
  */
@@ -69,5 +69,5 @@ function removeStars(str) {
     return stack.join("");
 }
 
-console.log( removeStars("leet**cod*e") ); // "lecoe"
-console.log( removeStars("erase*****") ); // ""
+console.log(removeStars("leet**cod*e")); // "lecoe"
+console.log(removeStars("erase*****")); // ""

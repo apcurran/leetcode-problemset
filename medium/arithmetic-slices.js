@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -31,6 +31,6 @@ function numberOfArithmeticSlices(nums) {
     return arithmeticSlicesCount;
 }
 
-console.log( numberOfArithmeticSlices([1, 2, 3, 4]) ); // 3
-console.log( numberOfArithmeticSlices([1]) ); // 0
-console.log( numberOfArithmeticSlices([1, 2, 3]) ); // 1
+console.log(numberOfArithmeticSlices([1, 2, 3, 4])); // 3
+console.log(numberOfArithmeticSlices([1])); // 0
+console.log(numberOfArithmeticSlices([1, 2, 3])); // 1

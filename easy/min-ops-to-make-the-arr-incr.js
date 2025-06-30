@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -35,4 +35,4 @@ function minOperations(nums) {
     return minOperationsForStrictlyIncreasing;
 }
 
-console.log( minOperations([1, 5, 2, 4, 1]) ); // 14
+console.log(minOperations([1, 5, 2, 4, 1])); // 14

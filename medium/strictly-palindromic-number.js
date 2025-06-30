@@ -6,7 +6,7 @@
  * m = base i of n number
  * time: O(n * m)
  * space: O(m)
- * 
+ *
  * @param {number} n
  * @return {boolean}
  */
@@ -27,7 +27,7 @@ function isStrictlyPalindromic(n) {
 }
 
 /**
- * @param {string} str 
+ * @param {string} str
  * @returns {boolean}
  */
 function isPalindrome(str) {

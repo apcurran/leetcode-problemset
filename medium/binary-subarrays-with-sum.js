@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} goal
 //  * @return {number}
@@ -33,7 +33,7 @@
 //  * solution 1 -- sliding window
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} goal
 //  * @return {number}
@@ -43,9 +43,9 @@
 // }
 
 // /**
-//  * 
-//  * @param {number[]} nums 
-//  * @param {number} goal 
+//  *
+//  * @param {number[]} nums
+//  * @param {number} goal
 //  * @returns {number}
 //  */
 // function helper(nums, goal) {
@@ -54,7 +54,7 @@
 //     let left = 0;
 //     let currentSum = 0;
 //     let totalSubarraysLessThanOrEqualToGoal = 0;
-    
+
 //     for (let right = 0; right < nums.length; right++) {
 //         currentSum += nums[right];
 
@@ -74,7 +74,7 @@
  * solution 1 -- hashmap
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number} goal
  * @return {number}
@@ -93,7 +93,9 @@ function numSubarraysWithSum(nums, goal) {
 
         // check hashmap
         if (prefixSumsFrequencies.has(currentSum - goal)) {
-            const prefixSumFrequency = prefixSumsFrequencies.get(currentSum - goal);
+            const prefixSumFrequency = prefixSumsFrequencies.get(
+                currentSum - goal,
+            );
             totalSubarraysEqualToGoal += prefixSumFrequency;
         }
 

@@ -6,7 +6,7 @@
 //  * y = nums[y] value
 //  * time: O(n^2 * max(log x, log y))
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -29,7 +29,7 @@
 // }
 
 // /**
-//  * @param {number} num 
+//  * @param {number} num
 //  * @returns {number}
 //  */
 // function sumNumDigits(num) {
@@ -49,22 +49,27 @@
  * y = nums[y] value
  * time: O(n * log n) -- sorting
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
 function maximumSum(nums) {
-    let digitSumPairs = nums.map((num) => {
-        const digitSum = sumNumDigits(num);
+    let digitSumPairs = nums
+        .map((num) => {
+            const digitSum = sumNumDigits(num);
 
-        return [digitSum, num];
-    }).sort(function sortByDigitSumThenNumValue([aDigitSum, aNum], [bDigitSum, bNum]) {
-        if (aDigitSum === bDigitSum) {
-            return aNum - bNum;
-        } else {
-            return aDigitSum - bDigitSum;
-        }
-    });    
+            return [digitSum, num];
+        })
+        .sort(function sortByDigitSumThenNumValue(
+            [aDigitSum, aNum],
+            [bDigitSum, bNum],
+        ) {
+            if (aDigitSum === bDigitSum) {
+                return aNum - bNum;
+            } else {
+                return aDigitSum - bDigitSum;
+            }
+        });
 
     let maxPairSum = -1;
 
@@ -84,7 +89,7 @@ function maximumSum(nums) {
 }
 
 /**
- * @param {number} num 
+ * @param {number} num
  * @returns {number}
  */
 function sumNumDigits(num) {

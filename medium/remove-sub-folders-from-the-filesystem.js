@@ -4,7 +4,7 @@
  * solution 1 -- hashset
  * time: O(n * l^2)
  * space: O(n + l)
- * 
+ *
  * @param {string[]} folders
  * @return {string[]}
  */

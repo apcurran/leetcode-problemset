@@ -4,7 +4,7 @@
 //  * solution 1 -- iterative
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number}
 //  */
@@ -22,7 +22,7 @@
  * solution 2 -- math formula (gauss-inspired)
  * time: O(1)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {number}
  */

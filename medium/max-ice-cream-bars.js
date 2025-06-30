@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * log n) -- sorting
  * space: O(1)
- * 
+ *
  * @param {number[]} costs
  * @param {number} coins
  * @return {number}
@@ -30,6 +30,6 @@ function maxIceCream(costs, coins) {
     return barCount;
 }
 
-console.log( maxIceCream([1, 3, 2, 4, 1], 7) ); // 4
-console.log( maxIceCream([10, 6, 8, 7, 7, 8], 5) ); // 0
-console.log( maxIceCream([1, 6, 3, 1, 2, 5], 20) ); // 6
+console.log(maxIceCream([1, 3, 2, 4, 1], 7)); // 4
+console.log(maxIceCream([10, 6, 8, 7, 7, 8], 5)); // 0
+console.log(maxIceCream([1, 6, 3, 1, 2, 5], 20)); // 6

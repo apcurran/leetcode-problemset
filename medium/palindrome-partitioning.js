@@ -4,7 +4,7 @@
  * solution 1 -- backtracking
  * time: O(n * 2^n)
  * space: O(n^2)
- * 
+ *
  * @param {string} str
  * @return {string[][]}
  */
@@ -13,7 +13,7 @@ function partition(str) {
     let currentPath = [];
 
     /**
-     * @param {number} start 
+     * @param {number} start
      * @returns {void}
      */
     function backtrack(start) {
@@ -41,7 +41,7 @@ function partition(str) {
 }
 
 /**
- * @param {string} str 
+ * @param {string} str
  * @returns {boolean}
  */
 function isPalindrome(str) {
@@ -63,4 +63,4 @@ function isPalindrome(str) {
     return true;
 }
 
-console.log(partition("aab")); // [["a","a","b"], ["aa","b"]] 
+console.log(partition("aab")); // [["a","a","b"], ["aa","b"]]

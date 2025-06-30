@@ -2,9 +2,9 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
@@ -13,9 +13,9 @@ function TreeNode(val, left, right) {
  * m = num of nodes for root2
  * time: O(n + m)
  * space: O(n + m)
- * 
- * @param {TreeNode} root1 
- * @param {TreeNode} root2 
+ *
+ * @param {TreeNode} root1
+ * @param {TreeNode} root2
  * @returns {TreeNode|null}
  */
 function mergeTrees(root1, root2) {

@@ -4,7 +4,7 @@
  * solution 1 -- simulation
  * time: O(m * n)
  * space: O(m * n) -- if counting result array
- * 
+ *
  * @param {number[]} original
  * @param {number} m
  * @param {number} n

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {string} s
  * @return {number}
  */
@@ -20,7 +20,7 @@ function countSubstrings(s) {
             totalPalindromes++;
             left--;
             right++;
-        }        
+        }
 
         // get even-length palindromes
         left = i;
@@ -30,7 +30,7 @@ function countSubstrings(s) {
             totalPalindromes++;
             left--;
             right++;
-        }        
+        }
     }
 
     return totalPalindromes;

@@ -4,7 +4,7 @@
 //  * Solution 1
 //  * Time: O(m * n)
 //  * Space: O(m * n)
-//  * 
+//  *
 //  * @param {number[][]} matrix
 //  * @param {number} target
 //  * @return {boolean}
@@ -19,7 +19,7 @@
 //  * solution 2 -- Passes tests but not efficient enough for problem description
 //  * time: O(m * log n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[][]} matrix
 //  * @param {number} target
 //  * @return {boolean}
@@ -35,8 +35,8 @@
 // }
 
 // /**
-//  * @param {number[]} arr 
-//  * @param {number} target 
+//  * @param {number[]} arr
+//  * @param {number} target
 //  * @returns {boolean}
 //  */
 // function binSearch(arr, target) {
@@ -64,7 +64,7 @@
  * solution 2 -- double binary search
  * time: O(log m * log n)
  * space: O(1)
- * 
+ *
  * @param {number[][]} matrix
  * @param {number} target
  * @return {boolean}
@@ -109,5 +109,23 @@ function searchMatrix(matrix, target) {
     return false;
 }
 
-console.log( searchMatrix([[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], 3) ); // true
-console.log( searchMatrix([[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], 13) ); // false
+console.log(
+    searchMatrix(
+        [
+            [1, 3, 5, 7],
+            [10, 11, 16, 20],
+            [23, 30, 34, 60],
+        ],
+        3,
+    ),
+); // true
+console.log(
+    searchMatrix(
+        [
+            [1, 3, 5, 7],
+            [10, 11, 16, 20],
+            [23, 30, 34, 60],
+        ],
+        13,
+    ),
+); // false

@@ -4,7 +4,7 @@
 //  * solution 1 -- two pointers
 //  * time: O((n * log n) + (m * log m)) -- sorting arrs
 //  * space: O(n + m) -- sorting arrs
-//  * 
+//  *
 //  * @param {number[]} nums1
 //  * @param {number[]} nums2
 //  * @return {number[]}
@@ -38,8 +38,8 @@
 // console.log(intersect([4,9,5], [9,4,9,8,4])); // [4, 9]
 
 // /**
-//  * @param {number} numA 
-//  * @param {number} numB 
+//  * @param {number} numA
+//  * @param {number} numB
 //  * @returns {number}
 //  */
 // function sortAsc(numA, numB) {
@@ -50,7 +50,7 @@
  * solution 2 -- hashmap
  * time: O(n + m)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number[]}

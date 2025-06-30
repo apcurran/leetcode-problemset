@@ -10,7 +10,7 @@ class KthLargest {
         this.nums = nums;
     }
 
-    /** 
+    /**
      * @param {number} val
      * @return {number}
      */
@@ -26,7 +26,7 @@ class KthLargest {
     }
 }
 
-/** 
+/**
  * Your KthLargest object will be instantiated and called as such:
  * var obj = new KthLargest(k, nums)
  * var param_1 = obj.add(val)

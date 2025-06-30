@@ -4,7 +4,7 @@
  * solution 1
  * time: O(m * n)
  * space: O(m * n)
- * 
+ *
  * @param {number} m
  * @param {number} n
  * @param {number[][]} indices
@@ -50,8 +50,13 @@ function oddCells(m, n, indices) {
             }
         }
     }
-    
+
     return oddValueCellsCount;
 }
 
-console.log(oddCells(2, 3, [[0, 1], [1, 1]])); // 6
+console.log(
+    oddCells(2, 3, [
+        [0, 1],
+        [1, 1],
+    ]),
+); // 6

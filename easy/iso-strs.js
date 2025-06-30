@@ -4,7 +4,7 @@
 //  * solution 1 -- map cache
 //  * time: O(n * m)
 //  * space: O(n * m)
-//  * 
+//  *
 //  * @param {string} s
 //  * @param {string} t
 //  * @return {boolean}
@@ -18,7 +18,7 @@
 //     let tCache = new Map();
 
 //     for (let i = 0; i < s.length; i++) {
-//         const sChar = s[i]; 
+//         const sChar = s[i];
 //         const tChar = t[i];
 
 //         // add s and t chars/indices to maps
@@ -57,7 +57,7 @@
  * solution 2 -- map cache
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @return {boolean}
@@ -75,8 +75,10 @@ function isIsomorphic(s, t) {
 
         // chars in s -> t have to map in both directions (t -> s)
         // otherwise, they are not isomorphic strings
-        if (sMap.has(sChar) && sMap.get(sChar) !== tChar ||
-            tMap.has(tChar) && tMap.get(tChar) !== sChar) {
+        if (
+            (sMap.has(sChar) && sMap.get(sChar) !== tChar) ||
+            (tMap.has(tChar) && tMap.get(tChar) !== sChar)
+        ) {
             return false;
         }
 

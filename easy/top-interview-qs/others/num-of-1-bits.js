@@ -7,4 +7,4 @@ function hammingWeight(n) {
     console.log(just1s);
 }
 
-console.log( hammingWeight(00000000000000000000000000001011) ); // 3
+console.log(hammingWeight(00000000000000000000000000001011)); // 3

@@ -4,13 +4,13 @@
  * solution 1 -- for loop
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number} n
  * @return {number[]}
  */
 function sumZero(n) {
     let resArr = [];
-    
+
     if (n % 2 !== 0) {
         // if odd, append 0
         resArr.push(0);
@@ -23,4 +23,4 @@ function sumZero(n) {
     return resArr;
 }
 
-console.log( sumZero(5) );
+console.log(sumZero(5));

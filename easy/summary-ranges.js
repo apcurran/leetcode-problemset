@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {string[]}
  */
@@ -31,4 +31,4 @@ function summaryRanges(nums) {
     return ranges;
 }
 
-console.log( summaryRanges([0, 1, 2, 4, 5, 7]) ); // ["0->2","4->5","7"]
+console.log(summaryRanges([0, 1, 2, 4, 5, 7])); // ["0->2","4->5","7"]

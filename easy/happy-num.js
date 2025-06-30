@@ -5,7 +5,7 @@
  * n = num of digits in n
  * time: O(n^2)
  * space: O(n) -- due to set
- * 
+ *
  * @param {number} n
  * @return {boolean}
  */
@@ -38,5 +38,5 @@ function sumOfSquares(num) {
     return resSum;
 }
 
-console.log( isHappy(19) ); // true
-console.log( isHappy(2) ); // false
+console.log(isHappy(19)); // true
+console.log(isHappy(2)); // false

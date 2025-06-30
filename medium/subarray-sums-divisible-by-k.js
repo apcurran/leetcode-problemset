@@ -4,7 +4,7 @@
  * solution 1 -- TLE
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -22,7 +22,6 @@ function subarraysDivByK(nums, k) {
                 divisibleByKCount++;
             }
         }
-
     }
 
     return divisibleByKCount;

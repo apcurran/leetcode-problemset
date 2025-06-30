@@ -6,7 +6,7 @@
 //  * k = chunk length
 //  * time: O(n * k)
 //  * space: O(n + k)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number[]}
@@ -30,7 +30,7 @@
 // }
 
 // /**
-//  * @param {number[]} arr 
+//  * @param {number[]} arr
 //  * @returns {boolean}
 //  */
 // function isConsecutive(arr) {
@@ -55,7 +55,7 @@
  * k = chunk length
  * time: O(n)
  * space: O(n) -- including results array
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}

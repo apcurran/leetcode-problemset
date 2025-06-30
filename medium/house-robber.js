@@ -4,16 +4,16 @@
 //  * solution 1 -- recursion top-down (TLE)
 //  * time: O(2^n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
 // function rob(nums) {
-//     return getRobberyTotal(nums, nums.length - 1);    
+//     return getRobberyTotal(nums, nums.length - 1);
 // }
 
 // /**
-//  * @param {number[]} nums 
+//  * @param {number[]} nums
 //  * @param {number} i
 //  * @returns {number}
 //  */
@@ -23,23 +23,23 @@
 //     const totalOfCurrentPlusHouseBeforeLastLoot = nums[i] + getRobberyTotal(nums, i - 2);
 //     const totalOfPreviousHouseLoot = getRobberyTotal(nums, i - 1);
 
-//     return Math.max(totalOfCurrentPlusHouseBeforeLastLoot, totalOfPreviousHouseLoot); 
+//     return Math.max(totalOfCurrentPlusHouseBeforeLastLoot, totalOfPreviousHouseLoot);
 // }
 
 // /**
 //  * solution 2 -- recursion top-down with caching
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
 // function rob(nums) {
-//     return getRobberyTotal(nums, nums.length - 1);    
+//     return getRobberyTotal(nums, nums.length - 1);
 // }
 
 // /**
-//  * @param {number[]} nums 
+//  * @param {number[]} nums
 //  * @param {number} i
 //  * @returns {number}
 //  */
@@ -64,7 +64,7 @@
 //  * solution 3 -- DP
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -88,7 +88,7 @@
  * solution 4 -- DP
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -106,4 +106,4 @@ function rob(nums) {
     return rob2;
 }
 
-console.log( rob([1, 2, 3, 1]) ); // 4
+console.log(rob([1, 2, 3, 1])); // 4

@@ -4,7 +4,7 @@
 //  * solution 1 -- iterative
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -22,8 +22,8 @@
 // }
 
 // /**
-//  * 
-//  * @param {number[]} numsArr 
+//  *
+//  * @param {number[]} numsArr
 //  * @returns {number}
 //  */
 // function sumArr(numsArr) {
@@ -40,14 +40,14 @@
  * solution 1 -- iterative (optimized)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
 function pivotIndex(nums) {
     const totalArrSum = nums.reduce((sum, curr) => sum + curr, 0);
     let leftSum = 0;
-    
+
     for (let i = 0; i < nums.length; i++) {
         const currNum = nums[i];
         const rightSum = totalArrSum - leftSum - currNum;
@@ -60,6 +60,6 @@ function pivotIndex(nums) {
     return -1;
 }
 
-console.log( pivotIndex([1, 7, 3, 6, 5, 6]) ); // 3
-console.log( pivotIndex([1, 2, 3]) ); // -1
-console.log( pivotIndex([2, 1, -1]) ); // 0
+console.log(pivotIndex([1, 7, 3, 6, 5, 6])); // 3
+console.log(pivotIndex([1, 2, 3])); // -1
+console.log(pivotIndex([2, 1, -1])); // 0

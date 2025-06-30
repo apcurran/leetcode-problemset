@@ -4,7 +4,7 @@
 //  * solution 1 -- simulation
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} tickets
 //  * @param {number} k
 //  * @return {number}
@@ -35,7 +35,7 @@
  * solution 2
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} tickets
  * @param {number} k
  * @return {number}

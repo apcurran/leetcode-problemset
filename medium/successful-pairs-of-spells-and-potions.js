@@ -6,7 +6,7 @@
 //  * m = potions length
 //  * time: O(n * m)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} spells
 //  * @param {number[]} potions
 //  * @param {number} success
@@ -38,7 +38,7 @@
 //  * m = potions length
 //  * time: O((n * m) + (m * log m))
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} spells
 //  * @param {number[]} potions
 //  * @param {number} success
@@ -78,7 +78,7 @@
  * m = potions length
  * time: O((n * log m) + (m * log m))
  * space: O(n)
- * 
+ *
  * @param {number[]} spells
  * @param {number[]} potions
  * @param {number} success
@@ -87,7 +87,7 @@
 function successfulPairs(spells, potions, success) {
     potions.sort((a, b) => a - b);
     let results = [];
-    
+
     for (let spell of spells) {
         // bin search algo
         let left = 0;
@@ -95,7 +95,7 @@ function successfulPairs(spells, potions, success) {
         let index = potions.length; // furthest left potion that works
 
         while (left <= right) {
-            const middle = left + ( Math.floor(right - left / 2) );
+            const middle = left + Math.floor(right - left / 2);
 
             if (spell * potions[middle] >= success) {
                 right = middle - 1;
@@ -112,4 +112,4 @@ function successfulPairs(spells, potions, success) {
     return results;
 }
 
-console.log( successfulPairs([5, 1, 3], [1, 2, 3, 4, 5], 7) ); // [4,0,3]
+console.log(successfulPairs([5, 1, 3], [1, 2, 3, 4, 5], 7)); // [4,0,3]

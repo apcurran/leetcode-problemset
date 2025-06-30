@@ -6,7 +6,7 @@
  * m = rows
  * time: O(n * m)
  * space: O(n * m)
- * 
+ *
  * @param {string} range
  * @return {string[]}
  */
@@ -29,4 +29,4 @@ function cellsInRange(range) {
     return rangeCells;
 }
 
-console.log( cellsInRange("K1:L2") ); // ["K1","K2","L1","L2"]
+console.log(cellsInRange("K1:L2")); // ["K1","K2","L1","L2"]

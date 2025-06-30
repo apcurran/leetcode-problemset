@@ -4,7 +4,7 @@
 //  * solution 1 -- recursion
 //  * time: O(n^2)
 //  * space: O(n^2)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -29,7 +29,7 @@
  * solution 2 -- iterative
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -52,4 +52,4 @@ function triangularSum(nums) {
     return nums[0];
 }
 
-console.log( triangularSum([1, 2, 3, 4, 5]) ); // 8
+console.log(triangularSum([1, 2, 3, 4, 5])); // 8

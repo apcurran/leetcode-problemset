@@ -4,7 +4,7 @@ class NumArray {
     /**
      * time: O(n)
      * space: O(n)
-     * 
+     *
      * @param {number[]} nums
      */
     constructor(nums) {
@@ -17,13 +17,13 @@ class NumArray {
             this.prefix.push(currentValue);
         }
     }
-    
-    /** 
+
+    /**
      * solution 1 -- prefix sums are pre-computed in constructor
      * time: O(1)
      * space: O(1)
-     * 
-     * @param {number} left 
+     *
+     * @param {number} left
      * @param {number} right
      * @return {number}
      */
@@ -35,7 +35,6 @@ class NumArray {
     }
 }
 
- 
 // Your NumArray object will be instantiated and called as such:
 const numArray = new NumArray([-2, 0, 3, -5, 2, -1]);
 numArray.sumRange(0, 2); // return (-2) + 0 + 3 = 1

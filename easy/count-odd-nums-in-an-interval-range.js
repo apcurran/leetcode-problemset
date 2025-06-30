@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} low
 //  * @param {number} high
 //  * @return {number}
@@ -23,7 +23,7 @@
  * solution 2
  * time: O(1)
  * space: O(1)
- * 
+ *
  * @param {number} low
  * @param {number} high
  * @return {number}
@@ -36,5 +36,5 @@ function countOdds(low, high) {
     return (high - low) / 2 + lowAndHighOddsAdditionalValue;
 }
 
-console.log( countOdds(3, 7) ); // [3, 5, 7] -> 3
-console.log( countOdds(8, 10) ); // [9] -> 1
+console.log(countOdds(3, 7)); // [3, 5, 7] -> 3
+console.log(countOdds(8, 10)); // [9] -> 1

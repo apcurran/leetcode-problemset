@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * log n) -- array.sort() call
  * space: O(n) -- map and built-in sort use linear space
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */

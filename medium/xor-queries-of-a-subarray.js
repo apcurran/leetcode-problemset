@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(q * a)
 //  * space: O(a) -- including results array
-//  * 
+//  *
 //  * @param {number[]} arr
 //  * @param {number[][]} queries
 //  * @return {number[]}
@@ -33,7 +33,7 @@
  * solution 2 -- prefix XOR
  * time: O(a + q)
  * space: O(a) -- including results array
- * 
+ *
  * @param {number[]} arr
  * @param {number[][]} queries
  * @return {number[]}
@@ -56,7 +56,27 @@ function xorQueries(arr, queries) {
     return results;
 }
 
-console.log(xorQueries([1, 3, 4, 8], [[0, 1], [1, 2], [0, 3], [3, 3]]));
+console.log(
+    xorQueries(
+        [1, 3, 4, 8],
+        [
+            [0, 1],
+            [1, 2],
+            [0, 3],
+            [3, 3],
+        ],
+    ),
+);
 // [2,7,14,8]
-console.log(xorQueries([4, 8, 2, 10], [[2, 3], [1, 3], [0, 0], [0, 3]]));
+console.log(
+    xorQueries(
+        [4, 8, 2, 10],
+        [
+            [2, 3],
+            [1, 3],
+            [0, 0],
+            [0, 3],
+        ],
+    ),
+);
 // [8,0,4,4]

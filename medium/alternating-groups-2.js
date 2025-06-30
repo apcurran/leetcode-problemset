@@ -4,7 +4,7 @@
  * solution 1 -- sliding window
  * time: O(n + k)
  * space: O(1)
- * 
+ *
  * @param {number[]} colors
  * @param {number} k
  * @return {number}

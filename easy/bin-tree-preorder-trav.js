@@ -13,7 +13,7 @@
  * solution 1 -- iterative preorder traversal
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number[]}
  */

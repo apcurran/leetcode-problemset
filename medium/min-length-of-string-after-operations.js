@@ -5,7 +5,7 @@
  * n = s length
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} s
  * @return {number}
  */

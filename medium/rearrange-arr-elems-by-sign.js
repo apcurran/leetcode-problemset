@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
@@ -26,7 +26,7 @@
  * solution 2 -- pre-filled array
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
@@ -52,5 +52,5 @@ function rearrangeArray(nums) {
     return results;
 }
 
-console.log( rearrangeArray([3, 1, -2, -5, 2, -4]) ); // [3, -2, 1, -5, 2, -4]
-console.log( rearrangeArray([-1, 1]) ); // [1, -1]
+console.log(rearrangeArray([3, 1, -2, -5, 2, -4])); // [3, -2, 1, -5, 2, -4]
+console.log(rearrangeArray([-1, 1])); // [1, -1]

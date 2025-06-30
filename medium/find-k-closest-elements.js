@@ -4,7 +4,7 @@
  * solution 1 -- sliding window
  * time: O(n)
  * space: O(1) -- not including results
- * 
+ *
  * @param {number[]} arr
  * @param {number} k
  * @param {number} x

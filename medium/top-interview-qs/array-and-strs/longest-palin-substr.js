@@ -5,7 +5,7 @@
 //  * m = subStr len
 //  * time: O(n^3)
 //  * space: O(n + m)
-//  * 
+//  *
 //  * @param {string} s
 //  * @return {string}
 //  */
@@ -33,8 +33,8 @@
 
 // /**
 //  * solution 1 -- two-pointer approach
-//  * 
-//  * @param {string} str 
+//  *
+//  * @param {string} str
 //  * @returns {boolean}
 //  */
 // function isPalindrome(str) {
@@ -55,7 +55,7 @@
  * solution 2
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {string} s
  * @return {string}
  */
@@ -75,8 +75,8 @@ function longestPalindrome(s) {
     return longest;
 
     /**
-     * @param {number} left 
-     * @param {number} right 
+     * @param {number} left
+     * @param {number} right
      * @returns {void}
      */
     function isPalin(left, right) {
@@ -94,6 +94,5 @@ function longestPalindrome(s) {
         }
     }
 }
-
 
 console.log(longestPalindrome("babad")); // "bab"

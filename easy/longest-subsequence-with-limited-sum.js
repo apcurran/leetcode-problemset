@@ -4,7 +4,7 @@
  * solution 1
  * time: O((m * n) + (n * log n))
  * space: O(m)
- * 
+ *
  * @param {number[]} nums
  * @param {number[]} queries
  * @return {number[]}
@@ -20,7 +20,7 @@ function answerQueries(nums, queries) {
 
         for (let num of nums) {
             if (query < num) break;
-            
+
             count++;
             query -= num;
         }
@@ -31,4 +31,4 @@ function answerQueries(nums, queries) {
     return longestSubsequences;
 }
 
-console.log( answerQueries([4, 5, 2, 1], [3, 10, 21]) ); // [2, 3, 4]
+console.log(answerQueries([4, 5, 2, 1], [3, 10, 21])); // [2, 3, 4]

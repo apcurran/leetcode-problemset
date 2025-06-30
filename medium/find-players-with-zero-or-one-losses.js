@@ -4,7 +4,7 @@
  * solution 1 -- hashset
  * time: O(n * log n) -- sort()
  * space: O(n)
- * 
+ *
  * @param {number[][]} matches
  * @return {number[][]}
  */
@@ -41,14 +41,26 @@ function findWinners(matches) {
 }
 
 /**
- * @param {number} a 
- * @param {number} b 
+ * @param {number} a
+ * @param {number} b
  * @returns {number}
  */
 function sortAsc(a, b) {
     return a - b;
 }
 
-console.log(findWinners([[1, 3], [2, 3], [3, 6], [5, 6], [5, 7], [4, 5], [4, 8], [4, 9], [10, 4], [10, 9]]));
+console.log(
+    findWinners([
+        [1, 3],
+        [2, 3],
+        [3, 6],
+        [5, 6],
+        [5, 7],
+        [4, 5],
+        [4, 8],
+        [4, 9],
+        [10, 4],
+        [10, 9],
+    ]),
+);
 // [[1,2,10], [4,5,7,8]]
-

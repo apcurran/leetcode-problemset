@@ -4,7 +4,7 @@
  * solution 1 -- two-pointer technique
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string[]} str
  * @return {void}
  */
@@ -25,5 +25,5 @@ function reverseString(str) {
     }
 }
 
-console.log( reverseString(["h", "e", "l", "l", "o"]) ); // ["o","l","l","e","h"]
-console.log( reverseString(["H", "a", "n", "n", "a", "h"]) ); // ["h","a","n","n","a","H"]
+console.log(reverseString(["h", "e", "l", "l", "o"])); // ["o","l","l","e","h"]
+console.log(reverseString(["H", "a", "n", "n", "a", "h"])); // ["h","a","n","n","a","H"]

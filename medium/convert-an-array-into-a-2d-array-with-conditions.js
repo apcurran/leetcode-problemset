@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[][]}
 //  */
@@ -31,7 +31,7 @@
  * solution 2 -- hashmap
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[][]}
  */

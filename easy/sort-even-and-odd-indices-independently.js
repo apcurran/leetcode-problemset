@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2) -- due to array.shift() calls inside of for loop
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
@@ -41,4 +41,4 @@ function sortEvenOdd(nums) {
     return resArr;
 }
 
-console.log( sortEvenOdd([4, 1, 2, 3]) ); // [2, 3, 4, 1]
+console.log(sortEvenOdd([4, 1, 2, 3])); // [2, 3, 4, 1]

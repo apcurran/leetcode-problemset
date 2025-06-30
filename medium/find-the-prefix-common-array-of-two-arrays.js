@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} A
 //  * @param {number[]} B
 //  * @return {number[]}
@@ -36,7 +36,7 @@
  * solution 2 -- hashset
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} A
  * @param {number[]} B
  * @return {number[]}
@@ -62,9 +62,7 @@ function findThePrefixCommonArray(A, B) {
             similarNumsCount++;
         }
 
-        seenNums
-            .add(aNum)
-            .add(bNum);
+        seenNums.add(aNum).add(bNum);
 
         results.push(similarNumsCount);
     }

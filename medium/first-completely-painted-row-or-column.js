@@ -4,7 +4,7 @@
  * solution 1 -- hashmap
  * time: O(n * m)
  * time: O(n + m)
- * 
+ *
  * @param {number[]} arr
  * @param {number[][]} mat
  * @return {number}
@@ -29,9 +29,7 @@ function firstCompleteIndex(arr, mat) {
         colCount[col]++; // increment count at index - col
 
         // if fully filled row OR col, return index
-        if (colCount[col] === ROWS ||
-            rowCount[row] === COLS
-        ) {
+        if (colCount[col] === ROWS || rowCount[row] === COLS) {
             return i;
         }
     }
@@ -39,4 +37,12 @@ function firstCompleteIndex(arr, mat) {
     return -1;
 }
 
-console.log(firstCompleteIndex([1, 3, 4, 2], [[1, 4], [2, 3]])); // 2
+console.log(
+    firstCompleteIndex(
+        [1, 3, 4, 2],
+        [
+            [1, 4],
+            [2, 3],
+        ],
+    ),
+); // 2

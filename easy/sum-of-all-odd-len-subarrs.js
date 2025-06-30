@@ -4,7 +4,7 @@
  * solution 1 -- iterative
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {number[]} arr
  * @return {number}
  */
@@ -25,7 +25,10 @@ function sumOddLengthSubarrays(arr) {
             if (subArr.length % 2 !== 0) {
                 // odd
                 // add to resAnswerSum var
-                const subArrSum = subArr.reduce((sum, currNum) => sum + currNum, 0);
+                const subArrSum = subArr.reduce(
+                    (sum, currNum) => sum + currNum,
+                    0,
+                );
                 resSum += subArrSum;
             }
         }
@@ -34,4 +37,4 @@ function sumOddLengthSubarrays(arr) {
     return resSum;
 }
 
-console.log( sumOddLengthSubarrays([1, 4, 2, 5, 3]) ); // 58
+console.log(sumOddLengthSubarrays([1, 4, 2, 5, 3])); // 58

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1) -- limited to 26 lowercase letters
- * 
+ *
  * @param {string} str
  * @return {number[]}
  */
@@ -19,10 +19,10 @@ function partitionLabels(str) {
     let chunkSize = 0;
     let endIndex = 0;
     let resultSizes = [];
-    
+
     for (let i = 0; i < str.length; i++) {
         chunkSize++;
-        
+
         const char = str[i];
         const charLastIndex = charsIndicesCache.get(char);
 
@@ -42,4 +42,4 @@ function partitionLabels(str) {
     return resultSizes;
 }
 
-console.log( partitionLabels("ababcbacadefegdehijhklij") ); // [9,7,8]
+console.log(partitionLabels("ababcbacadefegdehijhklij")); // [9,7,8]

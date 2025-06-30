@@ -15,7 +15,9 @@ function minTimeToType(word) {
     let currLetterPointer = "a";
 
     for (let letter of word) {
-        const diffSeconds = Math.abs(currLetterPointer.charCodeAt(0) - letter.charCodeAt(0));
+        const diffSeconds = Math.abs(
+            currLetterPointer.charCodeAt(0) - letter.charCodeAt(0),
+        );
 
         if (diffSeconds > ALPHA_HALF_NUM) {
             minTotalTime += ALPHA_END_NUM - diffSeconds + TIME_TO_TYPE_LETTER;
@@ -30,5 +32,5 @@ function minTimeToType(word) {
     return minTotalTime;
 }
 
-console.log( minTimeToType("abc") ); // 5
-console.log( minTimeToType("bza") ); // 7
+console.log(minTimeToType("abc")); // 5
+console.log(minTimeToType("bza")); // 7

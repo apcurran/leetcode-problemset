@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} numStr
 //  * @return {string}
 //  */
@@ -36,7 +36,7 @@
  * solution 2 -- regex
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} numStr
  * @return {string}
  */
@@ -44,4 +44,4 @@ function removeTrailingZeros(numStr) {
     return numStr.replace(/0+$/, "");
 }
 
-console.log( removeTrailingZeros("51230100") ); // "512301"
+console.log(removeTrailingZeros("51230100")); // "512301"

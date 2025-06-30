@@ -8,7 +8,7 @@ function TreeNode(val, children) {
 
 // /**
 //  * solution 1 -- iterative
-//  * 
+//  *
 //  * @param {TreeNode|null} root
 //  * @return {number[]}
 //  */
@@ -34,7 +34,7 @@ function TreeNode(val, children) {
 
 /**
  * solution 2 -- recursive
- * 
+ *
  * @param {TreeNode|null} root
  * @return {number[]}
  */
@@ -45,9 +45,9 @@ function preorder(root) {
 }
 
 /**
- * 
- * @param {TreeNode|null} root 
- * @param {number[]} results 
+ *
+ * @param {TreeNode|null} root
+ * @param {number[]} results
  */
 function recurse(root, results) {
     if (root === null) return results;

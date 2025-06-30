@@ -4,7 +4,7 @@
  * solution 1 -- Euclidean Algorithm
  * time: O(n + log(b))
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -23,8 +23,8 @@ function findGCD(nums) {
 /**
  * time: O(n)
  * space: O(1)
- * 
- * @param {number[]} arr 
+ *
+ * @param {number[]} arr
  * @returns {number[]}
  */
 function getSmallestAndLargestNums(arr) {
@@ -44,5 +44,5 @@ function getSmallestAndLargestNums(arr) {
     return [smallestNum, largestNum];
 }
 
-console.log( findGCD([2, 5, 6, 9, 10]) ); // 2
-console.log( findGCD([7, 5, 6, 8, 3]) ); // 1
+console.log(findGCD([2, 5, 6, 9, 10])); // 2
+console.log(findGCD([7, 5, 6, 8, 3])); // 1

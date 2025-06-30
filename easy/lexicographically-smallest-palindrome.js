@@ -4,7 +4,7 @@
 //  * solution 1 -- two pointers
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {string}
 //  */
@@ -13,7 +13,7 @@
 //     let palindromeLettersLeft = [];
 //     let left = 0;
 //     let right = str.length - 1;
-    
+
 //     while (left < right) {
 //         const leftChar = str[left];
 //         const rightChar = str[right];
@@ -47,7 +47,7 @@
  * solution 2 -- optimized
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {string}
  */
@@ -56,8 +56,8 @@ function makeSmallestPalindrome(str) {
     let result = "";
 
     for (let i = 0; i < n; i++) {
-        const currentCharCode = (str[i]).charCodeAt(0);
-        const mirroredCharCode = (str[n - i - 1]).charCodeAt(0);
+        const currentCharCode = str[i].charCodeAt(0);
+        const mirroredCharCode = str[n - i - 1].charCodeAt(0);
         const smallerCharCode = Math.min(currentCharCode, mirroredCharCode);
         const smallerChar = String.fromCharCode(smallerCharCode);
         result += smallerChar;
@@ -66,5 +66,4 @@ function makeSmallestPalindrome(str) {
     return result;
 }
 
-console.log( makeSmallestPalindrome("egcfe") ); // "efcfe"
-
+console.log(makeSmallestPalindrome("egcfe")); // "efcfe"

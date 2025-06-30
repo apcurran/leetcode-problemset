@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {boolean}
  */
@@ -33,12 +33,11 @@ function isValid(str) {
     return stack.length === 0;
 }
 
-
 // /**
 //  * solution 2 -- alt stack version
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {boolean}
 //  */

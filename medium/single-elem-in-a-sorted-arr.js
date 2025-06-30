@@ -4,7 +4,7 @@
  * solution 1 -- binary search
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -19,17 +19,19 @@ function singleNonDuplicate(nums) {
         const rightNeighbor = nums[middle + 1];
 
         // if no left neighbor (first elem) OR current elem is diff from left neighbor
-        if (middle - 1 < 0 ||
-            currentElement !== leftNeighbor) {
+        if (middle - 1 < 0 || currentElement !== leftNeighbor) {
             // if no right neighbor (end of the list) OR current elem is diff from right neighbor
-            if (middle + 1 === nums.length ||
-                currentElement !== rightNeighbor) {
+            if (
+                middle + 1 === nums.length ||
+                currentElement !== rightNeighbor
+            ) {
                 return nums[middle];
             }
         }
 
         // otherwise this elem is a duplicate
-        const sizeOfLeftHalf = leftNeighbor === currentElement ? middle - 1 : middle;
+        const sizeOfLeftHalf =
+            leftNeighbor === currentElement ? middle - 1 : middle;
 
         if (sizeOfLeftHalf % 2 === 1) {
             // left half is odd length,

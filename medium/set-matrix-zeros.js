@@ -4,7 +4,7 @@
  * solution 1 -- hashset
  * time: O(m * n)
  * space: O(m + n)
- * 
+ *
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
@@ -32,5 +32,11 @@ function setZeroes(matrix) {
     }
 }
 
-console.log(setZeroes([[1, 1, 1], [1, 0, 1], [1, 1, 1]]));
+console.log(
+    setZeroes([
+        [1, 1, 1],
+        [1, 0, 1],
+        [1, 1, 1],
+    ]),
+);
 // [[1,0,1], [0,0,0], [1,0,1]]

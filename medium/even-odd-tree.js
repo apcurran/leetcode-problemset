@@ -2,16 +2,16 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- BFS
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {boolean}
  */
@@ -29,8 +29,10 @@ function isEvenOddTree(root) {
             // setup for conditional logic
             const isValueEven = currentNode.val % 2 === 0;
             const isValueOdd = currentNode.val % 2 === 1;
-            const isValueOrderNotIncreasing = currentNode.val <= previousNodeValue;
-            const isValueOrderNotDecreasing = currentNode.val >= previousNodeValue;
+            const isValueOrderNotIncreasing =
+                currentNode.val <= previousNodeValue;
+            const isValueOrderNotDecreasing =
+                currentNode.val >= previousNodeValue;
 
             if (isLevelEven && (isValueEven || isValueOrderNotIncreasing)) {
                 return false;

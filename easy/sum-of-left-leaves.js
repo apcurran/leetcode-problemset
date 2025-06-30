@@ -2,16 +2,16 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 // /**
 //  * solution 1 -- DFS iterative
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {number}
 //  */
@@ -42,7 +42,7 @@ function TreeNode(val, left, right) {
  * solution 2 -- DFS recursion
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number}
  */
@@ -54,7 +54,9 @@ function sumOfLeftLeaves(root, isLeft = false) {
         return root.val;
     }
 
-    return sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false);
+    return (
+        sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false)
+    );
 }
 
 const a = new TreeNode(1);
@@ -68,4 +70,4 @@ a.right = c;
 b.left = d;
 b.right = e;
 
-console.log( sumOfLeftLeaves(a) ); // 4
+console.log(sumOfLeftLeaves(a)); // 4

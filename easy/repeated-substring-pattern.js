@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {boolean}
  */
@@ -18,5 +18,5 @@ function repeatedSubstringPattern(str) {
     return joinedNewStr.includes(str);
 }
 
-console.log( repeatedSubstringPattern("abab") ); // true -> It is the substring "ab" twice.
-console.log( repeatedSubstringPattern("aba") ); // false
+console.log(repeatedSubstringPattern("abab")); // true -> It is the substring "ab" twice.
+console.log(repeatedSubstringPattern("aba")); // false

@@ -4,7 +4,7 @@
 //  * solution 1 -- dynamic programming (top down)
 //  * time: O(n) -- hashmap
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[][]} questions
 //  * @return {number}
 //  */
@@ -28,7 +28,7 @@
  * solution 2 -- dynamic programming (top down)
  * time: O(n) -- array cache
  * space: O(n)
- * 
+ *
  * @param {Array<[number, number]>} questions
  * @param {number} [i] - optional index
  * @param {Array<number>} [cache] - optional cache
@@ -43,11 +43,19 @@ function mostPoints(questions, i = 0, cache = new Array(questions.length)) {
 
     const [pointsEarned, questionsToSkip] = questions[i];
     const path1 = mostPoints(questions, i + 1, cache); // skip current question
-    const path2 = pointsEarned + mostPoints(questions, i + 1 + questionsToSkip, cache); // solve current question and take score
+    const path2 =
+        pointsEarned + mostPoints(questions, i + 1 + questionsToSkip, cache); // solve current question and take score
     const mostPossiblePoints = Math.max(path1, path2);
     cache[i] = mostPossiblePoints;
 
     return mostPossiblePoints;
 }
 
-console.log( mostPoints([[3, 2], [4, 3], [4, 4], [2, 5]]) ); // 5
+console.log(
+    mostPoints([
+        [3, 2],
+        [4, 3],
+        [4, 4],
+        [2, 5],
+    ]),
+); // 5

@@ -7,7 +7,7 @@
  * k = chars parameter string length
  * time: O(n * m + k)
  * space: O(m + k)
- * 
+ *
  * @param {string[]} words
  * @param {string} chars
  * @return {number} sum of the lengths of all "good" strings in words
@@ -53,5 +53,5 @@ function countCharacters(words, chars) {
     return goodStrLengthsSum;
 }
 
-console.log( countCharacters(["cat", "bt", "hat", "tree"], "atach") ); // 6
-console.log( countCharacters(["hello", "world", "leetcode"], "welldonehoneyr") ); // 10
+console.log(countCharacters(["cat", "bt", "hat", "tree"], "atach")); // 6
+console.log(countCharacters(["hello", "world", "leetcode"], "welldonehoneyr")); // 10

@@ -4,7 +4,7 @@
 //  * solution 1 -- stack
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {number}
 //  */
@@ -25,7 +25,7 @@
 //                 maxNestingCount = Math.max(maxNestingCount, openParensStack.length);
 //             }
 //         }
-        
+
 //         if (character === ")") {
 //             // check for closing paren -> pop off stack
 //             openParensStack.pop();
@@ -41,7 +41,7 @@
  * solution 2
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @return {number}
  */

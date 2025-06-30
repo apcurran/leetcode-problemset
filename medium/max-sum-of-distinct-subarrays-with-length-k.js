@@ -4,7 +4,7 @@
 //  * solution 1 -- hashset -- correct, but TLE
 //  * time: O(n * k)
 //  * space: O(k) subarray chunk
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number}
@@ -33,7 +33,7 @@
  * solution 2 -- hashmap
  * time: O(n)
  * time: O(n) subarray chunk
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -71,7 +71,6 @@ function maximumSubarraySum(nums, k) {
             maxSum = Math.max(maxSum, currentSum);
         }
     }
-    
 
     return maxSum;
 }

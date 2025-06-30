@@ -4,7 +4,7 @@
 //  * solution 1 -- recursion (TLE)
 //  * time: O(2^n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number}
 //  */
@@ -20,7 +20,7 @@
 //  * solution 2 -- recursion with memoization
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {number}
 //  */
@@ -44,7 +44,7 @@
  * solution 3 -- iterative tabulation
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -64,5 +64,5 @@ function climbStairs(n) {
     return numOfCombos[n];
 }
 
-console.log( climbStairs(2) ); // 2
-console.log( climbStairs(3) ); // 3
+console.log(climbStairs(2)); // 2
+console.log(climbStairs(3)); // 3

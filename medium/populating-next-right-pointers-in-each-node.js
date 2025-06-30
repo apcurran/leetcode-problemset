@@ -11,7 +11,7 @@ function ListNode(val, left, right, next) {
  * solution 1 -- BFS
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {ListNode} root
  * @return {ListNode}
  */

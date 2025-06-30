@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} gain
 //  * @return {number}
 //  */
@@ -25,7 +25,7 @@
  * solution 2 -- prefix sum -- optimized space complexity
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} gain
  * @return {number}
  */
@@ -41,4 +41,4 @@ function largestAltitude(gain) {
     return highestPoint;
 }
 
-console.log( largestAltitude([-5, 1, 5, 0, -7]) ); // 1
+console.log(largestAltitude([-5, 1, 5, 0, -7])); // 1

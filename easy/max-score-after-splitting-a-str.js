@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {number}
 //  */
@@ -26,7 +26,7 @@
 //         for (let numStr of rightSubStr) {
 //             if (numStr === "1") rightSubStrOnesCount++;
 //         }
-        
+
 //         const sumScore = leftSubStrZerosCount + rightSubStrOnesCount;
 //         maxSumScore = Math.max(maxSumScore, sumScore);
 //     }
@@ -38,7 +38,7 @@
 //  * solution 2 -- memory optimization
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {string} str
 //  * @return {number}
 //  */
@@ -57,7 +57,7 @@
 //         for (let j = i + 1; j < str.length; j++) {
 //             if (str[j] === "1") rightSubStrOnesCount++;
 //         }
-        
+
 //         const sumScore = leftSubStrZerosCount + rightSubStrOnesCount;
 //         maxSumScore = Math.max(maxSumScore, sumScore);
 //     }
@@ -69,7 +69,7 @@
  * solution 2 -- two pass
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @return {number}
  */
@@ -98,6 +98,6 @@ function maxScore(str) {
     return maxSumScore;
 }
 
-console.log( maxScore("011101") ); // 5
-console.log( maxScore("00") ); // 1
-console.log( maxScore("0100") ); // 2
+console.log(maxScore("011101")); // 5
+console.log(maxScore("00")); // 1
+console.log(maxScore("0100")); // 2

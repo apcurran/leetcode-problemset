@@ -2,17 +2,17 @@
 
 // Definition for singly-linked list.
 function ListNode(val, next) {
-    this.val = (val===undefined ? 0 : val);
-    this.next = (next===undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 /**
  * solution 1 -- iterative
  * time: O(n)
  * space: O(1)
- * 
- * @param {ListNode} list1 
- * @param {ListNode} list2 
+ *
+ * @param {ListNode} list1
+ * @param {ListNode} list2
  * @returns {ListNode}
  */
 function mergeTwoLists(list1, list2) {
@@ -39,7 +39,7 @@ function mergeTwoLists(list1, list2) {
 
     // after iteration, check if list1 or list2 still have some nodes left
     if (list1 !== null) tail.next = list1;
-    
+
     if (list2 !== null) tail.next = list2;
 
     return dummyNode.next;

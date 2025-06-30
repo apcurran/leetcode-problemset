@@ -10,7 +10,7 @@ function TreeNode(val, children) {
  * solution 1 -- BFS
  * time: O(n * m)
  * space: O(m)
- * 
+ *
  * @param {TreeNode|null} root
  * @return {number}
  */
@@ -24,7 +24,7 @@ function maxDepth(root) {
     while (queue.length > 0) {
         // get current node from queue
         const cachedQueueLength = queue.length;
-        
+
         for (let i = 0; i < cachedQueueLength; i++) {
             const currentNode = queue.shift();
 

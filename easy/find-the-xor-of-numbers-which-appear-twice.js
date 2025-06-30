@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force (nested loops)
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -33,14 +33,14 @@
  * solution 2 -- hashset
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
 function duplicateNumbersXOR(nums) {
     let result = 0;
     let numsSet = new Set();
-    
+
     for (let num of nums) {
         if (numsSet.has(num)) {
             result ^= num;

@@ -4,7 +4,7 @@
  * solution 1 -- hashmap and sliding window
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2)
  * space: O(n^2)
- * 
+ *
  * @param {number} numRows
  * @return {number[][]}
  */
@@ -29,7 +29,7 @@ function generate(numRows) {
     return resArr;
 }
 
-console.log( generate(5) );
+console.log(generate(5));
 // [
 //     [1],
 //     [1,1],

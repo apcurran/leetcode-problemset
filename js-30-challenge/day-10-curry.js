@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {Function} fn
  * @return {Function}
  */
@@ -19,7 +19,7 @@ const curry = function (fn) {
 };
 
 function sum(a, b) {
-    return a + b; 
+    return a + b;
 }
 const csum = curry(sum);
-console.log( csum(1)(2) ); // 3
+console.log(csum(1)(2)); // 3

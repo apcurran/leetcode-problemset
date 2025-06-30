@@ -13,7 +13,7 @@
  * solution 1 -- iterative
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {TreeNode} root
  * @param {number} val
  * @return {TreeNode}

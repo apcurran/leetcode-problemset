@@ -2,14 +2,14 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- recursion
- * 
+ *
  * @param {number[]} preorder
  * @param {number[]} inorder
  * @return {TreeNode|null}
@@ -22,9 +22,15 @@ function buildTree(preorder, inorder) {
     let root = new TreeNode(startingNode);
 
     // build left subtree
-    root.left = buildTree(preorder.slice(1, midPoint + 1), inorder.slice(0, midPoint));
+    root.left = buildTree(
+        preorder.slice(1, midPoint + 1),
+        inorder.slice(0, midPoint),
+    );
     // build right subtree
-    root.right = buildTree(preorder.slice(midPoint + 1), inorder.slice(midPoint + 1));
+    root.right = buildTree(
+        preorder.slice(midPoint + 1),
+        inorder.slice(midPoint + 1),
+    );
 
     return root;
 }

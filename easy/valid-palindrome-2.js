@@ -4,7 +4,7 @@
  * solution 1 -- two-pointer technique
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {boolean}
  */
@@ -22,7 +22,7 @@ function validPalindrome(str) {
             const skipLeft = str.slice(leftPointer + 1, rightPointer + 1);
             const reversedLeft = revStr(skipLeft);
             // console.log("skip left", skipLeft);
-            
+
             const skipRight = str.slice(leftPointer, rightPointer);
             const reversedRight = revStr(skipRight);
             // console.log("skip right", skipRight);
@@ -47,5 +47,5 @@ function revStr(s) {
     return resStr;
 }
 
-console.log( validPalindrome("abca") ); // true -> "aba" (deleting "c")
-console.log( validPalindrome("abc") ); // false
+console.log(validPalindrome("abca")); // true -> "aba" (deleting "c")
+console.log(validPalindrome("abc")); // false

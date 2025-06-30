@@ -4,7 +4,7 @@
  * solution 1 -- two pointers
  * time: O(n * log n) -- sort
  * space: O(n) -- sort
- * 
+ *
  * @param {number[]} tokens
  * @param {number} power
  * @return {number}

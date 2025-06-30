@@ -1,16 +1,16 @@
 "use strict";
 
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- recursion (postorder DFS)
  * time: O(n)
  * space: O(n) -- callstack
- * 
+ *
  * delete all leaf nodes with target value
  * @param {TreeNode} root
  * @param {number} target

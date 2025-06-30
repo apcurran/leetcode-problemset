@@ -4,7 +4,7 @@
  * solution 1 -- recursion
  * time: O(2^n)
  * space: O(n)
- * 
+ *
  * @param {number} n
  * @return {string[]}
  */
@@ -12,9 +12,9 @@ function generateParenthesis(n) {
     let results = [];
 
     /**
-     * @param {number} openN 
-     * @param {number} closedN 
-     * @param {string} parens 
+     * @param {number} openN
+     * @param {number} closedN
+     * @param {string} parens
      * @returns {void}
      */
     function backtrack(openN, closedN, parens) {
@@ -43,7 +43,7 @@ function generateParenthesis(n) {
 //  * solution 2 -- recursion (stack)
 //  * time: O(2^n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {string[]}
 //  */
@@ -52,8 +52,8 @@ function generateParenthesis(n) {
 //     let stack = [];
 
 //     /**
-//      * @param {number} openN 
-//      * @param {number} closedN 
+//      * @param {number} openN
+//      * @param {number} closedN
 //      * @returns {void}
 //      */
 //     function recurse(openN, closedN) {
@@ -80,4 +80,4 @@ function generateParenthesis(n) {
 //     return results;
 // }
 
-console.log( generateParenthesis(3) ); // ["((()))","(()())","(())()","()(())","()()()"]
+console.log(generateParenthesis(3)); // ["((()))","(()())","(())()","()(())","()()()"]

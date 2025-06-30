@@ -1,17 +1,17 @@
 {
-  "name": "leetcode",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "lint": "npx eslint ."
-  },
-  "author": "Alex Curran",
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^9.23.0",
-    "@stylistic/eslint-plugin": "^4.2.0",
-    "eslint": "^9.23.0",
-    "globals": "^16.0.0"
-  }
+    "name": "leetcode",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "npx oxlint .",
+        "format:check": "npx prettier . --check",
+        "format:write": "npx prettier . --write"
+    },
+    "author": "Alex Curran",
+    "license": "ISC",
+    "devDependencies": {
+        "oxlint": "^1.4.0",
+        "prettier": "3.6.2"
+    }
 }

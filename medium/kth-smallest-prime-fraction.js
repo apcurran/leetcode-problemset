@@ -4,7 +4,7 @@
  * solution 1 -- brute force
  * time: O(n^2)
  * space: O(n^2)
- * 
+ *
  * @param {number[]} arr
  * @param {number} k
  * @return {number[]}
@@ -25,7 +25,7 @@ function kthSmallestPrimeFraction(arr, k) {
     possibilities.sort(function sortAsc(tupleA, tupleB) {
         return tupleA[0] - tupleB[0];
     });
-    
+
     // get kth (1-indexed) value of possibilities
     return possibilities[k - 1][1];
     // return max value associated array combo

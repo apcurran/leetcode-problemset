@@ -4,7 +4,7 @@
  * solution 1
  * time: O(1)
  * space: O(1)
- * 
+ *
  * @returns {number}
  */
 Array.prototype.last = function () {
@@ -14,4 +14,4 @@ Array.prototype.last = function () {
 };
 
 const arr = [1, 2, 3];
-console.log( arr.last() ); // 3
+console.log(arr.last()); // 3

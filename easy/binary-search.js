@@ -9,7 +9,7 @@
 function search(numsArr, target) {
     let start = 0;
     let end = numsArr.length - 1;
-    
+
     while (start <= end) {
         const middleIndex = Math.floor((start + end) / 2);
         const potentialMatch = numsArr[middleIndex];

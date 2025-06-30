@@ -4,7 +4,7 @@
  * solution 1 -- two-pointers with hashmap
  * time: O(n)
  * space: O(1) -- only two fruit types maintained at any one time
- * 
+ *
  * @param {number[]} fruits
  * @return {number}
  */
@@ -39,6 +39,6 @@ function totalFruit(fruits) {
     return result;
 }
 
-console.log( totalFruit([1, 2, 1]) ); // 3
-console.log( totalFruit([0, 1, 2, 2]) ); // 3
-console.log( totalFruit([1, 2, 3, 2, 2]) ); // 4
+console.log(totalFruit([1, 2, 1])); // 3
+console.log(totalFruit([0, 1, 2, 2])); // 3
+console.log(totalFruit([1, 2, 3, 2, 2])); // 4

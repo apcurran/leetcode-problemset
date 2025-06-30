@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @param {number} time
  * @return {number}
@@ -15,9 +15,10 @@ function passThePillow(n, time) {
     let currentDirection = 1;
 
     while (currentTime < time) {
-        if (currentPillowPosition + currentDirection > 0 &&
-            currentPillowPosition + currentDirection <= n) {
-
+        if (
+            currentPillowPosition + currentDirection > 0 &&
+            currentPillowPosition + currentDirection <= n
+        ) {
             currentPillowPosition += currentDirection;
             currentTime++;
         } else {

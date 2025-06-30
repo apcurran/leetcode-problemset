@@ -4,7 +4,7 @@
  * solution 1 -- sort and two pointers
  * time: O(n * log n) -- array.sort()
  * space: O(n)
- * 
+ *
  * @param {number[][]} intervals
  * @return {number}
  */
@@ -41,4 +41,12 @@ function minGroups(intervals) {
     return result;
 }
 
-console.log(minGroups([[5, 10], [6, 8], [1, 5], [2, 3], [1, 10]])); // 3
+console.log(
+    minGroups([
+        [5, 10],
+        [6, 8],
+        [1, 5],
+        [2, 3],
+        [1, 10],
+    ]),
+); // 3

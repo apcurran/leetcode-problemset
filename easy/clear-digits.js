@@ -4,7 +4,7 @@
 //  * solution 1 -- regex
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} s
 //  * @return {string}
 //  */
@@ -24,7 +24,7 @@
  * solution 2 -- stack
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {string}
  */
@@ -47,4 +47,3 @@ function clearDigits(str) {
 
 console.log(clearDigits("abc")); // "abc"
 console.log(clearDigits("cb34")); // ""
-

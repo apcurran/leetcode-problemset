@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -19,4 +19,4 @@ function minimumOperations(nums) {
     return uniqueNumbers.size;
 }
 
-console.log( minimumOperations([1, 5, 0, 3, 5]) ); // 3
+console.log(minimumOperations([1, 5, 0, 3, 5])); // 3

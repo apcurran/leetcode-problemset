@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(n)
- * 
+ *
  * @param {string[]} words
  * @param {string} separator
  * @return {string[]}

@@ -5,7 +5,7 @@
 //  * n = number of key/value pairs (JSON stringification)
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {Object | Array} obj
 //  * @return {boolean}
 //  */
@@ -20,7 +20,7 @@
  * n = number of key/value pairs
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {Object | Array} obj
  * @return {boolean}
  */
@@ -34,5 +34,5 @@ function isEmpty(obj) {
     return true;
 }
 
-console.log( isEmpty({}) ); // true
-console.log( isEmpty([]) ); // true
+console.log(isEmpty({})); // true
+console.log(isEmpty([])); // true

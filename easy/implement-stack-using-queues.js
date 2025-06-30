@@ -12,11 +12,11 @@ class MyStack {
     push(val) {
         this.q.push(val);
     }
-    
+
     /**
      * time: O(n)
      * space: O(1)
-     * 
+     *
      * @return {number}
      */
     pop() {
@@ -33,7 +33,7 @@ class MyStack {
 
     /**
      * last elem peek
-     * 
+     *
      * @return {number}
      */
     top() {
@@ -48,7 +48,7 @@ class MyStack {
     }
 }
 
-/** 
+/**
  * Your MyStack object will be instantiated and called as such:
  * var obj = new MyStack()
  * obj.push(x)

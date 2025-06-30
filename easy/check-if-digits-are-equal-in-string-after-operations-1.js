@@ -4,7 +4,7 @@
  * solution 1 -- direct simluation
  * time: O(n * log n)
  * space: O(log n)
- * 
+ *
  * @param {string} s
  * @return {boolean}
  */

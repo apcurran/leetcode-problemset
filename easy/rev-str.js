@@ -4,7 +4,7 @@
 //  * solution 1 -- two-pointer technique
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {string[]} s
 //  * @return {void} Do not return anything, modify s in-place instead.
 //  */
@@ -33,7 +33,7 @@
  * solution 1 -- array.reverse() method
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string[]} s
  * @return {void} Do not return anything, modify s in-place instead.
  */
@@ -41,4 +41,4 @@ function reverseString(s) {
     s.reverse();
 }
 
-console.log( reverseString(["h", "e", "l", "l", "o"]) ); // ["o","l","l","e","h"]
+console.log(reverseString(["h", "e", "l", "l", "o"])); // ["o","l","l","e","h"]

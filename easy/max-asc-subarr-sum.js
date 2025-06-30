@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -35,6 +35,6 @@ function maxAscendingSum(nums) {
     return globalMaxSum;
 }
 
-console.log( maxAscendingSum([10, 20, 30, 5, 10, 50]) ); // 65
-console.log( maxAscendingSum([10, 20, 30, 40, 50]) ); // 150
-console.log( maxAscendingSum([12, 17, 15, 13, 10, 11, 12]) ); // 33
+console.log(maxAscendingSum([10, 20, 30, 5, 10, 50])); // 65
+console.log(maxAscendingSum([10, 20, 30, 40, 50])); // 150
+console.log(maxAscendingSum([12, 17, 15, 13, 10, 11, 12])); // 33

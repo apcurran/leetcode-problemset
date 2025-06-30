@@ -4,7 +4,7 @@
  * solution 1 -- hashmap
  * time: O(n * m)
  * space: O(1)
- * 
+ *
  * @param {string[]} words
  * @return {boolean}
  */

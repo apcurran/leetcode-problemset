@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1) -- not counting return array
- * 
+ *
  * @param {string} boxes
  * @return {number[]}
  */

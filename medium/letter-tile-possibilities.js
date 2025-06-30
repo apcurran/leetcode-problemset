@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n!) -- permutations
  * space: O(n)
- * 
+ *
  * @param {string} tiles
  * @return {number}
  */
@@ -17,7 +17,7 @@ function numTilePossibilities(tiles) {
     }
 
     /**
-     * @returns {number} 
+     * @returns {number}
      */
     function backtrack() {
         let result = 0;

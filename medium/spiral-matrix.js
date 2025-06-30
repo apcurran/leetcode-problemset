@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(n * m)
- * 
+ *
  * @param {number[][]} matrix
  * @return {number[]}
  */
@@ -53,4 +53,10 @@ function spiralOrder(matrix) {
     return results;
 }
 
-console.log(spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]])); // [1,2,3,6,9,8,7,4,5]
+console.log(
+    spiralOrder([
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ]),
+); // [1,2,3,6,9,8,7,4,5]

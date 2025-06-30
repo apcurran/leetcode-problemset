@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[][]} arrays
  * @return {number}
  */
@@ -29,4 +29,10 @@ function maxDistance(arrays) {
     return largestDifference;
 }
 
-console.log(maxDistance([[1, 2, 3], [4, 5], [1, 2, 3]])); // 4
+console.log(
+    maxDistance([
+        [1, 2, 3],
+        [4, 5],
+        [1, 2, 3],
+    ]),
+); // 4

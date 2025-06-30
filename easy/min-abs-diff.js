@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[]} arr
  * @return {number[][]}
  */
@@ -38,5 +38,5 @@ function minimumAbsDifference(arr) {
     return results;
 }
 
-console.log( minimumAbsDifference([4, 2, 1, 3]) ); // [[1,2], [2,3], [3,4]]
-console.log( minimumAbsDifference([3, 8, -10, 23, 19, -4, -14, 27]) ); // [[-14,-10], [19,23], [23,27]]
+console.log(minimumAbsDifference([4, 2, 1, 3])); // [[1,2], [2,3], [3,4]]
+console.log(minimumAbsDifference([3, 8, -10, 23, 19, -4, -14, 27])); // [[-14,-10], [19,23], [23,27]]

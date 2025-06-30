@@ -4,7 +4,7 @@
  * solution 1 -- hashmap
  * time: O(n)
  * space: O(k)
- * 
+ *
  * @param {number[]} arr
  * @param {number} k
  * @return {boolean}
@@ -27,7 +27,10 @@ function canArrange(arr, k) {
             const isOdd = remainderCounts.get(remainder) % 2 === 1;
 
             if (isOdd) return false;
-        } else if (remainderCounts.get(remainder) !== remainderCounts.get(k - remainder)) {
+        } else if (
+            remainderCounts.get(remainder) !==
+            remainderCounts.get(k - remainder)
+        ) {
             return false;
         }
     }

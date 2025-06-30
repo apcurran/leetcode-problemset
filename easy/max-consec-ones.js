@@ -4,7 +4,7 @@
  * solution 1 -- iterative
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -26,5 +26,5 @@ function findMaxConsecutiveOnes(nums) {
     return overallMax;
 }
 
-console.log( findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]) ); // 3
-console.log( findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1]) ); // 2
+console.log(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1])); // 3
+console.log(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1])); // 2

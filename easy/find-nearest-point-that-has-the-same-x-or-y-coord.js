@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number} x
  * @param {number} y
  * @param {number[][]} points
@@ -20,7 +20,8 @@ function nearestValidPoint(x, y, points) {
         // skip invalid coordinates
         if (currentPointX !== x && currentPointY !== y) continue;
 
-        const manhattanDistance = Math.abs(x - currentPointX) + Math.abs(y - currentPointY);
+        const manhattanDistance =
+            Math.abs(x - currentPointX) + Math.abs(y - currentPointY);
 
         if (manhattanDistance < smallestDistance) {
             smallestDistance = manhattanDistance;
@@ -31,5 +32,13 @@ function nearestValidPoint(x, y, points) {
     return smallestDistanceIndex;
 }
 
-console.log( nearestValidPoint(3, 4, [[1, 2], [3, 1], [2, 4], [2, 3], [4, 4]]) ); // 2
-console.log( nearestValidPoint(3, 4, [[2, 3]]) ); // -1
+console.log(
+    nearestValidPoint(3, 4, [
+        [1, 2],
+        [3, 1],
+        [2, 4],
+        [2, 3],
+        [4, 4],
+    ]),
+); // 2
+console.log(nearestValidPoint(3, 4, [[2, 3]])); // -1

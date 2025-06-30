@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -13,7 +13,7 @@ function trailingZeroes(n) {
 
     let value = BigInt(1);
 
-    for (let i = BigInt(2); i <=n; i++) {
+    for (let i = BigInt(2); i <= n; i++) {
         value *= i;
     }
 

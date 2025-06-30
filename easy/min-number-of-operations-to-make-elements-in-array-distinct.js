@@ -4,7 +4,7 @@
 //  * solution 1 -- recursion and hashset cache
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -20,7 +20,7 @@
 // }
 
 // /**
-//  * @param {number[]} arr 
+//  * @param {number[]} arr
 //  * @returns {boolean}
 //  */
 // function isDistinct(arr) {
@@ -41,7 +41,7 @@
  * solution 2 -- iterative, slightly optimized for time and memory (no change to big-O though)
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -60,7 +60,7 @@ function minimumOperations(nums) {
 }
 
 /**
- * @param {number[]} arr 
+ * @param {number[]} arr
  * @param {number} startIndex
  * @returns {boolean}
  */

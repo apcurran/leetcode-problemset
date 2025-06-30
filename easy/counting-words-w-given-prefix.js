@@ -4,7 +4,7 @@
 //  * solution 1 -- regex
 //  * time: O(n * m)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {string[]} words
 //  * @param {string} pref
 //  * @return {number}
@@ -27,7 +27,7 @@
  * m = word length
  * time: O(n * m)
  * space: O(1)
- * 
+ *
  * @param {string[]} words
  * @param {string} pref
  * @return {number}
@@ -42,5 +42,5 @@ function prefixCount(words, pref) {
     return prefixCount;
 }
 
-console.log( prefixCount(["pay", "attention", "practice", "attend"], "at") ); // 2
-console.log( prefixCount(["leetcode", "win", "loops", "success"], "code") ); // 0
+console.log(prefixCount(["pay", "attention", "practice", "attend"], "at")); // 2
+console.log(prefixCount(["leetcode", "win", "loops", "success"], "code")); // 0

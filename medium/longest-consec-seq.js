@@ -4,7 +4,7 @@
  * solution 1 -- Set cache
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -34,4 +34,4 @@ function longestConsecutive(nums) {
     return longestSequence;
 }
 
-console.log( longestConsecutive([100, 4, 200, 1, 3, 2]) ); // 4
+console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); // 4

@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n) -- num to string
- * 
+ *
  * @param {number} x
  * @return {number}
  */

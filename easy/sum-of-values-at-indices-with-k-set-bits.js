@@ -6,7 +6,7 @@
  * m = num binary str length
  * time: O(n * m)
  * space: O(m)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}

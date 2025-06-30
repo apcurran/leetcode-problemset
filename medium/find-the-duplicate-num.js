@@ -5,7 +5,7 @@
 //  * solution 1
 //  * Time: O(n^2) -- too slow
 //  * Space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -35,7 +35,7 @@
 //  * solution 2 -- modify inputs (not allowed in description)
 //  * Time: O(n)
 //  * Space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -56,7 +56,7 @@
 //  * solution 3 -- binary search
 //  * Time: O(n * log n)
 //  * Space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -90,7 +90,7 @@
  * solution 4 -- Floyd's algorithm (optimal)
  * Time: O(n)
  * Space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -120,5 +120,5 @@ function findDuplicate(nums) {
     return slow;
 }
 
-console.log( findDuplicate([1, 3, 4, 2, 2] ) ); // 2
-console.log( findDuplicate([3, 1, 3, 4, 2] ) ); // 3
+console.log(findDuplicate([1, 3, 4, 2, 2])); // 2
+console.log(findDuplicate([3, 1, 3, 4, 2])); // 3

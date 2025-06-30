@@ -4,7 +4,7 @@
  * solution 1 -- iterative
  * time: O(n * log n) -- sorting
  * space: O(n) -- sorting
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */

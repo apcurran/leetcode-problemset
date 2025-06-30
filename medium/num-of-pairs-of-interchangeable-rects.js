@@ -4,7 +4,7 @@
 //  * solution 1 -- TLE
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[][]} rectangles
 //  * @return {number}
 //  */
@@ -35,7 +35,7 @@
  * solution 2 -- Map cache
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[][]} rectangles
  * @return {number}
  */
@@ -46,7 +46,8 @@ function interchangeableRectangles(rectangles) {
     for (let i = 0; i < rectangles.length; i++) {
         const [rectangleWidth, rectangleHeight] = rectangles[i];
         const currentRectangleRatio = rectangleWidth / rectangleHeight;
-        const preExistingRatioCount = rectangleRatios.get(currentRectangleRatio) || 0;
+        const preExistingRatioCount =
+            rectangleRatios.get(currentRectangleRatio) || 0;
         interchangeableRectanglesCount += preExistingRatioCount;
         rectangleRatios.set(currentRectangleRatio, preExistingRatioCount + 1);
     }
@@ -54,11 +55,11 @@ function interchangeableRectangles(rectangles) {
     return interchangeableRectanglesCount;
 }
 
-console.log( interchangeableRectangles(
-    [
+console.log(
+    interchangeableRectangles([
         [4, 8],
         [3, 6],
         [10, 20],
         [15, 30],
-    ],
-) ); // 6
+    ]),
+); // 6

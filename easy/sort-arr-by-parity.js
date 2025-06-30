@@ -3,11 +3,11 @@
 // /**
 //  * Given an integer array nums,
 //  * move all the even integers at the beginning of the array followed by all the odd integers.
-//  * 
+//  *
 //  * solution 1
 //  * time: O(n log n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
@@ -28,7 +28,7 @@
 //  * solution 2
 //  * time: O(n log n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
@@ -37,7 +37,7 @@
 // }
 
 // /**
-//  * @param {number} a 
+//  * @param {number} a
 //  * @returns {-1|1}
 //  */
 // function compareNums(a) {
@@ -53,7 +53,7 @@
  * solution 3
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
@@ -73,4 +73,4 @@ function sortArrayByParity(nums) {
     return nums;
 }
 
-console.log( sortArrayByParity([3, 1, 2, 4]) ); // [2, 4, 3, 1]
+console.log(sortArrayByParity([3, 1, 2, 4])); // [2, 4, 3, 1]

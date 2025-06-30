@@ -2,7 +2,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @return {number}
  */
@@ -27,4 +27,4 @@ function partitionString(str) {
     return minSubStrsCount;
 }
 
-console.log( partitionString("abacaba") ); // 4
+console.log(partitionString("abacaba")); // 4

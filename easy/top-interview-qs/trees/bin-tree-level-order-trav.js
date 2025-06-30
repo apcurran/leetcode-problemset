@@ -2,9 +2,9 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
@@ -12,7 +12,7 @@ function TreeNode(val, left, right) {
  * n = num of total nodes in bin tree
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number[][]}
  */
@@ -25,7 +25,7 @@ function levelOrder(root) {
         const queueLen = queue.length;
         let level = [];
 
-        // iterate through all elems in 
+        // iterate through all elems in
         for (let i = 0; i < queueLen; i++) {
             // remove elem from front of queue
             const currNode = queue.shift();

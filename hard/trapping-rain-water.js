@@ -4,7 +4,7 @@
  * solution 1 -- two pointers
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} heights
  * @return {number}
  */

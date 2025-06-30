@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n * log n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[]}
 //  */
@@ -18,7 +18,7 @@
  * solution 2
  * time: O(n)
  * space: O(1) -- not including results array
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
@@ -44,8 +44,7 @@ function sortedSquares(nums) {
         }
     }
 
-
     return results.reverse();
 }
 
-console.log( sortedSquares([-4, -1, 0, 3, 10]) ); // [0,1,9,16,100]
+console.log(sortedSquares([-4, -1, 0, 3, 10])); // [0,1,9,16,100]

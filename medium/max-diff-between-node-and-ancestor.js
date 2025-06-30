@@ -1,15 +1,15 @@
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 // /**
 //  * solution 1 -- recursion
 //  * time: O(n)
 //  * space: O(h)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {number}
 //  */
@@ -18,9 +18,9 @@ function TreeNode(val, left, right) {
 // }
 
 // /**
-//  * @param {TreeNode} root 
-//  * @param {number} min 
-//  * @param {number} max 
+//  * @param {TreeNode} root
+//  * @param {number} min
+//  * @param {number} max
 //  * @returns {number}
 //  */
 // function traverseBinTree(root, min, max) {
@@ -42,14 +42,14 @@ function TreeNode(val, left, right) {
  * solution 2 -- iterative
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {TreeNode} root
  * @return {number}
  */
 function maxAncestorDiff(root) {
     if (root === null) return 0;
     //            [ [rootNode, min, max] ]
-    let stack = [ [root, root.val, root.val] ];
+    let stack = [[root, root.val, root.val]];
     let largestDifference = 0;
 
     while (stack.length > 0) {

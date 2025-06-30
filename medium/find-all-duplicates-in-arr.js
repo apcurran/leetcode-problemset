@@ -2,7 +2,7 @@
 
 // /**
 //  * Solution 1
-//  * 
+//  *
 //  * Time: O(n)
 //  * Space: O(n)
 //  * @param {number[]} nums
@@ -31,7 +31,7 @@
 
 // /**
 //  * Solution 2
-//  * 
+//  *
 //  * Time: O(n log n) - due to JS sorting algo
 //  * Space: O(1)
 //  * @param {number[]} nums
@@ -59,9 +59,9 @@
 
 // /**
 //  * Solution 3
-//  * 
+//  *
 //  * This solution eliminates the second for loop, and uses slightly less memory
-//  * 
+//  *
 //  * Time: O(n)
 //  * Space: O(n)
 //  * @param {number[]} nums
@@ -130,6 +130,6 @@ function findDuplicates(nums) {
     return resArr;
 }
 
-console.log( findDuplicates([4, 3, 2, 7, 8, 2, 3, 1]) ); // [2, 3]
-console.log( findDuplicates([1, 1, 2]) ); // [1]
-console.log( findDuplicates([1]) ); // []
+console.log(findDuplicates([4, 3, 2, 7, 8, 2, 3, 1])); // [2, 3]
+console.log(findDuplicates([1, 1, 2])); // [1]
+console.log(findDuplicates([1])); // []

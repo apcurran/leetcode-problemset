@@ -9,8 +9,8 @@ class MyCalendar {
         this.events = [];
     }
 
-    /** 
-     * @param {number} start 
+    /**
+     * @param {number} start
      * @param {number} end
      * @return {boolean}
      */
@@ -27,7 +27,7 @@ class MyCalendar {
     }
 }
 
-/** 
+/**
  * Your MyCalendar object will be instantiated and called as such:
  * var obj = new MyCalendar()
  * var param_1 = obj.book(start,end)

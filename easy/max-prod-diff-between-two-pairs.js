@@ -4,7 +4,7 @@
 //  * solution 1 -- sort first
 //  * time: O(n * log n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -16,7 +16,7 @@
 //     const largeProd = nums[0] * nums[1];
 //     // two smallest are the small prod pair
 //     const smallProd = nums[nums.length - 1] * nums[nums.length - 2];
-    
+
 //     // sub both prods for max diff
 //     return largeProd - smallProd;
 // }
@@ -25,7 +25,7 @@
  * solution 2
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -54,7 +54,7 @@ function maxProductDifference(nums) {
     const maxProd = firstMaxNum * secondMaxNum;
     const minProd = firstMinNum * secondMinNum;
 
-    return maxProd - minProd; 
+    return maxProd - minProd;
 }
 
-console.log( maxProductDifference([5, 6, 2, 7, 4]) ); // 34
+console.log(maxProductDifference([5, 6, 2, 7, 4])); // 34

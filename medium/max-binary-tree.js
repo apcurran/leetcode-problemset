@@ -1,16 +1,16 @@
 "use strict";
 
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- recursion
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {TreeNode}
  */
@@ -19,10 +19,10 @@ function constructMaximumBinaryTree(nums) {
 }
 
 /**
- * 
- * @param {number[]} nums 
- * @param {number} left 
- * @param {number} right 
+ *
+ * @param {number[]} nums
+ * @param {number} left
+ * @param {number} right
  * @returns {TreeNode|null}
  */
 function construct(nums, left, right) {
@@ -37,10 +37,10 @@ function construct(nums, left, right) {
 }
 
 /**
- * 
- * @param {number[]} nums 
- * @param {number} left 
- * @param {number} right 
+ *
+ * @param {number[]} nums
+ * @param {number} left
+ * @param {number} right
  * @returns {number}
  */
 function getMaxIndex(nums, left, right) {

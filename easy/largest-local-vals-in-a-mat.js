@@ -4,7 +4,7 @@
  * solution 1 -- iterative
  * time: O(n^2)
  * space: O(n^2)
- * 
+ *
  * @param {number[][]} grid
  * @return {number[][]}
  */
@@ -39,11 +39,11 @@ function largestLocal(grid) {
     return resArr;
 }
 
-console.log( largestLocal(
-    [
+console.log(
+    largestLocal([
         [9, 9, 8, 1],
         [5, 6, 2, 6],
         [8, 2, 6, 4],
         [6, 2, 2, 2],
-    ],
-) );
+    ]),
+);

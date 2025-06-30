@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
@@ -16,11 +16,12 @@ function distinctDifferenceArray(nums) {
         const distinctPrefixValues = new Set(prefixValues);
         const suffixValues = nums.slice(i + 1);
         const distinctSuffixValues = new Set(suffixValues);
-        const distinctValuesLengthsDiff = distinctPrefixValues.size - distinctSuffixValues.size;
+        const distinctValuesLengthsDiff =
+            distinctPrefixValues.size - distinctSuffixValues.size;
         results.push(distinctValuesLengthsDiff);
     }
 
-    return results; 
+    return results;
 }
 
 console.log(distinctDifferenceArray([1, 2, 3, 4, 5])); // [-3,-1,1,3,5]

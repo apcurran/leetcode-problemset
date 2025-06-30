@@ -4,7 +4,7 @@
  * solution 1 -- map obj
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -17,8 +17,8 @@ function majorityElement(nums) {
         numsCache.set(num, prevNumCount + 1);
     }
 
-    let maxNum = -Infinity;    
-    let maxNumCount = -Infinity;    
+    let maxNum = -Infinity;
+    let maxNumCount = -Infinity;
 
     for (let [num, numCount] of numsCache) {
         if (numCount > maxNumCount) {
@@ -32,5 +32,5 @@ function majorityElement(nums) {
     return maxNum;
 }
 
-console.log( majorityElement([1, 1, 1, 2, 2, 2, 2]) ); // 2
-console.log( majorityElement([3, 2, 3]) ); // 3
+console.log(majorityElement([1, 1, 1, 2, 2, 2, 2])); // 2
+console.log(majorityElement([3, 2, 3])); // 3

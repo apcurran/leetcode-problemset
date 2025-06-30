@@ -4,7 +4,7 @@
 //  * solution 1 -- correct, but TLE
 //  * time: O(n * k)
 //  * space: O(k) slice copy of k per iteration of str
-//  * 
+//  *
 //  * @param {string} str
 //  * @param {number} k
 //  * @return {number}
@@ -37,7 +37,7 @@
  * solution 2 -- sliding window
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @param {number} k
  * @return {number}
@@ -62,7 +62,7 @@ function maxVowels(str, k) {
             if (allVowels.has(currentLeftChar)) {
                 currentVowelsCount--;
             }
-            
+
             // move leftPointer forward
             leftPointer++;
         }
@@ -73,5 +73,5 @@ function maxVowels(str, k) {
     return maxVowelsCount;
 }
 
-console.log( maxVowels("abciiidef", 3) ); // 3 ("iii" has 3 vowels)
-console.log( maxVowels("aeiou", 2) ); // 2
+console.log(maxVowels("abciiidef", 3)); // 3 ("iii" has 3 vowels)
+console.log(maxVowels("aeiou", 2)); // 2

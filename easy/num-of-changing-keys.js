@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @return {number}
  */
@@ -15,7 +15,7 @@ function countKeyChanges(str) {
         const currentChar = str[i].toUpperCase();
         const nextChar = str[i + 1].toUpperCase();
 
-        if (currentChar !== nextChar) changesCount++; 
+        if (currentChar !== nextChar) changesCount++;
     }
 
     return changesCount;

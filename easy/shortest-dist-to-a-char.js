@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n * m)
 //  * space: O(n + m)
-//  * 
+//  *
 //  * @param {string} str
 //  * @param {string} char
 //  * @return {number[]}
@@ -25,8 +25,8 @@
 //             const positionsDifference = Math.abs(i - currentCharPosition);
 //             minDistanceToChar = Math.min(minDistanceToChar, positionsDifference);
 //         }
-        
-//         shortestDistancesToChar.push(minDistanceToChar);        
+
+//         shortestDistancesToChar.push(minDistanceToChar);
 //     }
 
 //     return shortestDistancesToChar;
@@ -36,7 +36,7 @@
  * solution 2 -- two-pass technique
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @param {string} targetChar
  * @return {number[]}
@@ -47,7 +47,7 @@ function shortestToChar(str, targetChar) {
 
     for (let i = 0; i < str.length; i++) {
         const currentLetter = str[i];
-        
+
         if (currentLetter === targetChar) previousPosition = i;
 
         const positionsDifference = Math.abs(i - previousPosition);
@@ -60,11 +60,14 @@ function shortestToChar(str, targetChar) {
 
         if (currentLetter === targetChar) previousPosition = i;
 
-        const smallestPositionDistance = Math.min(shortestDistancesToChar[i], positionsDifference);
+        const smallestPositionDistance = Math.min(
+            shortestDistancesToChar[i],
+            positionsDifference,
+        );
         shortestDistancesToChar[i] = smallestPositionDistance;
     }
 
     return shortestDistancesToChar;
 }
 
-console.log( shortestToChar("loveleetcode", "e") ); // [3,2,1,0,1,0,0,1,2,2,1,0]
+console.log(shortestToChar("loveleetcode", "e")); // [3,2,1,0,1,0,0,1,2,2,1,0]

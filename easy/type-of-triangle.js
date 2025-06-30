@@ -4,7 +4,7 @@
  * solution 1
  * time: O(1) -- sort will always be constant since only 3 variables guaranteed
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {"equilateral"|"isosceles"|"scalene"|"none"}
  */

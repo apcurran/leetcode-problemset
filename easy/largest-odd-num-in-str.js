@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} num
  * @return {string}
  */
@@ -14,7 +14,7 @@ function largestOddNumber(num) {
         const currDigit = Number(num[i]);
 
         if (currDigit % 2 === 0) continue;
-        
+
         // odd digit
         // get full num from start as str
         return num.slice(0, i + 1);
@@ -23,6 +23,6 @@ function largestOddNumber(num) {
     return "";
 }
 
-console.log( largestOddNumber("52") ); // "5"
-console.log( largestOddNumber("4206") ); // ""
-console.log( largestOddNumber("35427") ); // "35427"
+console.log(largestOddNumber("52")); // "5"
+console.log(largestOddNumber("4206")); // ""
+console.log(largestOddNumber("35427")); // "35427"

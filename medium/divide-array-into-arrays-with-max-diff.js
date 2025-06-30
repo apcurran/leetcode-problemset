@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number[][]}

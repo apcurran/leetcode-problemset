@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[][]} intervals
  * @param {number[]} newInterval
  * @return {number[][]}
@@ -31,4 +31,12 @@ function insert(intervals, newInterval) {
     return [...left, [newIntervalStart, newIntervalEnd], ...right];
 }
 
-console.log( insert([[1, 3], [6, 9]], [2, 5]) ); // [[1,5],[6,9]]
+console.log(
+    insert(
+        [
+            [1, 3],
+            [6, 9],
+        ],
+        [2, 5],
+    ),
+); // [[1,5],[6,9]]

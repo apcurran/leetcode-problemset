@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string[][]} paths
 //  * @return {string}
 //  */
@@ -21,7 +21,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string[][]} paths
  * @return {string}
  */
@@ -41,5 +41,17 @@ function destCity(paths) {
     }
 }
 
-console.log( destCity([["London", "New York"], ["New York", "Lima"], ["Lima", "Sao Paulo"]]) ); // "Sao Paulo"
-console.log( destCity([["B", "C"], ["D", "B"], ["C", "A"]]) ); // "A"
+console.log(
+    destCity([
+        ["London", "New York"],
+        ["New York", "Lima"],
+        ["Lima", "Sao Paulo"],
+    ]),
+); // "Sao Paulo"
+console.log(
+    destCity([
+        ["B", "C"],
+        ["D", "B"],
+        ["C", "A"],
+    ]),
+); // "A"

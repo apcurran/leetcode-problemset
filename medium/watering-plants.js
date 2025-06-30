@@ -2,10 +2,10 @@
 
 /**
  * Solution 1
- * 
+ *
  * Time: O(n)
  * Space: O(1)
- * 
+ *
  * @param {number[]} plants
  * @param {number} capacity
  * @return {number}
@@ -26,7 +26,7 @@ function wateringPlants(plants, capacity) {
             canCapacityCopy = capacity;
             // Walk back to last plant that you left off at
             const stepsToWalkBackToPlant = i + 1;
-            
+
             // Incr steps counter by total steps back and forward
             stepsCounter += stepsToWalkBackForRefill + stepsToWalkBackToPlant;
             // Subtract water amt from can
@@ -42,7 +42,7 @@ function wateringPlants(plants, capacity) {
     return stepsCounter;
 }
 
-console.log( wateringPlants([2, 2, 3, 3], 5) ); // 14
-console.log( wateringPlants([1, 1, 1, 4, 2, 3], 4) ); // 30
-console.log( wateringPlants([7, 7, 7, 7, 7, 7, 7], 8) ); // 49
-console.log( wateringPlants([3, 2, 4, 2, 1], 6) ); // 17
+console.log(wateringPlants([2, 2, 3, 3], 5)); // 14
+console.log(wateringPlants([1, 1, 1, 4, 2, 3], 4)); // 30
+console.log(wateringPlants([7, 7, 7, 7, 7, 7, 7], 8)); // 49
+console.log(wateringPlants([3, 2, 4, 2, 1], 6)); // 17

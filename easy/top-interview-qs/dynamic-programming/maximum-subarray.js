@@ -4,7 +4,7 @@
 //  * Solution 1
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -32,7 +32,7 @@
  * Solution 2 -- Kadane's Algorithm
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -53,4 +53,4 @@ function maxSubArray(nums) {
     return globalMax;
 }
 
-console.log( maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]) ); // 6 -- [4,-1,2,1] has the largest sum = 6
+console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6 -- [4,-1,2,1] has the largest sum = 6

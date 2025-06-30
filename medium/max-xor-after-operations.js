@@ -4,7 +4,7 @@
  * solution 1 -- bitwise OR
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */

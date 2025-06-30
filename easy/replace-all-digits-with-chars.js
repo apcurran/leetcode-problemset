@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} str
  * @return {string}
  */
@@ -25,11 +25,11 @@ function replaceDigits(str) {
     return chars.join("");
 }
 
-console.log( replaceDigits("a1b2c3d4e") ); // "abbdcfdhe"
+console.log(replaceDigits("a1b2c3d4e")); // "abbdcfdhe"
 
 /**
- * @param {string} char 
- * @param {number} digit 
+ * @param {string} char
+ * @param {number} digit
  * @returns {string} replacement char
  */
 function shift(char, digit) {

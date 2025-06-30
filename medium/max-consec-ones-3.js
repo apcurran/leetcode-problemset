@@ -4,7 +4,7 @@
  * solution 1 -- sliding window
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
@@ -29,5 +29,7 @@ function longestOnes(nums, k) {
     return endPointer - beginningPointer;
 }
 
-console.log( longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2) ); // 6
-console.log( longestOnes([0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], 3) ); // 10
+console.log(longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2)); // 6
+console.log(
+    longestOnes([0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], 3),
+); // 10

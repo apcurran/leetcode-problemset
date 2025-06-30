@@ -6,7 +6,7 @@
 //  * m = length of current num string
 //  * time: O(n * m)
 //  * space: O(m)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -28,7 +28,7 @@
 //  * n = len of nums arr
 //  * time: O(n * m)
 //  * space: O(n + m)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -48,7 +48,7 @@
  * m = num digits count
  * time: O(n * m)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */

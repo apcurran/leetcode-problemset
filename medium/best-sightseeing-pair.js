@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force (nested loops) TLE
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} values
 //  * @return {number}
 //  */
@@ -25,7 +25,7 @@
  * solution 2 -- dynamic programming
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} values
  * @return {number}
  */

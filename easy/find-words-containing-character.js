@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(n) -- (if return value is counted)
- * 
+ *
  * @param {string[]} words
  * @param {string} x
  * @return {number[]}

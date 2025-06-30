@@ -2,9 +2,9 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 const a = new TreeNode(3);
@@ -28,7 +28,7 @@ c.right = e;
 //  * solution 1 -- BFS
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @return {number}
 //  */
@@ -49,7 +49,7 @@ c.right = e;
 //                 // leaf node -> end the func
 //                 return currentLevel;
 //             }
-            
+
 //             if (node.left !== null) {
 //                 // add child
 //                 queue.push(node?.left);
@@ -71,7 +71,7 @@ c.right = e;
  * solution 2 -- recursive DFS
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number}
  */
@@ -88,7 +88,9 @@ function minDepth(root) {
         return currentNodeCount + minDepth(root.left);
     }
 
-    return currentNodeCount + Math.min(minDepth(root.left), minDepth(root.right));
+    return (
+        currentNodeCount + Math.min(minDepth(root.left), minDepth(root.right))
+    );
 }
 
-console.log( minDepth(a) ); // 2
+console.log(minDepth(a)); // 2

@@ -4,7 +4,7 @@
  * solution 1 -- recursion
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {any} object
  * @return {string}
  */
@@ -44,4 +44,4 @@ function jsonStringify(object) {
     return String(object);
 }
 
-console.log( jsonStringify({"y":1, "x":2}) ); // {"y":1,"x":2}
+console.log(jsonStringify({ y: 1, x: 2 })); // {"y":1,"x":2}

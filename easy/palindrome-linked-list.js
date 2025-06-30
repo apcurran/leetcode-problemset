@@ -2,15 +2,15 @@
 
 // Definition for singly-linked list.
 function ListNode(val, next) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 // /**
 //  * solution 1 -- iterative
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {boolean}
 //  */
@@ -34,7 +34,7 @@ function ListNode(val, next) {
 //  * solution 2 -- iterative (slight alternative)
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {ListNode} head
 //  * @return {boolean}
 //  */
@@ -57,7 +57,7 @@ function ListNode(val, next) {
  * solution 3 -- array and two pointers
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {ListNode} head
  * @return {boolean}
  */
@@ -74,7 +74,7 @@ function isPalindrome(head) {
 }
 
 /**
- * @param {number[]} values 
+ * @param {number[]} values
  * @returns {boolean}
  */
 function areValuesPalindrome(values) {

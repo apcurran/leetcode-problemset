@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1) -- no more than 26 letters
- * 
+ *
  * @param {string} word
  * @return {number}
  */
@@ -28,7 +28,7 @@ function minimumPushes(word) {
         }
 
         const currentFrequency = frequenciesCount[i];
-        const amount = Math.floor((i / 8 + 1)) * currentFrequency;
+        const amount = Math.floor(i / 8 + 1) * currentFrequency;
         totalPresses += amount;
     }
 

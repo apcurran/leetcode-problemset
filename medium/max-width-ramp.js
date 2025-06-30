@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force (correct, but TLE)
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number}
 //  */
@@ -28,7 +28,7 @@
  * solution 2 -- sliding window
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */

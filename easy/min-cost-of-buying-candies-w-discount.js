@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * log n)
  * space: O(1)
- * 
+ *
  * @param {number[]} cost
  * @return {number}
  */
@@ -24,4 +24,4 @@ function minimumCost(cost) {
     return totalCost;
 }
 
-console.log( minimumCost([6, 5, 7, 9, 2, 2]) ); // 23
+console.log(minimumCost([6, 5, 7, 9, 2, 2])); // 23

@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(sqrt(n))
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} x
 //  * @return {number}
 //  */
@@ -22,16 +22,16 @@
  * solution 2
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {number} x
  * @return {number}
  */
 function mySqrt(x) {
     let left = 1;
     let right = Math.ceil(x / 2);
-    
+
     while (left <= right) {
-        const middle = left + ( Math.floor(right - left / 2) );
+        const middle = left + Math.floor(right - left / 2);
         const squaredMiddle = middle * middle;
 
         if (squaredMiddle > x) {
@@ -46,5 +46,5 @@ function mySqrt(x) {
     return right;
 }
 
-console.log( mySqrt(1) ); // 1
-console.log( mySqrt(4) ); // 2
+console.log(mySqrt(1)); // 1
+console.log(mySqrt(4)); // 2

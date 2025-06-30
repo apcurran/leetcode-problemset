@@ -6,7 +6,7 @@
 //  * m = items length
 //  * time: O(n * m)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[][]} items
 //  * @param {number[]} queries
 //  * @return {number[]}
@@ -35,7 +35,7 @@
 //  * solution 2 -- sort & binary search
 //  * time: O((m + n) * log m)
 //  * space: O(n + m)
-//  * 
+//  *
 //  * @param {number[][]} items
 //  * @param {number[]} queries
 //  * @return {number[]}
@@ -44,10 +44,10 @@
 //     items.sort(function sortByPrice(itemA, itemB) {
 //         const itemAPrice = itemA[0];
 //         const itemBPrice = itemB[0];
-        
+
 //         return itemAPrice - itemBPrice;
 //     });
-    
+
 //     let priceBeauties = [];
 //     let maxBeauty = 0;
 
@@ -85,7 +85,7 @@
  * solution 3 -- sort items and queries, then sliding pointer approach
  * time: O((n * log n) + (m * log m))
  * space: O(n + m)
- * 
+ *
  * @param {number[][]} items
  * @param {number[]} queries
  * @return {number[]}
@@ -94,7 +94,7 @@ function maximumBeauty(items, queries) {
     items.sort(function sortByPrice(itemA, itemB) {
         const itemAPrice = itemA[0];
         const itemBPrice = itemB[0];
-        
+
         return itemAPrice - itemBPrice;
     });
 
@@ -126,7 +126,28 @@ function maximumBeauty(items, queries) {
     return results;
 }
 
-console.log(maximumBeauty([[1, 2], [3, 2], [2, 4], [5, 6], [3, 5]], [1, 2, 3, 4, 5, 6]));
+console.log(
+    maximumBeauty(
+        [
+            [1, 2],
+            [3, 2],
+            [2, 4],
+            [5, 6],
+            [3, 5],
+        ],
+        [1, 2, 3, 4, 5, 6],
+    ),
+);
 // [2,4,5,5,6,6]
-console.log(maximumBeauty([[1, 2], [1, 2], [1, 3], [1, 4]], [1]));
+console.log(
+    maximumBeauty(
+        [
+            [1, 2],
+            [1, 2],
+            [1, 3],
+            [1, 4],
+        ],
+        [1],
+    ),
+);
 // [4]

@@ -4,7 +4,7 @@
 //  * solution 1 -- sliding window
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {string} blocks
 //  * @param {number} k
 //  * @return {number}
@@ -41,7 +41,7 @@
  * solution 2 -- brute force
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {string} blocks
  * @param {number} k
  * @return {number}

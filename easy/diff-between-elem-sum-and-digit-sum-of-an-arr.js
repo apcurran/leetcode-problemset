@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -18,4 +18,4 @@ function differenceOfSum(nums) {
     return Math.abs(elementsSum - digitsSum);
 }
 
-console.log( differenceOfSum([1, 15, 6, 3]) ); // 25 - 16 = 9
+console.log(differenceOfSum([1, 15, 6, 3])); // 25 - 16 = 9

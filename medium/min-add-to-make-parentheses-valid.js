@@ -4,7 +4,7 @@
  * Solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} str
  * @return {number}
  */
@@ -31,6 +31,6 @@ function minAddToMakeValid(str) {
     return leftParenCount + rightParenCount;
 }
 
-console.log( minAddToMakeValid("())") ); // 1
-console.log( minAddToMakeValid("(((") ); // 3
-console.log( minAddToMakeValid("()))((") ); // 4
+console.log(minAddToMakeValid("())")); // 1
+console.log(minAddToMakeValid("(((")); // 3
+console.log(minAddToMakeValid("()))((")); // 4

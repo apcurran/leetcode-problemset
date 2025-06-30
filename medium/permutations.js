@@ -4,27 +4,27 @@
 //  * Solution 1
 //  * time: O(n * n!)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @return {number[][]}
 //  */
 // function permute(nums) {
 //     let resArr = [];
-    
+
 //     /**
-//      * @param {number} n 
-//      * @param {number[]} heapArr 
+//      * @param {number} n
+//      * @param {number[]} heapArr
 //      * @returns {void}
 //      */
 //     function generate(n, heapArr) {
 //         if (n === 1) {
 //             resArr.push([...heapArr]);
-    
+
 //             return;
 //         }
-    
+
 //         generate(n - 1, heapArr);
-    
+
 //         for (let i = 0; i < n - 1; i++) {
 //             if (n % 2 === 0) {
 //                 swapInPlace(heapArr, i, n - 1);
@@ -52,8 +52,8 @@
 // // ]
 
 // /**
-//  * @param {number[]} arrToSwap 
-//  * @param {number} indexA 
+//  * @param {number[]} arrToSwap
+//  * @param {number} indexA
 //  * @param {number} indexB
 //  * @returns {void}
 //  */
@@ -65,7 +65,7 @@
  * Solution 2
  * time: O(n * n!)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number[][]}
  */
@@ -77,10 +77,10 @@ function permute(nums) {
 }
 
 /**
- * @param {number[]} nums 
- * @param {number[]} path 
- * @param {boolean[]} used 
- * @param {number[][]} results 
+ * @param {number[]} nums
+ * @param {number[]} path
+ * @param {boolean[]} used
+ * @param {number[][]} results
  */
 function dfs(nums, path, used, results) {
     if (path.length === nums.length) {
@@ -104,7 +104,7 @@ function dfs(nums, path, used, results) {
     }
 }
 
-console.log( permute([1, 2, 3]) );
+console.log(permute([1, 2, 3]));
 // [
 //     [1,2,3],
 //     [1,3,2],

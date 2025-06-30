@@ -5,7 +5,7 @@
  * n = words.length
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string[]} words
  * @param {string} s
  * @return {boolean}

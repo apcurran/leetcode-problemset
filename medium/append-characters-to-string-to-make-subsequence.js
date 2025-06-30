@@ -4,7 +4,7 @@
  * solution 1 -- two pointers
  * time: O(s + t)
  * space: O(1)
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @return {number}

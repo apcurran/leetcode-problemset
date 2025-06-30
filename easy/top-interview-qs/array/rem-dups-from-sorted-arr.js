@@ -4,7 +4,7 @@
  * solution 1 -- sliding window technique
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @return {number}
  */
@@ -25,4 +25,4 @@ function removeDuplicates(nums) {
     return insertIndex;
 }
 
-console.log( removeDuplicates([1, 1, 2]) ); // 2 -> nums = [1, 2, _]
+console.log(removeDuplicates([1, 1, 2])); // 2 -> nums = [1, 2, _]

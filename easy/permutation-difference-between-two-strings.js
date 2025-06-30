@@ -4,7 +4,7 @@
  * solution 1 -- hashmap
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @return {number}

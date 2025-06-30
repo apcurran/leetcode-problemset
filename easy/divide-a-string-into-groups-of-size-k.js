@@ -5,7 +5,7 @@
  * c = chunk length
  * time: O(n * c)
  * space: O(c) -- not including results array space
- * 
+ *
  * @param {string} str
  * @param {number} k
  * @param {string} fill - a single char

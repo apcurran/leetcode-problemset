@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[]} heights
  * @return {number}
  */
@@ -13,7 +13,7 @@ function heightChecker(heights) {
         return a - b;
     });
     let heightDiscrepancyCounter = 0;
-    
+
     for (let i = 0; i < heights.length; i++) {
         const originalHeight = heights[i];
         const expectedHeight = sortedHeights[i];
@@ -26,5 +26,5 @@ function heightChecker(heights) {
     return heightDiscrepancyCounter;
 }
 
-console.log( heightChecker([1, 1, 4, 2, 1, 3]) ); // 3
-console.log( heightChecker([5, 1, 2, 3, 4]) ); // 5
+console.log(heightChecker([1, 1, 4, 2, 1, 3])); // 3
+console.log(heightChecker([5, 1, 2, 3, 4])); // 5

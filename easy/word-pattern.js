@@ -4,7 +4,7 @@
  * solution 1 -- map
  * time: O(n)
  * space: O(n + m)
- * 
+ *
  * @param {string} pattern
  * @param {string} s
  * @return {boolean}
@@ -36,6 +36,6 @@ function wordPattern(pattern, s) {
     return true;
 }
 
-console.log( wordPattern("abba", "dog cat cat dog") ); // true
-console.log( wordPattern("abba", "dog cat cat fish") ); // false
-console.log( wordPattern("abba", "dog dog dog dog") ); // false
+console.log(wordPattern("abba", "dog cat cat dog")); // true
+console.log(wordPattern("abba", "dog cat cat fish")); // false
+console.log(wordPattern("abba", "dog dog dog dog")); // false

@@ -4,7 +4,7 @@
  * solution 1 -- stack
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} s
  * @return {number}
  */
@@ -14,9 +14,12 @@ function minLength(s) {
     for (let char of s) {
         stack.push(char);
 
-        if (stack.length >= 2 &&
-            (stack.at(-2) === "A" && stack.at(-1) === "B") ||
-            (stack.at(-2) === "C" && stack.at(-1) === "D")) {
+        if (
+            (stack.length >= 2 &&
+                stack.at(-2) === "A" &&
+                stack.at(-1) === "B") ||
+            (stack.at(-2) === "C" && stack.at(-1) === "D")
+        ) {
             stack.pop();
             stack.pop();
         }
@@ -29,7 +32,7 @@ function minLength(s) {
 //  * solution 2 -- string replacement
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {string} s
 //  * @return {number}
 //  */

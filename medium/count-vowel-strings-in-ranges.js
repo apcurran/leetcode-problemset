@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force (TLE)
 //  * time: O(q * w)
 //  * space: O(1) -- not including results
-//  * 
+//  *
 //  * @param {string[]} words
 //  * @param {number[][]} queries
 //  * @return {number[]}
@@ -20,7 +20,7 @@
 //             const currentWord = words[i];
 //             const wordFirstChar = currentWord[0];
 //             const wordLastChar = currentWord[currentWord.length - 1];
-            
+
 //             // check that start and end of word is a vowel (aeiou)
 //             if (!VOWELS.includes(wordFirstChar) || !VOWELS.includes(wordLastChar)) {
 //                 continue;
@@ -39,7 +39,7 @@
  * solution 2 -- prefix/suffix
  * time: O(q + w)
  * space: O(w)
- * 
+ *
  * @param {string[]} words
  * @param {number[][]} queries
  * @return {number[]}
@@ -52,7 +52,10 @@ function vowelStrings(words, queries) {
         const word = words[i];
         let isVowel = 0;
 
-        if (VOWELS.includes(word[0]) && VOWELS.includes(word[word.length - 1])) {
+        if (
+            VOWELS.includes(word[0]) &&
+            VOWELS.includes(word[word.length - 1])
+        ) {
             isVowel = 1;
         }
 
@@ -63,12 +66,31 @@ function vowelStrings(words, queries) {
 
     for (let i = 0; i < queries.length; i++) {
         const [queryStart, queryEnd] = queries[i];
-        const validWordsInRange = prefixCount[queryEnd + 1] - prefixCount[queryStart];
+        const validWordsInRange =
+            prefixCount[queryEnd + 1] - prefixCount[queryStart];
         results.push(validWordsInRange);
     }
-    
+
     return results;
 }
 
-console.log(vowelStrings(["aba", "bcb", "ece", "aa", "e"], [[0, 2], [1, 4], [1, 1]])); // [2, 3, 0]
-console.log(vowelStrings(["a", "e", "i"], [[0, 2], [0, 1], [2, 2]])); // [3, 2, 1]
+console.log(
+    vowelStrings(
+        ["aba", "bcb", "ece", "aa", "e"],
+        [
+            [0, 2],
+            [1, 4],
+            [1, 1],
+        ],
+    ),
+); // [2, 3, 0]
+console.log(
+    vowelStrings(
+        ["a", "e", "i"],
+        [
+            [0, 2],
+            [0, 1],
+            [2, 2],
+        ],
+    ),
+); // [3, 2, 1]

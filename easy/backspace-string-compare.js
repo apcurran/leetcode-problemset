@@ -6,7 +6,7 @@
  * m = t length
  * time: O(n + m)
  * space: O(n + m)
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @return {boolean}

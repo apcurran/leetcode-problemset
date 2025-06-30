@@ -3,7 +3,7 @@
 /**
  * Solution 1 -- O(n log n) depending on the JS engine implementation of Set.prototype.has(value),
  *                          on average Set.has() is faster than array.includes().
- * 
+ *
  * You're given strings jewels representing the types of stones that are jewels,
  * and stones representing the stones you have.
  * Each character in stones is a type of stone you have.
@@ -26,5 +26,5 @@ function numJewelsInStones(jewels, stones) {
     return jewelsCount;
 }
 
-console.log( numJewelsInStones("aA", "aAAbbbb") ); // 3
-console.log( numJewelsInStones("z", "ZZ") ); // 0
+console.log(numJewelsInStones("aA", "aAAbbbb")); // 3
+console.log(numJewelsInStones("z", "ZZ")); // 0

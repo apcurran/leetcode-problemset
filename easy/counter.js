@@ -4,7 +4,7 @@
  * solution 1 -- closure
  * time: O(1)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {Function} counter
  */
@@ -18,8 +18,7 @@ function createCounter(n) {
     };
 }
 
- 
 const counter = createCounter(10);
-console.log( counter() ); // 10
-console.log( counter() ); // 11
-console.log( counter() ); // 12
+console.log(counter()); // 10
+console.log(counter()); // 11
+console.log(counter()); // 12

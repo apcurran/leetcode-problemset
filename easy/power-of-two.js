@@ -4,7 +4,7 @@
 //  * Solution 1
 //  * time: O(log n)
 //  * space: O(log n)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {boolean}
 //  */
@@ -21,7 +21,7 @@
 //  * Solution 2 -- math
 //  * time: O(1)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number} n
 //  * @return {boolean}
 //  */
@@ -33,7 +33,7 @@
  * Solution 3 -- loop
  * time: O(1) -- bounded by 32 interations max
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {boolean}
  */
@@ -47,7 +47,7 @@ function isPowerOfTwo(n) {
     return multipleOfTwo === n;
 }
 
-console.log( isPowerOfTwo(16) ); // true -> 2^4 === 16
-console.log( isPowerOfTwo(1) ); // true -> 2^0 === 1
-console.log( isPowerOfTwo(3) ); // false
-console.log( isPowerOfTwo(5) ); // false
+console.log(isPowerOfTwo(16)); // true -> 2^4 === 16
+console.log(isPowerOfTwo(1)); // true -> 2^0 === 1
+console.log(isPowerOfTwo(3)); // false
+console.log(isPowerOfTwo(5)); // false

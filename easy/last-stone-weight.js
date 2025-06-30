@@ -4,7 +4,7 @@
 //  * solution 1 -- iterative
 //  * time: O(n^2 * log n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} stones
 //  * @return {number}
 //  */
@@ -34,7 +34,7 @@
  * solution 2 -- recursive
  * time: O(n^2 * log n)
  * space: O(n)
- * 
+ *
  * @param {number[]} stones
  * @return {number}
  */
@@ -51,6 +51,6 @@ function lastStoneWeight(stones) {
     return lastStoneWeight(stones);
 }
 
-console.log( lastStoneWeight([2, 7, 4, 1, 8, 1]) ); // 1
-console.log( lastStoneWeight([1]) ); // 1
-console.log( lastStoneWeight([2, 2]) ); // 0
+console.log(lastStoneWeight([2, 7, 4, 1, 8, 1])); // 1
+console.log(lastStoneWeight([1])); // 1
+console.log(lastStoneWeight([2, 2])); // 0

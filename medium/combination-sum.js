@@ -4,7 +4,7 @@
  * solution 1
  * time: O(2^n)
  * space: O(n)
- * 
+ *
  * @param {number[]} candidates
  * @param {number} target
  * @return {number[][]}
@@ -39,4 +39,4 @@ function combinationSum(candidates, target) {
     return results;
 }
 
-console.log( combinationSum([2, 3, 6, 7], 7) ); // [[2,2,3],[7]]
+console.log(combinationSum([2, 3, 6, 7], 7)); // [[2,2,3],[7]]

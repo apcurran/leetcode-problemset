@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number} low
  * @param {number} high
  * @return {number}
@@ -20,7 +20,7 @@ function countSymmetricIntegers(low, high) {
 }
 
 /**
- * @param {number} num 
+ * @param {number} num
  * @returns {boolean}
  */
 function isSymmetric(num) {

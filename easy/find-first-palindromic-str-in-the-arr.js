@@ -4,7 +4,7 @@
  * solution 1 -- two-pointer technique
  * time: O(n^2)
  * space: O(1)
- * 
+ *
  * @param {string[]} words
  * @return {string}
  */
@@ -17,8 +17,8 @@ function firstPalindrome(words) {
 }
 
 /**
- * 
- * @param {string} word 
+ *
+ * @param {string} word
  * @returns {boolean}
  */
 function isPalindrome(word) {
@@ -40,6 +40,6 @@ function isPalindrome(word) {
     return true;
 }
 
-console.log( firstPalindrome(["abc", "car", "ada", "racecar", "cool"]) ); // "ada"
-console.log( firstPalindrome(["notapalindrome", "racecar"]) ); // "racecar"
-console.log( firstPalindrome(["def", "ghi"]) ); // ""
+console.log(firstPalindrome(["abc", "car", "ada", "racecar", "cool"])); // "ada"
+console.log(firstPalindrome(["notapalindrome", "racecar"])); // "racecar"
+console.log(firstPalindrome(["def", "ghi"])); // ""

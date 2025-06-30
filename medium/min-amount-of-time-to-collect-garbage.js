@@ -5,7 +5,7 @@
  * n = garbagePickups length
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string[]} garbagePickups
  * @param {number[]} travelTimes
  * @return {number} minutes of total time for all trucks
@@ -40,7 +40,14 @@ function garbageCollection(garbagePickups, travelTimes) {
         time += travelTimes[i];
     }
 
-    return maxMetalTime + maxPaperTime + maxGlassTime + metalPickupsCount + paperPickupsCount + glassPickupsCount;
+    return (
+        maxMetalTime +
+        maxPaperTime +
+        maxGlassTime +
+        metalPickupsCount +
+        paperPickupsCount +
+        glassPickupsCount
+    );
 }
 
 console.log(garbageCollection(["G", "P", "GP", "GG"], [2, 4, 3])); // 21 (minutes)

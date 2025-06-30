@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * m)
  * space: O(n * m)
- * 
+ *
  * @param {number[]} nums
  * @return {number[]}
  */
@@ -23,4 +23,4 @@ function decompressRLElist(nums) {
     return results;
 }
 
-console.log( decompressRLElist([1, 2, 3, 4]) ); // [2, 4, 4, 4]
+console.log(decompressRLElist([1, 2, 3, 4])); // [2, 4, 4, 4]

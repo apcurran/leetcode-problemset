@@ -5,15 +5,15 @@
  * a = args
  * time: O(a)
  * space: O(a)
- * 
+ *
  * @param {Function} fn
  * @param {number} duration milliseconds
  * @return {Function}
  */
-const debounce = function(fn, duration) {
+const debounce = function (fn, duration) {
     let timeout;
 
-    return function(...args) {
+    return function (...args) {
         clearTimeout(timeout);
 
         timeout = setTimeout(() => {

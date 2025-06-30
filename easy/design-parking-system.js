@@ -15,7 +15,7 @@ class ParkingSystem {
         this.small = small;
     }
 
-    /** 
+    /**
      * @param {number} carType
      * @return {boolean}
      */
@@ -48,10 +48,8 @@ class ParkingSystem {
     }
 }
 
-
- 
 var obj = new ParkingSystem(1, 1, 0);
-console.log( obj.addCar(1) ); // true
-console.log( obj.addCar(2) ); // true
-console.log( obj.addCar(3) ); // false
-console.log( obj.addCar(1) ); // false
+console.log(obj.addCar(1)); // true
+console.log(obj.addCar(2)); // true
+console.log(obj.addCar(3)); // false
+console.log(obj.addCar(1)); // false

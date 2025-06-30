@@ -3,11 +3,11 @@
 /**
  * m = s1.length
  * n = s2.length
- * 
+ *
  * solution 1 -- iterative
  * time: O(m + n)
  * space: O(n + n)
- * 
+ *
  * @param {string} s1
  * @param {string} s2
  * @return {string[]}
@@ -43,4 +43,4 @@ function uncommonFromSentences(s1, s2) {
     return uncommonArr;
 }
 
-console.log( uncommonFromSentences("this apple is sweet", "this apple is sour") ); // ["sweet", "sour"]
+console.log(uncommonFromSentences("this apple is sweet", "this apple is sour")); // ["sweet", "sour"]

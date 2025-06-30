@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {string} binaryStr
  * @return {number}
  */
@@ -34,7 +34,7 @@ function numSteps(binaryStr) {
 }
 
 /**
- * @param {string} str 
+ * @param {string} str
  * @returns {string}
  */
 function binaryAddOne(str) {
@@ -59,4 +59,6 @@ function binaryAddOne(str) {
 console.log(numSteps("1101")); // 6
 console.log(numSteps("10")); // 1
 console.log(numSteps("1")); // 0
-console.log(numSteps("1111011110000011100000110001011011110010111001010111110001")); // 85
+console.log(
+    numSteps("1111011110000011100000110001011011110010111001010111110001"),
+); // 85

@@ -4,7 +4,7 @@
  * solution 1 -- hashmap
  * time: O(n)
  * space: O(52) -> O(1) -- only 52 unique upper/lower chars
- * 
+ *
  * @param {string} s
  * @return {number}
  */

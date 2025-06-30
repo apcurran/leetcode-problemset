@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[][]} points
  * @return {number}
  */
@@ -15,8 +15,8 @@ function minTimeToVisitAllPoints(points) {
         const currentPoint = points[i];
         const nextPoint = points[i + 1];
 
-        const[currentPointX, currentPointY] = currentPoint;
-        const[nextPointX, nextPointY] = nextPoint;
+        const [currentPointX, currentPointY] = currentPoint;
+        const [nextPointX, nextPointY] = nextPoint;
         const distanceX = Math.abs(currentPointX - nextPointX);
         const distanceY = Math.abs(currentPointY - nextPointY);
 
@@ -26,4 +26,10 @@ function minTimeToVisitAllPoints(points) {
     return totalSeconds;
 }
 
-console.log( minTimeToVisitAllPoints([[1, 1], [3, 4], [-1, 0]]) ); // 7
+console.log(
+    minTimeToVisitAllPoints([
+        [1, 1],
+        [3, 4],
+        [-1, 0],
+    ]),
+); // 7

@@ -22,16 +22,12 @@
  * @return {boolean}
  */
 function isPalindrome(x) {
-    const reversedXStr = x
-        .toString()
-        .split("")
-        .reverse()
-        .join("");
+    const reversedXStr = x.toString().split("").reverse().join("");
 
     return Number(reversedXStr) === x;
 }
 
-console.log( isPalindrome(121) ); // true -> 121 reads the same left to right and right to left
-console.log( isPalindrome(-121) ); // false -> -121 reads differently when reversed
-console.log( isPalindrome(10) ); // false -> 10 reads differently when reversed
-console.log( isPalindrome(-101) ); // false -> -101 reads differently when reversed
+console.log(isPalindrome(121)); // true -> 121 reads the same left to right and right to left
+console.log(isPalindrome(-121)); // false -> -121 reads differently when reversed
+console.log(isPalindrome(10)); // false -> 10 reads differently when reversed
+console.log(isPalindrome(-101)); // false -> -101 reads differently when reversed

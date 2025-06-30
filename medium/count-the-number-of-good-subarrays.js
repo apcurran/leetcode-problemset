@@ -4,7 +4,7 @@
 //  * solution 1 -- brute force
 //  * time: O(n^4)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} k
 //  * @return {number}
@@ -41,7 +41,7 @@
  * solution 2 -- hashmap
  * time: O(n^2)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @param {number} k
  * @return {number}

@@ -10,7 +10,7 @@ function TreeNode(val) {
  * solution 1 -- iterative
  * time: O(h)
  * space: O(1)
- * 
+ *
  * @param {TreeNode} root
  * @param {TreeNode} p
  * @param {TreeNode} q

@@ -4,7 +4,7 @@
  * solution 1 -- bin search
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {number} n
  * @return {number}
  */
@@ -33,4 +33,4 @@ function arrangeCoins(n) {
     return result;
 }
 
-console.log( arrangeCoins(5) ); // 2
+console.log(arrangeCoins(5)); // 2

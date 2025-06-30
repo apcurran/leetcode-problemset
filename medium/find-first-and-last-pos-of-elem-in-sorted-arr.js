@@ -4,7 +4,7 @@
 //  * solution 1 -- unoptimized
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} nums
 //  * @param {number} target
 //  * @return {number[]}
@@ -33,7 +33,7 @@
  * solution 1 -- unoptimized
  * time: O(log n)
  * space: O(1)
- * 
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
@@ -46,9 +46,9 @@ function searchRange(nums, target) {
 }
 
 /**
- * @param {number[]} nums 
- * @param {number} target 
- * @param {boolean} leftBias 
+ * @param {number[]} nums
+ * @param {number} target
+ * @param {boolean} leftBias
  * @returns {number}
  */
 function binSearch(nums, target, leftBias) {

@@ -11,7 +11,7 @@ class ArrayWrapper {
     /**
      * time: O(n)
      * space: O(1)
-     * 
+     *
      * @returns {number}
      */
     valueOf() {
@@ -21,7 +21,7 @@ class ArrayWrapper {
     /**
      * time: O(n)
      * space: O(n)
-     * 
+     *
      * @returns {string}
      */
     toString() {

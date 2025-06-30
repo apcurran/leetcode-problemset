@@ -19,7 +19,7 @@
 //             if (i === j) continue;
 
 //             const currInnerNum = nums[j];
-            
+
 //             if (currInnerNum + currOuterNum === num) {
 //                 // Return indices of nums
 //                 return [i, j];
@@ -71,7 +71,6 @@ function twoSum(nums, num) {
     nums.sort((a, b) => a - b);
 
     // Binary search
-    
 }
 
 /**
@@ -82,7 +81,7 @@ function twoSum(nums, num) {
 function binarySearch(arr, num) {
     let start = 0;
     let end = arr.length - 1;
-    
+
     while (start <= end) {
         // Find middle index
         const midIndex = Math.floor((start + end) / 2);

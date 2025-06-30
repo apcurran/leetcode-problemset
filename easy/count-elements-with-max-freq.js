@@ -2,8 +2,8 @@
  * solution 1
  * time: O(n)
  * space: O(n)
- * 
- * @param {number[]} nums 
+ *
+ * @param {number[]} nums
  * @returns {number}
  */
 function maxFrequencyElements(nums) {
@@ -16,13 +16,13 @@ function maxFrequencyElements(nums) {
 
     const maxFequency = Math.max(...numsFrequencies.values());
     let sum = 0;
-    
+
     for (let [, numFreq] of numsFrequencies) {
         if (numFreq === maxFequency) {
             sum += numFreq;
         }
     }
-    
+
     return sum;
 }
 

@@ -4,7 +4,7 @@
  * solution 1 -- sliding window
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {string} s
  * @param {number} k
  * @return {number}
@@ -25,14 +25,13 @@ function takeCharacters(s, k) {
         }
     }
 
-
     if (Math.min(aCount, bCount, cCount) < k) {
         return -1; // not possible to get k of each char
     }
 
     let result = Infinity;
     let left = 0;
-    
+
     for (let right = 0; right < s.length; right++) {
         if (s[right] === "a") {
             aCount--;

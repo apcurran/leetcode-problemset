@@ -2,9 +2,9 @@
 
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val);
-    this.left = (left === undefined ? null : left);
-    this.right = (right === undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 const a = new TreeNode(3);
@@ -20,7 +20,7 @@ b.right = d;
 //  * solution 1 -- DFS (unoptimized)
 //  * time: O(n * log n) -- sort
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @param {number} k
 //  * @return {number}
@@ -52,7 +52,7 @@ b.right = d;
 //  * solution 2 -- DFS
 //  * time: O(n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {TreeNode} root
 //  * @param {number} k
 //  * @return {number}
@@ -87,7 +87,7 @@ b.right = d;
  * solution 2 -- DFS recursion
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @param {number} k
  * @return {number}
@@ -99,8 +99,8 @@ function kthSmallest(root, k) {
 }
 
 /**
- * @param {TreeNode} root 
- * @param {number[]} values 
+ * @param {TreeNode} root
+ * @param {number[]} values
  */
 function recurse(root, values) {
     if (root === null) return values;

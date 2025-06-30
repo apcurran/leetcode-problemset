@@ -13,7 +13,7 @@
  * solution 1 -- recursive dfs
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number}
  */

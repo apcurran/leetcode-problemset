@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n * k)
  * space: O(n) -- including results arr
- * 
+ *
  * @param {number[]} code
  * @param {number} k
  * @return {number[]}

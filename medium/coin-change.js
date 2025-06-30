@@ -6,7 +6,7 @@
 //  * a = amount
 //  * time: O(n^a)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} coins
 //  * @param {number} amount
 //  * @return {number}
@@ -23,7 +23,7 @@
 //     for (let coin of coins) {
 //         const updatedAmount = amount - coin;
 //         const coinCount = coinChange(coins, updatedAmount);
-        
+
 //         if (coinCount >= 0) {
 //             if (minTotalCoins < 0) {
 //                 minTotalCoins = coinCount + 1;
@@ -33,7 +33,6 @@
 //         }
 //     }
 
-    
 //     return minTotalCoins;
 // }
 
@@ -43,7 +42,7 @@
 //  * a = amount
 //  * time: O(n * a)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} coins
 //  * @param {number} amount
 //  * @return {number}
@@ -64,7 +63,7 @@
 //     for (let coin of coins) {
 //         const updatedAmount = amount - coin;
 //         const coinCount = coinChange(coins, updatedAmount, cache);
-        
+
 //         if (coinCount >= 0) {
 //             // coinCount + 1 to include this current coin for total coins
 //             if (minTotalCoins < 0) {
@@ -76,7 +75,7 @@
 //     }
 
 //     cache.set(amount, minTotalCoins);
-    
+
 //     return minTotalCoins;
 // }
 
@@ -86,7 +85,7 @@
  * a = amount
  * time: O(m * c)
  * space: O(m)
- * 
+ *
  * @param {number[]} coins
  * @param {number} amount
  * @return {number}
@@ -113,5 +112,5 @@ function coinChange(coins, amount) {
     }
 }
 
-console.log( coinChange([1], 0) ); // 0
-console.log( coinChange([1, 2, 5], 11) ); // 3
+console.log(coinChange([1], 0)); // 0
+console.log(coinChange([1, 2, 5], 11)); // 3

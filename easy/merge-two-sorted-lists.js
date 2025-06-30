@@ -1,17 +1,16 @@
 "use strict";
 
-
 // Definition for singly-linked list.
 function ListNode(val, next) {
-    this.val = (val===undefined ? 0 : val);
-    this.next = (next===undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
 }
 
 /**
  * solution 1 -- iterative
  * time: O(min(n, m))
  * space: O(n + m) -> generates a new list with all nodes
- * 
+ *
  * @param {ListNode} list1
  * @param {ListNode} list2
  * @return {ListNode}

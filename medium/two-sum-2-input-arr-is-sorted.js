@@ -32,7 +32,7 @@
  * solution 2 -- two pointers
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} numbers
  * @param {number} target
  * @return {[number, number]|undefined}
@@ -56,7 +56,7 @@ function twoSum(numbers, target) {
     }
 }
 
-console.log( twoSum([2, 7, 11, 15], 9) ); // [1, 2]
-console.log( twoSum([2, 3, 4], 6) ); // [1, 3]
-console.log( twoSum([-1, 0], -1) ); // [1, 2]
-console.log( twoSum([0, 0, 3, 4], 0) ); // [1, 2]
+console.log(twoSum([2, 7, 11, 15], 9)); // [1, 2]
+console.log(twoSum([2, 3, 4], 6)); // [1, 3]
+console.log(twoSum([-1, 0], -1)); // [1, 2]
+console.log(twoSum([0, 0, 3, 4], 0)); // [1, 2]

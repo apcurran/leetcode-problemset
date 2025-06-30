@@ -4,7 +4,7 @@
 //  * solution 1 -- brute-force
 //  * time: O(n^2)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[]} heightsArr
 //  * @return {number}
 //  */
@@ -27,7 +27,7 @@
  * solution 2 -- two-pointer
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} heightsArr
  * @return {number}
  */
@@ -55,4 +55,4 @@ function maxArea(heightsArr) {
     return maxArea;
 }
 
-console.log( maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]) ); // 49
+console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])); // 49

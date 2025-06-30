@@ -4,7 +4,7 @@
  * solution 1 -- dynamic programming bottom-up
  * time: O(n^2 * m)
  * space: O(n + m)
- * 
+ *
  * @param {string} s
  * @param {string[]} wordDict
  * @return {boolean}
@@ -16,7 +16,8 @@ function wordBreak(s, wordDict) {
 
     for (let i = s.length - 1; i >= 0; i--) {
         for (let word of wordDict) {
-            if (i + word.length <= s.length &&
+            if (
+                i + word.length <= s.length &&
                 s.slice(i, i + word.length) === word
             ) {
                 // there are enough chars in s for us to compare them AND

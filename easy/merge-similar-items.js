@@ -3,7 +3,7 @@
 //  * n = Max(items1, items2)
 //  * time: O(n * log n)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[][]} items1
 //  * @param {number[][]} items2
 //  * @return {number[][]}
@@ -38,7 +38,7 @@
  * n = Max(items1, items2)
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[][]} items1
  * @param {number[][]} items2
  * @return {number[][]}
@@ -55,4 +55,16 @@ function mergeSimilarItems(items1, items2) {
     return [...itemsCache.entries()].sort((arrA, arrB) => arrA[0] - arrB[0]);
 }
 
-console.log( mergeSimilarItems([[1, 1], [4, 5], [3, 8]], [[3, 1], [1, 5]]) ); // [[1,6],[3,9],[4,5]]
+console.log(
+    mergeSimilarItems(
+        [
+            [1, 1],
+            [4, 5],
+            [3, 8],
+        ],
+        [
+            [3, 1],
+            [1, 5],
+        ],
+    ),
+); // [[1,6],[3,9],[4,5]]

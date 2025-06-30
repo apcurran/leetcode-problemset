@@ -4,7 +4,7 @@
 //  * solution 1 -- iterative
 //  * time: O(n^2)
 //  * space: O(n)
-//  * 
+//  *
 //  * @param {number[]} arr
 //  * @return {number[]}
 //  */
@@ -27,7 +27,7 @@
  * solution 2 -- iterative (optimized)
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[]} arr
  * @return {number[]}
  */
@@ -44,5 +44,5 @@ function replaceElements(arr) {
     return arr;
 }
 
-console.log( replaceElements([17, 18, 5, 4, 6, 1]) ); // [18, 6, 6, 6, 1, -1]
-console.log( replaceElements([400]) ); // [-1]
+console.log(replaceElements([17, 18, 5, 4, 6, 1])); // [18, 6, 6, 6, 1, -1]
+console.log(replaceElements([400])); // [-1]

@@ -5,12 +5,12 @@
  * n = functions length
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {Function[]} functions
  * @return {Function}
  */
-const compose = function(functions) {
-    return function(x) {
+const compose = function (functions) {
+    return function (x) {
         if (functions.length === 0) return x;
 
         let result = x;
@@ -25,9 +25,8 @@ const compose = function(functions) {
     };
 };
 
+const fn = compose([(x) => x + 1, (x) => 2 * x]);
+console.log(fn(4)); // 9
 
-const fn = compose( [(x) => x + 1, (x) => 2 * x] );
-console.log( fn(4) ); // 9
-
-const fn2 = compose( [(x) => x + 1, (x) => x * x, (x) => 2 * x] );
-console.log( fn2(4) ); // 65
+const fn2 = compose([(x) => x + 1, (x) => x * x, (x) => 2 * x]);
+console.log(fn2(4)); // 65

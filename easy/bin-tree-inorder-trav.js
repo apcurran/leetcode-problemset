@@ -1,18 +1,17 @@
 "use strict";
 
-
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val===undefined ? 0 : val);
-    this.left = (left===undefined ? null : left);
-    this.right = (right===undefined ? null : right);
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
 }
 
 /**
  * solution 1 -- recursive
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {TreeNode} root
  * @return {number[]}
  */
@@ -26,9 +25,9 @@ function inorderTraversal(root) {
 
 /**
  * helper func
- * 
- * @param {TreeNode} node 
- * @param {number[]} valsArr 
+ *
+ * @param {TreeNode} node
+ * @param {number[]} valsArr
  * @returns {void}
  */
 function recurseInorder(node, valsArr) {

@@ -4,7 +4,7 @@
 //  * solution 1 -- sort and compare
 //  * time: O((s * log s) + (t * log t))
 //  * space: O(s + t)
-//  * 
+//  *
 //  * @param {string} s
 //  * @param {string} t
 //  * @return {boolean}
@@ -26,7 +26,7 @@
  * solution 1 -- hashmaps
  * time: O(s + t)
  * space: O(s + t)
- * 
+ *
  * @param {string} s
  * @param {string} t
  * @return {boolean}
@@ -47,7 +47,8 @@ function isAnagram(s, t) {
     }
 
     // now compare maps
-    const largestLettersCache = sLetters.size >= tLetters.size ? sLetters : tLetters;
+    const largestLettersCache =
+        sLetters.size >= tLetters.size ? sLetters : tLetters;
 
     for (let tuple of largestLettersCache) {
         const char = tuple[0];
@@ -60,5 +61,5 @@ function isAnagram(s, t) {
     return true;
 }
 
-console.log( isAnagram("anagram", "nagaram") ); // true
-console.log( isAnagram("rat", "car") ); // false
+console.log(isAnagram("anagram", "nagaram")); // true
+console.log(isAnagram("rat", "car")); // false

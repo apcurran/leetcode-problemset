@@ -4,7 +4,7 @@
  * solution 1 -- interval
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number} days
  * @param {number[][]} meetings
  * @return {number}
@@ -28,4 +28,10 @@ function countDays(days, meetings) {
     return result;
 }
 
-console.log(countDays(10, [[5, 7], [1, 3], [9, 10]])); // 2
+console.log(
+    countDays(10, [
+        [5, 7],
+        [1, 3],
+        [9, 10],
+    ]),
+); // 2

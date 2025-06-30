@@ -4,7 +4,7 @@
  * solution 1
  * time: O(1)
  * space: O(1)
- * 
+ *
  * @param {number} initialValue
  * @return { increment: Function, decrement: Function, reset: Function }
  */
@@ -44,7 +44,6 @@ function createCounter(initialValue) {
         reset,
     };
 }
-
 
 const counter = createCounter(5);
 console.log(counter.increment()); // 6

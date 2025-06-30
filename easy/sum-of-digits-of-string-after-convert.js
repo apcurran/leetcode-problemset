@@ -4,7 +4,7 @@
  * solution 1
  * time: O(n + (k * n))
  * space: O(n)
- * 
+ *
  * @param {string} s
  * @param {number} k
  * @return {number}
@@ -32,8 +32,8 @@ function getLucky(s, k) {
 }
 
 /**
- * 
- * @param {string} charDigitsStr 
+ *
+ * @param {string} charDigitsStr
  * @returns {number}
  */
 function transformCharDigitsStrToSum(charDigitsStr) {

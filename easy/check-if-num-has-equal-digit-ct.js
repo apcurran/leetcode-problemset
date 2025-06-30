@@ -4,14 +4,12 @@
  * solution 1 -- cache
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} num
  * @return {boolean}
  */
 function digitCount(num) {
-    const digitsArr = num
-        .split("")
-        .map((digitStr) => Number(digitStr));
+    const digitsArr = num.split("").map((digitStr) => Number(digitStr));
     let digitsMap = new Map();
 
     for (let digit of digitsArr) {
@@ -26,8 +24,8 @@ function digitCount(num) {
         if (currDigit !== currDigitIndexCount) return false;
     }
 
-    return true;  
+    return true;
 }
 
-console.log( digitCount("1210") ); // true
-console.log( digitCount("030") ); // false
+console.log(digitCount("1210")); // true
+console.log(digitCount("030")); // false

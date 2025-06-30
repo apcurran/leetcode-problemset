@@ -4,7 +4,7 @@
  * solution 1 -- built-in sort method
  * time: O(n * log n)
  * space: O(n)
- * 
+ *
  * @param {number[]} arr
  * @return {number[]}
  */
@@ -26,7 +26,7 @@ function sortByBits(arr) {
 }
 
 /**
- * @param {number} num 
+ * @param {number} num
  * @returns {number}
  */
 function get1sBitsCount(num) {

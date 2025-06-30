@@ -5,7 +5,7 @@
  * n = num of digits in num
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number} num
  * @return {number}
  */
@@ -23,8 +23,8 @@ function maximum69Number(num) {
             digitStrs.push(digitStr);
         }
     }
-    
-    return Number( digitStrs.join("") );
+
+    return Number(digitStrs.join(""));
 }
 
-console.log( maximum69Number(9669) ); // 9969
+console.log(maximum69Number(9669)); // 9969

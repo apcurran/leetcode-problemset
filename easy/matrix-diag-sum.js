@@ -4,7 +4,7 @@
 //  * solution 1
 //  * time: O(n)
 //  * space: O(1)
-//  * 
+//  *
 //  * @param {number[][]} matrix
 //  * @return {number}
 //  */
@@ -16,7 +16,7 @@
 //         const primaryDiagonal = matrix[i][i];
 //         const secondaryDiagonal = matrix[i][j];
 //         totalSum += primaryDiagonal;
-        
+
 //         // skip adding numbers from the same middle diagonal position
 //         if (i !== j) {
 //             totalSum += secondaryDiagonal;
@@ -30,7 +30,7 @@
  * solution 2 -- similar alternative
  * time: O(n)
  * space: O(1)
- * 
+ *
  * @param {number[][]} matrix
  * @return {number}
  */
@@ -42,11 +42,11 @@ function diagonalSum(matrix) {
         totalSum += matrix[i][i]; // primary diagonal
         totalSum += matrix[i][n - 1 - i]; // secondary diagonal
     }
-    
+
     if (n % 2 !== 0) {
         // skip adding numbers from the same middle diagonal position
         const matrixCenterNum = matrix[Math.floor(n / 2)][Math.floor(n / 2)];
-        
+
         return totalSum - matrixCenterNum;
     } else {
         return totalSum;
@@ -58,4 +58,4 @@ const mat = [
     [4, 5, 6],
     [7, 8, 9],
 ];
-console.log( diagonalSum(mat) ); // 25
+console.log(diagonalSum(mat)); // 25

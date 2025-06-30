@@ -4,7 +4,7 @@
  * solution 1 -- math reasoning & counting occurrences
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {number} min ops or -1 if not possible
  */

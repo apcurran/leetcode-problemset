@@ -4,8 +4,8 @@
  * solution 1 -- bottom-up dynamic programming
  * time: O(n^2)
  * space: O(n)
- * 
- * @param {number} n 
+ *
+ * @param {number} n
  * @returns {number}
  */
 function minSteps(n) {
@@ -16,7 +16,7 @@ function minSteps(n) {
         for (let j = 0; j <= i / 2; j++) {
             if (i % j === 0) {
                 dp[i] = Math.min(dp[i], dp[j] + i / j);
-            }            
+            }
         }
     }
 
