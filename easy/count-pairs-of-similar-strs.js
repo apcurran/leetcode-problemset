@@ -11,11 +11,11 @@ function similarPairs(words) {
 
     for (let i = 0; i < words.length; i++) {
         const currentWord = words[i];
-        const currentWordUniqueLetters = new Set([...currentWord]);
+        const currentWordUniqueLetters = new Set(currentWord);
 
         followingWordsLoop: for (let j = i + 1; j < words.length; j++) {
             const followingWord = words[j];
-            const followingWordUniqueLetters = new Set([...followingWord]);
+            const followingWordUniqueLetters = new Set(followingWord);
             // iterate Set currentWord
             for (let letter of currentWordUniqueLetters) {
                 if (!followingWordUniqueLetters.has(letter)) {
