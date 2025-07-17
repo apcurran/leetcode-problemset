@@ -11,8 +11,7 @@
 function isValid(word) {
     if (word.length < 3) return false;
 
-    const regex =
-        /^(?=.*[aeiouAEIOU])(?=.*[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ])[a-zA-Z0-9]+$/gi;
+    const regex = /^(?=.*[aeiou])(?=.*[bcdfghjklmnpqrstvwxyz])[a-z0-9]+$/gi;
 
     return regex.test(word);
 }
