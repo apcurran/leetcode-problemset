@@ -38,8 +38,26 @@
 //     return true;
 // }
 
+// /**
+//  * solution 3 -- math logarithms
+//  * time: O(1)
+//  * space: O(1)
+//  *
+//  * @param {number} n
+//  * @return {boolean}
+//  */
+// function isPowerOfFour(n) {
+//     if (n === 0) return false;
+
+//     const baseFourLog = Math.log(n) / Math.log(4);
+
+//     if (!Number.isInteger(baseFourLog)) return false;
+
+//     return n === 4 ** baseFourLog;
+// }
+
 /**
- * solution 3 -- math logarithms
+ * solution 4 -- math logarithms (refined)
  * time: O(1)
  * space: O(1)
  *
@@ -47,13 +65,11 @@
  * @return {boolean}
  */
 function isPowerOfFour(n) {
-    if (n === 0) return false;
+    if (n <= 0) return false;
 
-    const baseFourLog = Math.log(n) / Math.log(4);
-
-    if (!Number.isInteger(baseFourLog)) return false;
-
-    return n === 4 ** baseFourLog;
+    // solving for k (the exponent of 4),
+    // then check if an int
+    return Number.isInteger(Math.log2(n) / 2);
 }
 
 console.log(isPowerOfFour(16)); // true
