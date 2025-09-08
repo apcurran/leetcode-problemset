@@ -7,9 +7,8 @@
  * @return {number[]}
  */
 function getNoZeroIntegers(n) {
-    for (let i = 1; i <= n; i++) {
-        const a = i;
-        const b = n - i;
+    for (let a = 1; a <= n; a++) {
+        const b = n - a;
 
         if (checkNoZeros(a) && checkNoZeros(b)) {
             return [a, b];
