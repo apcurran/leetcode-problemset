@@ -30,8 +30,6 @@ function shipWithinDays(weights, days) {
     return result;
 }
 
-console.log(shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)); // 15
-
 // HELPER FUNCS
 /**
  * @param {number[]} weights
@@ -55,15 +53,50 @@ function canShip(weights, capacity, days) {
     return ships <= days;
 }
 
+// /**
+//  * solution 2 -- linear search brute force (correct, but TLE)
+//  * time: O(n^2)
+//  * space: O(1)
+//  *
+//  * @param {number[]} weights
+//  * @param {number} days
+//  * @return {number}
+//  */
+// function shipWithinDays(weights, days) {
+//     let result = getMax(weights);
+
+//     while (true) {
+//         let ships = 1;
+//         let capacity = result; // upper bound
+
+//         for (let weight of weights) {
+//             if (capacity - weight < 0) {
+//                 ships++;
+//                 capacity = result;
+//             }
+
+//             capacity -= weight;
+//         }
+
+//         if (ships <= days) {
+//             return result;
+//         }
+
+//         result++;
+//     }
+// }
+
+console.log(shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)); // 15
+
 /**
- * @param {number[]} arr
+ * @param {number[]} nums
  * @returns {number}
  */
-function getMax(arr) {
-    let max = arr[0];
+function getMax(nums) {
+    let max = nums[0];
 
-    for (let i = 1; i < arr.length; i++) {
-        max = Math.max(max, arr[i]);
+    for (let i = 1; i < nums.length; i++) {
+        max = Math.max(max, nums[i]);
     }
 
     return max;
