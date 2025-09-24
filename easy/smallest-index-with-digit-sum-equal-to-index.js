@@ -1,29 +1,65 @@
+// /**
+//  * solution 1
+//  * n = nums length
+//  * m = num length
+//  * time: O(n * m)
+//  * space: O(m)
+//  *
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function smallestIndex(nums) {
+//     for (let i = 0; i < nums.length; i++) {
+//         const num = nums[i];
+//         const strNum = String(num);
+//         let sum = 0;
+
+//         for (let strDigit of strNum) {
+//             sum += Number(strDigit);
+//         }
+
+//         if (sum === i) {
+//             return i;
+//         }
+//     }
+
+//     return -1;
+// }
+
 /**
- * solution 1
+ * solution 2
  * n = nums length
  * m = num length
  * time: O(n * m)
- * space: O(m)
+ * space: O(1)
  *
  * @param {number[]} nums
  * @return {number}
  */
 function smallestIndex(nums) {
     for (let i = 0; i < nums.length; i++) {
-        const num = nums[i];
-        const strNum = String(num);
-        let sum = 0;
-
-        for (let strDigit of strNum) {
-            sum += Number(strDigit);
-        }
-
-        if (sum === i) {
+        if (i === calcDigitsSum(nums[i])) {
             return i;
         }
     }
 
     return -1;
+}
+
+/**
+ * @param {number} num
+ * @returns {number}
+ */
+function calcDigitsSum(num) {
+    let sum = 0;
+
+    while (num !== 0) {
+        const digit = num % 10;
+        sum += digit;
+        num = Math.floor(num / 10);
+    }
+
+    return sum;
 }
 
 console.log(smallestIndex([1, 3, 2])); // 2
