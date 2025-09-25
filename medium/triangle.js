@@ -80,7 +80,7 @@
 function minimumTotal(triangle) {
     const h = triangle.length;
     // copy final row of triangle
-    let dpCache = new Int16Array(triangle[h - 1].length);
+    let dpCache = new Int32Array(triangle[h - 1].length);
 
     for (let i = 0; i < dpCache.length; i++) {
         dpCache[i] = triangle[h - 1][i];
