@@ -24,7 +24,7 @@ function relativeSortArray(arr1, arr2) {
 
     // sort arr1Map in ascending order
     const sortedArr1NumbersCache = new Map(
-        [...arr1NumbersCache.entries()].sort(
+        [...arr1NumbersCache.entries()].toSorted(
             (entryA, entryB) => entryA[0] - entryB[0],
         ),
     );

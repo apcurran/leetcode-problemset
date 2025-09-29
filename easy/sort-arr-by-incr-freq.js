@@ -18,7 +18,7 @@ function frequencySort(nums) {
     }
 
     // sort func with comparison callback checking num freq from map,
-    return nums.sort(function sortByIncreasingFreq(numA, numB) {
+    return nums.toSorted(function sortByIncreasingFreq(numA, numB) {
         const numAFreq = numberFrequencies.get(numA);
         const numBFreq = numberFrequencies.get(numB);
         const frequenciesDiff = numAFreq - numBFreq;

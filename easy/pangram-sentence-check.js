@@ -7,7 +7,7 @@
  */
 function checkIfPangram(sentence) {
     const alphabetStr = "abcdefghijklmnopqrstuvwxyz";
-    const sortedSentenceChars = sentence.split("").sort();
+    const sortedSentenceChars = sentence.split("").toSorted();
     const uniqueSentenceChars = new Set(sortedSentenceChars);
     const joinedUniqueChars = [...uniqueSentenceChars].join("");
 

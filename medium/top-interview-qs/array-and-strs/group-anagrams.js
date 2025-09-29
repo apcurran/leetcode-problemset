@@ -13,7 +13,7 @@ function groupAnagrams(strs) {
 
     for (let str of strs) {
         // key for map val
-        const sortedStr = str.split("").sort().join("");
+        const sortedStr = str.split("").toSorted().join("");
         // map val
         const anagramGroup = anagramsMap.get(sortedStr) || [];
         // add curr anagram to str anagram list

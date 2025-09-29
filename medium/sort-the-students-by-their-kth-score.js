@@ -11,7 +11,7 @@
  * @return {number[][]}
  */
 function sortTheStudents(scores, kColumn) {
-    return scores.sort((student1, student2) => {
+    return scores.toSorted((student1, student2) => {
         const student1ExamScore = student1[kColumn];
         const student2ExamScore = student2[kColumn];
 

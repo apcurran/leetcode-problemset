@@ -10,7 +10,7 @@
  * @return {number}
  */
 function kthSmallest(matrix, k) {
-    const flattenedArr = matrix.flat().sort((a, b) => a - b);
+    const flattenedArr = matrix.flat().toSorted((a, b) => a - b);
 
     return flattenedArr[k - 1];
 }

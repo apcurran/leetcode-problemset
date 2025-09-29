@@ -60,7 +60,7 @@ function maximumSum(nums) {
 
             return [digitSum, num];
         })
-        .sort(function sortByDigitSumThenNumValue(
+        .toSorted(function sortByDigitSumThenNumValue(
             [aDigitSum, aNum],
             [bDigitSum, bNum],
         ) {

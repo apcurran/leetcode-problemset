@@ -41,7 +41,7 @@ function zigzagLevelOrder(root) {
 
         if (results.length % 2 !== 0) {
             // odd level reversal
-            level = level.reverse();
+            level = level.toReversed();
         }
 
         results.push(level);

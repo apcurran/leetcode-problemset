@@ -15,7 +15,7 @@ function removeAnagrams(words) {
     let prevSortedWord = "";
 
     for (let word of words) {
-        const currSortedWord = word.split("").sort().join("");
+        const currSortedWord = word.split("").toSorted().join("");
 
         if (currSortedWord === prevSortedWord) continue;
 

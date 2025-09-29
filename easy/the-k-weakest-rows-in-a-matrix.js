@@ -30,7 +30,7 @@ function kWeakestRows(matrix, k) {
     }
 
     return soldierCountsFromRows
-        .sort((a, b) => {
+        .toSorted((a, b) => {
             const array1SoldierCountOfRow = a[0];
             const array2SoldierCountOfRow = b[0];
 

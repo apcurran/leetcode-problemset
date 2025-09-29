@@ -51,7 +51,7 @@
  */
 function smallerNumbersThanCurrent(nums) {
     // JS prototype .sort() method takes O(n log n)
-    const numsArrCopy = [...nums].sort((a, b) => a - b);
+    const numsArrCopy = [...nums].toSorted((a, b) => a - b);
     let numCache = new Map();
 
     for (let i = 0; i < numsArrCopy.length; i++) {

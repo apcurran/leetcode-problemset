@@ -34,8 +34,8 @@ function findWinners(matches) {
     }
 
     // convert Set objs to arrays and sort ASC order
-    const matchLossesZero = [...zeroLoss].sort(sortAsc);
-    const matchLossesOne = [...oneLoss].sort(sortAsc);
+    const matchLossesZero = [...zeroLoss].toSorted(sortAsc);
+    const matchLossesOne = [...oneLoss].toSorted(sortAsc);
 
     return [matchLossesZero, matchLossesOne];
 }

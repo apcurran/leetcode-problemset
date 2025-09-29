@@ -10,7 +10,7 @@
  */
 function minimumAbsDifference(arr) {
     // sort arr ASC
-    arr = arr.sort((a, b) => a - b);
+    arr = arr.toSorted((a, b) => a - b);
     // take first two nums (min nums)
     // find the Abs(diff) of both nums
     let minDiff = Infinity;

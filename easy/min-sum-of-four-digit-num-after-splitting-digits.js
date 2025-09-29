@@ -13,7 +13,7 @@ function minimumSum(num) {
         .toString()
         .split("")
         .map((digitStr) => +digitStr)
-        .sort((a, b) => a - b);
+        .toSorted((a, b) => a - b);
 
     const num1 = digitsArr[0] * 10 + digitsArr[3];
     const num2 = digitsArr[1] * 10 + digitsArr[2];

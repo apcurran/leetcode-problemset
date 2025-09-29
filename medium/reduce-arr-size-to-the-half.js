@@ -28,7 +28,7 @@ function minSetSize(arr) {
 
     // Sorted numCache by value (number of occurrences)
     let sortedNumCache = new Map(
-        [...numCache.entries()].sort((a, b) => b[1] - a[1]),
+        [...numCache.entries()].toSorted((a, b) => b[1] - a[1]),
     );
     let n = arr.length;
     let currArrLen = arr.length;

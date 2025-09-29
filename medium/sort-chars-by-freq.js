@@ -21,7 +21,7 @@ function frequencySort(str) {
     }
 
     // sort char tuples by frequency
-    const sortedCharTuples = [...charsMap.entries()].sort(
+    const sortedCharTuples = [...charsMap.entries()].toSorted(
         (charA, charB) => charB[1] - charA[1],
     );
     // create a resStr with most freq to least freq chars in order

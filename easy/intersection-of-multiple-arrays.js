@@ -26,7 +26,7 @@ function intersection(nums) {
     }
 
     // sort ASC
-    return results.sort((a, b) => a - b);
+    return results.toSorted((a, b) => a - b);
 }
 
 console.log(

@@ -64,5 +64,5 @@ function postorderTraversal(root) {
         if (node.right) stack.push(node.right);
     }
 
-    return resArr.reverse();
+    return resArr.toReversed();
 }

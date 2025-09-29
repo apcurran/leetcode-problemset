@@ -9,7 +9,7 @@
  * @return {number[]}
  */
 function sortByBits(arr) {
-    return arr.sort(function bitSort(numA, numB) {
+    return arr.toSorted(function bitSort(numA, numB) {
         // convert num to binary form and count 1s bits
         const numA1sBitsCount = get1sBitsCount(numA);
         const numB1sBitsCount = get1sBitsCount(numB);

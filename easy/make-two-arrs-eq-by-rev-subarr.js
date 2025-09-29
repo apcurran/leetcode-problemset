@@ -46,8 +46,8 @@
  * @return {boolean}
  */
 function canBeEqual(targetArr, arr) {
-    const sortedTargetStr = targetArr.sort((a, b) => a - b).join("");
-    const sortedArrStr = arr.sort((a, b) => a - b).join("");
+    const sortedTargetStr = targetArr.toSorted((a, b) => a - b).join("");
+    const sortedArrStr = arr.toSorted((a, b) => a - b).join("");
 
     return sortedTargetStr === sortedArrStr;
 }

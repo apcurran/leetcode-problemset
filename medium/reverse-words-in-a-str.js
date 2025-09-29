@@ -15,7 +15,7 @@ function reverseWords(str) {
     // Split str on spaces
     // Iterate through str arr and reverse order of words
     // Return joined str with single spaces between words
-    return oneSpaceBetweenWords.split(" ").reverse().join(" ");
+    return oneSpaceBetweenWords.split(" ").toReversed().join(" ");
 }
 
 console.log(reverseWords("the sky is blue")); // "blue is sky the"

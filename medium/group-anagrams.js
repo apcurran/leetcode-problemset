@@ -48,7 +48,7 @@ function groupAnagrams(strs) {
     let results = [];
 
     for (let str of strs) {
-        const sortedStr = [...str].sort().join("");
+        const sortedStr = [...str].toSorted().join("");
         // default to empty array
         const strAnagrams = anagramsCache.get(sortedStr) || [];
         strAnagrams.push(str);

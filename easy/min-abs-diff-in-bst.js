@@ -32,7 +32,7 @@ function getMinimumDifference(root) {
         }
     }
 
-    nodeValues = nodeValues.sort((a, b) => a - b);
+    nodeValues = nodeValues.toSorted((a, b) => a - b);
 
     let minimumDifference = Infinity;
 

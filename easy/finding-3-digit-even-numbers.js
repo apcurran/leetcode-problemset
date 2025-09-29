@@ -30,7 +30,7 @@ function findEvenNumbers(digits) {
         }
     }
 
-    return [...validEvenNums].sort(function sortAsc(a, b) {
+    return [...validEvenNums].toSorted(function sortAsc(a, b) {
         return a - b;
     });
 }

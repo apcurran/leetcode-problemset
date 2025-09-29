@@ -52,7 +52,7 @@ function finalString(str) {
     for (let char of str) {
         if (char === "i") {
             // reverse current string
-            result = result.reverse();
+            result = result.toReversed();
         } else {
             result.push(char);
         }

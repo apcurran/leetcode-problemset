@@ -56,7 +56,7 @@ function freqAlphabets(str) {
         }
     }
 
-    return results.reverse().join("");
+    return results.toReversed().join("");
 }
 
 console.log(freqAlphabets("10#11#12")); // "jkab"

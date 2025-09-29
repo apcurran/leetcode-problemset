@@ -9,7 +9,7 @@
  * @return {"equilateral"|"isosceles"|"scalene"|"none"}
  */
 function triangleType(nums) {
-    const [a, b, c] = nums.sort((val1, val2) => val1 - val2);
+    const [a, b, c] = nums.toSorted((val1, val2) => val1 - val2);
     const isValidTriangle = a + b > c;
 
     if (!isValidTriangle) {

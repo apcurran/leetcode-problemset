@@ -52,7 +52,7 @@ function mergeSimilarItems(items1, items2) {
         itemsCache.set(itemValue, itemPreviousWeight + itemWeight);
     }
 
-    return [...itemsCache.entries()].sort((arrA, arrB) => arrA[0] - arrB[0]);
+    return [...itemsCache.entries()].toSorted((arrA, arrB) => arrA[0] - arrB[0]);
 }
 
 console.log(

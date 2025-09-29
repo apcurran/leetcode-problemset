@@ -15,7 +15,7 @@ function reversePrefix(word, ch) {
     const chFirstIndex = word.indexOf(ch);
     const wordPrefix = word.slice(0, chFirstIndex + 1);
     const wordEnding = word.slice(chFirstIndex + 1);
-    const reversedWordPrefix = wordPrefix.split("").reverse().join("");
+    const reversedWordPrefix = wordPrefix.split("").toReversed().join("");
 
     return reversedWordPrefix + wordEnding;
 }

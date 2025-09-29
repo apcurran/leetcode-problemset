@@ -20,7 +20,7 @@ function transformArray(nums) {
         }
     }
 
-    return nums.sort(function sortAsc(a, b) {
+    return nums.toSorted(function sortAsc(a, b) {
         return a - b;
     });
 }

@@ -19,7 +19,7 @@ function convertToTitle(columnNumber) {
         columnNumber = Math.floor(columnNumber / 26);
     }
 
-    return results.reverse().join("");
+    return results.toReversed().join("");
 }
 
 console.log(convertToTitle(28)); // "AB"

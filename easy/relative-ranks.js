@@ -10,7 +10,7 @@
  */
 function findRelativeRanks(scores) {
     // sort list in desc order first
-    const sortedScoresArrCopy = [...scores].sort((a, b) => b - a);
+    const sortedScoresArrCopy = [...scores].toSorted((a, b) => b - a);
     let resArr = [];
     // iterate through original score arr
     for (let score of scores) {
