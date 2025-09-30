@@ -17,8 +17,8 @@ function numIslands(grid) {
     ];
 
     // get dimensions
-    const rows = grid.length;
-    const cols = grid[0].length;
+    const ROWS = grid.length;
+    const COLS = grid[0].length;
     let islandsCount = 0;
 
     /**
@@ -39,8 +39,8 @@ function numIslands(grid) {
                 if (
                     nr >= 0 &&
                     nc >= 0 &&
-                    nr < rows &&
-                    nc < cols &&
+                    nr < ROWS &&
+                    nc < COLS &&
                     grid[nr][nc] === "1"
                 ) {
                     queue.push([nr, nc]);
@@ -50,8 +50,8 @@ function numIslands(grid) {
         }
     }
 
-    for (let row = 0; row < rows; row++) {
-        for (let col = 0; col < cols; col++) {
+    for (let row = 0; row < ROWS; row++) {
+        for (let col = 0; col < COLS; col++) {
             if (grid[row][col] === "1") {
                 bfs(row, col);
                 islandsCount++;
