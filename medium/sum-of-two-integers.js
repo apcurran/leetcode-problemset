@@ -9,9 +9,9 @@
  */
 function getSum(a, b) {
     while (b !== 0) {
-        const temp = (a & b) << 1;
+        const carryDigit = (a & b) << 1;
         a ^= b;
-        b = temp;
+        b = carryDigit;
     }
 
     return a;
