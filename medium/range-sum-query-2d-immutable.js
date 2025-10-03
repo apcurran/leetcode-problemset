@@ -7,7 +7,9 @@ var NumMatrix = function (matrix) {
 
 /**
  * solution 1 -- brute force (passes, but not O(1) time constraint)
- * time: O(n^2)
+ * m = matrix rows
+ * n = matrix columns
+ * time: O(m * n)
  * space: O(1)
  *
  * @param {number} row1
