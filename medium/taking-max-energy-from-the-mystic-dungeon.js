@@ -1,6 +1,6 @@
 /**
- * solution 1 -- brute force - nested loops
- * time: O(n^2)
+ * solution 1 -- reverse traversal
+ * time: O(n)
  * space: O(1)
  *
  * @param {number[]} energy
@@ -8,17 +8,16 @@
  * @return {number}
  */
 function maximumEnergy(energy, k) {
+    const n = energy.length;
     let maxPossibleTotal = -Infinity;
 
-    for (let i = 0; i < energy.length; i++) {
+    for (let i = n - k; i < n; i++) {
         let currentSum = 0;
 
-        for (let j = i; j < energy.length; j += k) {
-            // add energy[i] and skip forwards k steps
+        for (let j = i; j >= 0; j -= k) {
             currentSum += energy[j];
+            maxPossibleTotal = Math.max(maxPossibleTotal, currentSum);
         }
-
-        maxPossibleTotal = Math.max(maxPossibleTotal, currentSum);
     }
 
     return maxPossibleTotal;
