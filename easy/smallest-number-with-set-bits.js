@@ -1,31 +1,49 @@
+// /**
+//  * solution 1 -- iterative
+//  * time: O(n * m)
+//  * space: O(m)
+//  *
+//  * @param {number} n
+//  * @return {number}
+//  */
+// function smallestNumber(n) {
+//     // smallest number >= n where all bits are 1s
+//     // must be power of 2 - 1
+//     const nBinary = n.toString(2);
+
+//     if (!nBinary.includes("0")) {
+//         return n;
+//     }
+
+//     let i = n + 1;
+
+//     while (true) {
+//         const iBinary = i.toString(2);
+
+//         if (!iBinary.includes("0")) {
+//             return i;
+//         }
+
+//         i++;
+//     }
+// }
+
 /**
- * solution 1 -- iterative
- * time: O(n * m)
- * space: O(m)
+ * solution 2 -- pattern approach
+ * time: O(log n)
+ * space: O(1)
  *
  * @param {number} n
  * @return {number}
  */
 function smallestNumber(n) {
-    // smallest number >= n where all bits are 1s
-    // must be power of 2 - 1
-    const nBinary = n.toString(2);
+    let x = 1;
 
-    if (!nBinary.includes("0")) {
-        return n;
+    while (x < n) {
+        x = x * 2 + 1;
     }
 
-    let i = n + 1;
-
-    while (true) {
-        const iBinary = i.toString(2);
-
-        if (!iBinary.includes("0")) {
-            return i;
-        }
-
-        i++;
-    }
+    return x;
 }
 
 console.log(smallestNumber(5)); // 7
