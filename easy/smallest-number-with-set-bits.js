@@ -28,8 +28,26 @@
 //     }
 // }
 
+// /**
+//  * solution 2 -- pattern approach
+//  * time: O(log n)
+//  * space: O(1)
+//  *
+//  * @param {number} n
+//  * @return {number}
+//  */
+// function smallestNumber(n) {
+//     let x = 1;
+
+//     while (x < n) {
+//         x = x * 2 + 1;
+//     }
+
+//     return x;
+// }
+
 /**
- * solution 2 -- pattern approach
+ * solution 3 -- bitwise operators
  * time: O(log n)
  * space: O(1)
  *
@@ -37,13 +55,15 @@
  * @return {number}
  */
 function smallestNumber(n) {
-    let x = 1;
+    let result = 1;
 
-    while (x < n) {
-        x = x * 2 + 1;
+    while (result < n) {
+        // move 1 bit over (bitwise left shift),
+        // then set all right bits to 1 with bitwise OR
+        result = (result << 1) | 1;
     }
 
-    return x;
+    return result;
 }
 
 console.log(smallestNumber(5)); // 7
