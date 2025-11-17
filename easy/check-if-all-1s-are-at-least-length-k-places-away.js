@@ -1,30 +1,58 @@
+// /**
+//  * solution 1
+//  * n = nums length
+//  * m = onesIndices length
+//  * time: O(n + m)
+//  * space: O(m)
+//  *
+//  * @param {number[]} nums
+//  * @param {number} k
+//  * @return {boolean}
+//  */
+// function kLengthApart(nums, k) {
+//     let onesIndices = [];
+
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] === 1) {
+//             onesIndices.push(i);
+//         }
+//     }
+
+//     for (let i = 0; i < onesIndices.length - 1; i++) {
+//         const current = onesIndices[i];
+//         const next = onesIndices[i + 1];
+//         const diff = next - current;
+
+//         if (diff <= k) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
 /**
- * solution 1
+ * solution 2
  * n = nums length
- * m = onesIndices length
- * time: O(n + m)
- * space: O(m)
+ * time: O(n)
+ * space: O(1)
  *
  * @param {number[]} nums
  * @param {number} k
  * @return {boolean}
  */
 function kLengthApart(nums, k) {
-    let onesIndices = [];
+    let spacesBetweenOnesNeighbors = k;
 
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] === 1) {
-            onesIndices.push(i);
-        }
-    }
+            if (spacesBetweenOnesNeighbors < k) {
+                return false;
+            }
 
-    for (let i = 0; i < onesIndices.length - 1; i++) {
-        const current = onesIndices[i];
-        const next = onesIndices[i + 1];
-        const diff = next - current;
-
-        if (diff <= k) {
-            return false;
+            spacesBetweenOnesNeighbors = 0;
+        } else {
+            spacesBetweenOnesNeighbors++;
         }
     }
 
