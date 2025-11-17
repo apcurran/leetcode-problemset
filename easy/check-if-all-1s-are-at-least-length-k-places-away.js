@@ -1,0 +1,35 @@
+/**
+ * solution 1
+ * n = nums length
+ * m = onesIndices length
+ * time: O(n + m)
+ * space: O(m)
+ *
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {boolean}
+ */
+function kLengthApart(nums, k) {
+    let onesIndices = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 1) {
+            onesIndices.push(i);
+        }
+    }
+
+    for (let i = 0; i < onesIndices.length - 1; i++) {
+        const current = onesIndices[i];
+        const next = onesIndices[i + 1];
+        const diff = next - current;
+
+        if (diff <= k) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log(kLengthApart([1, 0, 0, 0, 1, 0, 0, 1], 2)); // true
+console.log(kLengthApart([1, 0, 0, 1, 0, 1], 2)); // false
