@@ -42,6 +42,8 @@
  * @return {boolean}
  */
 function kLengthApart(nums, k) {
+    // initialize at k to prevent edge case of starting with 0,
+    // which would always trigger a false return
     let spacesBetweenOnesNeighbors = k;
 
     for (let i = 0; i < nums.length; i++) {
