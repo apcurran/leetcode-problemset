@@ -1,7 +1,35 @@
+// /**
+//  * solution 1
+//  * time: O(n^2)
+//  * space: O(1) -- not including results array
+//  *
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
+// function findMissingElements(nums) {
+//     let min = Infinity;
+//     let max = -Infinity;
+
+//     for (let num of nums) {
+//         min = Math.min(min, num);
+//         max = Math.max(max, num);
+//     }
+
+//     let results = [];
+
+//     for (let current = min; current <= max; current++) {
+//         if (!nums.includes(current)) {
+//             results.push(current);
+//         }
+//     }
+
+//     return results;
+// }
+
 /**
- * solution 1
- * time: O(n^2)
- * space: O(1) -- not including results array
+ * solution 2 -- hashset
+ * time: O(n)
+ * space: O(n) -- not including results array
  *
  * @param {number[]} nums
  * @return {number[]}
@@ -15,15 +43,16 @@ function findMissingElements(nums) {
         max = Math.max(max, num);
     }
 
-    let results = [];
+    let fullRange = new Set();
 
     for (let current = min; current <= max; current++) {
-        if (!nums.includes(current)) {
-            results.push(current);
-        }
+        fullRange.add(current);
     }
 
-    return results;
+    const numsSet = new Set(nums);
+    const diff = fullRange.difference(numsSet);
+
+    return [...diff];
 }
 
 console.log(findMissingElements([1, 4, 2, 5])); // [3]
