@@ -37,9 +37,12 @@ function countTriples(n) {
 
     for (let a = 1; a <= n; a++) {
         for (let b = 2; b <= n; b++) {
-            const c = Math.trunc(Math.sqrt(a * a + b * b));
+            const aSquared = a * a;
+            const bSquared = b * b;
+            const c = Math.trunc(Math.sqrt(aSquared + bSquared));
+            const cSquared = c * c;
 
-            if (a * a + b * b === c * c && c <= n) {
+            if (aSquared + bSquared === cSquared && c <= n) {
                 triplesCount++;
             }
         }
