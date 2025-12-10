@@ -89,8 +89,7 @@ function minimumTotal(triangle) {
     // iterate from next to last row upwards
     for (let row = h - 2; row >= 0; row--) {
         for (let col = 0; col <= row; col++) {
-            dpCache[col] =
-                triangle[row][col] + Math.min(dpCache[col], dpCache[col + 1]);
+            dpCache[col] = triangle[row][col] + Math.min(dpCache[col], dpCache[col + 1]);
         }
     }
 

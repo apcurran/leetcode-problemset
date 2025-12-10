@@ -15,10 +15,7 @@ function smallestNumber(pattern) {
     for (let i = 0; i <= pattern.length; i++) {
         stack.push(i + 1);
 
-        while (
-            stack.length > 0 &&
-            (i === pattern.length || pattern[i] === "I")
-        ) {
+        while (stack.length > 0 && (i === pattern.length || pattern[i] === "I")) {
             result.push(String(stack.pop()));
         }
     }

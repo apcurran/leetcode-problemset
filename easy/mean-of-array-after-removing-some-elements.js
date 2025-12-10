@@ -24,6 +24,4 @@ function trimMean(arr) {
     return remainingNumsSum / remainingNumsLength;
 }
 
-console.log(
-    trimMean([1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3]),
-); // 2
+console.log(trimMean([1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3])); // 2

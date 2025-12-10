@@ -78,10 +78,5 @@ function getUniqueLetters(str) {
     return [...uniqueLetters];
 }
 
-console.log(
-    decodeMessage(
-        "the quick brown fox jumps over the lazy dog",
-        "vkbs bs t suepuv",
-    ),
-);
+console.log(decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"));
 // "this is a secret"

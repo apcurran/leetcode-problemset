@@ -59,8 +59,7 @@ function characterReplacement(str, k) {
         const currentChar = str[right];
         const charCount = charCounts.get(currentChar) || 0;
         charCounts.set(currentChar, charCount + 1);
-        const charAmtToReplace =
-            getWindowLength(left, right) - getMax(charCounts.values());
+        const charAmtToReplace = getWindowLength(left, right) - getMax(charCounts.values());
 
         if (charAmtToReplace > k) {
             // k is not large enough to support replacing more chars,

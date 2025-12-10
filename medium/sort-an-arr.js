@@ -105,11 +105,7 @@ function merge(leftArr, rightArr) {
         }
     }
 
-    return [
-        ...resultArr,
-        ...leftArr.slice(leftIndex),
-        ...rightArr.slice(rightIndex),
-    ];
+    return [...resultArr, ...leftArr.slice(leftIndex), ...rightArr.slice(rightIndex)];
 }
 
 console.log(sortArray([5, 2, 3, 1])); // [1, 2, 3, 5]

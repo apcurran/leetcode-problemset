@@ -33,6 +33,4 @@ console.log(
         "this is great thanks very much",
     ]),
 ); // 6
-console.log(
-    mostWordsFound(["please wait", "continue to fight", "continue to win"]),
-); // 3
+console.log(mostWordsFound(["please wait", "continue to fight", "continue to win"])); // 3

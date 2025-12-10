@@ -14,10 +14,7 @@ function maxAdjacentDistance(nums) {
 
     // skip last case (already handled above first)
     for (let i = 0; i < nums.length - 1; i++) {
-        maxAbsoluteDiff = Math.max(
-            maxAbsoluteDiff,
-            Math.abs(nums[i] - nums[i + 1]),
-        );
+        maxAbsoluteDiff = Math.max(maxAbsoluteDiff, Math.abs(nums[i] - nums[i + 1]));
     }
 
     return maxAbsoluteDiff;

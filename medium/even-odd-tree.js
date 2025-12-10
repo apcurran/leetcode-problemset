@@ -29,10 +29,8 @@ function isEvenOddTree(root) {
             // setup for conditional logic
             const isValueEven = currentNode.val % 2 === 0;
             const isValueOdd = currentNode.val % 2 === 1;
-            const isValueOrderNotIncreasing =
-                currentNode.val <= previousNodeValue;
-            const isValueOrderNotDecreasing =
-                currentNode.val >= previousNodeValue;
+            const isValueOrderNotIncreasing = currentNode.val <= previousNodeValue;
+            const isValueOrderNotDecreasing = currentNode.val >= previousNodeValue;
 
             if (isLevelEven && (isValueEven || isValueOrderNotIncreasing)) {
                 return false;

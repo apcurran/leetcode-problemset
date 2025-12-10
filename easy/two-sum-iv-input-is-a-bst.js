@@ -61,10 +61,7 @@ function findTarget(root, k, seenValues = new Set()) {
     // otherwise, add the value and continue through the tree
     seenValues.add(root.val);
 
-    return (
-        findTarget(root.left, k, seenValues) ||
-        findTarget(root.right, k, seenValues)
-    );
+    return findTarget(root.left, k, seenValues) || findTarget(root.right, k, seenValues);
 }
 
 const a = new TreeNode(5);

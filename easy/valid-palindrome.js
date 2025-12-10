@@ -20,8 +20,7 @@ function isPalindrome(str) {
 
         if (
             charCode < NUMBER_CHARCODE_START ||
-            (charCode > NUMBER_CHARCODE_END &&
-                charCode < ALPHA_LOWER_CHARCODE_START) ||
+            (charCode > NUMBER_CHARCODE_END && charCode < ALPHA_LOWER_CHARCODE_START) ||
             charCode > ALPHA_LOWER_CHARCODE_END
         ) {
             // skip element

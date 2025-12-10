@@ -22,15 +22,9 @@ function buildTree(preorder, inorder) {
     let root = new TreeNode(startingNode);
 
     // build left subtree
-    root.left = buildTree(
-        preorder.slice(1, midPoint + 1),
-        inorder.slice(0, midPoint),
-    );
+    root.left = buildTree(preorder.slice(1, midPoint + 1), inorder.slice(0, midPoint));
     // build right subtree
-    root.right = buildTree(
-        preorder.slice(midPoint + 1),
-        inorder.slice(midPoint + 1),
-    );
+    root.right = buildTree(preorder.slice(midPoint + 1), inorder.slice(midPoint + 1));
 
     return root;
 }

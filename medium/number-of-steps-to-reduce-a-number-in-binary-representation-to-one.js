@@ -59,6 +59,4 @@ function binaryAddOne(str) {
 console.log(numSteps("1101")); // 6
 console.log(numSteps("10")); // 1
 console.log(numSteps("1")); // 0
-console.log(
-    numSteps("1111011110000011100000110001011011110010111001010111110001"),
-); // 85
+console.log(numSteps("1111011110000011100000110001011011110010111001010111110001")); // 85

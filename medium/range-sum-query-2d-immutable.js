@@ -36,19 +36,15 @@
  * @param {number[][]} matrix
  */
 var NumMatrix = function (matrix) {
-    this.prefixSum = Array.from(
-        { length: matrix.length },
-        function generateRowsWithZeros() {
-            return Array(matrix[0].length).fill(0);
-        },
-    );
+    this.prefixSum = Array.from({ length: matrix.length }, function generateRowsWithZeros() {
+        return Array(matrix[0].length).fill(0);
+    });
 
     for (let row = 0; row < matrix.length; row++) {
         this.prefixSum[row][0] = matrix[row][0];
 
         for (let col = 1; col < matrix[0].length; col++) {
-            this.prefixSum[row][col] =
-                this.prefixSum[row][col - 1] + matrix[row][col];
+            this.prefixSum[row][col] = this.prefixSum[row][col - 1] + matrix[row][col];
         }
     }
 };

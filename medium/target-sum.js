@@ -26,10 +26,7 @@ function findTargetSumWays(nums, target) {
         }
 
         // otherwise recursive case
-        return (
-            waysToTarget(i + 1, currSum + nums[i]) +
-            waysToTarget(i + 1, currSum - nums[i])
-        );
+        return waysToTarget(i + 1, currSum + nums[i]) + waysToTarget(i + 1, currSum - nums[i]);
     }
 
     return waysToTarget(0, 0);

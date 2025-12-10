@@ -93,9 +93,7 @@ function numSubarraysWithSum(nums, goal) {
 
         // check hashmap
         if (prefixSumsFrequencies.has(currentSum - goal)) {
-            const prefixSumFrequency = prefixSumsFrequencies.get(
-                currentSum - goal,
-            );
+            const prefixSumFrequency = prefixSumsFrequencies.get(currentSum - goal);
             totalSubarraysEqualToGoal += prefixSumFrequency;
         }
 

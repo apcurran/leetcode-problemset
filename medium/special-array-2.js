@@ -144,8 +144,7 @@ function isArraySpecial(nums, queries) {
 
     for (let i = 0; i < queries.length; i++) {
         const [queryStart, queryEnd] = queries[i];
-        const isViolatingQuery =
-            badIndices[queryEnd] - badIndices[queryStart] === 0;
+        const isViolatingQuery = badIndices[queryEnd] - badIndices[queryStart] === 0;
         results[i] = isViolatingQuery;
     }
 

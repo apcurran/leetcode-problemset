@@ -9,10 +9,7 @@
  */
 function hasIncreasingSubarrays(nums, k) {
     for (let i = 0; i <= nums.length - 2 * k; i++) {
-        if (
-            isStrictlyIncreasing(nums, i, k) &&
-            isStrictlyIncreasing(nums, i + k, k)
-        ) {
+        if (isStrictlyIncreasing(nums, i, k) && isStrictlyIncreasing(nums, i + k, k)) {
             return true;
         }
     }

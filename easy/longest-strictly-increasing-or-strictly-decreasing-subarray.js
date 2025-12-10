@@ -78,10 +78,7 @@ function longestMonotonicSubarray(nums) {
         }
 
         // check for current max
-        const currentMax = Math.max(
-            maxIncreasingSubarrLength,
-            maxDecrasingSubarrLength,
-        );
+        const currentMax = Math.max(maxIncreasingSubarrLength, maxDecrasingSubarrLength);
         // update global max
         overallMaxLength = Math.max(overallMaxLength, currentMax);
     }

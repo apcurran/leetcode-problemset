@@ -88,9 +88,7 @@ function minDepth(root) {
         return currentNodeCount + minDepth(root.left);
     }
 
-    return (
-        currentNodeCount + Math.min(minDepth(root.left), minDepth(root.right))
-    );
+    return currentNodeCount + Math.min(minDepth(root.left), minDepth(root.right));
 }
 
 console.log(minDepth(a)); // 2

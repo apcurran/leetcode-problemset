@@ -24,8 +24,7 @@ function capitalizeTitle(title) {
             resStrArr.push(loweredWord);
         } else {
             // else cap first letter of word and then lower all others
-            const casedWord =
-                word[0].toUpperCase() + word.slice(1).toLowerCase();
+            const casedWord = word[0].toUpperCase() + word.slice(1).toLowerCase();
             // add word to resStrArr
             resStrArr.push(casedWord);
         }

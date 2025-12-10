@@ -24,9 +24,7 @@ function relativeSortArray(arr1, arr2) {
 
     // sort arr1Map in ascending order
     const sortedArr1NumbersCache = new Map(
-        [...arr1NumbersCache.entries()].toSorted(
-            (entryA, entryB) => entryA[0] - entryB[0],
-        ),
+        [...arr1NumbersCache.entries()].toSorted((entryA, entryB) => entryA[0] - entryB[0]),
     );
 
     // iterate arr2
@@ -54,7 +52,5 @@ function relativeSortArray(arr1, arr2) {
     return results;
 }
 
-console.log(
-    relativeSortArray([2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19], [2, 1, 4, 3, 9, 6]),
-); // [2,2,2,1,4,3,3,9,6,7,19]
+console.log(relativeSortArray([2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19], [2, 1, 4, 3, 9, 6])); // [2,2,2,1,4,3,3,9,6,7,19]
 console.log(relativeSortArray([28, 6, 22, 8, 44, 17], [22, 28, 8, 6])); // [22,28,8,6,17,44]

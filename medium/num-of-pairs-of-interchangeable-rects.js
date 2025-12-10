@@ -46,8 +46,7 @@ function interchangeableRectangles(rectangles) {
     for (let i = 0; i < rectangles.length; i++) {
         const [rectangleWidth, rectangleHeight] = rectangles[i];
         const currentRectangleRatio = rectangleWidth / rectangleHeight;
-        const preExistingRatioCount =
-            rectangleRatios.get(currentRectangleRatio) || 0;
+        const preExistingRatioCount = rectangleRatios.get(currentRectangleRatio) || 0;
         interchangeableRectanglesCount += preExistingRatioCount;
         rectangleRatios.set(currentRectangleRatio, preExistingRatioCount + 1);
     }

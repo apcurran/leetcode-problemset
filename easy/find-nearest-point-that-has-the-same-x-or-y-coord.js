@@ -20,8 +20,7 @@ function nearestValidPoint(x, y, points) {
         // skip invalid coordinates
         if (currentPointX !== x && currentPointY !== y) continue;
 
-        const manhattanDistance =
-            Math.abs(x - currentPointX) + Math.abs(y - currentPointY);
+        const manhattanDistance = Math.abs(x - currentPointX) + Math.abs(y - currentPointY);
 
         if (manhattanDistance < smallestDistance) {
             smallestDistance = manhattanDistance;

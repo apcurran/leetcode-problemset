@@ -40,10 +40,7 @@ function makeGood(str) {
     while (i < str.length) {
         // stack is not empty AND
         // current top of stack and current char are adjacent same letters with diff casing
-        if (
-            stack.length > 0 &&
-            Math.abs(stack.at(-1).charCodeAt(0) - str.charCodeAt(i)) === 32
-        ) {
+        if (stack.length > 0 && Math.abs(stack.at(-1).charCodeAt(0) - str.charCodeAt(i)) === 32) {
             stack.pop();
         } else {
             stack.push(str[i]);

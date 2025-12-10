@@ -11,10 +11,7 @@
  */
 async function addTwoPromises(promise1, promise2) {
     try {
-        const [promise1Value, promise2Value] = await Promise.all([
-            promise1,
-            promise2,
-        ]);
+        const [promise1Value, promise2Value] = await Promise.all([promise1, promise2]);
 
         return promise1Value + promise2Value;
     } catch (err) {

@@ -17,8 +17,7 @@ function maximumWealth(accounts) {
     for (let account of accounts) {
         const customerWealth = account.reduce((total, curr) => total + curr, 0);
 
-        if (customerWealth > maxCustomerWealth)
-            maxCustomerWealth = customerWealth;
+        if (customerWealth > maxCustomerWealth) maxCustomerWealth = customerWealth;
     }
 
     return maxCustomerWealth;

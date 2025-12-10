@@ -32,10 +32,7 @@ function longestSubarray(nums) {
         }
 
         const currentWindowOnesCount = rightPointer - leftPointer;
-        longestOnesWindowCount = Math.max(
-            longestOnesWindowCount,
-            currentWindowOnesCount,
-        );
+        longestOnesWindowCount = Math.max(longestOnesWindowCount, currentWindowOnesCount);
     }
 
     return longestOnesWindowCount;

@@ -20,10 +20,7 @@ function maxDistinctElements(nums, k) {
         const maxNumEndOfRange = num + k;
         const minNumBeginningOfRange = num - k;
         const smallestNonPrevNum = previous + 1;
-        const smallestPossibleValue = Math.max(
-            smallestNonPrevNum,
-            minNumBeginningOfRange,
-        );
+        const smallestPossibleValue = Math.max(smallestNonPrevNum, minNumBeginningOfRange);
         const current = Math.min(smallestPossibleValue, maxNumEndOfRange);
 
         if (current > previous) {

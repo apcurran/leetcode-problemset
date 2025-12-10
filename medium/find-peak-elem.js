@@ -49,10 +49,7 @@ function findPeakElement(nums) {
 
         if (middleIndex > 0 && middleValue < nums[middleIndex - 1]) {
             right = middleIndex - 1;
-        } else if (
-            middleIndex < nums.length - 1 &&
-            middleValue < nums[middleIndex + 1]
-        ) {
+        } else if (middleIndex < nums.length - 1 && middleValue < nums[middleIndex + 1]) {
             left = middleIndex + 1;
         } else {
             return middleIndex;

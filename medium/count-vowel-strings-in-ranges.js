@@ -52,10 +52,7 @@ function vowelStrings(words, queries) {
         const word = words[i];
         let isVowel = 0;
 
-        if (
-            VOWELS.includes(word[0]) &&
-            VOWELS.includes(word[word.length - 1])
-        ) {
+        if (VOWELS.includes(word[0]) && VOWELS.includes(word[word.length - 1])) {
             isVowel = 1;
         }
 
@@ -66,8 +63,7 @@ function vowelStrings(words, queries) {
 
     for (let i = 0; i < queries.length; i++) {
         const [queryStart, queryEnd] = queries[i];
-        const validWordsInRange =
-            prefixCount[queryEnd + 1] - prefixCount[queryStart];
+        const validWordsInRange = prefixCount[queryEnd + 1] - prefixCount[queryStart];
         results.push(validWordsInRange);
     }
 

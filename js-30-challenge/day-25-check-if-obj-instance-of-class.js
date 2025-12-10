@@ -10,11 +10,7 @@
  * @return {boolean}
  */
 const checkIfInstanceOf = function (obj, classFunction) {
-    if (
-        obj === undefined ||
-        obj === null ||
-        typeof classFunction !== "function"
-    ) {
+    if (obj === undefined || obj === null || typeof classFunction !== "function") {
         return false;
     }
 

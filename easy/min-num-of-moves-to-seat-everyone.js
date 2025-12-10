@@ -19,9 +19,7 @@ function minMovesToSeat(seats, students) {
     for (let i = 0; i < students.length; i++) {
         const currStudentPos = students[i];
         const currProspectiveSeatPos = seats[i];
-        const studentMoveAmt = Math.abs(
-            currStudentPos - currProspectiveSeatPos,
-        );
+        const studentMoveAmt = Math.abs(currStudentPos - currProspectiveSeatPos);
         totalMoves += studentMoveAmt;
     }
 

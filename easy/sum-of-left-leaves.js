@@ -54,9 +54,7 @@ function sumOfLeftLeaves(root, isLeft = false) {
         return root.val;
     }
 
-    return (
-        sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false)
-    );
+    return sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false);
 }
 
 const a = new TreeNode(1);

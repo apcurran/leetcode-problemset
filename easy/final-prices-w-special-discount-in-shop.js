@@ -37,10 +37,7 @@ function finalPrices(prices) {
     for (let i = 0; i < prices.length; i++) {
         // while stack has a length greater than 0 AND
         // the top of the stack is greater than or equal to the current price
-        while (
-            stack.length > 0 &&
-            prices[stack[stack.length - 1]] >= prices[i]
-        ) {
+        while (stack.length > 0 && prices[stack[stack.length - 1]] >= prices[i]) {
             const jIndex = stack.pop();
             results[jIndex] -= prices[i];
         }

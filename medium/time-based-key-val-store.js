@@ -37,8 +37,7 @@ class TimeMap {
         let rightPointer = values.length - 1;
 
         while (leftPointer <= rightPointer) {
-            const middle =
-                leftPointer + Math.floor((rightPointer - leftPointer) / 2);
+            const middle = leftPointer + Math.floor((rightPointer - leftPointer) / 2);
             // get pair [value, timestamp] from values array at middle
             const currentPair = values[middle];
             const [currentWord, currentTimestamp] = currentPair;

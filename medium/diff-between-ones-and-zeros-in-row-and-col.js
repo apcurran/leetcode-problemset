@@ -24,20 +24,14 @@ function onesMinusZeros(grid) {
     }
 
     // create a diff matrix with the same amount of rows and columns as the original grid
-    let diffMatrix = Array.from(
-        { length: ROWS },
-        function createPlaceholderCols() {
-            return new Array(COLS).fill(0);
-        },
-    );
+    let diffMatrix = Array.from({ length: ROWS }, function createPlaceholderCols() {
+        return new Array(COLS).fill(0);
+    });
 
     for (let row = 0; row < ROWS; row++) {
         for (let col = 0; col < COLS; col++) {
             diffMatrix[row][col] =
-                rowOnes[row] +
-                colOnes[col] -
-                (ROWS - rowOnes[row]) -
-                (COLS - colOnes[col]);
+                rowOnes[row] + colOnes[col] - (ROWS - rowOnes[row]) - (COLS - colOnes[col]);
         }
     }
 

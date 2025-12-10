@@ -36,13 +36,7 @@ function numIslands(grid) {
                 const nr = row + dr;
                 const nc = col + dc;
 
-                if (
-                    nr >= 0 &&
-                    nc >= 0 &&
-                    nr < ROWS &&
-                    nc < COLS &&
-                    grid[nr][nc] === "1"
-                ) {
+                if (nr >= 0 && nc >= 0 && nr < ROWS && nc < COLS && grid[nr][nc] === "1") {
                     queue.push([nr, nc]);
                     grid[nr][nc] = "0";
                 }

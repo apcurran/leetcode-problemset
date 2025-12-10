@@ -29,12 +29,8 @@ function flipEquiv(root1, root2) {
         return false;
     }
 
-    const noSwap =
-        flipEquiv(root1.left, root2.left) &&
-        flipEquiv(root1.right, root2.right);
-    const swap =
-        flipEquiv(root1.left, root2.right) &&
-        flipEquiv(root1.right, root2.left);
+    const noSwap = flipEquiv(root1.left, root2.left) && flipEquiv(root1.right, root2.right);
+    const swap = flipEquiv(root1.left, root2.right) && flipEquiv(root1.right, root2.left);
 
     return noSwap || swap;
 }

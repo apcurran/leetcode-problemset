@@ -47,8 +47,7 @@ function isAnagram(s, t) {
     }
 
     // now compare maps
-    const largestLettersCache =
-        sLetters.size >= tLetters.size ? sLetters : tLetters;
+    const largestLettersCache = sLetters.size >= tLetters.size ? sLetters : tLetters;
 
     for (let tuple of largestLettersCache) {
         const char = tuple[0];

@@ -15,9 +15,7 @@ function findRelativeRanks(scores) {
     // iterate through original score arr
     for (let score of scores) {
         // findIndex on the curr score
-        const sortedScoresIdx = sortedScoresArrCopy.findIndex(
-            (num) => num === score,
-        );
+        const sortedScoresIdx = sortedScoresArrCopy.findIndex((num) => num === score);
         // add one to index res (so 1-based index instead of 0-based)
         const scoreRank = sortedScoresIdx + 1;
         // check if num is 1st -> gold, 2nd -> silver, etc.

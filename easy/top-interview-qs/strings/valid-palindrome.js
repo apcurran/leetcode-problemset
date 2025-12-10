@@ -48,9 +48,7 @@ function isPalindrome(str) {
         }
 
         // if both chars are not equal, it is NOT a palindrome
-        if (
-            str[leftPointer].toLowerCase() !== str[rightPointer].toLowerCase()
-        ) {
+        if (str[leftPointer].toLowerCase() !== str[rightPointer].toLowerCase()) {
             return false;
         }
 

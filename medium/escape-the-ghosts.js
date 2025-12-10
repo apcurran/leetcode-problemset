@@ -15,8 +15,7 @@ function escapeGhosts(ghosts, target) {
 
     for (let ghost of ghosts) {
         const [ghostX, ghostY] = ghost;
-        const ghostDistance =
-            Math.abs(ghostX - targetX) + Math.abs(ghostY - targetY);
+        const ghostDistance = Math.abs(ghostX - targetX) + Math.abs(ghostY - targetY);
 
         if (ghostDistance <= playerDistance) return false;
     }

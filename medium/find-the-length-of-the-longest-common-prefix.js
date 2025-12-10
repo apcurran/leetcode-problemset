@@ -29,10 +29,7 @@ function longestCommonPrefix(arr1, arr2) {
         }
 
         if (num !== 0) {
-            longestPrefixLength = Math.max(
-                longestPrefixLength,
-                String(num).length,
-            );
+            longestPrefixLength = Math.max(longestPrefixLength, String(num).length);
         }
     }
 

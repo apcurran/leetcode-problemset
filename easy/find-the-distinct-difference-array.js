@@ -16,8 +16,7 @@ function distinctDifferenceArray(nums) {
         const distinctPrefixValues = new Set(prefixValues);
         const suffixValues = nums.slice(i + 1);
         const distinctSuffixValues = new Set(suffixValues);
-        const distinctValuesLengthsDiff =
-            distinctPrefixValues.size - distinctSuffixValues.size;
+        const distinctValuesLengthsDiff = distinctPrefixValues.size - distinctSuffixValues.size;
         results.push(distinctValuesLengthsDiff);
     }
 

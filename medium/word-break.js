@@ -16,10 +16,7 @@ function wordBreak(s, wordDict) {
 
     for (let i = s.length - 1; i >= 0; i--) {
         for (let word of wordDict) {
-            if (
-                i + word.length <= s.length &&
-                s.slice(i, i + word.length) === word
-            ) {
+            if (i + word.length <= s.length && s.slice(i, i + word.length) === word) {
                 // there are enough chars in s for us to compare them AND
                 // the words are the same
                 dpCache[i] = dpCache[i + word.length];

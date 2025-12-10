@@ -25,10 +25,7 @@ function numRescueBoats(people, limit) {
         boatsCount++;
 
         // there is a person left and enough weight to hold the person
-        if (
-            leftPointer <= rightPointer &&
-            remainingWeight >= people[leftPointer]
-        ) {
+        if (leftPointer <= rightPointer && remainingWeight >= people[leftPointer]) {
             leftPointer++;
         }
     }

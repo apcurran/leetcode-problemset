@@ -27,9 +27,7 @@ function minSetSize(arr) {
     }
 
     // Sorted numCache by value (number of occurrences)
-    let sortedNumCache = new Map(
-        [...numCache.entries()].toSorted((a, b) => b[1] - a[1]),
-    );
+    let sortedNumCache = new Map([...numCache.entries()].toSorted((a, b) => b[1] - a[1]));
     let n = arr.length;
     let currArrLen = arr.length;
     // Check cache to see the highest num of occurrences and start by removing that key num from arr.

@@ -7,13 +7,13 @@
     "scripts": {
         "lint": "npx oxlint .",
         "lint:fix": "npx oxlint --fix .",
-        "format:check": "npx prettier . --check",
-        "format:write": "npx prettier . --write"
+        "format:check": "npx oxfmt . --check",
+        "format:write": "npx oxfmt ."
     },
     "author": "Alex Curran",
     "license": "ISC",
     "devDependencies": {
-        "oxlint": "^1.23.0",
-        "prettier": "3.6.2"
+        "oxfmt": "^0.17.0",
+        "oxlint": "^1.23.0"
     }
 }

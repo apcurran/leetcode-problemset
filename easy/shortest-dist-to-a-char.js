@@ -60,10 +60,7 @@ function shortestToChar(str, targetChar) {
 
         if (currentLetter === targetChar) previousPosition = i;
 
-        const smallestPositionDistance = Math.min(
-            shortestDistancesToChar[i],
-            positionsDifference,
-        );
+        const smallestPositionDistance = Math.min(shortestDistancesToChar[i], positionsDifference);
         shortestDistancesToChar[i] = smallestPositionDistance;
     }
 

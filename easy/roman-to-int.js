@@ -28,8 +28,7 @@ function romanToInt(str) {
 
         if (
             isNextInBounds &&
-            romanNumerals.get(currRomanNumeral) <
-                romanNumerals.get(nextRomanNumeral)
+            romanNumerals.get(currRomanNumeral) < romanNumerals.get(nextRomanNumeral)
         ) {
             // subtract vals
             resVal -= romanNumerals.get(currRomanNumeral);

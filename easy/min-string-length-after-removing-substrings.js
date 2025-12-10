@@ -15,9 +15,7 @@ function minLength(s) {
         stack.push(char);
 
         if (
-            (stack.length >= 2 &&
-                stack.at(-2) === "A" &&
-                stack.at(-1) === "B") ||
+            (stack.length >= 2 && stack.at(-2) === "A" && stack.at(-1) === "B") ||
             (stack.at(-2) === "C" && stack.at(-1) === "D")
         ) {
             stack.pop();

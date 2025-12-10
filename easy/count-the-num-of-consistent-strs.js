@@ -60,18 +60,5 @@ function countConsistentStrings(allowed, words) {
 }
 
 console.log(countConsistentStrings("ab", ["ad", "bd", "aaab", "baa", "badab"])); // 2
-console.log(
-    countConsistentStrings("abc", ["a", "b", "c", "ab", "ac", "bc", "abc"]),
-); // 7
-console.log(
-    countConsistentStrings("cad", [
-        "cc",
-        "acd",
-        "b",
-        "ba",
-        "bac",
-        "bad",
-        "ac",
-        "d",
-    ]),
-); // 4
+console.log(countConsistentStrings("abc", ["a", "b", "c", "ab", "ac", "bc", "abc"])); // 7
+console.log(countConsistentStrings("cad", ["cc", "acd", "b", "ba", "bac", "bad", "ac", "d"])); // 4

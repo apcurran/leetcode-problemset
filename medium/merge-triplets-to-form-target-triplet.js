@@ -13,11 +13,7 @@ function mergeTriplets(triplets, target) {
     let validTriplet = new Set();
 
     for (let triplet of triplets) {
-        if (
-            triplet[0] > target[0] ||
-            triplet[1] > target[1] ||
-            triplet[2] > target[2]
-        ) {
+        if (triplet[0] > target[0] || triplet[1] > target[1] || triplet[2] > target[2]) {
             // skip this triplet, since at least one value is greater -- not compatible
             continue;
         }

@@ -25,10 +25,7 @@ function pushDominoes(dominoes) {
         const [dominoeIndex, dominoeDirection] = queue.shift();
 
         if (dominoeDirection === "L") {
-            if (
-                dominoeIndex > 0 &&
-                dominoesList[dominoeIndex - 1] === standingStraightUpDominoe
-            ) {
+            if (dominoeIndex > 0 && dominoesList[dominoeIndex - 1] === standingStraightUpDominoe) {
                 queue.push([dominoeIndex - 1, "L"]);
                 dominoesList[dominoeIndex - 1] = "L";
             }

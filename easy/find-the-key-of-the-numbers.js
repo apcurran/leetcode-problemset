@@ -17,11 +17,7 @@ function generateKey(num1, num2, num3) {
     let key = "";
 
     for (let i = 0; i < 4; i++) {
-        key += Math.min(
-            Number(num1Padded[i]),
-            Number(num2Padded[i]),
-            Number(num3Padded[i]),
-        );
+        key += Math.min(Number(num1Padded[i]), Number(num2Padded[i]), Number(num3Padded[i]));
     }
 
     return Number(key);

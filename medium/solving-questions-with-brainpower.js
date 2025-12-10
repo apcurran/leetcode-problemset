@@ -43,8 +43,7 @@ function mostPoints(questions, i = 0, cache = new Array(questions.length)) {
 
     const [pointsEarned, questionsToSkip] = questions[i];
     const path1 = mostPoints(questions, i + 1, cache); // skip current question
-    const path2 =
-        pointsEarned + mostPoints(questions, i + 1 + questionsToSkip, cache); // solve current question and take score
+    const path2 = pointsEarned + mostPoints(questions, i + 1 + questionsToSkip, cache); // solve current question and take score
     const mostPossiblePoints = Math.max(path1, path2);
     cache[i] = mostPossiblePoints;
 

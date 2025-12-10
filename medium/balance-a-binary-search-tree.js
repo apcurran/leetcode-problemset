@@ -21,11 +21,7 @@ function balanceBST(root) {
     // build sorted inorder list
     inOrderTraversal(root, inOrderNodeValues);
 
-    return createBalancedBST(
-        inOrderNodeValues,
-        0,
-        inOrderNodeValues.length - 1,
-    );
+    return createBalancedBST(inOrderNodeValues, 0, inOrderNodeValues.length - 1);
 }
 
 /**

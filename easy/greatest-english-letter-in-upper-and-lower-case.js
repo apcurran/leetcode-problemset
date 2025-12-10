@@ -16,10 +16,7 @@ function greatestLetter(letters) {
         const lowercaseLetter = letter.toLowerCase();
         const uppercaseLetter = letter.toUpperCase();
 
-        if (
-            !uniqueLetters.has(lowercaseLetter) ||
-            !uniqueLetters.has(uppercaseLetter)
-        ) {
+        if (!uniqueLetters.has(lowercaseLetter) || !uniqueLetters.has(uppercaseLetter)) {
             continue;
         }
 

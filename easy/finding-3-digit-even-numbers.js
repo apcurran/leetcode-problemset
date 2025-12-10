@@ -19,8 +19,7 @@ function findEvenNumbers(digits) {
                 }
 
                 // add hundreds + tens + ones places together for sum
-                const createdValue =
-                    digits[i] * 100 + digits[j] * 10 + digits[k];
+                const createdValue = digits[i] * 100 + digits[j] * 10 + digits[k];
 
                 if (createdValue >= 100 && createdValue % 2 === 0) {
                     // even and valid 3-digit int

@@ -52,10 +52,7 @@ function countLargestGroup(n) {
         map.set(digitSum, previousDigitSumValues);
 
         // update largest arr length
-        largestArrsLength = Math.max(
-            largestArrsLength,
-            previousDigitSumValues.length,
-        );
+        largestArrsLength = Math.max(largestArrsLength, previousDigitSumValues.length);
     }
 
     let result = 0;

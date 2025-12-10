@@ -33,8 +33,5 @@ function dfs(rootLeft, rootRight) {
 
     if (rootLeft.val !== rootRight.val) return false;
 
-    return (
-        dfs(rootLeft.left, rootRight.right) &&
-        dfs(rootLeft.right, rootRight.left)
-    );
+    return dfs(rootLeft.left, rootRight.right) && dfs(rootLeft.right, rootRight.left);
 }

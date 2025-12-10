@@ -56,10 +56,7 @@ function lengthOfLIS(nums) {
             if (nums[j] < nums[i]) {
                 const currentMax = Math.max(dpCache[i], dpCache[j] + 1);
                 dpCache[i] = currentMax;
-                longestSubsequenceLength = Math.max(
-                    longestSubsequenceLength,
-                    currentMax,
-                );
+                longestSubsequenceLength = Math.max(longestSubsequenceLength, currentMax);
             }
         }
     }

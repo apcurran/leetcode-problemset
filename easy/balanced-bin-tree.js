@@ -63,8 +63,7 @@ function isBalanced(root) {
         // also, the difference between left and right heights must differ by no more than 1 (definition of height-balanced trees)
         const isCurrentBalanced = areSubtreesBalanced && heightDiff <= 1;
         const currentNodeHeight = 1;
-        const currentHeight =
-            currentNodeHeight + Math.max(leftSubtree[1], rightSubtree[1]);
+        const currentHeight = currentNodeHeight + Math.max(leftSubtree[1], rightSubtree[1]);
 
         return [isCurrentBalanced, currentHeight];
     }
