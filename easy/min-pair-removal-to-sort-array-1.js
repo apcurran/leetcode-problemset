@@ -11,7 +11,7 @@ function minimumPairRemoval(nums) {
 
     while (!isNonDecreasingArray(nums)) {
         let minSum = Infinity;
-        let minSumStartIndex = 0;
+        let minSumStartIndex = -1;
 
         // adjacent pairs
         for (let i = 0; i < nums.length - 1; i++) {
