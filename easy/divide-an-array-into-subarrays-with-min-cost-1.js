@@ -1,5 +1,19 @@
+// /**
+//  * solution 1 -- sorting
+//  * time: O(n * log n)
+//  * space: O(n)
+//  *
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function minimumCost(nums) {
+//     const sorted = [nums[0], ...nums.slice(1).toSorted((a, b) => a - b)];
+
+//     return sorted[0] + sorted[1] + sorted[2];
+// }
+
 /**
- * solution 1 -- sorting
+ * solution 2 -- sorting
  * time: O(n * log n)
  * space: O(n)
  *
@@ -7,9 +21,10 @@
  * @return {number}
  */
 function minimumCost(nums) {
-    const sorted = [nums[0], ...nums.slice(1).toSorted((a, b) => a - b)];
+    const firstValue = nums[0];
+    const [secondValue, thirdValue] = nums.slice(1).sort((a, b) => a - b);
 
-    return sorted[0] + sorted[1] + sorted[2];
+    return firstValue + secondValue + thirdValue;
 }
 
 console.log(minimumCost([1, 2, 3, 12])); // 6
