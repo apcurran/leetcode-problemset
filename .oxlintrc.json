@@ -1,6 +1,5 @@
 {
     "categories": {
-        "correctness": "warn",
-        "suspicious": "warn"
+        "correctness": "warn"
     }
 }
