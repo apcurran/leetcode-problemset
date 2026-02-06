@@ -19,7 +19,8 @@ function minRemoval(nums, k) {
             right++;
         }
 
-        result = Math.min(result, n - (right - left));
+        const removals = n - (right - left);
+        result = Math.min(result, removals);
     }
 
     return result;
