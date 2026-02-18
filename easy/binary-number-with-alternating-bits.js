@@ -1,21 +1,48 @@
+// /**
+//  * solution 1
+//  * time: O(n)
+//  * space: O(n)
+//  *
+//  * @param {number} n
+//  * @return {boolean}
+//  */
+// function hasAlternatingBits(n) {
+//     const binaryN = n.toString(2);
+
+//     for (let i = 0; i < binaryN.length - 1; i++) {
+//         const currentBit = binaryN[i];
+//         const nextBit = binaryN[i + 1];
+
+//         if (currentBit === nextBit) {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
 /**
- * solution 1
- * time: O(n)
- * space: O(n)
+ * solution 2 -- remainder and modulo operators for bit checking
+ * w <= 32 bits
+ * time: O(w)
+ * space: O(1)
  *
  * @param {number} n
  * @return {boolean}
  */
 function hasAlternatingBits(n) {
-    const binaryN = n.toString(2);
+    let lastBit = n % 2;
+    n = Math.floor(n / 2);
 
-    for (let i = 0; i < binaryN.length - 1; i++) {
-        const currentBit = binaryN[i];
-        const nextBit = binaryN[i + 1];
+    while (n > 0) {
+        const currentBit = n % 2;
 
-        if (currentBit === nextBit) {
+        if (currentBit === lastBit) {
             return false;
         }
+
+        lastBit = currentBit;
+        n = Math.floor(n / 2);
     }
 
     return true;
