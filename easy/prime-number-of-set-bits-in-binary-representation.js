@@ -9,13 +9,14 @@
  * @return {number}
  */
 function countPrimeSetBits(left, right) {
+    const PRIME_SET_BITS = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31];
     let counter = 0;
 
     for (let i = left; i <= right; i++) {
         const binaryStr = i.toString(2);
         const setBitsCount = getSetBitsCount(binaryStr);
 
-        if (isPrime(setBitsCount)) {
+        if (PRIME_SET_BITS.includes(setBitsCount)) {
             counter++;
         }
     }
@@ -37,23 +38,4 @@ function getSetBitsCount(binStr) {
     }
 
     return setBitsCounter;
-}
-
-/**
- * @param {number} num
- * @returns {boolean}
- */
-function isPrime(num) {
-    if (num <= 1) {
-        return false;
-    }
-
-    for (let i = 2; i < num; i++) {
-        if (num % i === 0) {
-            // if evenly divisible by current i, not prime
-            return false;
-        }
-    }
-
-    return true;
 }
