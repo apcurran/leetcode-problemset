@@ -1,6 +1,37 @@
+// /**
+//  * solution 1 -- nested loops (brute force)
+//  * time: O(n^2)
+//  * space: O(n)
+//  *
+//  * @param {number} n
+//  * @return {number}
+//  */
+// function binaryGap(n) {
+//     const binaryNum = n.toString(2);
+//     let largestGap = 0;
+
+//     for (let i = 0; i < binaryNum.length; i++) {
+//         if (binaryNum[i] !== "1") {
+//             continue;
+//         }
+
+//         for (let j = i + 1; j < binaryNum.length; j++) {
+//             if (binaryNum[j] === "1") {
+//                 // take window size of prev 1 and curr 1 (Math.max() the counter)
+//                 const windowSize = j - i;
+//                 largestGap = Math.max(largestGap, windowSize);
+
+//                 break;
+//             }
+//         }
+//     }
+
+//     return largestGap;
+// }
+
 /**
- * solution 1 -- nested loops (brute force)
- * time: O(n^2)
+ * solution 2 -- pre-compute index positions
+ * time: O(n)
  * space: O(n)
  *
  * @param {number} n
@@ -8,22 +39,19 @@
  */
 function binaryGap(n) {
     const binaryNum = n.toString(2);
-    let largestGap = 0;
+    let oneBitsIndexPositions = [];
 
     for (let i = 0; i < binaryNum.length; i++) {
-        if (binaryNum[i] !== "1") {
-            continue;
+        if (binaryNum[i] === "1") {
+            oneBitsIndexPositions.push(i);
         }
+    }
 
-        for (let j = i + 1; j < binaryNum.length; j++) {
-            if (binaryNum[j] === "1") {
-                // take window size of prev 1 and curr 1 (Math.max() the counter)
-                const windowSize = j - i;
-                largestGap = Math.max(largestGap, windowSize);
+    let largestGap = 0;
 
-                break;
-            }
-        }
+    for (let i = 0; i < oneBitsIndexPositions.length - 1; i++) {
+        const currentGap = oneBitsIndexPositions[i + 1] - oneBitsIndexPositions[i];
+        largestGap = Math.max(largestGap, currentGap);
     }
 
     return largestGap;
