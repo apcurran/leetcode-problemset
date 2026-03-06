@@ -65,11 +65,14 @@ class MyQueue {
     }
 
     _transfer() {
+        // stack2 must be empty first
         if (this.stack2.length !== 0) {
             return;
         }
 
+        // move every value from stack1 to stack2
         while (this.stack1.length > 0) {
+            // this inverts the order of values
             this.stack2.push(this.stack1.pop());
         }
     }
