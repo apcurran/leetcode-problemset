@@ -35,12 +35,14 @@ function search(nums, target) {
 
         // otherwise, keep looking
         if (nums[left] < nums[mid]) {
+            // we are in the left portion of the rotated array
             if (nums[left] <= target && target < nums[mid]) {
                 right = mid - 1;
             } else {
                 left = mid + 1;
             }
         } else if (nums[left] > nums[mid]) {
+            // right portion of rotated array
             if (nums[mid] < target && target <= nums[right]) {
                 left = mid + 1;
             } else {
