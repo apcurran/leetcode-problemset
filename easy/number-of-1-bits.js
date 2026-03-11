@@ -36,7 +36,7 @@ function hammingWeight(n) {
         // read bit in "ones" place from binary form
         const binaryOnesPlaceValue = n & 1;
         oneBitsCounter += binaryOnesPlaceValue;
-        // bit shift to right one to operate on last place digit again
+        // bit shift to right one to operate on ones place bit again
         n = n >> 1;
     }
 
