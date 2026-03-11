@@ -1,6 +1,10 @@
 "use strict";
 
 /**
+ * solution 1 -- modulo and RIGHT SHIFT bitwise operator
+ * time: O(1)
+ * space: O(1)
+ *
  * @param {number} n - a positive int
  * @return {number}
  */
