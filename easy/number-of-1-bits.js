@@ -17,20 +17,41 @@
 //     return oneBitsCounter;
 // }
 
+// /**
+//  * solution 2
+//  * time: O(1) - constant since 32-bits won't ever change in size
+//  * space: O(1)
+//  *
+//  * @param {number} n - a positive int
+//  * @return {number}
+//  */
+// function hammingWeight(n) {
+//     let oneBitsCounter = 0;
+
+//     while (n) {
+//         n &= n - 1;
+//         oneBitsCounter++;
+//     }
+
+//     return oneBitsCounter;
+// }
+
 /**
- * solution 2
- * time: O(1) - constant since 32-bits won't ever change in size
- * space: O(1)
+ * solution 3 -- brute force
+ * time: O(n) stringify n
+ * space: O(n) stringify n
  *
  * @param {number} n - a positive int
  * @return {number}
  */
 function hammingWeight(n) {
+    const nBinStr = n.toString(2);
     let oneBitsCounter = 0;
 
-    while (n) {
-        n &= n - 1;
-        oneBitsCounter++;
+    for (let bitStr of nBinStr) {
+        if (bitStr === "1") {
+            oneBitsCounter++;
+        }
     }
 
     return oneBitsCounter;
