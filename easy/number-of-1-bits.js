@@ -1,7 +1,28 @@
 "use strict";
 
+// /**
+//  * solution 1 -- modulo and RIGHT SHIFT bitwise operator
+//  * time: O(1)
+//  * space: O(1)
+//  *
+//  * @param {number} n - a positive int
+//  * @return {number}
+//  */
+// function hammingWeight(n) {
+//     let oneBitsCounter = 0;
+
+//     while (n > 0) {
+//         // n % 2 gives 1 or 0 for 'last place' digit
+//         oneBitsCounter += n % 2;
+//         // bit shift to right one to operate on last place digit again
+//         n = n >> 1;
+//     }
+
+//     return oneBitsCounter;
+// }
+
 /**
- * solution 1 -- modulo and RIGHT SHIFT bitwise operator
+ * solution 1 (alt bitwise operator to read ones place) -- bitwise AND and RIGHT SHIFT operators
  * time: O(1)
  * space: O(1)
  *
@@ -12,8 +33,9 @@ function hammingWeight(n) {
     let oneBitsCounter = 0;
 
     while (n > 0) {
-        // n % 2 gives 1 or 0 for 'last place' digit
-        oneBitsCounter += n % 2;
+        // read bit in "ones" place from binary form
+        const binaryOnesPlaceValue = n & 1;
+        oneBitsCounter += binaryOnesPlaceValue;
         // bit shift to right one to operate on last place digit again
         n = n >> 1;
     }
