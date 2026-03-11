@@ -53,10 +53,9 @@ function singleNumber(nums) {
         // leaving only the single non-duplicate num
         if (numSet.has(num)) {
             numSet.delete(num);
-            continue;
+        } else {
+            numSet.add(num);
         }
-
-        numSet.add(num);
     }
 
     // get first elem of Set obj
