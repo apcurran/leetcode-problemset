@@ -27,10 +27,7 @@
 // }
 
 /**
- * solution 2
- * n = input n number
- * m = bin ones count for each bin number i of arr
- *
+ * solution 2 -- bit manipulation
  * time: O(n * log n)
  * space: O(1) -- not including results
  *
@@ -44,8 +41,10 @@ function countBits(n) {
         let numOnesBitsCount = 0;
 
         for (let j = 0; j < 32; j++) {
-            // check for ith bit set (1 bit)
-            if ((num & (1 << j)) !== 0) {
+            const bitPowerOfTwoMask = 1 << j;
+            const bitValue = num & bitPowerOfTwoMask;
+            // check for ith bit set (1 bit -> always non-zero)
+            if (bitValue !== 0) {
                 numOnesBitsCount++;
             }
         }
