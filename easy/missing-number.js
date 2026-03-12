@@ -55,26 +55,48 @@
 //     return allNumsSum - actualNumsSum;
 // }
 
+// /**
+//  * solution 4 -- hashset
+//  * time: O(n)
+//  * space: O(n)
+//  *
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function missingNumber(nums) {
+//     let set = new Set(nums);
+
+//     // from [0 to n]
+//     for (let i = 0; i <= nums.length; i++) {
+//         // missing num
+//         if (!set.has(i)) {
+//             return i;
+//         }
+//     }
+
+//     return -1; // should not reach here
+// }
+
 /**
- * solution 4 -- hashset
+ * solution 5 -- bitwise operators
  * time: O(n)
- * space: O(n)
+ * space: O(1)
  *
  * @param {number[]} nums
  * @return {number}
  */
 function missingNumber(nums) {
-    let set = new Set(nums);
+    const n = nums.length;
+    // already accounting for the final num in [0 .... n] range
+    let xorr = n;
 
-    // from [0 to n]
-    for (let i = 0; i <= nums.length; i++) {
-        // missing num
-        if (!set.has(i)) {
-            return i;
-        }
+    // the xorr num ^ 0 = num
+    // this reveals the missing num by XORing with nums from 0 to n
+    for (let i = 0; i < n; i++) {
+        xorr ^= i ^ nums[i];
     }
 
-    return -1; // should not reach here
+    return xorr;
 }
 
 console.log(missingNumber([3, 0, 1])); // 2
