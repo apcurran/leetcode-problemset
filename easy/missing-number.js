@@ -40,19 +40,41 @@
 //     return -1;
 // }
 
+// /**
+//  * solution 3 -- math (Gauss summation formula)
+//  * time: O(n)
+//  * space: O(1)
+//  *
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// function missingNumber(nums) {
+//     const allNumsSum = (nums.length * (nums.length + 1)) / 2;
+//     const actualNumsSum = nums.reduce((sum, current) => sum + current, 0);
+
+//     return allNumsSum - actualNumsSum;
+// }
+
 /**
- * solution 3 -- math (Gauss summation formula)
+ * solution 4 -- hashset
  * time: O(n)
- * space: O(1)
+ * space: O(n)
  *
  * @param {number[]} nums
  * @return {number}
  */
 function missingNumber(nums) {
-    const allNumsSum = (nums.length * (nums.length + 1)) / 2;
-    const actualNumsSum = nums.reduce((sum, current) => sum + current, 0);
+    let set = new Set(nums);
 
-    return allNumsSum - actualNumsSum;
+    // from [0 to n]
+    for (let i = 0; i <= nums.length; i++) {
+        // missing num
+        if (!set.has(i)) {
+            return i;
+        }
+    }
+
+    return -1; // should not reach here
 }
 
 console.log(missingNumber([3, 0, 1])); // 2
