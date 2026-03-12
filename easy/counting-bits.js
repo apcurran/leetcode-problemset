@@ -41,6 +41,7 @@ function countBits(n) {
         let numOnesBitsCount = 0;
 
         for (let j = 0; j < 32; j++) {
+            // shift 1 bit left by j places to check current bit value
             const bitPowerOfTwoMask = 1 << j;
             const bitValue = num & bitPowerOfTwoMask;
             // check for ith bit set (1 bit -> always non-zero)
