@@ -14,8 +14,31 @@
 //     return reversedChunk + remainingChunk;
 // }
 
+// /**
+//  * solution 2 -- for loop
+//  * time: O(n)
+//  * space: O(n)
+//  *
+//  * @param {string} s
+//  * @param {number} k
+//  * @return {string}
+//  */
+// function reversePrefix(s, k) {
+//     let reversedResult = "";
+
+//     for (let i = k - 1; i >= 0; i--) {
+//         reversedResult += s[i];
+//     }
+
+//     for (let i = k; i < s.length; i++) {
+//         reversedResult += s[i];
+//     }
+
+//     return reversedResult;
+// }
+
 /**
- * solution 2 -- for loop
+ * solution 3 -- single while loop
  * time: O(n)
  * space: O(n)
  *
@@ -24,17 +47,20 @@
  * @return {string}
  */
 function reversePrefix(s, k) {
-    let reversedResult = "";
+    let splitStr = s.split("");
+    let left = 0;
+    let right = k - 1;
 
-    for (let i = k - 1; i >= 0; i--) {
-        reversedResult += s[i];
+    while (left < right) {
+        const tempLeft = splitStr[left];
+        splitStr[left] = splitStr[right];
+        splitStr[right] = tempLeft;
+        // move pointers
+        left++;
+        right--;
     }
 
-    for (let i = k; i < s.length; i++) {
-        reversedResult += s[i];
-    }
-
-    return reversedResult;
+    return splitStr.join("");
 }
 
 console.log(reversePrefix("abcd", 2)); // "bacd"
