@@ -2,16 +2,16 @@
     "name": "leetcode",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-        "lint": "npx oxlint .",
-        "lint:fix": "npx oxlint --fix .",
-        "format:check": "npx oxfmt . --check",
-        "format:write": "npx oxfmt ."
-    },
-    "author": "Alex Curran",
     "license": "ISC",
+    "author": "Alex Curran",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "lint": "npx oxlint --fix .",
+        "lint:check": "npx oxlint .",
+        "fmt": "npx oxfmt .",
+        "fmt:check": "npx oxfmt . --check"
+    },
     "devDependencies": {
         "oxfmt": "^0.42.0",
         "oxlint": "^1.57.0"
