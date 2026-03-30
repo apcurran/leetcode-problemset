@@ -5,25 +5,58 @@ function TreeNode(val, left, right) {
     this.right = right === undefined ? null : right;
 }
 
+// /**
+//  * solution 1 -- recursion
+//  * time: O(n)
+//  * space: O(n)
+//  *
+//  * @param {TreeNode} root
+//  * @return {number[]}
+//  */
+// function preorderTraversal(root, results = []) {
+//     if (root === null) {
+//         return results;
+//     }
+
+//     // take care of node now
+//     results.push(root.val);
+//     // recurse on left subtree
+//     const leftSubtree = preorderTraversal(root.left, results);
+//     // recurse on right subtree
+//     const rightSubtree = preorderTraversal(root.right, results);
+
+//     return leftSubtree && rightSubtree;
+// }
+
 /**
- * solution 1 -- recursion
+ * solution 2 -- DFS iterative
  * time: O(n)
  * space: O(n)
  *
  * @param {TreeNode} root
  * @return {number[]}
  */
-function preorderTraversal(root, results = []) {
+function preorderTraversal(root) {
+    let results = [];
+
     if (root === null) {
         return results;
     }
 
-    // take care of node now
-    results.push(root.val);
-    // recurse on left subtree
-    const leftSubtree = preorderTraversal(root.left, results);
-    // recurse on right subtree
-    const rightSubtree = preorderTraversal(root.right, results);
+    let stack = [root];
 
-    return leftSubtree && rightSubtree;
+    while (stack.length > 0) {
+        const current = stack.pop();
+        results.push(current.val);
+
+        if (current.right !== null) {
+            stack.push(current.right);
+        }
+
+        if (current.left !== null) {
+            stack.push(current.left);
+        }
+    }
+
+    return results;
 }
