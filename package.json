@@ -13,7 +13,7 @@
         "fmt:check": "npx oxfmt . --check"
     },
     "devDependencies": {
-        "oxfmt": "^0.43.0",
-        "oxlint": "^1.58.0"
+        "oxfmt": "^0.44.0",
+        "oxlint": "^1.59.0"
     }
 }
