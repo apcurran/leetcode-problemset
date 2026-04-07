@@ -1,5 +1,36 @@
+// /**
+//  * solution 1 -- two pointers
+//  * time: O(n)
+//  * space: O(n)
+//  *
+//  * @param {number} n
+//  * @return {number}
+//  */
+// function minimumFlips(n) {
+//     const binStr = n.toString(2);
+//     let left = 0;
+//     let right = binStr.length - 1;
+//     let counter = 0;
+
+//     // continue left until the end and
+//     // continue right until the beginning
+//     while (left < binStr.length && right >= 0) {
+//         const leftBit = binStr[left];
+//         const rightBit = binStr[right];
+
+//         if (leftBit !== rightBit) {
+//             counter++;
+//         }
+
+//         left++;
+//         right--;
+//     }
+
+//     return counter;
+// }
+
 /**
- * solution 1 -- two pointers
+ * solution 2 -- string methods
  * time: O(n)
  * space: O(n)
  *
@@ -8,22 +39,13 @@
  */
 function minimumFlips(n) {
     const binStr = n.toString(2);
-    let left = 0;
-    let right = binStr.length - 1;
+    const binStrReversed = binStr.split("").reverse().join("");
     let counter = 0;
 
-    // continue left until the end and
-    // continue right until the beginning
-    while (left < binStr.length && right >= 0) {
-        const leftBit = binStr[left];
-        const rightBit = binStr[right];
-
-        if (leftBit !== rightBit) {
+    for (let i = 0; i < binStr.length; i++) {
+        if (binStr[i] !== binStrReversed[i]) {
             counter++;
         }
-
-        left++;
-        right--;
     }
 
     return counter;
