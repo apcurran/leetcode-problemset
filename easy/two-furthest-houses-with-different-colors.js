@@ -31,7 +31,7 @@
  * space: O(1)
  *
  * @param {number[]} colors
- * @return {number}
+ * @return {number} indices distance between two diff values
  */
 function maxDistance(colors) {
     let max = 0;
