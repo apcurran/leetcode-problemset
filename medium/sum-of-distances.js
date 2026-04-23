@@ -16,6 +16,7 @@ function distance(nums) {
         // start at the beginning, skip index i
         for (let j = 0; j < nums.length; j++) {
             if (i === j) continue;
+
             const num2 = nums[j];
 
             if (num1 === num2) {
