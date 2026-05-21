@@ -23,38 +23,34 @@
 // }
 
 /**
- * solution 1 -- hashmaps
- * time: O(s + t)
- * space: O(s + t)
+ * solution 1 -- hashmap
+ * time: O(s)
+ * space: O(26) -> O(1) -- max of 26 alphabet chars
  *
  * @param {string} s
  * @param {string} t
  * @return {boolean}
  */
 function isAnagram(s, t) {
-    let sLetters = new Map();
+    if (s.length !== t.length) {
+        return false;
+    }
+
+    let charsCounts = new Map();
 
     for (let char of s) {
-        const previousCount = sLetters.get(char) || 0;
-        sLetters.set(char, previousCount + 1);
+        const previousCount = charsCounts.get(char) || 0;
+        charsCounts.set(char, previousCount + 1);
     }
-
-    let tLetters = new Map();
 
     for (let char of t) {
-        const previousCount = tLetters.get(char) || 0;
-        tLetters.set(char, previousCount + 1);
-    }
+        const currCharCount = charsCounts.get(char);
+        // character we don't already have OR char count ran out already
+        if (!charsCounts.has(char) || currCharCount === 0) {
+            return false;
+        }
 
-    // now compare maps
-    const largestLettersCache = sLetters.size >= tLetters.size ? sLetters : tLetters;
-
-    for (let tuple of largestLettersCache) {
-        const char = tuple[0];
-        const sCharCount = sLetters.get(char);
-        const tCharCount = tLetters.get(char);
-
-        if (sCharCount !== tCharCount) return false;
+        charsCounts.set(char, currCharCount - 1); // decrement this char's frequency
     }
 
     return true;
