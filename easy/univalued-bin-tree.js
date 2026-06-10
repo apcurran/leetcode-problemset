@@ -43,58 +43,55 @@ function TreeNode(val, left, right) {
 //     return true;
 // }
 
-/**
- * solution 2 -- BFS
- * time: O(n^2) - queue data struct
- * space: O(n) - queue space
- *
- * @param {TreeNode} root
- * @return {boolean}
- */
-function isUnivalTree(root) {
-    // traverse binary tree
-    let queue = [root];
-
-    while (queue.length > 0) {
-        // get the top node
-        const currentNode = queue.shift();
-
-        // different value -> not uni-valued
-        if (currentNode.val !== root.val) {
-            return false;
-        }
-
-        // check if node's left property has a node
-        if (currentNode.left !== null) {
-            // if so, add it to the queue
-            queue.push(currentNode.left);
-        }
-
-        // check if node's right property has a node
-        if (currentNode.right !== null) {
-            // if so, add it to the queue
-            queue.push(currentNode.right);
-        }
-    }
-
-    return true;
-}
-
 // /**
-//  * solution 3 -- recursive DFS
-//  * time: O(n)
-//  * space: O(h)
+//  * solution 2 -- BFS
+//  * time: O(n^2) - queue data struct
+//  * space: O(n) - queue space
 //  *
 //  * @param {TreeNode} root
 //  * @return {boolean}
 //  */
-// function isUnivalTree(root, value = root.val) {
-//     if (root === null) return true;
+// function isUnivalTree(root) {
+//     // traverse binary tree
+//     let queue = [root];
 
-//     if (root.val !== value) return false;
+//     while (queue.length > 0) {
+//         // get the top node
+//         const currentNode = queue.shift();
 
-//     const isLeftSideUnival = isUnivalTree(root.left, value);
-//     const isRightSideUnival = isUnivalTree(root.right, value);
+//         // different value -> not uni-valued
+//         if (currentNode.val !== root.val) {
+//             return false;
+//         }
 
-//     return isLeftSideUnival && isRightSideUnival;
+//         // check if node's left property has a node
+//         if (currentNode.left !== null) {
+//             // if so, add it to the queue
+//             queue.push(currentNode.left);
+//         }
+
+//         // check if node's right property has a node
+//         if (currentNode.right !== null) {
+//             // if so, add it to the queue
+//             queue.push(currentNode.right);
+//         }
+//     }
+
+//     return true;
 // }
+
+/**
+ * solution 3 -- recursive DFS
+ * time: O(n)
+ * space: O(h)
+ *
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+function isUnivalTree(root, value = root.val) {
+    if (root === null) return true;
+
+    if (root.val !== value) return false;
+
+    return isUnivalTree(root.left, value) && isUnivalTree(root.right, value);
+}
