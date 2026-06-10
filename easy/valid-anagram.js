@@ -57,9 +57,9 @@
 // }
 
 /**
- * solution 3 -- two hashmaps comparison
- * time: O(s)
- * space: O(26) -> O(1) -- max of 26 alphabet chars
+ * solution 3 -- two hash maps comparison
+ * time: O(s) - s must equal t after first string lengths are checked
+ * space: O(52) -> O(1) -- max of 26 alphabet chars per hash map
  *
  * @param {string} s
  * @param {string} t
