@@ -66,7 +66,41 @@ c.right = e;
 // }
 
 /**
- * solution 2 -- recursive DFS
+ * solution 2 -- BFS (tuples within queue struct)
+ * time: O(n^2)
+ * space: O(n)
+ *
+ * @param {TreeNode} root
+ * @return {number}
+ */
+function minDepth(root) {
+    if (root === null) return 0;
+
+    let queue = [[root, 1]]; // tuple of [node, level]
+    let minD = Infinity;
+
+    while (queue.length > 0) {
+        const [currentNode, currentNodeLevel] = queue.shift();
+
+        // leaf node found
+        if (currentNode.left === null && currentNode.right === null) {
+            minD = Math.min(minD, currentNodeLevel);
+        }
+
+        if (currentNode.left !== null) {
+            queue.push([currentNode.left, currentNodeLevel + 1]);
+        }
+
+        if (currentNode.right !== null) {
+            queue.push([currentNode.right, currentNodeLevel + 1]);
+        }
+    }
+
+    return minD;
+}
+
+/**
+ * solution 3 -- recursive DFS
  * time: O(n)
  * space: O(n)
  *
