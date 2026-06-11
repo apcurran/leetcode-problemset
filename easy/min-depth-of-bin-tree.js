@@ -87,6 +87,7 @@ function minDepth(root) {
             minD = Math.min(minD, currentNodeLevel);
         }
 
+        // check for children, add if available
         if (currentNode.left !== null) {
             queue.push([currentNode.left, currentNodeLevel + 1]);
         }
