@@ -68,11 +68,13 @@ function invertTree(root) {
     // base case
     if (root === null) return null;
 
-    // swap
-    const temp = root.left;
-    root.left = root.right;
-    root.right = temp;
-    // recursive cases
+    // swap using an extra variable
+    // const temp = root.left;
+    // root.left = root.right;
+    // root.right = temp;
+
+    // OR swap using destructure syntax
+    [root.left, root.right] = [root.right, root.left];
     invertTree(root.left);
     invertTree(root.right);
 
