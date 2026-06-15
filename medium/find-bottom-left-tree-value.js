@@ -24,11 +24,11 @@ function findBottomLeftValue(root) {
         leftmostNode = currentNode;
 
         // travel right to left
-        if (currentNode.right) {
+        if (currentNode.right !== null) {
             queue.push(currentNode.right);
         }
 
-        if (currentNode.left) {
+        if (currentNode.left !== null) {
             queue.push(currentNode.left);
         }
     }
