@@ -26,10 +26,28 @@
 //     return sum;
 // }
 
+// /**
+//  * solution 2 -- math
+//  * time: O(n)
+//  * space: O(n)
+//  *
+//  * @param {number} n
+//  * @return {number}
+//  */
+// function digitFrequencyScore(n) {
+//     let sum = 0;
+
+//     for (let digitStr of String(n)) {
+//         sum += Number(digitStr);
+//     }
+
+//     return sum;
+// }
+
 /**
- * solution 2 -- math
+ * solution 3 -- math
  * time: O(n)
- * space: O(n)
+ * space: O(1) -- no extra data structs
  *
  * @param {number} n
  * @return {number}
@@ -37,8 +55,9 @@
 function digitFrequencyScore(n) {
     let sum = 0;
 
-    for (let digitStr of String(n)) {
-        sum += Number(digitStr);
+    while (n > 0) {
+        sum += n % 10; // grab digit
+        n = Math.floor(n / 10); // move over a place value
     }
 
     return sum;
