@@ -13,7 +13,7 @@ function digitFrequencyScore(n) {
     for (let digitStr of nStr) {
         const digit = Number(digitStr);
         const previousCount = digitsFrequencies.get(digit) || 0;
-        digitsFrequencies.set(Number(digit), previousCount + 1);
+        digitsFrequencies.set(digit, previousCount + 1);
     }
 
     let sum = 0;
