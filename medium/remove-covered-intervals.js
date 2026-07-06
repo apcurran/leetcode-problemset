@@ -1,14 +1,13 @@
 /**
  * solution 1 -- brute force
  * time: O(n^2)
- * space: O(n)
+ * space: O(1)
  *
  * @param {number[][]} intervals
  * @return {number}
  */
 function removeCoveredIntervals(intervals) {
-    // iterate all intervals
-    let results = [];
+    let count = 0;
 
     outerLoop: for (let i = 0; i < intervals.length; i++) {
         const outerInterval = intervals[i];
@@ -19,16 +18,15 @@ function removeCoveredIntervals(intervals) {
 
             if (j === i) continue;
             // given [a, b] [c, d] check that c <= a and b <= d
-            // c <= a && b <= d
             if (innerInterval[0] <= outerInterval[0] && outerInterval[1] <= innerInterval[1]) {
                 continue outerLoop;
             }
         }
 
-        results.push(intervals[i]);
+        count++;
     }
 
-    return results.length;
+    return count;
 }
 
 console.log(
