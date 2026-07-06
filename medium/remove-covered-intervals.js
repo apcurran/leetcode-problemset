@@ -47,7 +47,7 @@ function removeCoveredIntervals(intervals) {
         }
     });
 
-    let remaining = 0;
+    let remainingCount = 0;
     let maxEnd = -Infinity;
 
     for (let interval of intervals) {
@@ -57,11 +57,11 @@ function removeCoveredIntervals(intervals) {
             continue;
         }
 
-        remaining++;
+        remainingCount++;
         maxEnd = end;
     }
 
-    return remaining;
+    return remainingCount;
 }
 
 console.log(
