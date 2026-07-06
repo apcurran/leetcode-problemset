@@ -13,10 +13,11 @@ function removeCoveredIntervals(intervals) {
         const currentInterval = intervals[i];
 
         for (let j = 0; j < intervals.length; j++) {
+            if (j === i) continue;
+
             // interate again skipping current interval
             const otherInterval = intervals[j];
 
-            if (j === i) continue;
             // given [a, b] [c, d] check that c <= a and b <= d
             if (otherInterval[0] <= currentInterval[0] && currentInterval[1] <= otherInterval[1]) {
                 continue outerLoop;
