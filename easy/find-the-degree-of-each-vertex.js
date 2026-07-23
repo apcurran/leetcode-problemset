@@ -1,5 +1,24 @@
+// /**
+//  * solution 1
+//  * time: O(n^2)
+//  * space: O(1) -- not including required results array
+//  *
+//  * @param {number[][]} matrix
+//  * @return {number[]}
+//  */
+// function findDegrees(matrix) {
+//     let results = [];
+
+//     for (let subarr of matrix) {
+//         const subarrDegreeSum = subarr.reduce((sum, curr) => sum + curr, 0);
+//         results.push(subarrDegreeSum);
+//     }
+
+//     return results;
+// }
+
 /**
- * solution 1
+ * solution 2 -- Array.map() method
  * time: O(n^2)
  * space: O(1) -- not including required results array
  *
@@ -7,14 +26,9 @@
  * @return {number[]}
  */
 function findDegrees(matrix) {
-    let results = [];
-
-    for (let subarr of matrix) {
-        const subarrDegreeSum = subarr.reduce((sum, curr) => sum + curr, 0);
-        results.push(subarrDegreeSum);
-    }
-
-    return results;
+    return matrix.map((row) => {
+        return row.reduce((sum, currValue) => sum + currValue, 0);
+    });
 }
 
 console.log(
