@@ -1,30 +1,30 @@
-// /**
-//  * solution 1
-//  * time: O(n^2)
-//  * space: O(1) -- not including results array
-//  *
-//  * @param {number[]} nums
-//  * @return {number[]}
-//  */
-// function findMissingElements(nums) {
-//     let min = Infinity;
-//     let max = -Infinity;
+/**
+ * solution 1
+ * time: O(n^2)
+ * space: O(1) -- not including results array
+ *
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+function findMissingElements(nums) {
+    let min = Infinity;
+    let max = -Infinity;
 
-//     for (let num of nums) {
-//         min = Math.min(min, num);
-//         max = Math.max(max, num);
-//     }
+    for (let num of nums) {
+        min = Math.min(min, num);
+        max = Math.max(max, num);
+    }
 
-//     let results = [];
+    let results = [];
 
-//     for (let current = min; current <= max; current++) {
-//         if (!nums.includes(current)) {
-//             results.push(current);
-//         }
-//     }
+    for (let current = min + 1; current < max; current++) {
+        if (!nums.includes(current)) {
+            results.push(current);
+        }
+    }
 
-//     return results;
-// }
+    return results;
+}
 
 // /**
 //  * solution 2 -- hashset
@@ -45,7 +45,7 @@
 
 //     let fullRange = new Set();
 
-//     for (let current = min; current <= max; current++) {
+//     for (let current = min + 1; current < max; current++) {
 //         fullRange.add(current);
 //     }
 
@@ -55,31 +55,31 @@
 //     return [...diff];
 // }
 
-/**
- * solution 3 -- sort + enumerate
- * time: O(n * log n + d)
- * space: O(n) -- due to sorting, not including results array
- *
- * @param {number[]} nums
- * @return {number[]}
- */
-function findMissingElements(nums) {
-    nums.sort(function sortAsc(a, b) {
-        return a - b;
-    });
+// /**
+//  * solution 3 -- sort + enumerate
+//  * time: O(n * log n + d)
+//  * space: O(n) -- due to sorting, not including results array
+//  *
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
+// function findMissingElements(nums) {
+//     nums.sort(function sortAsc(a, b) {
+//         return a - b;
+//     });
 
-    let results = [];
+//     let results = [];
 
-    // from beginning to num before end
-    for (let i = 0; i < nums.length - 1; i++) {
-        // iterate all nums less than next num in list (missing values)
-        for (let j = nums[i] + 1; j < nums[i + 1]; j++) {
-            results.push(j);
-        }
-    }
+//     // from beginning to num before end
+//     for (let i = 0; i < nums.length - 1; i++) {
+//         // iterate all nums less than next num in list (missing values)
+//         for (let j = nums[i] + 1; j < nums[i + 1]; j++) {
+//             results.push(j);
+//         }
+//     }
 
-    return results;
-}
+//     return results;
+// }
 
 console.log(findMissingElements([1, 4, 2, 5])); // [3]
 console.log(findMissingElements([7, 8, 6, 9])); // []
