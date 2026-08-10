@@ -36,13 +36,8 @@ function TreeNode(val, left, right) {
  * @return {number[]}
  */
 function inorderTraversal(root) {
-    let results = [];
-
-    if (root === null) {
-        return results;
-    }
-
     let stack = [];
+    let results = [];
     let current = root;
 
     while (current !== null || stack.length > 0) {
