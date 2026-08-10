@@ -41,18 +41,16 @@ function inorderTraversal(root) {
     let current = root;
 
     while (current !== null || stack.length > 0) {
-        if (current !== null) {
+        while (current !== null) {
             // exhaust left subtree before checking current node's value
             stack.push(current);
             current = current.left;
-        } else {
-            // check current node's value
-            current = stack.pop();
-            // add to results array
-            results.push(current.val);
-            // explore right subtree
-            current = current.right;
         }
+        // handle current node
+        current = stack.pop();
+        results.push(current.val);
+        // travel to right subtree
+        current = current.right;
     }
 
     return results;
