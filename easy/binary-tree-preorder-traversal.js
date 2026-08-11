@@ -20,12 +20,10 @@ function TreeNode(val, left, right) {
 
 //     // take care of node now
 //     results.push(root.val);
-//     // recurse on left subtree
-//     const leftSubtree = preorderTraversal(root.left, results);
-//     // recurse on right subtree
-//     const rightSubtree = preorderTraversal(root.right, results);
+//     preorderTraversal(root.left, results);
+//     preorderTraversal(root.right, results);
 
-//     return leftSubtree && rightSubtree;
+//     return results;
 // }
 
 /**
