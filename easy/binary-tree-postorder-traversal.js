@@ -18,9 +18,7 @@ function TreeNode(val, left, right) {
 //         return results;
 //     }
 
-//     // handle left subtree
 //     postorderTraversal(root.left, results);
-//     // handle right subtree
 //     postorderTraversal(root.right, results);
 //     // handle current node value
 //     results.push(root.val);
