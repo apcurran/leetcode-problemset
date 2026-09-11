@@ -23,7 +23,7 @@ function totalNumbers(digits) {
 
                 const currentNum = Number("" + digits[i] + digits[j] + digits[k]);
 
-                if (currentNum % 2 === 0 && currentNum) {
+                if (currentNum % 2 === 0) {
                     // even num
                     distinctNums.add(currentNum);
                 }
