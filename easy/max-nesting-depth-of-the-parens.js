@@ -46,8 +46,8 @@
  * @return {number}
  */
 function maxDepth(str) {
-    let maxNestingCount = 0;
     let currentNestingCount = 0;
+    let maxNestingCount = 0;
 
     for (let character of str) {
         if (character === "(") {
