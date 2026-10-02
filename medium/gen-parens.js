@@ -17,7 +17,7 @@ function generateParenthesis(n) {
      * @param {string} parens
      * @returns {void}
      */
-    function backtrack(openN, closedN, parens) {
+    function getCombo(openN, closedN, parens) {
         if (openN === n && closedN === n) {
             // add valid, finished parentheses string into results
             results.push(parens);
@@ -26,15 +26,15 @@ function generateParenthesis(n) {
         }
 
         if (openN < n) {
-            backtrack(openN + 1, closedN, parens + "(");
+            getCombo(openN + 1, closedN, parens + "(");
         }
 
         if (closedN < openN) {
-            backtrack(openN, closedN + 1, parens + ")");
+            getCombo(openN, closedN + 1, parens + ")");
         }
     }
 
-    backtrack(0, 0, "");
+    getCombo(0, 0, "");
 
     return results;
 }
