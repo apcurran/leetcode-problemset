@@ -1,7 +1,46 @@
 "use strict";
 
+// /**
+//  * solution 1 -- recursion
+//  * time: O(2^n)
+//  * space: O(n)
+//  *
+//  * @param {number} n
+//  * @return {string[]}
+//  */
+// function generateParenthesis(n) {
+//     let results = [];
+
+//     /**
+//      * @param {number} openN
+//      * @param {number} closedN
+//      * @param {string} parens
+//      * @returns {void}
+//      */
+//     function getCombo(openN, closedN, parens) {
+//         if (openN === n && closedN === n) {
+//             // add valid, finished parentheses string into results
+//             results.push(parens);
+
+//             return;
+//         }
+
+//         if (openN < n) {
+//             getCombo(openN + 1, closedN, parens + "(");
+//         }
+
+//         if (closedN < openN) {
+//             getCombo(openN, closedN + 1, parens + ")");
+//         }
+//     }
+
+//     getCombo(0, 0, "");
+
+//     return results;
+// }
+
 /**
- * solution 1 -- recursion
+ * solution 2 -- (iterative) stack
  * time: O(2^n)
  * space: O(n)
  *
@@ -10,37 +49,33 @@
  */
 function generateParenthesis(n) {
     let results = [];
+    let stack = [["", 0, 0]]; // pre-set this stack with a first run
 
-    /**
-     * @param {number} openN
-     * @param {number} closedN
-     * @param {string} parens
-     * @returns {void}
-     */
-    function getCombo(openN, closedN, parens) {
+    while (stack.length > 0) {
+        // get top stack item
+        const [parens, openN, closedN] = stack.pop();
+
         if (openN === n && closedN === n) {
-            // add valid, finished parentheses string into results
             results.push(parens);
 
-            return;
+            continue;
+        }
+
+        // pushed first so that it will be popped second later on
+        if (closedN < openN) {
+            stack.push([parens + ")", openN, closedN + 1]);
         }
 
         if (openN < n) {
-            getCombo(openN + 1, closedN, parens + "(");
-        }
-
-        if (closedN < openN) {
-            getCombo(openN, closedN + 1, parens + ")");
+            stack.push([parens + "(", openN + 1, closedN]);
         }
     }
-
-    getCombo(0, 0, "");
 
     return results;
 }
 
 // /**
-//  * solution 2 -- recursion (stack)
+//  * solution 3 -- recursion (stack)
 //  * time: O(2^n)
 //  * space: O(n)
 //  *
