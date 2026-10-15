@@ -1,8 +1,8 @@
 "use strict";
 
 /**
- * solution 1 -- Set
- * time: O(n^3)
+ * solution 1 -- Hash Set
+ * time: O(n^2)
  * space: O(n)
  *
  * @param {number[]} nums
@@ -12,9 +12,10 @@ function sumCounts(nums) {
     let distinctCount = 0;
 
     for (let i = 0; i < nums.length; i++) {
+        let distinctValues = new Set();
+
         for (let j = i; j < nums.length; j++) {
-            const subArr = nums.slice(i, j + 1);
-            const distinctValues = new Set(subArr);
+            distinctValues.add(nums[j]);
             const squaredValue = distinctValues.size * distinctValues.size;
             distinctCount += squaredValue;
         }
