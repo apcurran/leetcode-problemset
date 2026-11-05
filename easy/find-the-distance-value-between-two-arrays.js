@@ -22,6 +22,7 @@ function findTheDistanceValue(arr1, arr2, d) {
             const absDiff = Math.abs(arr1Value - arr2value);
 
             if (absDiff <= d) {
+                // invalid, so skip some repeated work
                 continue arr1Loop;
             }
         }
